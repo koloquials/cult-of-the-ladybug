@@ -5,7 +5,11 @@ using UnityEngine.UI; 
 
 public class DuelManager : MonoBehaviour {
     public Text textBox;
-    Enemy enemy; 
+
+    //TO LINK A NEW ENEMY SCRIPT IN INSPECTOR: add it to the manager's game object, make it the first Enemy script on the object,
+    //and then hook it up through the list in the inspector, this will add the script on the top of the list.
+    public List<Enemy> enemies = new List<Enemy>();
+    public int enemyId = 1; //enemy id! iterate through these to change the enemy script you reference.
 
     public GameObject tile; //GameObject for tile on board
     GameObject[] tiles = new GameObject[7]; //array of tiles. only important for intialization.
@@ -26,20 +30,19 @@ public class DuelManager : MonoBehaviour {
     int enemyLine; //the left-most tile enemy controls on the board.
     int enemyType; //dialogue type enemy picks: 1 = concede, 2 = stand ground, 3 = aggressive, 4 = insult
 
-
     int step = 0; //enemy dialogue step, follow the documentation!
     int optStep = -4; //player's option dialogue! comes in sets of 4.
     int enTypeStep = -1; //line contains enemy's option number.
     bool combatRound = true;
 
     void Start () {
-        enemy = GetComponent<Enemy>();
+        //enemy = GetComponent<Enemy>();
     }
 
     void Update () {
 
         if (Input.GetKeyDown(KeyCode.Space) && inDuel == false && duelFinished == false){
-            textBox.text = enemy.dialogue[step]; //introduction text. limited to only one line of dialogue.
+            textBox.text = enemies[enemyId].dialogue[step]; //introduction text. limited to only one line of dialogue.
             inDuel = true;
         } else if (Input.GetKeyDown(KeyCode.Space) && inDuel == true && combatRound == true){ //combat round.
 
@@ -50,7 +53,7 @@ public class DuelManager : MonoBehaviour {
             combatRound = false;
 
             //detects end of enemy dialogue and resets so that it repeats.
-            if (step == enemy.dialogue.Count){ 
+            if (step == enemies[enemyId].dialogue.Count){ 
                 step = 3; 
                 optStep = 4;
                 enTypeStep = 1;
@@ -64,43 +67,52 @@ public class DuelManager : MonoBehaviour {
             }
             //if there's a winner, otherwise print next round:
             if (playerWin == true){
-                textBox.text = (enemy.options[optStep + (playerType-5)] + "\n\nPlayer wins!"); //displays the winning dialogue option, too!
+                textBox.text = (enemies[enemyId].options[optStep + (playerType-5)] + "\n\nPlayer wins!"); //displays the winning dialogue option, too!
                 duelFinished = true;
+                //needs to exit.
+                //note to vera, use these on the main dialogue script:
+                //MyGameObject.GetComponent<MyScript>().enabled = false; //toggle this script to re-invoke duel
+                //MyGameObject.GetComponent<MyScript>().enabled = true;
+
             }else if (enemyWin == true){
-                textBox.text = (enemy.dialogue[step] + "\n\nEnemy wins!"); //displays the winning dialogue option, too!
+                textBox.text = (enemies[enemyId].dialogue[step] + "\n\nEnemy wins!"); //displays the winning dialogue option, too!
                 duelFinished = true;
+                //needs to exit.
+                //note to vera, use these on the main dialogue script:
+                //MyGameObject.GetComponent<MyScript>().enabled = false; //toggle this script to re-invoke duel
+                //MyGameObject.GetComponent<MyScript>().enabled = true;
             }else{ 
                 //displays next round of dialogue + choices
-                textBox.text = (enemy.dialogue[step] + "[1][concede] " + enemy.options[optStep] + "[2][stand] " + enemy.options[optStep + 1] + 
-                                "[3][aggress] " + enemy.options[optStep + 2] + "[4][insult] " + enemy.options[optStep + 3]);
+                textBox.text = (enemies[enemyId].dialogue[step] + "[1][concede] " + enemies[enemyId].options[optStep] + "[2][stand] " + enemies[enemyId].options[optStep + 1] + 
+                                "[3][aggress] " + enemies[enemyId].options[optStep + 2] + "[4][insult] " + enemies[enemyId].options[optStep + 3]);
             }
         }
         //result round. tells the player what they picked + the enemy reaction.
         //[WIP] enemy dialogue shouldn't display if this is the round where the player wins (an option is to just remove it but i like the drama it elicits) 
         else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha1) && inDuel == true && combatRound == false) { //player chooses [1]
             step++;
-            textBox.text = (enemy.options[optStep] + "\n" + enemy.dialogue[step] + "\n [space]");
+            textBox.text = (enemies[enemyId].options[optStep] + "\n" + enemies[enemyId].dialogue[step] + "\n [space]");
             playerType = 1;
             processTable = true;
             combatRound = true;
 
         } else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha2) && inDuel == true && combatRound == false){ //player chooses [2]
             step++;
-            textBox.text = (enemy.options[optStep+1] + "\n" + enemy.dialogue[step] + "\n [space]");
+            textBox.text = (enemies[enemyId].options[optStep+1] + "\n" + enemies[enemyId].dialogue[step] + "\n [space]");
             playerType = 2;
             processTable = true;
             combatRound = true;
 
         } else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha3) && inDuel == true && combatRound == false){ //player chooses [3]
             step++;
-            textBox.text = (enemy.options[optStep+2] + "\n" + enemy.dialogue[step] + "\n [space]");
+            textBox.text = (enemies[enemyId].options[optStep+2] + "\n" + enemies[enemyId].dialogue[step] + "\n [space]");
             playerType = 3;
             processTable = true;
             combatRound = true;
 
         } else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha4) && inDuel == true && combatRound == false){ //player chooses [4]
             step++;
-            textBox.text = (enemy.options[optStep+3] + "\n" + enemy.dialogue[step] + "\n [space]");
+            textBox.text = (enemies[enemyId].options[optStep+3] + "\n" + enemies[enemyId].dialogue[step] + "\n [space]");
             playerType = 4;
             processTable = true;
             combatRound = true;
@@ -114,7 +126,7 @@ public class DuelManager : MonoBehaviour {
     }
 
     void ProcessCombat(){ //compares player and enemy type and decides what the interaction does
-        enemyType = enemy.types[enTypeStep];
+        enemyType = enemies[enemyId].types[enTypeStep];
         if (playerType == 1){ //concede
             if (enemyType == 1){
                 playerLine -= 1;
@@ -292,4 +304,5 @@ public class DuelManager : MonoBehaviour {
         status[playerPos].hasPlayer = true;
         status[enemyPos].hasEnemy = true;
     }
+
 }
