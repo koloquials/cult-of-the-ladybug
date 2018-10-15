@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 615e32332fae742deaf5e71faba67679
+guid: 6c03688f1574f534880c752feb25708b
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,7 +11,8 @@ TrueTypeFontImporter:
   fontName: Typewriter_Condensed
   fontNames:
   - Typewriter_Condensed
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 615e32332fae742deaf5e71faba67679, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
