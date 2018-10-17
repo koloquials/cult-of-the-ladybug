@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 606dab1dcf00c4741bf61375d0db1af1, type: 3}
+  m_Name: BSecondNode1
+  m_EditorClassIdentifier: 
+  nodeName: PersonBNode2
+  dialogueLines:
+  - line: "Oh, hi. Sorry, have we met? I don\u2019t recognize you."
+    valuableInfo: 0
+    duelTrigger: 0
+  - line: Are you friends with Jerry? I saw you talking over there.
+    valuableInfo: 0
+    duelTrigger: 0
+  - line: So we can talk calmly now? Good!
+    valuableInfo: 0
+    duelTrigger: 0
+  - line: Okay so um,  you wanna know about Jerry, right? He can be a tough nut to
+      crack, for sure.
+    valuableInfo: 0
+    duelTrigger: 0
+  - line: But he and the host were actually close friends since kindergarten. Sure,
+      they fought sometimes, and sometimes Jerry got outta hand.
+    valuableInfo: 1
+    duelTrigger: 0
+  - line: "But he couldn\u2019t take part in something like this...could he?"
+    valuableInfo: 0
+    duelTrigger: 0

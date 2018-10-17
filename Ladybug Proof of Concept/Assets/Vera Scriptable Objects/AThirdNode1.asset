@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 606dab1dcf00c4741bf61375d0db1af1, type: 3}
+  m_Name: AThirdNode1
+  m_EditorClassIdentifier: 
+  nodeName: PersonANode3
+  dialogueLines:
+  - line: Yeah, the host and I were friends. What of it?
+    valuableInfo: 0
+    duelTrigger: 0
+  - line: We did fight sometimes, he was a difficult kind of guy. Not something to
+      kill him over, though he did deserve a beating
+    valuableInfo: 0
+    duelTrigger: 1
+  - line: During cocktail hour, when last I checked the host was alive, I went to
+      the bathroom.
+    valuableInfo: 1
+    duelTrigger: 0
+  - line: "Ask Jeri, she\u2019ll tell you I ain\u2019t lyin\u2019."
+    valuableInfo: 0
+    duelTrigger: 0

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 606dab1dcf00c4741bf61375d0db1af1, type: 3}
+  m_Name: BInitNode1
+  m_EditorClassIdentifier: 
+  nodeName: PersonBNode1
+  dialogueLines:
+  - line: Oh!
+    valuableInfo: 0
+    duelTrigger: 0
+  - line: "Sorry, I didn\u2019t see you there, scared me a bit."
+    valuableInfo: 0
+    duelTrigger: 0
+  - line: This whole thing is crazy, huh?
+    valuableInfo: 0
+    duelTrigger: 1
+  - line: "Jerry, that guy over there, he said I shouldn\u2019t talk to anybody\u2026"
+    valuableInfo: 0
+    duelTrigger: 0
