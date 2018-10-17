@@ -35,6 +35,8 @@ public class DuelManager : MonoBehaviour {
     int enTypeStep = -1; //line contains enemy's option number.
     bool combatRound = true;
 
+    float letterPause = 0.2f; //amt of time before next letter prints.
+
     void Start () {
         //enemy = GetComponent<Enemy>();
     }
@@ -43,6 +45,7 @@ public class DuelManager : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Space) && inDuel == false && duelFinished == false){
             textBox.text = enemies[enemyId].dialogue[step]; //introduction text. limited to only one line of dialogue.
+            //StartCoroutine(TypeText(enemies[enemyId].dialogue[step]));
             inDuel = true;
         } else if (Input.GetKeyDown(KeyCode.Space) && inDuel == true && combatRound == true){ //combat round.
 
@@ -81,8 +84,9 @@ public class DuelManager : MonoBehaviour {
                 //note to vera, use these on the main dialogue script:
                 //MyGameObject.GetComponent<MyScript>().enabled = false; //toggle this script to re-invoke duel
                 //MyGameObject.GetComponent<MyScript>().enabled = true;
-            }else{ 
+            }else{
                 //displays next round of dialogue + choices
+                //StartCoroutine(TypeText(enemies[enemyId].dialogue[step]));
                 textBox.text = (enemies[enemyId].dialogue[step] + "[1][concede] " + enemies[enemyId].options[optStep] + "[2][stand] " + enemies[enemyId].options[optStep + 1] + 
                                 "[3][aggress] " + enemies[enemyId].options[optStep + 2] + "[4][insult] " + enemies[enemyId].options[optStep + 3]);
             }
@@ -124,6 +128,17 @@ public class DuelManager : MonoBehaviour {
         }
 
     }
+
+    IEnumerator TypeText (string message) {
+         foreach (char letter in message.ToCharArray()) {
+            textBox.text += letter;
+            //if (typeSound1 && typeSound2){
+            //    SoundManager.instance.RandomizeSfx(typeSound1, typeSound2);
+            //    yield return 0;
+            //}
+            yield return new WaitForSeconds (letterPause);
+         }
+     }
 
     void ProcessCombat(){ //compares player and enemy type and decides what the interaction does
         enemyType = enemies[enemyId].types[enTypeStep];

@@ -108,14 +108,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1180230911098240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32bc7a4e0cc8c4884aa6a6c6bc01a637, type: 3}
+  m_Script: {fileID: 11500000, guid: 436d704d1140d0a44a28837c0cab2eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
   hasPlayer: 0
   hasEnemy: 0
   square: {fileID: 0}
-  person: {fileID: 114142036668665478}
+  person: {fileID: 0}
   struck: 0
 --- !u!222 &222241701047140092
 CanvasRenderer:

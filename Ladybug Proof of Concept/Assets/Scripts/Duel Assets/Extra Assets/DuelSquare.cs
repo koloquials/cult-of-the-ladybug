@@ -13,6 +13,7 @@ public class DuelSquare : MonoBehaviour {
 
     void Start () {
         square = GetComponent<Image>();
+        person = transform.Find("Person").gameObject.GetComponentInChildren<Image>();
     }
 	
 	void Update () {
