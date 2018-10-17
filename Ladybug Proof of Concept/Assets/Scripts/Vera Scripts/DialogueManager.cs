@@ -84,7 +84,6 @@ public class DialogueManager : MonoBehaviour
         timeManager.modifier = 1f;
         nodeIndex = 0;
         lineIndex = 0;
-        activeNPC = null;
     }
 
     void RunDialogue()
