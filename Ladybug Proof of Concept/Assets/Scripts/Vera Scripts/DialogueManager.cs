@@ -9,11 +9,16 @@ public class DialogueManager : MonoBehaviour
     public bool dialogueActive = false;
     public bool duelActive = false;
     public Canvas dialogueCanvas;
+    public Canvas duelCanvas;
     TimeManager timeManager;
     Text dialogueText;
     public DialogueTree treeToRun;
     GameObject duelTrigger;
     public Color normalText, importantText;
+
+
+    public DuelManager activeDuel;
+    public NPC activeNPC;
 
     private int nodeIndex = 0;
     private int lineIndex = 0;
@@ -26,10 +31,20 @@ public class DialogueManager : MonoBehaviour
         dialogueText.color = normalText;
         duelTrigger = GameObject.Find("DuelTrigger");
         duelTrigger.SetActive(false);
+        dialogueCanvas.gameObject.SetActive(false);
+        duelCanvas.gameObject.SetActive(false);
+        activeDuel = null;
 
     }
     private void Update()
     {
+
+        if(activeNPC!=null){
+            treeToRun = activeNPC.treeToLoad;
+        } else {
+            treeToRun = null;
+            return;
+        }
         if (dialogueActive)
         {
             dialogueCanvas.gameObject.SetActive(true);
@@ -39,6 +54,20 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueCanvas.gameObject.SetActive(false);
             StopDialogue();
+        }
+
+        if(duelActive){
+            duelCanvas.gameObject.SetActive(true);
+            activeNPC.GetComponent<DuelManager>().enabled = true;
+            activeDuel = activeNPC.GetComponent<DuelManager>();
+            activeDuel.inDuel = true;
+            if(activeDuel.duelFinished){
+                duelActive = false;
+            }
+        } else {
+            activeNPC.GetComponent<DuelManager>().enabled = false;
+            activeDuel = null;
+            duelCanvas.gameObject.SetActive(false);
         }
 
     }
@@ -55,6 +84,7 @@ public class DialogueManager : MonoBehaviour
         timeManager.modifier = 1f;
         nodeIndex = 0;
         lineIndex = 0;
+        activeNPC = null;
     }
 
     void RunDialogue()

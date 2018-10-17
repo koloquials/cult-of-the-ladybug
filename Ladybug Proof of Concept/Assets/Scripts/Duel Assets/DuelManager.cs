@@ -15,12 +15,12 @@ public class DuelManager : MonoBehaviour {
     GameObject[] tiles = new GameObject[7]; //array of tiles. only important for intialization.
     DuelSquare[] status = new DuelSquare[7]; //array of tiles' status, can be references to ex: change tile color.
 
-    bool inDuel = false; //is a duel currently in process? (for a few dialogue if statements)
+    public bool inDuel = false; //is a duel currently in process? (for a few dialogue if statements)
     bool crtTable = true; //does a table need to be created?
     bool processTable = false; //does the table need to be updated?
-    bool playerWin = false; //if player has won
-    bool enemyWin = false; //if enemy has won
-    bool duelFinished = false; //if the duel is over
+    public bool playerWin = false; //if player has won
+    public bool enemyWin = false; //if enemy has won
+    public bool duelFinished = false; //if the duel is over
 
     int playerPos; //player's tile on the board: 0 to 6
     int playerLine; //the right-most tile player controls on the board.
