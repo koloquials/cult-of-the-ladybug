@@ -460,7 +460,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1095183502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 924b5bbcccc2c41cf8390a528fe364b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 478937d1bf070724998d9f87ff10b1c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: []
@@ -474,16 +474,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1095183502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4227f615db5341bcac1c59fd102c46b, type: 3}
+  m_Script: {fileID: 11500000, guid: 54d071e0fc5e65542be446994fa40d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 1394517439}
   enemies:
+  - {fileID: 1095183509}
   - {fileID: 1095183507}
   - {fileID: 1095183509}
-  - {fileID: 1095183509}
-  enemyId: 0
-  tile: {fileID: 1180230911098240, guid: 08c08e2bb1a77477da37c48ce6e43729, type: 2}
+  enemyId: 1
+  tile: {fileID: 1180230911098240, guid: dcebe389154be074a821a3f8f338755e, type: 2}
 --- !u!114 &1095183509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,7 +553,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 615e32332fae742deaf5e71faba67679, type: 3}
+    m_Font: {fileID: 12800000, guid: 6c03688f1574f534880c752feb25708b, type: 3}
     m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
