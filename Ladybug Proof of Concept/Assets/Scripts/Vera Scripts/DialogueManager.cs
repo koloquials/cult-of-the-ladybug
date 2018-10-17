@@ -124,9 +124,9 @@ public class DialogueManager : MonoBehaviour
             {
                 dialogueActive = false;
             }
-            Debug.Log(lineIndex + nodeIndex);
+            //Debug.Log(lineIndex + nodeIndex);
         } catch(System.IndexOutOfRangeException e){
-            Debug.Log("Index out of range???");
+            //Debug.Log("Index out of range???");
             dialogueActive = false;
         }
     }
