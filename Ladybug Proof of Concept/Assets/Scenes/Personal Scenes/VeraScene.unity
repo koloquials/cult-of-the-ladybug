@@ -295,10 +295,10 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Debate Text
+  m_Text: 'Press Space to Start Duel
 
 '
 --- !u!222 &528584854
@@ -788,8 +788,8 @@ GameObject:
   - component: {fileID: 1552525550}
   - component: {fileID: 1552525549}
   - component: {fileID: 1552525553}
-  - component: {fileID: 1552525555}
   - component: {fileID: 1552525554}
+  - component: {fileID: 1552525555}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -809,6 +809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeToLoad: {fileID: 11400000, guid: 25cdf5bdaebd14aa1a6beed1813a55dd, type: 2}
+  informationReward: {fileID: 11400000, guid: 2b3fdf2217d7e4aa298cc4abfe3af7c6, type: 2}
   thisDuelManager: {fileID: 0}
   possibleTrees: []
   npcInfo: {fileID: 0}
@@ -898,7 +899,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1552525548}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54d071e0fc5e65542be446994fa40d04, type: 3}
   m_Name: 
@@ -906,7 +907,7 @@ MonoBehaviour:
   textBox: {fileID: 528584853}
   enemies:
   - {fileID: 1552525554}
-  - {fileID: 1552525555}
+  - {fileID: 1552525554}
   - {fileID: 1552525555}
   enemyId: 1
   tile: {fileID: 1180230911098240, guid: dcebe389154be074a821a3f8f338755e, type: 2}
@@ -1032,7 +1033,7 @@ GameObject:
   - component: {fileID: 1822658871}
   m_Layer: 5
   m_Name: Duel Canvas
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

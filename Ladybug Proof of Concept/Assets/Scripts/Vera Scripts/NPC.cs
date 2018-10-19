@@ -5,6 +5,7 @@ using UnityEngine;
 public class NPC : MonoBehaviour {
 
     public DialogueTree treeToLoad;
+    public DialogueTree informationReward;
     public DuelManager thisDuelManager;
 
     public List<DialogueTree> possibleTrees;
@@ -12,19 +13,18 @@ public class NPC : MonoBehaviour {
     public NpcTemplate npcInfo;
 
     public bool AngryAtPlayer = false;
+    VariableStorage variables;
 
     private void Start()
     {
         possibleTrees = new List<DialogueTree>();
+        variables = FindObjectOfType<VariableStorage>();
     }
 
     private void Update()
     {
         try{
             thisDuelManager = GetComponent<DuelManager>();
-        } catch (System.NullReferenceException){
-            Debug.Log("Duel manager is not enabled yet");
-            return;
-        }
+        } catch (System.NullReferenceException){}
     }
 }
