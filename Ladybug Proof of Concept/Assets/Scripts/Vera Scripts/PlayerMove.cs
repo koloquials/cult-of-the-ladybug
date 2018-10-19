@@ -51,9 +51,6 @@ public class PlayerMove : MonoBehaviour{
             Debug.Log("Interacting with npc");
             dialogue.activeNPC = target;
             dialogue.StartDialogue(dialogue.activeNPC.treeToLoad);
-            //dialogue.activeDuel = target.thisDuelManager;
-          
-
         }
     }
 
