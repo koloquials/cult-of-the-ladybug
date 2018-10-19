@@ -8,11 +8,14 @@ public class DialogueManager : MonoBehaviour
 {
     public bool dialogueActive = false;
     public bool duelActive = false;
+
     public Canvas dialogueCanvas;
     public Canvas duelCanvas;
     TimeManager timeManager;
     Text dialogueText;
+
     public DialogueTree treeToRun;
+
     GameObject duelTrigger;
     public Color normalText, importantText;
 
@@ -38,13 +41,6 @@ public class DialogueManager : MonoBehaviour
     }
     private void Update()
     {
-
-        if(activeNPC!=null){
-            treeToRun = activeNPC.treeToLoad;
-        } else {
-            treeToRun = null;
-            return;
-        }
         if (dialogueActive)
         {
             dialogueCanvas.gameObject.SetActive(true);
@@ -57,12 +53,16 @@ public class DialogueManager : MonoBehaviour
         }
 
         if(duelActive){
-            duelCanvas.gameObject.SetActive(true);
-            activeNPC.GetComponent<DuelManager>().enabled = true;
-            activeDuel = activeNPC.GetComponent<DuelManager>();
-            activeDuel.inDuel = true;
-            if(activeDuel.duelFinished){
-                duelActive = false;
+            EnableDuel();
+            if(activeDuel.duelFinished && !dialogueActive){
+                timeManager.modifier = 1f;
+                if (activeDuel.enemyWin)
+                {
+                    ReprimandPlayer(10f);
+                } else if(activeDuel.playerWin){
+                    Debug.Log("Win");
+                    StartDialogue(activeNPC.informationReward);
+                }
             }
         } else {
             activeNPC.GetComponent<DuelManager>().enabled = false;
@@ -72,15 +72,23 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    public void StartDialogue(DialogueTree treeToRun)
+    public void StartDialogue(DialogueTree tree)
     {
+
+        if (duelActive)
+        {
+            duelActive = false;
+        }
+
         dialogueActive = true;
+        treeToRun = tree;
         timeManager.modifier = 0f;
 
     }
 
     public void StopDialogue()
     {
+        treeToRun = null;
         timeManager.modifier = 1f;
         nodeIndex = 0;
         lineIndex = 0;
@@ -91,15 +99,13 @@ public class DialogueManager : MonoBehaviour
         try
         {
             dialogueText.text = treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line;
-            if (Input.GetKeyUp(KeyCode.E) && dialogueActive)
+            if (Input.GetKeyUp(KeyCode.R) && dialogueActive)
             {
-                Debug.Log("Here");
                 lineIndex++;
             }
 
             if (lineIndex > treeToRun.dialogueNodes[nodeIndex].dialogueLines.Length - 1)
             {
-                Debug.Log("Finished this node");
                 nodeIndex++;
                 lineIndex = 0;
             }
@@ -120,15 +126,26 @@ public class DialogueManager : MonoBehaviour
                 dialogueText.color = normalText;
             }
 
-            if (nodeIndex >= treeToRun.dialogueNodes.Length - 1 && lineIndex> treeToRun.dialogueNodes[nodeIndex].dialogueLines.Length)
+            if (nodeIndex == treeToRun.dialogueNodes.Length - 1 && lineIndex > treeToRun.dialogueNodes[nodeIndex].dialogueLines.Length)
             {
                 dialogueActive = false;
             }
-            //Debug.Log(lineIndex + nodeIndex);
-        } catch(System.IndexOutOfRangeException e){
-            //Debug.Log("Index out of range???");
+        } catch(System.IndexOutOfRangeException){
             dialogueActive = false;
         }
+    }
+
+    void ReprimandPlayer(float timeToSubtract){
+        timeManager.currentTime = (timeManager.currentTime - timeToSubtract);
+        duelActive = false;
+    }
+
+    void EnableDuel(){
+        duelCanvas.gameObject.SetActive(true);
+        activeNPC.GetComponent<DuelManager>().enabled = true;
+        activeDuel = activeNPC.GetComponent<DuelManager>();
+        activeDuel.inDuel = true;
+        timeManager.modifier = 0f;
     }
 
 }
