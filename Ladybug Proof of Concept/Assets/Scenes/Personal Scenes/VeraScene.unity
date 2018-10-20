@@ -557,6 +557,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1424946401}
   - component: {fileID: 1424946402}
+  - component: {fileID: 1424946403}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -597,6 +598,22 @@ MonoBehaviour:
   importantText: {r: 1, g: 0, b: 0, a: 1}
   activeDuel: {fileID: 0}
   activeNPC: {fileID: 0}
+--- !u!114 &1424946403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1424946400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 434c8e9f08a664e13a23137c99624f37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoOne: 0
+  infoTwo: 0
+  infoThree: 0
+  infoFour: 0
+  infoFive: 0
 --- !u!1 &1446439185
 GameObject:
   m_ObjectHideFlags: 0

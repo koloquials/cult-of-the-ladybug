@@ -19,3 +19,4 @@ MonoBehaviour:
   - line: Now go away
     valuableInfo: 0
     duelTrigger: 0
+  informationIndex: 1

@@ -11,7 +11,10 @@ public class DialogueManager : MonoBehaviour
 
     public Canvas dialogueCanvas;
     public Canvas duelCanvas;
+
     TimeManager timeManager;
+    VariableStorage variableStorage;
+
     Text dialogueText;
 
     public DialogueTree treeToRun;
@@ -29,6 +32,7 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         timeManager = FindObjectOfType<TimeManager>();
+        variableStorage = FindObjectOfType<VariableStorage>();
         Transform dt = dialogueCanvas.gameObject.transform.Find("DialogueText");
         dialogueText = dt.GetComponent<Text>();
         dialogueText.color = normalText;
@@ -126,6 +130,8 @@ public class DialogueManager : MonoBehaviour
                 dialogueText.color = normalText;
             }
 
+            UnlockInformation(treeToRun.dialogueNodes[nodeIndex]);
+
             if (nodeIndex == treeToRun.dialogueNodes.Length - 1 && lineIndex > treeToRun.dialogueNodes[nodeIndex].dialogueLines.Length)
             {
                 dialogueActive = false;
@@ -138,6 +144,28 @@ public class DialogueManager : MonoBehaviour
     void ReprimandPlayer(float timeToSubtract){
         timeManager.currentTime = (timeManager.currentTime - timeToSubtract);
         duelActive = false;
+    }
+
+    void UnlockInformation(DialogueNode node){
+        switch(node.informationIndex){
+            case DialogueNode.InformationIndex.Node:
+                break;
+            case DialogueNode.InformationIndex.Info1:
+                variableStorage.infoOne = true;
+                break;
+            case DialogueNode.InformationIndex.Info2:
+                variableStorage.infoTwo = true;
+                break;
+            case DialogueNode.InformationIndex.Info3:
+                variableStorage.infoThree = true;
+                break;
+            case DialogueNode.InformationIndex.Info4:
+                variableStorage.infoFour = true;
+                break;
+            case DialogueNode.InformationIndex.Info5:
+                variableStorage.infoFive = true;
+                break;
+        }
     }
 
     void EnableDuel(){
