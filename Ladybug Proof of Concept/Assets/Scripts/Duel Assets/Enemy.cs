@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour {
+    public string name = "";
     public List<string> dialogue = new List<string>();
     public List<string> options = new List<string>();
     public List<int> types = new List<int>();
