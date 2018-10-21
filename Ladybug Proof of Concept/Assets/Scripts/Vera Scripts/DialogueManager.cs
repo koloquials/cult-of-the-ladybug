@@ -69,9 +69,12 @@ public class DialogueManager : MonoBehaviour
                 }
             }
         } else {
-            activeNPC.GetComponent<DuelManager>().enabled = false;
-            activeDuel = null;
-            duelCanvas.gameObject.SetActive(false);
+            try
+            {
+                activeNPC.GetComponent<DuelManager>().enabled = false;
+                activeDuel = null;
+                duelCanvas.gameObject.SetActive(false);
+            }catch (System.NullReferenceException){}
         }
 
     }
