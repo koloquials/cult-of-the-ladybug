@@ -12,16 +12,17 @@ public class PlayerMove : MonoBehaviour{
     }
     public void Update()
     {
-        if(dialogue.dialogueActive || dialogue == null){
+        if(dialogue.dialogueActive || dialogue == null || dialogue.duelActive){
             return;
         }else{
             MovePlayer();  
+            if (Input.GetKeyUp(KeyCode.E))
+            {
+                CheckForNPC();
+            }
         } 
        
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            CheckForNPC();
-        }
+
     }
 
     void MovePlayer()

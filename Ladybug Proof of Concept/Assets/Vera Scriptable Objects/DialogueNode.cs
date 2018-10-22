@@ -13,4 +13,8 @@ public class DialogueNode : ScriptableObject {
     }
     public string nodeName;
     public DialogueLine[] dialogueLines;
+    public enum InformationIndex {
+        Node, Info1, Info2, Info3, Info4, Info5
+    }
+    public InformationIndex informationIndex;
 }
