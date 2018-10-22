@@ -62,10 +62,18 @@ public class DialogueManager : MonoBehaviour
                 timeManager.modifier = 1f;
                 if (activeDuel.enemyWin)
                 {
-                    ReprimandPlayer(10f);
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        ReprimandPlayer(10f);
+                        activeDuel.Reset();
+                    }
                 } else if(activeDuel.playerWin){
-                    Debug.Log("Win");
-                    StartDialogue(activeNPC.informationReward);
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        Debug.Log("Win");
+                        activeDuel.Reset();
+                        StartDialogue(activeNPC.informationReward);
+                    }
                 }
             }
         } else {
@@ -175,7 +183,7 @@ public class DialogueManager : MonoBehaviour
         duelCanvas.gameObject.SetActive(true);
         activeNPC.GetComponent<DuelManager>().enabled = true;
         activeDuel = activeNPC.GetComponent<DuelManager>();
-        activeDuel.inDuel = true;
+        //activeDuel.inDuel = true;
         timeManager.modifier = 0f;
     }
 
