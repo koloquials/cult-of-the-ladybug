@@ -167,9 +167,10 @@ public class DuelManager : MonoBehaviour {
             CreateTable();
         }
 
-        if ((duelFinished == true && typing == false && playerWin == true) || (duelFinished == true && typing == false && enemyWin == true)){
-            Reset();
-        }
+        //reset
+        //if ((duelFinished == true && typing == false && playerWin == true) || (duelFinished == true && typing == false && enemyWin == true)){
+        //    Reset();
+        //}
 
     }
 
@@ -369,6 +370,8 @@ public class DuelManager : MonoBehaviour {
 
         CreateTable();
         UpdateTable();
+
+        textBox.text = "";
 
     }
 
