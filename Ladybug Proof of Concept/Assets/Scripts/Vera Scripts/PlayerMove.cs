@@ -12,16 +12,17 @@ public class PlayerMove : MonoBehaviour{
     }
     public void Update()
     {
-        if(dialogue.dialogueActive || dialogue == null){
+        if(dialogue.dialogueActive || dialogue == null || dialogue.duelActive){
             return;
         }else{
             MovePlayer();  
+            if (Input.GetKeyUp(KeyCode.E))
+            {
+                CheckForNPC();
+            }
         } 
        
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            CheckForNPC();
-        }
+
     }
 
     void MovePlayer()
@@ -41,7 +42,6 @@ public class PlayerMove : MonoBehaviour{
         var allNps = new List<NPC>(FindObjectsOfType<NPC>());
         var target = allNps.Find(delegate (NPC p)
         {
-            //string.IsNullOrEmpty(p.talkToNode) == false &&
             return (p.transform.position - this.transform.position)
                     .magnitude <= interactionRadius;
 
@@ -50,8 +50,8 @@ public class PlayerMove : MonoBehaviour{
         if (target != null)
         {
             Debug.Log("Interacting with npc");
-            dialogue.treeToRun = target.treeToLoad;
-            dialogue.StartDialogue(dialogue.treeToRun);
+            dialogue.activeNPC = target;
+            dialogue.StartDialogue(dialogue.activeNPC.treeToLoad);
         }
     }
 

@@ -142,8 +142,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bb0d52e8c804c1db91f6f8ee956167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  talkToNode: 
   treeToLoad: {fileID: 11400000, guid: d1b1d3b2b40e99e4d96ca447a18a9721, type: 2}
+  thisDuelManager: {fileID: 0}
+  possibleTrees: []
+  npcInfo: {fileID: 0}
+  AngryAtPlayer: 0
 --- !u!50 &29556961
 Rigidbody2D:
   serializedVersion: 4
@@ -555,9 +558,12 @@ MonoBehaviour:
   dialogueActive: 0
   duelActive: 0
   dialogueCanvas: {fileID: 2023277897}
+  duelCanvas: {fileID: 0}
   treeToRun: {fileID: 0}
   normalText: {r: 1, g: 1, b: 1, a: 1}
   importantText: {r: 1, g: 0.9983577, b: 0, a: 1}
+  activeDuel: {fileID: 0}
+  activeNPC: {fileID: 0}
 --- !u!1 &1446439185
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,8 +772,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bb0d52e8c804c1db91f6f8ee956167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  talkToNode: 
   treeToLoad: {fileID: 11400000, guid: e05722ae307a7e34984a017d40527657, type: 2}
+  thisDuelManager: {fileID: 0}
+  possibleTrees: []
+  npcInfo: {fileID: 0}
+  AngryAtPlayer: 0
 --- !u!50 &1552525550
 Rigidbody2D:
   serializedVersion: 4
