@@ -251,7 +251,9 @@ public class DuelManager : MonoBehaviour {
                 playerLine += 1;
                 enemyLine += 1;
             }
-            playerPos += 1;
+            if (playerPos+1 >= playerLine){
+                playerPos += 1;
+            }
 
         } else{ //insult
             if (enemyType == 1){
@@ -270,7 +272,14 @@ public class DuelManager : MonoBehaviour {
                 playerLine += 0;
                 enemyLine += 0;
             }
+            if (playerPos+1 >= playerLine){
             playerPos += 1;
+            }
+        }
+
+        if (playerLine == enemyLine){
+            playerLine--;
+            enemyLine++;
         }
     }
 
@@ -294,16 +303,20 @@ public class DuelManager : MonoBehaviour {
                 enemyPos += 1;
             }
             if (enemyType == 3){
+                if (enemyPos-1 >= enemyLine){
                 enemyPos -= 1;
+                }
             }
             else if (enemyType == 4){
-                enemyPos -= 0;
+                if (enemyPos-1 >= enemyLine){
+                enemyPos -= 1;
+                }
             }
 
-            if (enemyPos <= playerLine){ //enemy pushes forward into player space if on the edge.
-                playerLine = enemyPos - 1;
-                enemyLine = enemyPos;
-            }
+            //if (enemyPos <= playerLine){ //enemy pushes forward into player space if on the edge.
+            //    playerLine = enemyPos - 1;
+            //    enemyLine = enemyPos;
+            //}
 
             if (playerPos < 0){ //idk why this needed its own if statement but it did.
                 enemyWin = true; ;
