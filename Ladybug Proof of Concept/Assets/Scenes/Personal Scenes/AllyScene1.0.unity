@@ -143,10 +143,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeToLoad: {fileID: 11400000, guid: d1b1d3b2b40e99e4d96ca447a18a9721, type: 2}
-  thisDuelManager: {fileID: 0}
+  informationReward: {fileID: 11400000, guid: 2b3fdf2217d7e4aa298cc4abfe3af7c6, type: 2}
+  thisDuelManager: {fileID: 1552525555}
   possibleTrees: []
-  npcInfo: {fileID: 0}
+  npcInfo: {fileID: 11400000, guid: 1ae2a2ae05c7e40c89f64681f863307b, type: 2}
   AngryAtPlayer: 0
+  attitude: 0
 --- !u!50 &29556961
 Rigidbody2D:
   serializedVersion: 4
@@ -344,6 +346,115 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 449340366}
   m_CullTransparentMesh: 0
+--- !u!1001 &526863646
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005998412759888, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079803355971776, guid: b5c4e7344ebc79b4baa58dccfcba9c47, type: 2}
+      propertyPath: m_Name
+      value: Duel Canvas (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b5c4e7344ebc79b4baa58dccfcba9c47, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1147942804
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,11 +669,11 @@ MonoBehaviour:
   dialogueActive: 0
   duelActive: 0
   dialogueCanvas: {fileID: 2023277897}
-  duelCanvas: {fileID: 0}
+  duelCanvas: {fileID: 1586946882}
   treeToRun: {fileID: 0}
   normalText: {r: 1, g: 1, b: 1, a: 1}
   importantText: {r: 1, g: 0.9983577, b: 0, a: 1}
-  activeDuel: {fileID: 0}
+  activeDuel: {fileID: 1552525555}
   activeNPC: {fileID: 0}
 --- !u!1 &1446439185
 GameObject:
@@ -754,6 +865,9 @@ GameObject:
   - component: {fileID: 1552525551}
   - component: {fileID: 1552525550}
   - component: {fileID: 1552525549}
+  - component: {fileID: 1552525555}
+  - component: {fileID: 1552525554}
+  - component: {fileID: 1552525553}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -773,10 +887,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeToLoad: {fileID: 11400000, guid: e05722ae307a7e34984a017d40527657, type: 2}
-  thisDuelManager: {fileID: 0}
+  informationReward: {fileID: 11400000, guid: 2b3fdf2217d7e4aa298cc4abfe3af7c6, type: 2}
+  thisDuelManager: {fileID: 1552525555}
   possibleTrees: []
-  npcInfo: {fileID: 0}
+  npcInfo: {fileID: 11400000, guid: dfaa959e329674e2da24fd2a53459270, type: 2}
   AngryAtPlayer: 0
+  attitude: 0
 --- !u!50 &1552525550
 Rigidbody2D:
   serializedVersion: 4
@@ -856,6 +972,69 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1552525553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1552525548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa2816483e7e64641b9d87bd83a47f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  dialogue: []
+  options: []
+  types: 
+--- !u!114 &1552525554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1552525548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478937d1bf070724998d9f87ff10b1c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  dialogue: []
+  options: []
+  types: 
+--- !u!114 &1552525555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1552525548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d071e0fc5e65542be446994fa40d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 1682307478}
+  enemies:
+  - {fileID: 1552525553}
+  - {fileID: 1552525554}
+  - {fileID: 0}
+  enemyId: 0
+  tile: {fileID: 1180230911098240, guid: dcebe389154be074a821a3f8f338755e, type: 2}
+  inDuel: 0
+  playerWin: 0
+  enemyWin: 0
+  duelFinished: 0
+--- !u!223 &1586946882 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 223763088355728074, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+    type: 2}
+  m_PrefabInternal: {fileID: 526863646}
+--- !u!114 &1682307478 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114502603372546474, guid: b5c4e7344ebc79b4baa58dccfcba9c47,
+    type: 2}
+  m_PrefabInternal: {fileID: 526863646}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1763048855
 GameObject:
   m_ObjectHideFlags: 0
