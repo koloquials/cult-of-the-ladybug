@@ -19,16 +19,26 @@ public class NPC : MonoBehaviour {
     public Attitude attitude;
     VariableStorage variables;
 
+    public List<NPC> otherNPC;
+
+    [HideInInspector]
+    public GameObject interactionIcon;
+
     private void Start()
     {
         possibleTrees = new List<DialogueTree>();
         variables = FindObjectOfType<VariableStorage>();
+        interactionIcon = this.gameObject.transform.Find("InteractionIcon").gameObject;
+        interactionIcon.SetActive(false);
+        otherNPC = new List<NPC>(FindObjectsOfType<NPC>());
+        otherNPC.Remove(this);
     }
 
     private void Update()
     {
         try{
             thisDuelManager = GetComponent<DuelManager>();
+            CheckForPlayer();
             switch (attitude){
                 case Attitude.AngryIfLose:
                     if(thisDuelManager.playerWin){
@@ -53,23 +63,32 @@ public class NPC : MonoBehaviour {
         } catch (System.NullReferenceException){}
     }
 
+
+    void CheckForPlayer()
+    {
+        var player = FindObjectOfType<PlayerMove>();
+        if((player.gameObject.transform.position - transform.position).magnitude <= player.interactionRadius){
+            interactionIcon.SetActive(true);
+        } else {
+            interactionIcon.SetActive(false);
+        }
+    }
+
     void SympatheticNPC(){
-        List<NPC> otherNPC = new List<NPC>(FindObjectsOfType<NPC>());
-        if (otherNPC.Count!=0)
+       
+        foreach (var npc in otherNPC)
         {
-            foreach (var npc in otherNPC)
+            for (int i = 0; i < npcInfo.npcRelationships.Length; i++)
             {
-                for (int i = 0; i < npc.npcInfo.npcRelationships.Length; i++)
+                if (npcInfo.npcRelationships[i].person == npc.npcInfo)
                 {
-                    if (npc.npcInfo.npcRelationships[i].person == this.npcInfo)
+                    if (npc.AngryAtPlayer)
                     {
-                        if (npc.AngryAtPlayer)
-                        {
-                            AngryAtPlayer= true;
-                        }
-                    }
+                        AngryAtPlayer = true;
+                    } 
                 }
             }
-        } 
+        }
+         
     }
 }

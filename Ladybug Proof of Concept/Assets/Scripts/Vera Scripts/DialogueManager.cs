@@ -14,8 +14,11 @@ public class DialogueManager : MonoBehaviour
 
     TimeManager timeManager;
     VariableStorage variableStorage;
+    GameObject player;
 
     Text dialogueText;
+    Text nameText;
+    Image characterImage;
 
     public DialogueTree treeToRun;
 
@@ -29,11 +32,20 @@ public class DialogueManager : MonoBehaviour
     private int nodeIndex = 0;
     private int lineIndex = 0;
 
+    float letterPause = 0.04f; //amt of time before next letter prints.
+    float extraPause = 0.1f; //extra pause used on commas and periods.
+    bool typing = false; //is the coroutine typing?
+    bool lineComplete = false; //to ensure a line doesn't get repeated.
+    Coroutine type; //holds the typing coroutine
+
     private void Start()
     {
         timeManager = FindObjectOfType<TimeManager>();
         variableStorage = FindObjectOfType<VariableStorage>();
         Transform dt = dialogueCanvas.gameObject.transform.Find("DialogueText");
+        Transform it = dialogueCanvas.gameObject.transform.Find("Character");
+        nameText = dialogueCanvas.gameObject.transform.Find("NameText").GetComponent<Text>();
+        characterImage = it.GetComponent<Image>();
         dialogueText = dt.GetComponent<Text>();
         dialogueText.color = normalText;
         duelTrigger = GameObject.Find("DuelTrigger");
@@ -41,6 +53,8 @@ public class DialogueManager : MonoBehaviour
         dialogueCanvas.gameObject.SetActive(false);
         duelCanvas.gameObject.SetActive(false);
         activeDuel = null;
+        player = GameObject.FindGameObjectWithTag("Player");
+
 
     }
     private void Update()
@@ -50,15 +64,17 @@ public class DialogueManager : MonoBehaviour
             dialogueCanvas.gameObject.SetActive(true);
             RunDialogue();
         }
-        else if(!dialogueActive || duelActive)
+        else if (!dialogueActive || duelActive)
         {
             dialogueCanvas.gameObject.SetActive(false);
             StopDialogue();
         }
 
-        if(duelActive){
+        if (duelActive)
+        {
             EnableDuel();
-            if(activeDuel.duelFinished && !dialogueActive){
+            if (activeDuel.duelFinished && !dialogueActive)
+            {
                 timeManager.modifier = 1f;
                 if (activeDuel.enemyWin)
                 {
@@ -67,7 +83,9 @@ public class DialogueManager : MonoBehaviour
                         ReprimandPlayer(10f);
                         activeDuel.Reset();
                     }
-                } else if(activeDuel.playerWin){
+                }
+                else if (activeDuel.playerWin)
+                {
                     if (Input.GetKeyDown(KeyCode.Space))
                     {
                         Debug.Log("Win");
@@ -76,13 +94,16 @@ public class DialogueManager : MonoBehaviour
                     }
                 }
             }
-        } else {
+        }
+        else
+        {
             try
             {
                 activeNPC.GetComponent<DuelManager>().enabled = false;
                 activeDuel = null;
                 duelCanvas.gameObject.SetActive(false);
-            }catch (System.NullReferenceException){}
+            }
+            catch (System.NullReferenceException) { }
         }
 
     }
@@ -107,16 +128,47 @@ public class DialogueManager : MonoBehaviour
         timeManager.modifier = 1f;
         nodeIndex = 0;
         lineIndex = 0;
+        if (!duelActive)
+        {
+            activeNPC = null;
+        }
     }
 
     void RunDialogue()
     {
         try
         {
-            dialogueText.text = treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line;
-            if (Input.GetKeyUp(KeyCode.R) && dialogueActive)
+            //dialogueText.text = treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line;
+            nameText.text = activeNPC.npcInfo.npcName;
+            characterImage.sprite = activeNPC.npcInfo.npcSprites[0].thisSprite;
+
+            if (typing == false && lineComplete == false)
+            {
+                dialogueText.text = "";
+                type = StartCoroutine(TypeText(treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line));
+            }
+
+            if (treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].valuableInfo)
+            {
+                dialogueText.color = importantText;
+            }
+            else
+            {
+                dialogueText.color = normalText;
+            }
+
+            if (Input.GetKeyDown(KeyCode.E) && typing && lineComplete == false)
+            {
+                StopCoroutine(type);
+                typing = false;
+                dialogueText.text = (treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line);
+                lineComplete = true;
+            }
+
+            else if (Input.GetKeyDown(KeyCode.E) && dialogueActive && lineComplete)
             {
                 lineIndex++;
+                lineComplete = false;
             }
 
             if (lineIndex > treeToRun.dialogueNodes[nodeIndex].dialogueLines.Length - 1)
@@ -125,20 +177,18 @@ public class DialogueManager : MonoBehaviour
                 lineIndex = 0;
             }
 
-            if(treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].duelTrigger){
-                duelTrigger.SetActive(true);   
-                if(Input.GetKeyUp(KeyCode.Space)){
+            if (treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].duelTrigger)
+            {
+                duelTrigger.SetActive(true);
+                if (Input.GetKeyUp(KeyCode.Space))
+                {
                     duelActive = true;
                     dialogueActive = false;
                 }
-            } else {
-                duelTrigger.SetActive(false);
             }
-
-            if(treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].valuableInfo){
-                dialogueText.color = importantText;
-            } else {
-                dialogueText.color = normalText;
+            else
+            {
+                duelTrigger.SetActive(false);
             }
 
             UnlockInformation(treeToRun.dialogueNodes[nodeIndex]);
@@ -147,18 +197,23 @@ public class DialogueManager : MonoBehaviour
             {
                 dialogueActive = false;
             }
-        } catch(System.IndexOutOfRangeException){
+        }
+        catch (System.IndexOutOfRangeException)
+        {
             dialogueActive = false;
         }
     }
 
-    void ReprimandPlayer(float timeToSubtract){
+    void ReprimandPlayer(float timeToSubtract)
+    {
         timeManager.currentTime = (timeManager.currentTime - timeToSubtract);
         duelActive = false;
     }
 
-    void UnlockInformation(DialogueNode node){
-        switch(node.informationIndex){
+    void UnlockInformation(DialogueNode node)
+    {
+        switch (node.informationIndex)
+        {
             case DialogueNode.InformationIndex.Node:
                 break;
             case DialogueNode.InformationIndex.Info1:
@@ -179,12 +234,43 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void EnableDuel(){
+    void EnableDuel()
+    {
         duelCanvas.gameObject.SetActive(true);
         activeNPC.GetComponent<DuelManager>().enabled = true;
         activeDuel = activeNPC.GetComponent<DuelManager>();
         //activeDuel.inDuel = true;
         timeManager.modifier = 0f;
+    }
+
+    IEnumerator TypeText(string message) //scrolling text!
+    {
+        typing = true;
+        foreach (char letter in message.ToCharArray())
+        {
+            dialogueText.text += letter;
+
+            //if (typeSound1 && typeSound2){ //[WIP] Sound! Can be implemented later!
+            //    SoundManager.instance.RandomizeSfx(typeSound1, typeSound2);
+            //    yield return 0;
+            //}
+
+            if (letter == '.')
+            {
+                yield return new WaitForSeconds(letterPause + extraPause + extraPause);
+                Debug.Log("period.");
+            }
+            else if (letter == ',' || letter == ';')
+            {
+                yield return new WaitForSeconds(letterPause + extraPause);
+            }
+            else
+            {
+                yield return new WaitForSeconds(letterPause);
+            }
+        }
+        typing = false;
+        lineComplete = true;
     }
 
 }
