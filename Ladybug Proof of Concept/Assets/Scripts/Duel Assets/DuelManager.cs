@@ -86,6 +86,7 @@ public class DuelManager : MonoBehaviour {
             if (playerWin == true){
                 textBox.text = (enemies[enemyId].options[optStep + (playerType-5)] + "\n\nPlayer wins!"); //displays the winning dialogue option, too!
                 duelFinished = true;
+                inDuel = false;
 
             }else if (enemyWin == true){
                 //textBox.text = (enemies[enemyId].dialogue[step] + "\n\nEnemy wins!"); //displays the winning dialogue option, too!
@@ -93,12 +94,14 @@ public class DuelManager : MonoBehaviour {
                 type = StartCoroutine(TypeText("", enemies[enemyId].dialogue[step], "\n\nEnemy wins!"));
                 typingLose = true;
                 duelFinished = true;
+                inDuel = false;
                 if (Input.GetKeyDown(KeyCode.Space) && typing == true && typingLose == true)
                 {
                     StopCoroutine(type);
                     typing = false;
                     textBox.text = (enemies[enemyId].dialogue[step] + "\n\nEnemy wins!");
                     typingLose = false;
+                    inDuel = false;
                 }
             }
                 else
