@@ -14,8 +14,10 @@ public class DialogueManager : MonoBehaviour
 
     TimeManager timeManager;
     VariableStorage variableStorage;
+    PlayerMove player;
 
     Text dialogueText;
+    Image characterImage;
 
     public DialogueTree treeToRun;
 
@@ -34,6 +36,8 @@ public class DialogueManager : MonoBehaviour
         timeManager = FindObjectOfType<TimeManager>();
         variableStorage = FindObjectOfType<VariableStorage>();
         Transform dt = dialogueCanvas.gameObject.transform.Find("DialogueText");
+        Transform it = dialogueCanvas.gameObject.transform.Find("Character");
+        characterImage = it.GetComponent<Image>();
         dialogueText = dt.GetComponent<Text>();
         dialogueText.color = normalText;
         duelTrigger = GameObject.Find("DuelTrigger");
@@ -41,6 +45,7 @@ public class DialogueManager : MonoBehaviour
         dialogueCanvas.gameObject.SetActive(false);
         duelCanvas.gameObject.SetActive(false);
         activeDuel = null;
+        player = FindObjectOfType<PlayerMove>();
 
     }
     private void Update()
@@ -49,11 +54,14 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueCanvas.gameObject.SetActive(true);
             RunDialogue();
+            player.enabled = false;
         }
         else if(!dialogueActive || duelActive)
         {
             dialogueCanvas.gameObject.SetActive(false);
             StopDialogue();
+        } else if(!dialogueActive && !duelActive){
+            player.enabled = true;
         }
 
         if(duelActive){
@@ -114,7 +122,8 @@ public class DialogueManager : MonoBehaviour
         try
         {
             dialogueText.text = treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line;
-            if (Input.GetKeyUp(KeyCode.R) && dialogueActive)
+            characterImage.sprite = activeNPC.npcInfo.npcSprites[0].thisSprite;
+            if (Input.GetKeyUp(KeyCode.E) && dialogueActive)
             {
                 lineIndex++;
             }
