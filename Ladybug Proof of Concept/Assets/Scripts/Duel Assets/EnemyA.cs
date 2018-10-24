@@ -9,7 +9,7 @@ public class EnemyA : Enemy {
         //items to replace will be {inside these brackets!}, write inside them/follow their instructions and then delete the brackets!
         name = "[JERRY]\n";
 
-        dialogue.Add("\n“Like hell I’m tellin anything, ya nosey jerkwad!”");
+        dialogue.Add("\n“Like hell I’m tellin ya anything, ya nosey jerkwad!”");
 
         dialogue.Add("[DUEL:START]\n");
         options.Add("Sorry...I didn’t mean to offend you.\n");

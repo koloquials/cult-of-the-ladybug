@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Name: ACon1
   m_EditorClassIdentifier: 
   nodeName: 
-  dialogueLines: []
+  dialogueLines:
+  - line: "I ain\u2019t tellin you anything, you\u2019ve got no determination."
+    valuableInfo: 0
+    duelTrigger: 0
   informationIndex: 0

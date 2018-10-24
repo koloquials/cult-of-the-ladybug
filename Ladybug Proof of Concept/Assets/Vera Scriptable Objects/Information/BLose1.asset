@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Name: BLose1
   m_EditorClassIdentifier: 
   nodeName: 
-  dialogueLines: []
+  dialogueLines:
+  - line: 'Time Lost: #:##'
+    valuableInfo: 0
+    duelTrigger: 0
   informationIndex: 0
