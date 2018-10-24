@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Name: Person A
   m_EditorClassIdentifier: 
   npcName: Person A
+  npcSprites:
+  - spriteName: Base
+    thisSprite: {fileID: 21300000, guid: abe0d25ad14314609b949578b8eae746, type: 3}
   npcRelationships:
   - person: {fileID: 11400000, guid: 1ae2a2ae05c7e40c89f64681f863307b, type: 2}
     nature: 0

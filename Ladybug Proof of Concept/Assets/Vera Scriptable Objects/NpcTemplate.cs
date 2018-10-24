@@ -18,7 +18,13 @@ public class NpcTemplate : ScriptableObject {
     public enum RelationshipNature{
         Positive, Negative, StronglyPositive, StronglyNegative, Neutral
     }
+    [System.Serializable]
+    public struct UISprite{
+        public string spriteName;
+        public Sprite thisSprite;
+    }
 
+    public UISprite[] npcSprites;
     public Relationship[] npcRelationships;
 
 }
