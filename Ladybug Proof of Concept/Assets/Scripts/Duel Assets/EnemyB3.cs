@@ -59,7 +59,7 @@ public class EnemyB3 : Enemy {
         options.Add("That sucks and all, but you still haven’t really answered my question.\n");
         options.Add("WHERE WERE YOU JERI???\n");
         options.Add("Oh boo hoo, woe is you.\n");//here is where the script ends
-        dialogue.Add("\"FUCK OFF ALREADY!!!\"\n");
+        dialogue.Add("\"It’s their fault our shop shut down! And that jerk had the gaul to have a party and invite us right after.\"\n");
         types.Add(3); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
     }
 	
