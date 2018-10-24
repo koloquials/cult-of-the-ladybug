@@ -16,7 +16,7 @@ public class PlayerMove : MonoBehaviour{
             return;
         }else {
             MovePlayer();  
-            if (Input.GetKeyUp(KeyCode.E))
+            if (Input.GetKeyUp(KeyCode.Space))
             {
                 CheckForNPC();
             }
