@@ -8,6 +8,8 @@ public class NPC : MonoBehaviour {
     public DialogueTree informationReward;
     public DuelManager thisDuelManager;
 
+    public int newDuelId;
+
     public List<DialogueTree> possibleTrees;
 
     public NpcTemplate npcInfo;
@@ -58,6 +60,10 @@ public class NPC : MonoBehaviour {
                         AngryAtPlayer = true;
                     }
                     break;
+            }
+
+            if(AngryAtPlayer){
+                thisDuelManager.enemyId = newDuelId;
             }
 
         } catch (System.NullReferenceException){}
