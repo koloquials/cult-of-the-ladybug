@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Name: BCon3
   m_EditorClassIdentifier: 
   nodeName: 
-  dialogueLines: []
+  dialogueLines:
+  - line: "Listen, I really can\u2019t tell you anything else. Sorry."
+    valuableInfo: 0
+    duelTrigger: 0
   informationIndex: 0

@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Name: ACon2
   m_EditorClassIdentifier: 
   nodeName: 
-  dialogueLines: []
+  dialogueLines:
+  - line: "FUCK OFF, SISTER-BULLY OR I\u201DLL BEAT YOUR ASS!"
+    valuableInfo: 0
+    duelTrigger: 0
   informationIndex: 0
