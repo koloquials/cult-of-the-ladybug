@@ -14,7 +14,7 @@ public class PlayerMove : MonoBehaviour{
     {
         if(dialogue.dialogueActive || dialogue == null || dialogue.duelActive){
             return;
-        }else{
+        }else {
             MovePlayer();  
             if (Input.GetKeyUp(KeyCode.E))
             {
@@ -44,14 +44,18 @@ public class PlayerMove : MonoBehaviour{
         {
             return (p.transform.position - this.transform.position)
                     .magnitude <= interactionRadius;
-
+            
         });
 
-        if (target != null)
+        if (target != null && dialogue.activeNPC == null)
         {
-            Debug.Log("Interacting with npc");
-            dialogue.activeNPC = target;
-            dialogue.StartDialogue(dialogue.activeNPC.treeToLoad);
+           
+                Debug.Log("Interacting with npc");
+                dialogue.activeNPC = target;
+                dialogue.StartDialogue(dialogue.activeNPC.treeToLoad);
+
+        } else {
+            return;
         }
     }
 
