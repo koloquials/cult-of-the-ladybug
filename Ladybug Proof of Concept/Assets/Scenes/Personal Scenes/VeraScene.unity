@@ -243,6 +243,7 @@ MonoBehaviour:
   treeToLoad: {fileID: 11400000, guid: d1b1d3b2b40e99e4d96ca447a18a9721, type: 2}
   informationReward: {fileID: 11400000, guid: 2b3fdf2217d7e4aa298cc4abfe3af7c6, type: 2}
   thisDuelManager: {fileID: 0}
+  newDuelId: 2
   possibleTrees: []
   npcInfo: {fileID: 11400000, guid: 1ae2a2ae05c7e40c89f64681f863307b, type: 2}
   AngryAtPlayer: 0
@@ -1263,8 +1264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71a7c17bfcae640a4997be68134652e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueActive: 0
-  duelActive: 0
+  currentGameState: 0
   dialogueCanvas: {fileID: 2023277897}
   duelCanvas: {fileID: 1822658873}
   treeToRun: {fileID: 0}
@@ -1502,6 +1502,7 @@ MonoBehaviour:
   treeToLoad: {fileID: 11400000, guid: e05722ae307a7e34984a017d40527657, type: 2}
   informationReward: {fileID: 11400000, guid: 2b3fdf2217d7e4aa298cc4abfe3af7c6, type: 2}
   thisDuelManager: {fileID: 0}
+  newDuelId: 2
   possibleTrees: []
   npcInfo: {fileID: 11400000, guid: dfaa959e329674e2da24fd2a53459270, type: 2}
   AngryAtPlayer: 0

@@ -6,8 +6,10 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    public bool dialogueActive = false;
-    public bool duelActive = false;
+    public enum GameState{
+        DialogueActive, DuelActive, OverworldActive
+    }
+    public GameState currentGameState;
 
     public Canvas dialogueCanvas;
     public Canvas duelCanvas;
@@ -54,26 +56,27 @@ public class DialogueManager : MonoBehaviour
         duelCanvas.gameObject.SetActive(false);
         activeDuel = null;
         player = GameObject.FindGameObjectWithTag("Player");
+        currentGameState = GameState.OverworldActive;
 
 
     }
     private void Update()
     {
-        if (dialogueActive)
+        if (currentGameState==GameState.DialogueActive)
         {
             dialogueCanvas.gameObject.SetActive(true);
             RunDialogue();
         }
-        else if (!dialogueActive || duelActive)
+        else if (currentGameState!=GameState.DialogueActive)
         {
             dialogueCanvas.gameObject.SetActive(false);
             StopDialogue();
         }
 
-        if (duelActive)
+        if (currentGameState==GameState.DuelActive)
         {
             EnableDuel();
-            if (activeDuel.duelFinished && !dialogueActive)
+            if (activeDuel.duelFinished && currentGameState!=GameState.DialogueActive)
             {
                 timeManager.modifier = 1f;
                 if (activeDuel.enemyWin)
@@ -110,13 +113,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(DialogueTree tree)
     {
-
-        if (duelActive)
-        {
-            duelActive = false;
-        }
-
-        dialogueActive = true;
+        currentGameState = GameState.DialogueActive;
         treeToRun = tree;
         timeManager.modifier = 0f;
 
@@ -128,7 +125,7 @@ public class DialogueManager : MonoBehaviour
         timeManager.modifier = 1f;
         nodeIndex = 0;
         lineIndex = 0;
-        if (!duelActive)
+        if (currentGameState!=GameState.DuelActive)
         {
             activeNPC = null;
         }
@@ -165,7 +162,7 @@ public class DialogueManager : MonoBehaviour
                 lineComplete = true;
             }
 
-            else if (Input.GetKeyDown(KeyCode.E) && dialogueActive && lineComplete)
+            else if (Input.GetKeyDown(KeyCode.E) && currentGameState==GameState.DialogueActive && lineComplete)
             {
                 lineIndex++;
                 lineComplete = false;
@@ -182,8 +179,7 @@ public class DialogueManager : MonoBehaviour
                 duelTrigger.SetActive(true);
                 if (Input.GetKeyUp(KeyCode.Space))
                 {
-                    duelActive = true;
-                    dialogueActive = false;
+                    currentGameState = GameState.DuelActive;
                 }
             }
             else
@@ -195,19 +191,19 @@ public class DialogueManager : MonoBehaviour
 
             if (nodeIndex == treeToRun.dialogueNodes.Length - 1 && lineIndex > treeToRun.dialogueNodes[nodeIndex].dialogueLines.Length)
             {
-                dialogueActive = false;
+                currentGameState = GameState.OverworldActive;
             }
         }
         catch (System.IndexOutOfRangeException)
         {
-            dialogueActive = false;
+            currentGameState = GameState.OverworldActive;
         }
     }
 
     void ReprimandPlayer(float timeToSubtract)
     {
         timeManager.currentTime = (timeManager.currentTime - timeToSubtract);
-        duelActive = false;
+        currentGameState = GameState.OverworldActive;
     }
 
     void UnlockInformation(DialogueNode node)
@@ -239,7 +235,6 @@ public class DialogueManager : MonoBehaviour
         duelCanvas.gameObject.SetActive(true);
         activeNPC.GetComponent<DuelManager>().enabled = true;
         activeDuel = activeNPC.GetComponent<DuelManager>();
-        //activeDuel.inDuel = true;
         timeManager.modifier = 0f;
     }
 

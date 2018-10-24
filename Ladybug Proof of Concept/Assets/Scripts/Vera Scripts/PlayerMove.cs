@@ -12,7 +12,7 @@ public class PlayerMove : MonoBehaviour{
     }
     public void Update()
     {
-        if(dialogue.dialogueActive || dialogue == null || dialogue.duelActive){
+        if(dialogue==null || dialogue.currentGameState!=DialogueManager.GameState.OverworldActive){
             return;
         }else {
             MovePlayer();  
