@@ -62,7 +62,7 @@ public class EnemyB : Enemy {
         dialogue.Add("\"FUCK OFF ALREADY!!!\"\n");
         types.Add(3); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
     }
-}
+
 	
 	// Update is called once per frame
 	void Update () {
