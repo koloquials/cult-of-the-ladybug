@@ -46,7 +46,7 @@ public class DuelManager : MonoBehaviour {
     void Update () {
 
 
-        if (Input.GetKeyDown(KeyCode.Space) && inDuel == false && duelFinished == false && typing == false){
+        if (inDuel == false && duelFinished == false && typing == false){
             //textBox.text = enemies[enemyId].dialogue[step]; //introduction text. limited to only one line of dialogue.
             textBox.text = "";
             type = StartCoroutine(TypeText(enemies[enemyId].name, enemies[enemyId].dialogue[step], ("\n\n[space]")));
@@ -180,7 +180,6 @@ public class DuelManager : MonoBehaviour {
             //}
             if (letter == '.'){
                 yield return new WaitForSeconds (letterPause + extraPause + extraPause);
-                Debug.Log("period.");
             } else if (letter == ',' || letter == ';'){
                 yield return new WaitForSeconds(letterPause + extraPause);
             } else {
