@@ -12,5 +12,12 @@ MonoBehaviour:
   m_Name: BCon2
   m_EditorClassIdentifier: 
   nodeName: 
-  dialogueLines: []
+  dialogueLines:
+  - line: "So we can talk calmly now? Good! Okay so um,  you wanna know about Jerry,
+      right? He can be a tough nut to crack, for sure. But he and the host were actually
+      close friends since kindergarten. Sure, *they fought sometimes, and sometimes
+      Jerry got outta hand*. But he couldn\u2019t take part in something like this...could
+      he?"
+    valuableInfo: 0
+    duelTrigger: 0
   informationIndex: 0

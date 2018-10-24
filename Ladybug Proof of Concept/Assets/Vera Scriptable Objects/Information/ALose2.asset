@@ -12,5 +12,12 @@ MonoBehaviour:
   m_Name: ALose2
   m_EditorClassIdentifier: 
   nodeName: 
-  dialogueLines: []
+  dialogueLines:
+  - line: "Man, you are pathetic. Can\u2019t even hold a conversation, downright pitiful.
+      Kinda like Moonchild, actually. Gah, fine whatever. The host and I are friends,
+      best friends. I came here tonight *to work through a fight we had. Moonchild
+      came along as emotional support.* The guy just wouldn\u2019t listen though.
+      He makes me so angry sometimes! Well, he used to. Time Lost: #:##"
+    valuableInfo: 0
+    duelTrigger: 0
   informationIndex: 0
