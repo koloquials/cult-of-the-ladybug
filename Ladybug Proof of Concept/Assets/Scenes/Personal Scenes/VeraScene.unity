@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 208066420}
   - component: {fileID: 208066419}
   - component: {fileID: 208066418}
+  - component: {fileID: 208066424}
   - component: {fileID: 208066417}
   - component: {fileID: 208066416}
   - component: {fileID: 208066423}
@@ -186,7 +187,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 208066415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa2816483e7e64641b9d87bd83a47f9d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ae0c24cfc78c01469fe26751ecf3f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
@@ -201,7 +202,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 208066415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 478937d1bf070724998d9f87ff10b1c9, type: 3}
+  m_Script: {fileID: 11500000, guid: a885add87c313bf4995c6bd587ecbe0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
@@ -221,10 +222,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textBox: {fileID: 528584853}
   enemies:
-  - {fileID: 208066417}
-  - {fileID: 208066417}
   - {fileID: 208066416}
-  enemyId: 1
+  - {fileID: 208066417}
+  - {fileID: 208066424}
+  enemyId: 0
   tile: {fileID: 1180230911098240, guid: dcebe389154be074a821a3f8f338755e, type: 2}
   inDuel: 0
   playerWin: 0
@@ -354,12 +355,27 @@ MonoBehaviour:
   variables: {fileID: 0}
   otherNPC: []
   interactionIcon: {fileID: 0}
-  mainTree1: {fileID: 0}
-  mainTree2: {fileID: 0}
-  mainTree3: {fileID: 0}
-  loopTree1: {fileID: 0}
-  loopTree2: {fileID: 0}
-  loopTree3: {fileID: 0}
+  mainTree1: {fileID: 11400000, guid: f48ec36ae1345be4b9f27cb645f41bd3, type: 2}
+  mainTree2: {fileID: 11400000, guid: 672f268dc20b60648b50f8ac012a0cb7, type: 2}
+  mainTree3: {fileID: 11400000, guid: 098680c52aeb6f6458523da505ce4db1, type: 2}
+  loopTree1: {fileID: 11400000, guid: f48ec36ae1345be4b9f27cb645f41bd3, type: 2}
+  loopTree2: {fileID: 11400000, guid: 672f268dc20b60648b50f8ac012a0cb7, type: 2}
+  loopTree3: {fileID: 11400000, guid: 098680c52aeb6f6458523da505ce4db1, type: 2}
+--- !u!114 &208066424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 208066415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e3a3efc9a59a94ba90bfb9bb5f16a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  dialogue: []
+  options: []
+  types: 
 --- !u!1 &219078520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,8 +1526,9 @@ GameObject:
   - component: {fileID: 1552525550}
   - component: {fileID: 1552525549}
   - component: {fileID: 1552525553}
-  - component: {fileID: 1552525554}
+  - component: {fileID: 1552525557}
   - component: {fileID: 1552525555}
+  - component: {fileID: 1552525554}
   - component: {fileID: 1552525556}
   m_Layer: 0
   m_Name: Person A
@@ -1636,12 +1653,12 @@ MonoBehaviour:
   textBox: {fileID: 528584853}
   enemies:
   - {fileID: 1552525554}
-  - {fileID: 1552525554}
   - {fileID: 1552525555}
-  enemyId: 1
+  - {fileID: 1552525557}
+  enemyId: 0
   tile: {fileID: 1180230911098240, guid: dcebe389154be074a821a3f8f338755e, type: 2}
   inDuel: 0
-  playerWin: 0
+  playerWin: 1
   enemyWin: 0
   duelFinished: 0
 --- !u!114 &1552525554
@@ -1652,7 +1669,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1552525548}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 478937d1bf070724998d9f87ff10b1c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a4094b6e4830d0498b43686ca2b559a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
@@ -1667,7 +1684,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1552525548}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa2816483e7e64641b9d87bd83a47f9d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4083286759f3f50419065b561036e9a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
@@ -1696,12 +1713,27 @@ MonoBehaviour:
   variables: {fileID: 0}
   otherNPC: []
   interactionIcon: {fileID: 0}
-  mainTree1: {fileID: 0}
-  mainTree2: {fileID: 0}
-  mainTree3: {fileID: 0}
-  loopTree1: {fileID: 0}
-  loopTree2: {fileID: 0}
-  loopTree3: {fileID: 0}
+  mainTree1: {fileID: 11400000, guid: 1c4e9fbec61e79641878e827a1cfea39, type: 2}
+  mainTree2: {fileID: 11400000, guid: b333bb32d59685e4ead5c0467b4ef39b, type: 2}
+  mainTree3: {fileID: 11400000, guid: 5722da59d24afc7498fcbe5e4d4602f4, type: 2}
+  loopTree1: {fileID: 11400000, guid: 1c4e9fbec61e79641878e827a1cfea39, type: 2}
+  loopTree2: {fileID: 11400000, guid: b333bb32d59685e4ead5c0467b4ef39b, type: 2}
+  loopTree3: {fileID: 11400000, guid: 5722da59d24afc7498fcbe5e4d4602f4, type: 2}
+--- !u!114 &1552525557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1552525548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fce8f49861292d647840f74fda47978b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  dialogue: []
+  options: []
+  types: 
 --- !u!1 &1763048855
 GameObject:
   m_ObjectHideFlags: 0

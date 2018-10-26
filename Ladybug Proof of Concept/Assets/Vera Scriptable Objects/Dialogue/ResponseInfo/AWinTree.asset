@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Name: AWinTree
   m_EditorClassIdentifier: 
   treeName: 
-  dialogueNodes: []
+  dialogueNodes:
+  - {fileID: 11400000, guid: 61dd4ba4041d79d4abc4b84952a7bc62, type: 2}

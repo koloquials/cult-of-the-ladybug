@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Name: ALoseTree
   m_EditorClassIdentifier: 
   treeName: 
-  dialogueNodes: []
+  dialogueNodes:
+  - {fileID: 11400000, guid: 2216f9b4c2ad0344f8e39b0228e96380, type: 2}

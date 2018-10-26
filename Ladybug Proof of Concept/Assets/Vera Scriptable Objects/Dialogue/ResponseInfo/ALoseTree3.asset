@@ -9,8 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 075334b926d654961be97b2678c6f974, type: 3}
-  m_Name: BLoseTree
+  m_Name: ALoseTree3
   m_EditorClassIdentifier: 
   treeName: 
   dialogueNodes:
-  - {fileID: 11400000, guid: e74107fabf0a41a4fb75e7335ab8dbc8, type: 2}
+  - {fileID: 11400000, guid: be0ae85dd5d64994fa805a80dee94510, type: 2}
