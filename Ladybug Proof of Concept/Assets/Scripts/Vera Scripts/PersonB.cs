@@ -34,7 +34,7 @@ public class PersonB : NPC {
 
             Debug.Log("Case 3");
             treeToLoad = mainTree2;
-
+            newDuelId = 1;
         }
             
         if(((variables.infoOne && !variables.infoFour && AngryAtPlayer) || (variables.infoTwo && !variables.infoFour)) && !variables.infoSix){
@@ -49,6 +49,7 @@ public class PersonB : NPC {
 
             Debug.Log("Case 5");
             treeToLoad = mainTree3;
+            newDuelId = 2;
 
         } 
 
