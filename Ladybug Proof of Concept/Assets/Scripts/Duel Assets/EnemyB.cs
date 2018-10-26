@@ -59,7 +59,7 @@ public class EnemyB : Enemy {
         options.Add("You seriously need to chill out.\n");
         options.Add("ANSWER MY QUESTIONS DAMMIT!\n");
         options.Add("WHAT A LITTLE CRY-BITCH BABY!\n");//here is where the script ends
-        dialogue.Add("\"FUCK OFF ALREADY!!!\"\n");
+        dialogue.Add("\"Waaaaaaaaaaaaaah!\"\n");
         types.Add(3); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
     }
 

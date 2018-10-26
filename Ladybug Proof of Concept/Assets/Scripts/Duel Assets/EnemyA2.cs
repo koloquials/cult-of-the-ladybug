@@ -59,7 +59,7 @@ public class EnemyA2 : Enemy {
         options.Add("Not much. Were you close with the host?  No pressure.\n");
         options.Add("HOW DO YOU KNOW THE HOST?\n");
         options.Add("Fuck you.\n");//here is where the script ends
-        dialogue.Add("\"FUCK OFF ALREADY!!!\"\n");
+        dialogue.Add("\"I don’t even know what you want me to tell you, asshole.\"\n");
         types.Add(3); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
     }
 	
