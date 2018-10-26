@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 208066418}
   - component: {fileID: 208066417}
   - component: {fileID: 208066416}
+  - component: {fileID: 208066423}
   m_Layer: 0
   m_Name: Person B
   m_TagString: Untagged
@@ -235,7 +236,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 208066415}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3bb0d52e8c804c1db91f6f8ee956167, type: 3}
   m_Name: 
@@ -248,6 +249,7 @@ MonoBehaviour:
   npcInfo: {fileID: 11400000, guid: 1ae2a2ae05c7e40c89f64681f863307b, type: 2}
   AngryAtPlayer: 0
   attitude: 4
+  variables: {fileID: 0}
   otherNPC: []
   interactionIcon: {fileID: 0}
 --- !u!50 &208066420
@@ -330,6 +332,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &208066423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 208066415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7af6e4236db024cae85ad974a76af986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treeToLoad: {fileID: 11400000, guid: d1b1d3b2b40e99e4d96ca447a18a9721, type: 2}
+  informationReward: {fileID: 11400000, guid: 2b3fdf2217d7e4aa298cc4abfe3af7c6, type: 2}
+  thisDuelManager: {fileID: 0}
+  newDuelId: 0
+  possibleTrees: []
+  npcInfo: {fileID: 11400000, guid: 1ae2a2ae05c7e40c89f64681f863307b, type: 2}
+  AngryAtPlayer: 0
+  attitude: 0
+  variables: {fileID: 0}
+  otherNPC: []
+  interactionIcon: {fileID: 0}
+  mainTree1: {fileID: 0}
+  mainTree2: {fileID: 0}
+  mainTree3: {fileID: 0}
+  loopTree1: {fileID: 0}
+  loopTree2: {fileID: 0}
+  loopTree3: {fileID: 0}
 --- !u!1 &219078520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,6 +1318,7 @@ MonoBehaviour:
   infoThree: 0
   infoFour: 0
   infoFive: 0
+  infoSix: 0
 --- !u!1 &1446439185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,6 +1512,7 @@ GameObject:
   - component: {fileID: 1552525553}
   - component: {fileID: 1552525554}
   - component: {fileID: 1552525555}
+  - component: {fileID: 1552525556}
   m_Layer: 0
   m_Name: Person A
   m_TagString: Untagged
@@ -1494,7 +1526,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1552525548}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3bb0d52e8c804c1db91f6f8ee956167, type: 3}
   m_Name: 
@@ -1507,6 +1539,7 @@ MonoBehaviour:
   npcInfo: {fileID: 11400000, guid: dfaa959e329674e2da24fd2a53459270, type: 2}
   AngryAtPlayer: 0
   attitude: 3
+  variables: {fileID: 0}
   otherNPC: []
   interactionIcon: {fileID: 0}
 --- !u!50 &1552525550
@@ -1641,6 +1674,34 @@ MonoBehaviour:
   dialogue: []
   options: []
   types: 
+--- !u!114 &1552525556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1552525548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d5be0c929ed4d12bbe6a9579a46107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treeToLoad: {fileID: 11400000, guid: e05722ae307a7e34984a017d40527657, type: 2}
+  informationReward: {fileID: 11400000, guid: 2b3fdf2217d7e4aa298cc4abfe3af7c6, type: 2}
+  thisDuelManager: {fileID: 0}
+  newDuelId: 0
+  possibleTrees: []
+  npcInfo: {fileID: 11400000, guid: dfaa959e329674e2da24fd2a53459270, type: 2}
+  AngryAtPlayer: 0
+  attitude: 3
+  variables: {fileID: 0}
+  otherNPC: []
+  interactionIcon: {fileID: 0}
+  mainTree1: {fileID: 0}
+  mainTree2: {fileID: 0}
+  mainTree3: {fileID: 0}
+  loopTree1: {fileID: 0}
+  loopTree2: {fileID: 0}
+  loopTree3: {fileID: 0}
 --- !u!1 &1763048855
 GameObject:
   m_ObjectHideFlags: 0
