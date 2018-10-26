@@ -16,34 +16,45 @@ public class PersonB : NPC {
     {
         base.Update();
 
-        if (!AngryAtPlayer)
+        if (!AngryAtPlayer && !(variables.infoOne || variables.infoSix || variables.infoFour))
         {
-
+            Debug.Log("Case 1");
             treeToLoad = mainTree1;
 
         }
-        else if (AngryAtPlayer)
-        {
 
+        if (AngryAtPlayer && !(variables.infoOne || variables.infoSix || variables.infoFour))
+        {
+            Debug.Log("Case 2");
             treeToLoad = loopTree1;
 
         }
-        else if ((variables.infoOne && variables.infoFour == false && !AngryAtPlayer) || (variables.infoTwo && !variables.infoFour))
-        {
 
+        if (((variables.infoOne && !variables.infoFour  && !AngryAtPlayer) || (variables.infoTwo && !variables.infoFour)) && !variables.infoSix){
+
+            Debug.Log("Case 3");
             treeToLoad = mainTree2;
 
-        } else if((variables.infoOne && variables.infoFour == false && AngryAtPlayer) || (variables.infoTwo && !variables.infoFour)){
+        }
+            
+        if(((variables.infoOne && !variables.infoFour && AngryAtPlayer) || (variables.infoTwo && !variables.infoFour)) && !variables.infoSix){
 
+            Debug.Log("Case 4");
             treeToLoad = loopTree2;
 
         
-        } else if(variables.infoFour){
+        } 
 
+        if(variables.infoFour){
+
+            Debug.Log("Case 5");
             treeToLoad = mainTree3;
 
-        } else if(variables.infoSix){
+        } 
 
+        if(variables.infoSix){
+
+            Debug.Log("Case 6");
             treeToLoad = loopTree3;
 
         }
