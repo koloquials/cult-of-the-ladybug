@@ -164,6 +164,8 @@ public class DuelManager : MonoBehaviour {
         //beginning of duel. create that table.
         if (step == 1 && crtTable == true){ 
             CreateTable();
+            //CreateTable();
+            UpdateTable();
         }
 
         //reset
@@ -363,11 +365,12 @@ public class DuelManager : MonoBehaviour {
 
         for (int i = 0; i < tiles.Length; i++)
         {
+            Destroy(status[i]);
             Destroy(tiles[i]);
         }
 
-        tiles = new GameObject[7]; //array of tiles. only important for intialization.
-        status = new DuelSqSprite[7];
+        //tiles = new GameObject[7]; //array of tiles. only important for intialization.
+        //status = new DuelSqSprite[7];
 
         inDuel = false; //is a duel currently in process? (for a few dialogue if statements)
         crtTable = true; //does a table need to be created?
@@ -385,18 +388,20 @@ public class DuelManager : MonoBehaviour {
         typingResult = false; 
         typingLose = false;
 
-        CreateTable();
-        UpdateTable();
+        //CreateTable();
+        //UpdateTable();
 
         textBox.text = "";
 
     }
 
     void CreateTable(){ //construct the whole dang table
+        tiles = new GameObject[7]; //array of tiles. only important for intialization.
+        status = new DuelSqSprite[7];
+
         for (int i = 0; i < tiles.Length; i++){ //make them tiles
             tiles[i] = Instantiate(tile) as GameObject;
             tiles[i].SetActive(true);
-            //tiles[i].transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
             tiles[i].transform.Translate((2.3f * i), 0.65f, 0);
             status[i] = tiles[i].GetComponent<DuelSqSprite>();
         }
