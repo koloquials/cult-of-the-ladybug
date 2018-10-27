@@ -16,12 +16,11 @@ public class PlayerMove : MonoBehaviour{
             return;
         }else {
             MovePlayer();  
-            if (Input.GetKeyUp(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 CheckForNPC();
             }
         } 
-       
 
     }
 

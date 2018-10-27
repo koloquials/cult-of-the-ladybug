@@ -84,7 +84,6 @@ public class DialogueManager : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.Space))
                     {
                         ReprimandPlayer(10f);
-                        activeDuel.Reset();
                     }
                 }
                 else if (activeDuel.playerWin)
@@ -203,7 +202,9 @@ public class DialogueManager : MonoBehaviour
     void ReprimandPlayer(float timeToSubtract)
     {
         timeManager.currentTime = (timeManager.currentTime - timeToSubtract);
+        activeDuel.Reset();
         currentGameState = GameState.OverworldActive;
+        duelCanvas.gameObject.SetActive(false);
     }
 
     void UnlockInformation(DialogueNode node)

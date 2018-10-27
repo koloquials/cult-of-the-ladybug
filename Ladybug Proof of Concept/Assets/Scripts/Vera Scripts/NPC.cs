@@ -19,14 +19,14 @@ public class NPC : MonoBehaviour {
         AngryIfLose, AngryIfWin, Neutral, AngryIfOthersLose, AlwaysAngry
     }
     public Attitude attitude;
-    VariableStorage variables;
+    public VariableStorage variables;
 
     public List<NPC> otherNPC;
 
     [HideInInspector]
     public GameObject interactionIcon;
 
-    private void Start()
+    public virtual void Start()
     {
         possibleTrees = new List<DialogueTree>();
         variables = FindObjectOfType<VariableStorage>();
@@ -36,7 +36,7 @@ public class NPC : MonoBehaviour {
         otherNPC.Remove(this);
     }
 
-    private void Update()
+    public virtual void Update()
     {
         try{
             thisDuelManager = GetComponent<DuelManager>();

@@ -59,7 +59,7 @@ public class EnemyA3 : Enemy {
         options.Add("Chill dude, it was just a question.\n");
         options.Add("GRAAAAAAAAAAAHSAKSJHDFKSJDHFNSKJDNF\n");
         options.Add("FUCK YOU!\n");//here is where the script ends
-        dialogue.Add("\"FUCK OFF ALREADY!!!\"\n");
+        dialogue.Add("\"GRAAAAAAHHHHHH\"\n");
         types.Add(3); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
     }
 	
