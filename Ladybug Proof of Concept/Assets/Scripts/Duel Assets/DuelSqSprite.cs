@@ -18,10 +18,10 @@ public class DuelSqSprite : MonoBehaviour {
 
     void Start () {
         zoneRenderer = GetComponent<SpriteRenderer>();
-        zoneRenderer.sprite = zone[0];
+        //zoneRenderer.sprite = zone[0];
 
         zoneRenderer = GetComponent<SpriteRenderer>();
-        personRenderer.sprite = person[2];
+        //personRenderer.sprite = person[2];
 
     }
 
