@@ -13,7 +13,8 @@ public class DuelManager : MonoBehaviour {
 
     public GameObject tile; //GameObject for tile on board
     GameObject[] tiles = new GameObject[7]; //array of tiles. only important for intialization.
-    DuelSquare[] status = new DuelSquare[7]; //array of tiles' status, can be references to ex: change tile color.
+    //DuelSquare[] status = new DuelSquare[7]; //array of tiles' status, can be references to ex: change tile color.
+    DuelSqSprite[] status = new DuelSqSprite[7]; //array of tiles' status, can be references to ex: change tile color.
 
     public bool inDuel = false; //is a duel currently in process? (for a few dialogue if statements)
     bool crtTable = true; //does a table need to be created?
@@ -359,8 +360,14 @@ public class DuelManager : MonoBehaviour {
     }
 
     public void Reset(){
+
+        for (int i = 0; i < tiles.Length; i++)
+        {
+            Destroy(tiles[i]);
+        }
+
         tiles = new GameObject[7]; //array of tiles. only important for intialization.
-        status = new DuelSquare[7];
+        status = new DuelSqSprite[7];
 
         inDuel = false; //is a duel currently in process? (for a few dialogue if statements)
         crtTable = true; //does a table need to be created?
@@ -388,9 +395,10 @@ public class DuelManager : MonoBehaviour {
     void CreateTable(){ //construct the whole dang table
         for (int i = 0; i < tiles.Length; i++){ //make them tiles
             tiles[i] = Instantiate(tile) as GameObject;
-            tiles[i].transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
-            tiles[i].transform.Translate((170 * i), 0, 0);
-            status[i] = tiles[i].GetComponent<DuelSquare>();
+            tiles[i].SetActive(true);
+            //tiles[i].transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
+            tiles[i].transform.Translate((2.3f * i), 0.65f, 0);
+            status[i] = tiles[i].GetComponent<DuelSqSprite>();
         }
         crtTable = false;
 
