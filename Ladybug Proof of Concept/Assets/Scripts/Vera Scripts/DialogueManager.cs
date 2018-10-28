@@ -84,6 +84,7 @@ public class DialogueManager : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.Space))
                     {
                         ReprimandPlayer(10f);
+                        activeDuel.enabled = false;
                     }
                 }
                 else if (activeDuel.playerWin)
@@ -92,6 +93,7 @@ public class DialogueManager : MonoBehaviour
                     {
                         Debug.Log("Win");
                         activeDuel.Reset();
+                        activeDuel.enabled = false;
                         StartDialogue(activeNPC.informationReward);
                     }
                 }
