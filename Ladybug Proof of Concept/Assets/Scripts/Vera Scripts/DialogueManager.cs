@@ -6,33 +6,35 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    public enum GameState{
-        DialogueActive, DuelActive, OverworldActive
+    [System.Serializable]
+
+    public enum GameState{ //possible game states to be in
+        DialogueActive, DuelActive, OverworldActive, TimerOut, InfoRight
     }
-    public GameState currentGameState;
+    public GameState currentGameState; //current game state we're in (gets updated)
 
-    public Canvas dialogueCanvas;
-    public Canvas duelCanvas;
+    public Canvas dialogueCanvas; //reference to the dialogue canvas 
+    public Canvas duelCanvas; //reference to the Duel Canvas
 
-    TimeManager timeManager;
-    VariableStorage variableStorage;
-    GameObject player;
+    TimeManager timeManager; //reference to the time manager 
+    VariableStorage variableStorage; //reference to information storage
+    GameObject player; //reference to the player
 
-    Text dialogueText;
-    Text nameText;
-    Image characterImage;
+    Text dialogueText; //text that displays the dialogue being run
+    Text nameText; //text that displays the name of the character you're talking to
+    Image characterImage; //image that displays the sprite of the character you're talking to
 
-    public DialogueTree treeToRun;
+    public DialogueTree treeToRun; //dialogue tree that's getting parsed
 
-    GameObject duelTrigger;
-    public Color normalText, importantText;
+    GameObject duelTrigger; //image that gets toggled to signify that a duel can be triggered
+    public Color normalText, importantText; //colors to change the text to depending on how valuable it is
 
 
-    public DuelManager activeDuel;
-    public NPC activeNPC;
+    public DuelManager activeDuel; //duel that's getting played
+    public NPC activeNPC; //npc that is being interacted with
 
-    private int nodeIndex = 0;
-    private int lineIndex = 0;
+    private int nodeIndex = 0; //node index for the dialogue node [] on the dialogue tree
+    private int lineIndex = 0; //line index for the line [] on the dialogue nodes
 
     float letterPause = 0.04f; //amt of time before next letter prints.
     float extraPause = 0.1f; //extra pause used on commas and periods.
@@ -42,57 +44,60 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
-        timeManager = FindObjectOfType<TimeManager>();
-        variableStorage = FindObjectOfType<VariableStorage>();
-        Transform dt = dialogueCanvas.gameObject.transform.Find("DialogueText");
-        Transform it = dialogueCanvas.gameObject.transform.Find("Character");
-        nameText = dialogueCanvas.gameObject.transform.Find("NameText").GetComponent<Text>();
-        characterImage = it.GetComponent<Image>();
-        dialogueText = dt.GetComponent<Text>();
-        dialogueText.color = normalText;
-        duelTrigger = GameObject.Find("DuelTrigger");
-        duelTrigger.SetActive(false);
-        dialogueCanvas.gameObject.SetActive(false);
-        duelCanvas.gameObject.SetActive(false);
-        activeDuel = null;
-        player = GameObject.FindGameObjectWithTag("Player");
-        currentGameState = GameState.OverworldActive;
+        timeManager = FindObjectOfType<TimeManager>(); //finds TimeManager script on start
+        variableStorage = FindObjectOfType<VariableStorage>(); //finds VariableStorage script on start
+        Transform dt = dialogueCanvas.gameObject.transform.Find("DialogueText"); //finds the Dialogue Text on start
+        Transform it = dialogueCanvas.gameObject.transform.Find("Character"); //finds the character UI sprite on start
+        nameText = dialogueCanvas.gameObject.transform.Find("NameText").GetComponent<Text>(); //assigns the name text on start
+        characterImage = it.GetComponent<Image>(); //assigns the UI character sprite image
+        dialogueText = dt.GetComponent<Text>(); //assigns the dialogue text
+        dialogueText.color = normalText; //assigns the default text color
+        duelTrigger = GameObject.Find("DuelTrigger"); //finds the duel trigger game object
+        duelTrigger.SetActive(false); //turns the duel trigger off on start
+        dialogueCanvas.gameObject.SetActive(false); //turns the dialogue canvas off at start
+        duelCanvas.gameObject.SetActive(false); //turns the duel canvas off at start
+        activeDuel = null; //sets active duel to null on start
+        player = GameObject.FindGameObjectWithTag("Player"); //finds the player by tag on start
+        currentGameState = GameState.OverworldActive; //sets the current game state the the overworld on start
 
 
     }
     private void Update()
     {
-        if (currentGameState==GameState.DialogueActive)
+        if (currentGameState==GameState.DialogueActive) //turns the dialogue canvas on and runs dialogue when dialogue is triggered 
         {
             dialogueCanvas.gameObject.SetActive(true);
             RunDialogue();
         }
-        else if (currentGameState!=GameState.DialogueActive)
+        else if (currentGameState!=GameState.DialogueActive) //turns the dialogue canvas off and stops dialogue when dialogue is finished or cancelled
         {
             dialogueCanvas.gameObject.SetActive(false);
             StopDialogue();
         }
 
-        if (currentGameState==GameState.DuelActive)
+        if (currentGameState==GameState.DuelActive) 
         {
-            EnableDuel();
+            EnableDuel(); //enables the duel when it is triggered
+
             if (activeDuel.duelFinished && currentGameState!=GameState.DialogueActive)
             {
-                timeManager.modifier = 1f;
-                if (activeDuel.enemyWin)
+                timeManager.modifier = 1f; //resumes time when the duel concludes
+
+                if (activeDuel.enemyWin) //player loss handling
                 {
                     if (Input.GetKeyDown(KeyCode.Space))
                     {
-                        ReprimandPlayer(10f);
+                        ReprimandPlayer(10f); //reprimands player upon loss when they press space 
+                        activeDuel.enabled = false; //turns of the duel component on the npc we're interacting with
                     }
                 }
-                else if (activeDuel.playerWin)
+                else if (activeDuel.playerWin) //player win handling
                 {
                     if (Input.GetKeyDown(KeyCode.Space))
                     {
-                        Debug.Log("Win");
-                        activeDuel.Reset();
-                        StartDialogue(activeNPC.informationReward);
+                        activeDuel.Reset(); //reset the duel componenet on the npc
+                        activeDuel.enabled = false; //turn the duel component on the npc off
+                        StartDialogue(activeNPC.informationReward); //run the information to load tree on the npc
                     }
                 }
             }
@@ -101,7 +106,7 @@ public class DialogueManager : MonoBehaviour
         {
             try
             {
-                activeNPC.GetComponent<DuelManager>().enabled = false;
+                activeNPC.GetComponent<DuelManager>().enabled = false; //this shit doesn't work but i'm too afraid to comment it out tbfh lmao
                 activeDuel = null;
                 duelCanvas.gameObject.SetActive(false);
             }
@@ -110,32 +115,32 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    public void StartDialogue(DialogueTree tree)
+    public void StartDialogue(DialogueTree tree) //function that initiates dialogue
     {
-        currentGameState = GameState.DialogueActive;
-        treeToRun = tree;
-        timeManager.modifier = 0f;
+        currentGameState = GameState.DialogueActive; //sets current game state to dialogue active
+        treeToRun = tree; //sets the tree that we're running to the tree in the parameter
+        timeManager.modifier = 0f; //stops time from decreasing 
 
     }
 
-    public void StopDialogue()
+    public void StopDialogue() //function that resets all the dialogue shit
     {
-        treeToRun = null;
-        timeManager.modifier = 1f;
-        nodeIndex = 0;
-        lineIndex = 0;
-        if (currentGameState!=GameState.DuelActive)
+        treeToRun = null; //loses the reference to the tree that we passed in StartDialogue()
+        timeManager.modifier = 1f; //resumes timer countdown
+        nodeIndex = 0; //resets node index to 0
+        lineIndex = 0; //resets line index to 0
+        if (currentGameState!=GameState.DuelActive) //loses reference to npc we're interacting with unless we're dueling them 
         {
             activeNPC = null;
         }
     }
 
-    void RunDialogue()
+    void RunDialogue() //function that runs the dialogue
     {
         try
         {
             //dialogueText.text = treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line;
-            nameText.text = activeNPC.npcInfo.npcName;
+            nameText.text = activeNPC.npcInfo.npcName; 
             characterImage.sprite = activeNPC.npcInfo.npcSprites[0].thisSprite;
 
             if (typing == false && lineComplete == false)
@@ -207,8 +212,8 @@ public class DialogueManager : MonoBehaviour
         duelCanvas.gameObject.SetActive(false);
     }
 
-    void UnlockInformation(DialogueNode node)
-    {
+    void UnlockInformation(DialogueNode node) //function that checks the nodes that get passed through the 
+    {                                         //dialogue manager for information and passes it to variable storage once it finds information
         switch (node.informationIndex)
         {
             case DialogueNode.InformationIndex.Node:
@@ -228,15 +233,18 @@ public class DialogueManager : MonoBehaviour
             case DialogueNode.InformationIndex.Info5:
                 variableStorage.infoFive = true;
                 break;
+            case DialogueNode.InformationIndex.Info6:
+                variableStorage.infoSix = true;
+                break;
         }
     }
 
-    void EnableDuel()
+    void EnableDuel() //I slapped all the duel enabling shit in a function because it looked ugly lmao
     {
-        duelCanvas.gameObject.SetActive(true);
-        activeNPC.GetComponent<DuelManager>().enabled = true;
-        activeDuel = activeNPC.GetComponent<DuelManager>();
-        timeManager.modifier = 0f;
+        duelCanvas.gameObject.SetActive(true); //turns the duel canvas on
+        activeNPC.GetComponent<DuelManager>().enabled = true; //enables the duel manager on the npc we're interacting with
+        activeDuel = activeNPC.GetComponent<DuelManager>(); //sets active duel to the duel manager on the npc we're interacting with
+        timeManager.modifier = 0f; //stops time from decreasing during the duel
     }
 
     IEnumerator TypeText(string message) //scrolling text!
