@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeToLoad: {fileID: 11400000, guid: d1b1d3b2b40e99e4d96ca447a18a9721, type: 2}
-  informationReward: {fileID: 11400000, guid: 28ab0714b36e4b145b46f9b3cde7fc59, type: 2}
+  informationReward: {fileID: 11400000, guid: 2b3fdf2217d7e4aa298cc4abfe3af7c6, type: 2}
   thisDuelManager: {fileID: 0}
   newDuelId: 0
   possibleTrees: []
@@ -415,6 +415,12 @@ MonoBehaviour:
   loopTree1: {fileID: 11400000, guid: f48ec36ae1345be4b9f27cb645f41bd3, type: 2}
   loopTree2: {fileID: 11400000, guid: 672f268dc20b60648b50f8ac012a0cb7, type: 2}
   loopTree3: {fileID: 11400000, guid: 098680c52aeb6f6458523da505ce4db1, type: 2}
+<<<<<<< HEAD
+  infoTreeCon1: {fileID: 11400000, guid: 88e2b542a864cfa40a3ae3dae0456326, type: 2}
+  infoTreeCon2: {fileID: 11400000, guid: 31d082c6fadb079459c198aa2b0f8d1a, type: 2}
+  infoTreeCon3: {fileID: 11400000, guid: 612b7528e9957254b9523252ba8e4814, type: 2}
+=======
+>>>>>>> 94f303130e7eded84d7e6d98250fafd689b6cc99
   infoTreeWin1: {fileID: 11400000, guid: 7f4a012a4c5ca3c4c93a8f990316ab52, type: 2}
   infoTreeWin2: {fileID: 11400000, guid: 47289dd1a37c1ba48ae6efbcd10d817c, type: 2}
   infoTreeWin3: {fileID: 11400000, guid: a72f99405ff5866428f9dd3d18b51e9f, type: 2}
@@ -1757,6 +1763,12 @@ MonoBehaviour:
   loopTree1: {fileID: 11400000, guid: 1c4e9fbec61e79641878e827a1cfea39, type: 2}
   loopTree2: {fileID: 11400000, guid: b333bb32d59685e4ead5c0467b4ef39b, type: 2}
   loopTree3: {fileID: 11400000, guid: 5722da59d24afc7498fcbe5e4d4602f4, type: 2}
+<<<<<<< HEAD
+  infoTreeCon1: {fileID: 11400000, guid: 28ab0714b36e4b145b46f9b3cde7fc59, type: 2}
+  infoTreeCon2: {fileID: 11400000, guid: f782a101e8286144a887fbda00625278, type: 2}
+  infoTreeCon3: {fileID: 11400000, guid: 9f65c904c99b7c345b4b5116dc57ba21, type: 2}
+=======
+>>>>>>> 94f303130e7eded84d7e6d98250fafd689b6cc99
   infoTreeWin1: {fileID: 11400000, guid: c74be3eeb8ef79b439fb1c98d42f55db, type: 2}
   infoTreeWin2: {fileID: 11400000, guid: 7ac342b38218c674ca92a1007eea4694, type: 2}
   infoTreeWin3: {fileID: 11400000, guid: 62140db5597974e418b4b117df13d09b, type: 2}
