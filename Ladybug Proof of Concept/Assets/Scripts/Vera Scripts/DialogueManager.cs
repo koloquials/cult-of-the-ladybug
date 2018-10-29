@@ -147,6 +147,7 @@ public class DialogueManager : MonoBehaviour
             if (typing == false && lineComplete == false)
             {
                 dialogueText.text = "";
+                print("let's type " + treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line);
                 type = StartCoroutine(TypeText(treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line));
             }
 
