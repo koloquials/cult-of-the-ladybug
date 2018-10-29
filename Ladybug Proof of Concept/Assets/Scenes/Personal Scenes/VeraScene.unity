@@ -415,6 +415,15 @@ MonoBehaviour:
   loopTree1: {fileID: 11400000, guid: f48ec36ae1345be4b9f27cb645f41bd3, type: 2}
   loopTree2: {fileID: 11400000, guid: 672f268dc20b60648b50f8ac012a0cb7, type: 2}
   loopTree3: {fileID: 11400000, guid: 098680c52aeb6f6458523da505ce4db1, type: 2}
+  infoTreeCon1: {fileID: 11400000, guid: 88e2b542a864cfa40a3ae3dae0456326, type: 2}
+  infoTreeCon2: {fileID: 11400000, guid: 31d082c6fadb079459c198aa2b0f8d1a, type: 2}
+  infoTreeCon3: {fileID: 11400000, guid: 612b7528e9957254b9523252ba8e4814, type: 2}
+  infoTreeWin1: {fileID: 11400000, guid: 7f4a012a4c5ca3c4c93a8f990316ab52, type: 2}
+  infoTreeWin2: {fileID: 11400000, guid: 47289dd1a37c1ba48ae6efbcd10d817c, type: 2}
+  infoTreeWin3: {fileID: 11400000, guid: a72f99405ff5866428f9dd3d18b51e9f, type: 2}
+  infoTreeLose1: {fileID: 11400000, guid: ca93a792d12f877418d560756b9ba223, type: 2}
+  infoTreeLose2: {fileID: 11400000, guid: c29b25ae150173747ac59cd08a4890b0, type: 2}
+  infoTreeLose3: {fileID: 11400000, guid: 4d556a5032dc01e46a25e1b7aec39255, type: 2}
 --- !u!114 &208066424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1751,9 +1760,15 @@ MonoBehaviour:
   loopTree1: {fileID: 11400000, guid: 1c4e9fbec61e79641878e827a1cfea39, type: 2}
   loopTree2: {fileID: 11400000, guid: b333bb32d59685e4ead5c0467b4ef39b, type: 2}
   loopTree3: {fileID: 11400000, guid: 5722da59d24afc7498fcbe5e4d4602f4, type: 2}
-  infoTree1: {fileID: 0}
-  infoTree2: {fileID: 0}
-  infoTree3: {fileID: 0}
+  infoTreeCon1: {fileID: 11400000, guid: 28ab0714b36e4b145b46f9b3cde7fc59, type: 2}
+  infoTreeCon2: {fileID: 11400000, guid: f782a101e8286144a887fbda00625278, type: 2}
+  infoTreeCon3: {fileID: 11400000, guid: 9f65c904c99b7c345b4b5116dc57ba21, type: 2}
+  infoTreeWin1: {fileID: 11400000, guid: c74be3eeb8ef79b439fb1c98d42f55db, type: 2}
+  infoTreeWin2: {fileID: 11400000, guid: 7ac342b38218c674ca92a1007eea4694, type: 2}
+  infoTreeWin3: {fileID: 11400000, guid: 62140db5597974e418b4b117df13d09b, type: 2}
+  infoTreeLose1: {fileID: 11400000, guid: af52d7849b20ba243ac57cf0605ccd75, type: 2}
+  infoTreeLose2: {fileID: 11400000, guid: a0db87dc22a81fe468b17ce84c06b80a, type: 2}
+  infoTreeLose3: {fileID: 11400000, guid: ff7d845dcbee39d4caab86d52c37f2e5, type: 2}
 --- !u!114 &1552525557
 MonoBehaviour:
   m_ObjectHideFlags: 0
