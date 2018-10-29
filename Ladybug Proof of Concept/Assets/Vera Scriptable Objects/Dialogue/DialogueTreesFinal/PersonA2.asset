@@ -14,3 +14,4 @@ MonoBehaviour:
   treeName: 
   dialogueNodes:
   - {fileID: 11400000, guid: 8e062c0454db99d4aaaeab9ddeb365ff, type: 2}
+  - {fileID: 11400000, guid: 9538872615458ac4bab13191edbc32f0, type: 2}
