@@ -97,4 +97,19 @@ public class NPC : MonoBehaviour {
         }
          
     }
+
+    public DialogueTree UpdateInformation(DialogueTree loseTree, DialogueTree winTree){
+        DialogueTree updatedTree = null;
+        try
+        {
+            if (thisDuelManager.enemyWin)
+            {
+                updatedTree = winTree;
+            } else if(thisDuelManager.playerWin){
+                updatedTree = loseTree;
+            }
+            return updatedTree;
+        }
+        catch (System.NullReferenceException) { return updatedTree; }
+    }
 }
