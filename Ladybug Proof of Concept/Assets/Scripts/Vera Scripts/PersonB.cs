@@ -7,6 +7,8 @@ public class PersonB : NPC {
 
     public DialogueTree mainTree1, mainTree2, mainTree3;
     public DialogueTree loopTree1, loopTree2, loopTree3;
+    public DialogueTree infoTreeCon1, infoTreeCon2, infoTreeCon3, infoTreeWin1, infoTreeWin2, infoTreeWin3, infoTreeLose1, infoTreeLose2, infoTreeLose3;
+
 
     public override void Start()
     {
