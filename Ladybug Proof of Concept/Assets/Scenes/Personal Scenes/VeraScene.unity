@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d836d1ec007a45ccb15a8d3f2694258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 40
+  timeLimit: 100
   currentTime: 0
   modifier: 1
   gameOverText: {fileID: 73958834}
@@ -1751,6 +1751,9 @@ MonoBehaviour:
   loopTree1: {fileID: 11400000, guid: 1c4e9fbec61e79641878e827a1cfea39, type: 2}
   loopTree2: {fileID: 11400000, guid: b333bb32d59685e4ead5c0467b4ef39b, type: 2}
   loopTree3: {fileID: 11400000, guid: 5722da59d24afc7498fcbe5e4d4602f4, type: 2}
+  infoTree1: {fileID: 0}
+  infoTree2: {fileID: 0}
+  infoTree3: {fileID: 0}
 --- !u!114 &1552525557
 MonoBehaviour:
   m_ObjectHideFlags: 0
