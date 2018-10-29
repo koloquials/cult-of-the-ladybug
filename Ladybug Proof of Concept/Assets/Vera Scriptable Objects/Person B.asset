@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0de9e3bc4944881bf6b6fe48651942, type: 3}
   m_Name: Person B
   m_EditorClassIdentifier: 
-  npcName: Moonshine
+  npcName: Moonchild
   npcSprites:
   - spriteName: Base
     thisSprite: {fileID: 21300000, guid: 946b31c3f35eb4b9c8ba2d5f6b936bcb, type: 3}
