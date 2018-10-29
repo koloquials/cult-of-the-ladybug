@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeToLoad: {fileID: 11400000, guid: d1b1d3b2b40e99e4d96ca447a18a9721, type: 2}
-  informationReward: {fileID: 11400000, guid: 28ab0714b36e4b145b46f9b3cde7fc59, type: 2}
+  informationReward: {fileID: 11400000, guid: 2b3fdf2217d7e4aa298cc4abfe3af7c6, type: 2}
   thisDuelManager: {fileID: 0}
   newDuelId: 0
   possibleTrees: []
