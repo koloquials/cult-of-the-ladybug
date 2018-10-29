@@ -24,6 +24,7 @@ MonoBehaviour:
       the bathroom.
     valuableInfo: 1
     duelTrigger: 0
-  - line: "Ask Jeri, she\u2019ll tell you I ain\u2019t lyin\u2019."
+  - line: "Ask Moonchild, she\u2019ll tell you I ain\u2019t lyin\u2019."
     valuableInfo: 0
     duelTrigger: 0
+  informationIndex: 4
