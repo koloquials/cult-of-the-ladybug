@@ -33,3 +33,4 @@ MonoBehaviour:
   - line: "But he couldn\u2019t take part in something like this...could he?"
     valuableInfo: 0
     duelTrigger: 0
+  informationIndex: 3

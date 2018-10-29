@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0de9e3bc4944881bf6b6fe48651942, type: 3}
   m_Name: Person A
   m_EditorClassIdentifier: 
-  npcName: Person A
+  npcName: Jerry
   npcSprites:
   - spriteName: Base
-    thisSprite: {fileID: 21300000, guid: abe0d25ad14314609b949578b8eae746, type: 3}
+    thisSprite: {fileID: 21300000, guid: 103d86317c14841a3806d19b0766dda9, type: 3}
   npcRelationships:
   - person: {fileID: 11400000, guid: 1ae2a2ae05c7e40c89f64681f863307b, type: 2}
     nature: 0
