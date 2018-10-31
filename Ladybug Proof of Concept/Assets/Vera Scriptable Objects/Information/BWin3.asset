@@ -14,11 +14,17 @@ MonoBehaviour:
   nodeName: 
   dialogueLines:
   - line: "Who cares?! I was drunk, okay? Blackout drunk, so I don\u2019t remember!
-      That good enough for you? Who even knows where Jerry was. The \u201Cbathroom\u201D?
-      As if, right? God, I\u2019ve hated that jerk for years, but they were friends
-      with Jerry so what was I supposed to do? Say \u201CNo, don\u2019t go to the
-      seance and make up with your best friend\u201D? Good riddance they\u2019re dead.
-      All they\u2019d done for years was screw over everybody here."
+      That good enough for you? "
     valuableInfo: 0
+    duelTrigger: 0
+  - line: "Who even knows where Jerry was. The \u201Cbathroom\u201D? As if, right?
+      God, I\u2019ve hated that jerk for years, but they were friends with Jerry so
+      what was I supposed to do? Say \u201CNo, don\u2019t go to the seance and make
+      up with your best friend\u201D? "
+    valuableInfo: 0
+    duelTrigger: 0
+  - line: " Good riddance they\u2019re dead. All they\u2019d done for years was screw
+      over everybody here."
+    valuableInfo: 1
     duelTrigger: 0
   informationIndex: 6

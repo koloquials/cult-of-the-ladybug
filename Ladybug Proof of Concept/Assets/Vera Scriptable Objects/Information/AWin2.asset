@@ -14,6 +14,6 @@ MonoBehaviour:
   nodeName: 
   dialogueLines:
   - line: "QUIT GRILLIN ME I\u2019M NOT TELLIN\u2019 YOU ANYTHING!"
-    valuableInfo: 0
+    valuableInfo: 1
     duelTrigger: 0
   informationIndex: 2

@@ -23,6 +23,4 @@ MonoBehaviour:
   - line: "During cocktail hour...um\u2026"
     valuableInfo: 0
     duelTrigger: 1
-  - line: "Listen, I really can\u2019t tell you anything else. Sorry."
-    valuableInfo: 0
-    duelTrigger: 0
+  informationIndex: 0
