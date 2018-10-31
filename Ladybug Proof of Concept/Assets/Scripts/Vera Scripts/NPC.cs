@@ -62,9 +62,9 @@ public class NPC : MonoBehaviour {
                     break;
             }
 
-            if(AngryAtPlayer){
+           
                 thisDuelManager.enemyId = newDuelId;
-            }
+
 
         } catch (System.NullReferenceException){}
     }
@@ -98,18 +98,17 @@ public class NPC : MonoBehaviour {
          
     }
 
-    public DialogueTree UpdateInformation(DialogueTree loseTree, DialogueTree winTree){
-        DialogueTree updatedTree = null;
+    public void UpdateInformation(DialogueTree loseTree, DialogueTree winTree){
         try
         {
             if (thisDuelManager.enemyWin)
             {
-                updatedTree = winTree;
+                informationReward = loseTree;
             } else if(thisDuelManager.playerWin){
-                updatedTree = loseTree;
+                informationReward = winTree;
             }
-            return updatedTree;
+
         }
-        catch (System.NullReferenceException) { return updatedTree; }
+        catch (System.NullReferenceException) {  }
     }
 }

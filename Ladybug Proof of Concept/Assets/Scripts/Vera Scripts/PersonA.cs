@@ -21,21 +21,23 @@ public class PersonA : NPC {
         {
 
             treeToLoad = mainTree1;
-            informationReward = UpdateInformation(infoTreeLose1, infoTreeWin1);
+            UpdateInformation(infoTreeLose1, infoTreeWin1);
+            newDuelId = 0;
 
         }
         if (variables.infoOne && !(variables.infoTwo || variables.infoThree || variables.infoFive))
         {
 
             treeToLoad = loopTree1;
-            informationReward = UpdateInformation(infoTreeLose1, infoTreeWin1);
+            UpdateInformation(infoTreeLose1, infoTreeWin1);
+            newDuelId = 0;
         }
          if (!variables.infoThree && AngryAtPlayer)
         {
 
             treeToLoad = mainTree2;
             newDuelId = 1;
-            informationReward = UpdateInformation(infoTreeLose2, infoTreeWin2);
+            UpdateInformation(infoTreeLose2, infoTreeWin2);
            // Debug.Log("Case 3");
 
         }
@@ -44,7 +46,7 @@ public class PersonA : NPC {
             
            // Debug.Log("Case 4");
             treeToLoad = loopTree2;
-            informationReward = UpdateInformation(infoTreeLose2, infoTreeWin2);
+            UpdateInformation(infoTreeLose2, infoTreeWin2);
 
         }
         if (variables.infoThree && !(variables.infoTwo || variables.infoTwo || variables.infoFive))
@@ -52,12 +54,12 @@ public class PersonA : NPC {
           //  Debug.Log("Case 5");
             treeToLoad = mainTree3;
             newDuelId = 2;
-            informationReward = UpdateInformation(infoTreeLose3, infoTreeWin3);
+            UpdateInformation(infoTreeLose3, infoTreeWin3);
         }
         if (variables.infoFive)
         {
             treeToLoad = loopTree3;
-            informationReward = UpdateInformation(infoTreeLose3, infoTreeWin3);
+            UpdateInformation(infoTreeLose3, infoTreeWin3);
         }
 
     }
