@@ -15,6 +15,6 @@ MonoBehaviour:
   dialogueLines:
   - line: "During cocktail hour, when last I checked the host was alive, I went to
       the bathroom. Ask Moonchild, she\u2019ll tell you. I ain\u2019t lyin\u2019."
-    valuableInfo: 0
+    valuableInfo: 1
     duelTrigger: 0
   informationIndex: 4

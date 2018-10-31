@@ -18,6 +18,6 @@ MonoBehaviour:
       close friends since kindergarten. Sure, *they fought sometimes, and sometimes
       Jerry got outta hand*. But he couldn\u2019t take part in something like this...could
       he?"
-    valuableInfo: 0
+    valuableInfo: 1
     duelTrigger: 0
   informationIndex: 3

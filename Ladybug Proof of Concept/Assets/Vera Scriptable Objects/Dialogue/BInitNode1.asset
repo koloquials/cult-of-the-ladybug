@@ -22,6 +22,4 @@ MonoBehaviour:
   - line: This whole thing is crazy, huh?
     valuableInfo: 0
     duelTrigger: 1
-  - line: "Jerry, that guy over there, he said I shouldn\u2019t talk to anybody\u2026"
-    valuableInfo: 0
-    duelTrigger: 0
+  informationIndex: 0
