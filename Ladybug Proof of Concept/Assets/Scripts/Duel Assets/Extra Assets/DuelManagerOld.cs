@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; 
 
-public class DuelManager : MonoBehaviour {
+public class DuelManagerOld : MonoBehaviour {
     public Text textBox;
 
     //TO LINK A NEW ENEMY SCRIPT IN INSPECTOR: add it to the manager's game object, make it the first Enemy script on the object,
@@ -28,14 +28,8 @@ public class DuelManager : MonoBehaviour {
     int playerType; //dialogue type player picks: 1 = concede, 2 = stand ground, 3 = aggressive, 4 = insult
 
     int enemyPos; //player's tile on the board: 0 to 6
-    int enemyPosFactor; //saves the enemy movement so it can be used later.
     int enemyLine; //the left-most tile enemy controls on the board.
     int enemyType; //dialogue type enemy picks: 1 = concede, 2 = stand ground, 3 = aggressive, 4 = insult
-
-    List<int> rand = new List<int>(4);
-    int n;
-    bool isValid = false;
-    bool notInArray = true;
 
     int step = 0; //enemy dialogue step, follow the documentation!
     int optStep = -4; //player's option dialogue! comes in sets of 4.
@@ -111,23 +105,11 @@ public class DuelManager : MonoBehaviour {
                     inDuel = false;
                 }
             }
-                else{
-                //displays next round of dialogue + choices
-
-                for (int i = 0; i < 4; i++)
+                else
                 {
-                    n = Random.Range(0, 4);
-
-                   while (rand.Contains(n)){
-                        n = Random.Range(0, 4);
-                    }
-
-                    rand.Add(n);
-                }
-                Debug.Log(rand[0] + " " + rand[1] + " " + rand[2] + " " + rand[3]);
-
-                textBox.text = (enemies[enemyId].dialogue[step] + "[1] " + enemies[enemyId].options[optStep] + "[2] " + enemies[enemyId].options[optStep + 1] + 
-                                "[3] " + enemies[enemyId].options[optStep + 2] + "[4] " + enemies[enemyId].options[optStep + 3]);
+                //displays next round of dialogue + choices
+                textBox.text = (enemies[enemyId].dialogue[step] + "[1][concede] " + enemies[enemyId].options[optStep] + "[2][stand] " + enemies[enemyId].options[optStep + 1] + 
+                                "[3][aggress] " + enemies[enemyId].options[optStep + 2] + "[4][insult] " + enemies[enemyId].options[optStep + 3]);
             }
         }
        
@@ -136,7 +118,7 @@ public class DuelManager : MonoBehaviour {
         else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha1) && inDuel == true && combatRound == false) { //player chooses [1]
             step++;
             playerType = 1;
-            textBox.text = "[concede] ";
+            textBox.text = "";
             type = StartCoroutine(TypeText((enemies[enemyId].options[optStep-1+playerType] + "\n"), enemies[enemyId].dialogue[step], ("\n [space]")));
             //textBox.text = (enemies[enemyId].options[optStep-1+playerType] + "\n" + enemies[enemyId].dialogue[step] + "\n [space]"); //optStep 1, basically.
             processTable = true;
@@ -146,7 +128,7 @@ public class DuelManager : MonoBehaviour {
         } else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha2) && inDuel == true && combatRound == false){ //player chooses [2]
             step++;
             playerType = 2;
-            textBox.text = "[stand] ";
+            textBox.text = "";
             type = StartCoroutine(TypeText((enemies[enemyId].options[optStep - 1 + playerType] + "\n"), enemies[enemyId].dialogue[step], ("\n [space]")));
             //textBox.text = (enemies[enemyId].options[optStep-1+playerType] + "\n" + enemies[enemyId].dialogue[step] + "\n [space]");
             processTable = true;
@@ -156,7 +138,7 @@ public class DuelManager : MonoBehaviour {
         } else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha3) && inDuel == true && combatRound == false){ //player chooses [3]
             step++;
             playerType = 3;
-            textBox.text = "[aggress] ";
+            textBox.text = "";
             type = StartCoroutine(TypeText((enemies[enemyId].options[optStep - 1 + playerType] + "\n"), enemies[enemyId].dialogue[step], ("\n [space]")));
             //textBox.text = (enemies[enemyId].options[optStep-1+playerType] + "\n" + enemies[enemyId].dialogue[step] + "\n [space]");
             processTable = true;
@@ -166,7 +148,7 @@ public class DuelManager : MonoBehaviour {
         } else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha4) && inDuel == true && combatRound == false){ //player chooses [4]
             step++;
             playerType = 4;
-            textBox.text = "[insult] ";
+            textBox.text = "";
             type = StartCoroutine(TypeText((enemies[enemyId].options[optStep - 1 + playerType] + "\n"), enemies[enemyId].dialogue[step], ("\n [space]")));
             //textBox.text = (enemies[enemyId].options[optStep-1+playerType] + "\n" + enemies[enemyId].dialogue[step] + "\n [space]");
             processTable = true;
@@ -218,104 +200,134 @@ public class DuelManager : MonoBehaviour {
         enemyType = enemies[enemyId].types[enTypeStep];
         if (playerType == 1){ //concede
             if (enemyType == 1){
-                playerPos -= 1;
-                enemyPosFactor = 1;
+                playerLine -= 1;
+                enemyLine += 1;
             }
             else if (enemyType == 2){
-                playerPos -= 1;
-                enemyPosFactor = 0;
+                playerLine -= 1;
+                enemyLine -= 1;
+            } else if (enemyType == 3){
+                playerLine += 1;
+                enemyLine += 1;
+            } else if (enemyType == 4){
+                playerLine -= 1;
+                enemyLine -= 1;
             }
-            else if (enemyType == 3){
-                playerPos -= 1;
-                enemyPosFactor = -1;
-            }
-            else if (enemyType == 4){
-                playerPos -= 2;
-                enemyPosFactor = -2;
-            }
+            playerPos -= 1;
 
         } else if (playerType == 2){ //stand
             if (enemyType == 1){
-                playerPos += 0;
-                enemyPosFactor = 1;
+                playerLine += 1;
+                enemyLine += 1;
             }
             else if (enemyType == 2){
-                playerPos += 0;
-                enemyPosFactor = 0;
+                playerLine += 0;
+                enemyLine += 0;
             }
-            else if (enemyType == 3){
-                playerPos += 1;
-                enemyPosFactor = 0;
+            else if(enemyType == 3){
+                playerLine += 1;
+                enemyLine += 1;
             }
             else if (enemyType == 4){
-                playerPos += 0;
-                enemyPosFactor = -1;
+                playerLine -= 1;
+                enemyLine -= 1;
             }
+            playerPos -= 0;
 
         } else if (playerType == 3){ //agress
             if (enemyType == 1){
-                playerPos += 1;
-                enemyPosFactor = 1;
+                playerLine -= 1;
+                enemyLine -= 1;
             }
             else if (enemyType == 2){
-                playerPos += 0;
-                enemyPosFactor = -1;
+                playerLine -= 1;
+                enemyLine -= 1;
             }
-            else if (enemyType == 3){
-                playerPos += 1;
-                enemyPosFactor = -1;
+            else if(enemyType == 3){
+                playerLine += 0;
+                enemyLine += 0;
             }
             else if (enemyType == 4){
+                playerLine += 1;
+                enemyLine += 1;
+            }
+            if (playerPos+1 <= playerLine){
                 playerPos += 1;
-                enemyPosFactor = 0;
             }
 
         } else{ //insult
             if (enemyType == 1){
-                playerPos += 2;
-                enemyPosFactor = 2;
+                playerLine += 1;
+                enemyLine += 1;
             }
             else if (enemyType == 2){
-                playerPos += 1;
-                enemyPosFactor = 0;
+                playerLine += 1;
+                enemyLine += 1;
             }
             else if (enemyType == 3){
-                playerPos += 0;
-                enemyPosFactor = -1;
+                playerLine -= 1;
+                enemyLine -= 1;
             }
             else if (enemyType == 4){
-                playerPos += 1;
-                enemyPosFactor = -1;
+                playerLine += 0;
+                enemyLine += 0;
+            }
+            if (playerPos+1 <= playerLine){
+            playerPos += 1;
             }
         }
-        Debug.Log(playerType + " " + enemyType);
-        playerLine = playerPos;
+
+        if (playerLine == enemyLine){
+            playerLine--;
+            enemyLine++;
+        }
     }
 
-    void ProcessMovement(){ 
+    void ProcessMovement(){ //reconciles spacing issue and nudges duelists on the board, detects win or lose state.
+        if (playerPos >= enemyLine){ //player pushes forward into enemy space if on the edge.
+            enemyLine = playerPos + 1;
+            playerLine = playerPos;
+        }
         if (enemyPos > 6 || playerLine > enemyPos || playerPos == enemyPos){ //detect player win. this goes first because they had the first attack.
             playerWin = true;
             if (enemyPos <= 6){
                 status[enemyPos].struck = true;
             }
+            //Debug.Log("player pos: " + playerPos + ", player line: " + playerLine + " | enemy pos: " + enemyPos + ", en line: " + enemyLine);
+            //Debug.Log("player wins");
         }
         else{ //else statement used here so enemy doesn't move upon losing.
 
-            enemyPos += enemyPosFactor;
-            enemyLine = enemyPos;
-
-            if (enemyPos > 6){
-                playerWin = true;
+            //move the enemy depending on dialogue type.
+            if (enemyType == 1){
+                enemyPos += 1;
             }
+            if (enemyType == 3){
+                if (enemyPos-1 >= enemyLine){
+                enemyPos -= 1;
+                }
+            }
+            else if (enemyType == 4){
+                if (enemyPos-1 >= enemyLine){
+                enemyPos -= 1;
+                }
+            }
+
+            //if (enemyPos <= playerLine){ //enemy pushes forward into player space if on the edge.
+            //    playerLine = enemyPos - 1;
+            //    enemyLine = enemyPos;
+            //}
 
             if (playerPos < 0){ //idk why this needed its own if statement but it did.
-                enemyWin = true;
+                enemyWin = true; ;
             }
-            if (enemyLine < playerPos || playerPos == enemyPos){ //detect enemy win.
+            if (playerPos < 0 || enemyLine < playerPos || playerPos == enemyPos){ //detect enemy win.
                 enemyWin = true;
                 if (playerPos >= 0){
                     status[playerPos].struck = true;
                 }
+                //Debug.Log("player pos: " + playerPos + ", player line: " + playerLine + " | enemy pos: " + enemyPos + ", en line: " + enemyLine);
+                //Debug.Log("player loses");
             }
 
         }
@@ -398,14 +410,14 @@ public class DuelManager : MonoBehaviour {
         //sets beginning tile states
         status[0].state = 1;
         status[1].state = 1;
-        status[2].state = 0;
-        status[3].state = 0;
-        status[4].state = 0;
+        status[2].state = 1;
+        status[3].state = 2;
+        status[4].state = 2;
         status[5].state = 2;
         status[6].state = 2;
 
-        playerLine = 1;
-        enemyLine = 5;
+        playerLine = 2;
+        enemyLine = 3;
 
         playerPos = 1;
         enemyPos = 5;
