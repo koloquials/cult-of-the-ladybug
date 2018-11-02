@@ -36,6 +36,7 @@ public class DuelManager : MonoBehaviour {
     int n;
     bool isValid = false;
     bool notInArray = true;
+    string enemyTag = "";
 
     int step = 0; //enemy dialogue step, follow the documentation!
     int optStep = -4; //player's option dialogue! comes in sets of 4.
@@ -114,20 +115,22 @@ public class DuelManager : MonoBehaviour {
                 else{
                 //displays next round of dialogue + choices
 
-                for (int i = 0; i < 4; i++)
-                {
-                    n = Random.Range(0, 4);
-
+                rand.Clear();
+                for (int i = 0; i < 4; i++){
+                   n = Random.Range(0, 4);
                    while (rand.Contains(n)){
                         n = Random.Range(0, 4);
                     }
-
                     rand.Add(n);
                 }
+
                 Debug.Log(rand[0] + " " + rand[1] + " " + rand[2] + " " + rand[3]);
 
-                textBox.text = (enemies[enemyId].dialogue[step] + "[1] " + enemies[enemyId].options[optStep] + "[2] " + enemies[enemyId].options[optStep + 1] + 
-                                "[3] " + enemies[enemyId].options[optStep + 2] + "[4] " + enemies[enemyId].options[optStep + 3]);
+                //textBox.text = (enemies[enemyId].dialogue[step] + "[1] " + enemies[enemyId].options[optStep] + "[2] " + enemies[enemyId].options[optStep + 1] +
+                //"[3] " + enemies[enemyId].options[optStep + 2] + "[4] " + enemies[enemyId].options[optStep + 3]);
+
+                textBox.text = (enemies[enemyId].dialogue[step] + "[1] " + enemies[enemyId].options[optStep + rand[0]] + "[2] " + enemies[enemyId].options[optStep + rand[1]] +
+                                      "[3] " + enemies[enemyId].options[optStep + rand[2]] + "[4] " + enemies[enemyId].options[optStep + rand[3]]);
             }
         }
        
@@ -135,19 +138,78 @@ public class DuelManager : MonoBehaviour {
         //[WIP] enemy dialogue shouldn't display if this is the round where the player wins (an option is to just remove it but i like the drama it elicits) 
         else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha1) && inDuel == true && combatRound == false) { //player chooses [1]
             step++;
-            playerType = 1;
-            textBox.text = "[concede] ";
-            type = StartCoroutine(TypeText((enemies[enemyId].options[optStep-1+playerType] + "\n"), enemies[enemyId].dialogue[step], ("\n [space]")));
-            //textBox.text = (enemies[enemyId].options[optStep-1+playerType] + "\n" + enemies[enemyId].dialogue[step] + "\n [space]"); //optStep 1, basically.
+            playerType = rand[0]+1;
+            Debug.Log("playerType is: " + playerType);
+            switch (playerType){
+                case 1:
+                    textBox.text = "[concede] ";
+                    break;
+                case 2:
+                    textBox.text = "[stand] ";
+                    break;
+                case 3:
+                    textBox.text = "[aggress] ";
+                    break;
+                case 4:
+                    textBox.text = "[insult] ";
+                    break;
+            }
+            enemyType = enemies[enemyId].types[enTypeStep];
+            switch (enemyType){
+                case 1:
+                    enemyTag = "[concede] ";
+                    break;
+                case 2:
+                    enemyTag = "[stand] ";
+                    break;
+                case 3:
+                    enemyTag = "[aggress] ";
+                    break;
+                case 4:
+                    enemyTag = "[insult] ";
+                    break;
+            }
+
+            type = StartCoroutine(TypeText((enemies[enemyId].options[optStep-1+playerType] + "\n"), (enemyTag + enemies[enemyId].dialogue[step]), ("\n [space]")));
             processTable = true;
             combatRound = true;
             typingResult = true;
 
         } else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha2) && inDuel == true && combatRound == false){ //player chooses [2]
             step++;
-            playerType = 2;
-            textBox.text = "[stand] ";
-            type = StartCoroutine(TypeText((enemies[enemyId].options[optStep - 1 + playerType] + "\n"), enemies[enemyId].dialogue[step], ("\n [space]")));
+            playerType = rand[1]+1;
+            Debug.Log("playerType is: " + playerType);
+            switch (playerType){
+                case 1:
+                    textBox.text = "[concede] ";
+                    break;
+                case 2:
+                    textBox.text = "[stand] ";
+                    break;
+                case 3:
+                    textBox.text = "[aggress] ";
+                    break;
+                case 4:
+                    textBox.text = "[insult] ";
+                    break;
+            }
+            enemyType = enemies[enemyId].types[enTypeStep];
+            switch (enemyType){
+                case 1:
+                    enemyTag = "[concede] ";
+                    break;
+                case 2:
+                    enemyTag = "[stand] ";
+                    break;
+                case 3:
+                    enemyTag = "[aggress] ";
+                    break;
+                case 4:
+                    enemyTag = "[insult] ";
+                    break;
+            }
+
+            type = StartCoroutine(TypeText((enemies[enemyId].options[optStep - 1 + playerType] + "\n"), (enemyTag + enemies[enemyId].dialogue[step]), ("\n [space]")));
             //textBox.text = (enemies[enemyId].options[optStep-1+playerType] + "\n" + enemies[enemyId].dialogue[step] + "\n [space]");
             processTable = true;
             combatRound = true;
@@ -155,9 +217,38 @@ public class DuelManager : MonoBehaviour {
 
         } else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha3) && inDuel == true && combatRound == false){ //player chooses [3]
             step++;
-            playerType = 3;
-            textBox.text = "[aggress] ";
-            type = StartCoroutine(TypeText((enemies[enemyId].options[optStep - 1 + playerType] + "\n"), enemies[enemyId].dialogue[step], ("\n [space]")));
+            playerType = rand[2]+1;
+            Debug.Log("playerType is: " + playerType);
+            switch (playerType){
+                case 1:
+                    textBox.text = "[concede] ";
+                    break;
+                case 2:
+                    textBox.text = "[stand] ";
+                    break;
+                case 3:
+                    textBox.text = "[aggress] ";
+                    break;
+                case 4:
+                    textBox.text = "[insult] ";
+                    break;
+            }
+            enemyType = enemies[enemyId].types[enTypeStep];
+            switch (enemyType){
+                case 1:
+                    enemyTag = "[concede] ";
+                    break;
+                case 2:
+                    enemyTag = "[stand] ";
+                    break;
+                case 3:
+                    enemyTag = "[aggress] ";
+                    break;
+                case 4:
+                    enemyTag = "[insult] ";
+                    break;
+            }
+            type = StartCoroutine(TypeText((enemies[enemyId].options[optStep - 1 + playerType] + "\n"), (enemyTag + enemies[enemyId].dialogue[step]), ("\n [space]")));
             //textBox.text = (enemies[enemyId].options[optStep-1+playerType] + "\n" + enemies[enemyId].dialogue[step] + "\n [space]");
             processTable = true;
             combatRound = true;
@@ -165,9 +256,38 @@ public class DuelManager : MonoBehaviour {
 
         } else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha4) && inDuel == true && combatRound == false){ //player chooses [4]
             step++;
-            playerType = 4;
-            textBox.text = "[insult] ";
-            type = StartCoroutine(TypeText((enemies[enemyId].options[optStep - 1 + playerType] + "\n"), enemies[enemyId].dialogue[step], ("\n [space]")));
+            playerType = rand[3]+1;
+            Debug.Log("playerType is: " + playerType);
+            switch (playerType){
+                case 1:
+                    textBox.text = "[concede] ";
+                    break;
+                case 2:
+                    textBox.text = "[stand] ";
+                    break;
+                case 3:
+                    textBox.text = "[aggress] ";
+                    break;
+                case 4:
+                    textBox.text = "[insult] ";
+                    break;
+            }
+            enemyType = enemies[enemyId].types[enTypeStep];
+            switch (enemyType){
+                case 1:
+                    enemyTag = "[concede] ";
+                    break;
+                case 2:
+                    enemyTag = "[stand] ";
+                    break;
+                case 3:
+                    enemyTag = "[aggress] ";
+                    break;
+                case 4:
+                    enemyTag = "[insult] ";
+                    break;
+            }
+            type = StartCoroutine(TypeText((enemies[enemyId].options[optStep - 1 + playerType] + "\n"), (enemyTag + enemies[enemyId].dialogue[step]), ("\n [space]")));
             //textBox.text = (enemies[enemyId].options[optStep-1+playerType] + "\n" + enemies[enemyId].dialogue[step] + "\n [space]");
             processTable = true;
             combatRound = true;
@@ -182,14 +302,8 @@ public class DuelManager : MonoBehaviour {
         //beginning of duel. create that table.
         if (step == 1 && crtTable == true){ 
             CreateTable();
-            //CreateTable();
             UpdateTable();
         }
-
-        //reset
-        //if ((duelFinished == true && typing == false && playerWin == true) || (duelFinished == true && typing == false && enemyWin == true)){
-        //    Reset();
-        //}
 
     }
 
