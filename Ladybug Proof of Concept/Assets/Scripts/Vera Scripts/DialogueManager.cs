@@ -159,6 +159,7 @@ public class DialogueManager : MonoBehaviour
             if (treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].valuableInfo)
             {
                 dialogueText.color = importantText;
+                variableStorage.AddInfo(treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line, treeToRun.dialogueNodes[nodeIndex].informationIndex);
             }
             else
             {
@@ -244,6 +245,7 @@ public class DialogueManager : MonoBehaviour
                 variableStorage.infoSix = true;
                 break;
         }
+
     }
 
     void EnableDuel() //I slapped all the duel enabling shit in a function because it looked ugly lmao

@@ -18,7 +18,7 @@ MonoBehaviour:
     duelTrigger: 0
   - line: Are you friends with Jerry? I saw you talking over there.
     valuableInfo: 0
-    duelTrigger: 0
+    duelTrigger: 1
   - line: So we can talk calmly now? Good!
     valuableInfo: 0
     duelTrigger: 0
