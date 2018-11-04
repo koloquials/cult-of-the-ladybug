@@ -11,8 +11,9 @@ public class UnlockableInfo : MonoBehaviour {
     public Text textInfo;
     public Button openInfo;
     Text buttonText;
-
     int index;
+
+    public string informationToDisplay;
 
     private void Start()
     {
@@ -54,11 +55,9 @@ public class UnlockableInfo : MonoBehaviour {
                 break;
         }
         if(!unlocked){
-            //textInfo.text = "???";
             buttonText.text = "???";
             openInfo.interactable = false;
         } else {
-            string[] temp = variableStorage.informationTitles.ToArray();
             buttonText.text = "Info " + index;
             openInfo.interactable = true;
         }
@@ -68,8 +67,7 @@ public class UnlockableInfo : MonoBehaviour {
         if(variableStorage.infoDisp == false){
             textInfo.text = null;
             variableStorage.infoDisp = true;
-            string[] temp = variableStorage.informationList.ToArray();
-            textInfo.text = temp[index - 1];
+            textInfo.text = informationToDisplay;
         } else {
             variableStorage.infoDisp = false;
             textInfo.text = null;

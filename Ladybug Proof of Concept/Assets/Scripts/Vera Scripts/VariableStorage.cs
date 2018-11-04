@@ -23,6 +23,7 @@ public class VariableStorage : MonoBehaviour {
                 if(u.thisInfo == node.informationIndex){
                     informationList.Add(toAdd);
                     informationTitles.Add(node.nodeName);
+                    u.informationToDisplay = toAdd;
                    // u.textInfo.text = toAdd;
                 }
             }
