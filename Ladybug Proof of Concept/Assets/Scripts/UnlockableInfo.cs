@@ -19,7 +19,7 @@ public class UnlockableInfo : MonoBehaviour {
     {
         variableStorage = FindObjectOfType<VariableStorage>();
         textInfo.text = null;
-        buttonText = openInfo.gameObject.transform.FindChild("Text").GetComponent<Text>();
+        buttonText = openInfo.gameObject.transform.Find("Text").GetComponent<Text>();
         openInfo.onClick.AddListener(OnClickRevelInfo);
     }
 
