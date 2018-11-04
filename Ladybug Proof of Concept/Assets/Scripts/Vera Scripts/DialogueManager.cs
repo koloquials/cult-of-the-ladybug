@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
     [System.Serializable]
 
     public enum GameState{ //possible game states to be in
-        DialogueActive, DuelActive, OverworldActive, TimerOut, InfoRight, IntroScene
+        DialogueActive, DuelActive, OverworldActive, TimerOut, MenuActive, IntroScene, Win
     }
     public GameState currentGameState; //current game state we're in (gets updated)
 
@@ -159,7 +159,7 @@ public class DialogueManager : MonoBehaviour
             if (treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].valuableInfo)
             {
                 dialogueText.color = importantText;
-                variableStorage.AddInfo(treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line, treeToRun.dialogueNodes[nodeIndex].informationIndex);
+                variableStorage.AddInfo(treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line, treeToRun.dialogueNodes[nodeIndex]);
             }
             else
             {
