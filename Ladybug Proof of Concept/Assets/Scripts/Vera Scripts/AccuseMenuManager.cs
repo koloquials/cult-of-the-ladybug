@@ -75,6 +75,7 @@ public class AccuseMenuManager : MonoBehaviour {
                 dialogueManager.currentGameState = DialogueManager.GameState.OverworldActive;
                 menu.GetComponent<RectTransform>().localPosition = new Vector3((menu.GetComponent<RectTransform>().localPosition.x - 500f),
                                                                                (menu.GetComponent<RectTransform>().localPosition.y), 0f);
+                FindObjectOfType<VariableStorage>().infoDisp = false;
             }
         }
     }

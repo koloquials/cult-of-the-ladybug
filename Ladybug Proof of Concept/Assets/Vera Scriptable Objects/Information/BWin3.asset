@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: BWin3
   m_EditorClassIdentifier: 
   nodeName: 
+  ClueTitle: Info 6
   dialogueLines:
   - line: "Who cares?! I was drunk, okay? Blackout drunk, so I don\u2019t remember!
       That good enough for you? "

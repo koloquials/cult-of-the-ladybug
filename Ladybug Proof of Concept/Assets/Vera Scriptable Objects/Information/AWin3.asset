@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: AWin3
   m_EditorClassIdentifier: 
   nodeName: 
+  ClueTitle: Info 5
   dialogueLines:
   - line: "I don\u2019t know! All your probing has given me a migraine, so now I can\u2019t
       remember! Go away!"
