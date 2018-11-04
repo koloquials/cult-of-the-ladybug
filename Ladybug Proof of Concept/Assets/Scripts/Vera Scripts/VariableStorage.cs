@@ -7,7 +7,6 @@ public class VariableStorage : MonoBehaviour {
 
     public bool infoOne, infoTwo, infoThree, infoFour, infoFive, infoSix;
     public List<string> informationList = new List<string>();
-    public List<string> informationTitles = new List<string>();
     public List<UnlockableInfo> unlockables;
 
     public bool infoDisp = false;
@@ -22,9 +21,8 @@ public class VariableStorage : MonoBehaviour {
             foreach(var u in unlockables){
                 if(u.thisInfo == node.informationIndex){
                     informationList.Add(toAdd);
-                    informationTitles.Add(node.nodeName);
                     u.informationToDisplay = toAdd;
-                   // u.textInfo.text = toAdd;
+                    u.clueDisplay = node.ClueTitle;
                 }
             }
         }

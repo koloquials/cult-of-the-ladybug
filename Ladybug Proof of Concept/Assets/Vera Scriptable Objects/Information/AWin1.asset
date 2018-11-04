@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: AWin1
   m_EditorClassIdentifier: 
   nodeName: 
+  ClueTitle: Info 1
   dialogueLines:
   - line: "Jeez, fine. You wanna know who I am? I\u2019m Jerry and over there is my
       sister Moonchild. You better be good to her, or I\u2019ll kick your ass."

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: AWin2
   m_EditorClassIdentifier: 
   nodeName: 
+  ClueTitle: Info 2
   dialogueLines:
   - line: "QUIT GRILLIN ME I\u2019M NOT TELLIN\u2019 YOU ANYTHING!"
     valuableInfo: 1
