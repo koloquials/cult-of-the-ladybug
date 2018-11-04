@@ -12,6 +12,7 @@ public class DialogueNode : ScriptableObject {
         public bool valuableInfo, duelTrigger;
     }
     public string nodeName;
+    public string ClueTitle;
     public DialogueLine[] dialogueLines;
 
     [System.Serializable]
