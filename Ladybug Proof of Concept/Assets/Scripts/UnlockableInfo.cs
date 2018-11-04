@@ -59,7 +59,7 @@ public class UnlockableInfo : MonoBehaviour {
             buttonText.text = "???";
             openInfo.interactable = false;
         } else {
-            buttonText.text = clueDisplay;
+            buttonText.text = "Info " + index;
             openInfo.interactable = true;
         }
         if(!variableStorage.infoDisp){
@@ -71,7 +71,7 @@ public class UnlockableInfo : MonoBehaviour {
         if(variableStorage.infoDisp == false){
             textInfo.text = null;
             variableStorage.infoDisp = true;
-            textInfo.text = informationToDisplay;
+            textInfo.text = clueDisplay + "\n" + informationToDisplay;
         } else {
             variableStorage.infoDisp = false;
             //textInfo.text = null;
