@@ -20,8 +20,10 @@ MonoBehaviour:
     duelTrigger: 0
   - line: "Who even knows where Jerry was. The \u201Cbathroom\u201D? As if, right?
       God, I\u2019ve hated that jerk for years, but they were friends with Jerry so
-      what was I supposed to do? Say \u201CNo, don\u2019t go to the seance and make
-      up with your best friend\u201D? "
+      what was I supposed to do? "
+    valuableInfo: 0
+    duelTrigger: 0
+  - line: "Say \u201CNo, don\u2019t go to the seance and make up with your best friend\u201D? "
     valuableInfo: 0
     duelTrigger: 0
   - line: " Good riddance they\u2019re dead. All they\u2019d done for years was screw

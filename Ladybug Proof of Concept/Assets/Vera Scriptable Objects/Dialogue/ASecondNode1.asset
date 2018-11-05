@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Name: ASecondNode1
   m_EditorClassIdentifier: 
   nodeName: PersonANode2
+  ClueTitle: 
   dialogueLines:
-  - line: "Why\u2019d you go and freak out my sister you goddamn jerk?!"
+  - line: "Why\u2019d you go and harass my sister, you bastard?"
     valuableInfo: 0
     duelTrigger: 0
   - line: "She didn\u2019t do anything, what\u2019s wrong with you?!"
     valuableInfo: 0
     duelTrigger: 1
-  - line: "FUCK OFF, SISTER-BULLY OR I\u201DLL BEAT YOUR ASS!"
+  - line: Mind your tongue! Or I will see you beaten to a pulp!
     valuableInfo: 0
     duelTrigger: 0
+  informationIndex: 0
