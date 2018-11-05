@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Name: ACon3
   m_EditorClassIdentifier: 
   nodeName: 
+  ClueTitle: Jerry claims to have been in the bathroom during the murder
   dialogueLines:
-  - line: "During cocktail hour, when last I checked the host was alive, I went to
-      the bathroom. Ask Moonchild, she\u2019ll tell you. I ain\u2019t lyin\u2019."
-    valuableInfo: 0
+  - line: During cocktail hour, when last I checked the host was alive, I went to
+      the bathroom.
+    valuableInfo: 1
+    duelTrigger: 0
+  - line: "Ask Moonchild, she\u2019ll tell you. I speak the truth."
+    valuableInfo: 1
     duelTrigger: 0
   informationIndex: 4

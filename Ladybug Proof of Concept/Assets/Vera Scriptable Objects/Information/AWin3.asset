@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Name: AWin3
   m_EditorClassIdentifier: 
   nodeName: 
+  ClueTitle: Jerry can't remember anything else.
   dialogueLines:
   - line: "I don\u2019t know! All your probing has given me a migraine, so now I can\u2019t
       remember! Go away!"
-    valuableInfo: 0
+    valuableInfo: 1
     duelTrigger: 0
   informationIndex: 5

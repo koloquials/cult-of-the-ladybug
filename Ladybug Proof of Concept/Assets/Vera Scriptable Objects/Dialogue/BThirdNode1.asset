@@ -12,17 +12,16 @@ MonoBehaviour:
   m_Name: BThirdNode1
   m_EditorClassIdentifier: 
   nodeName: PersonBNode3
+  ClueTitle: 
   dialogueLines:
-  - line: You wanna know where we were?
+  - line: You want know where we were at the time of death?
     valuableInfo: 0
     duelTrigger: 0
-  - line: "Um, let me think for a second. I think I\u2019m still in shock from this
-      whole thing."
+  - line: Um, let me think for a second. I think I may still be in shock from this
+      whole situation.
     valuableInfo: 0
     duelTrigger: 0
   - line: "During cocktail hour...um\u2026"
     valuableInfo: 0
     duelTrigger: 1
-  - line: "Listen, I really can\u2019t tell you anything else. Sorry."
-    valuableInfo: 0
-    duelTrigger: 0
+  informationIndex: 0

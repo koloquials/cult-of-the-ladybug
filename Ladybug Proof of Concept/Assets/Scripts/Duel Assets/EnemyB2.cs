@@ -12,59 +12,59 @@ public class EnemyB2 : Enemy {
         dialogue.Add("\n“AH! Interrupting is rude…”");
 
         dialogue.Add("[DUEL:START]\n");
-        options.Add("Oh gosh, I’m so sorry.\n");
-        options.Add("Relax, dude. I just wanna know how you know the dead guy.\n");
-        options.Add("DID YOU MURDER THE HOST?!\n");
-        options.Add("Speak up, dumbass.\n");
-        dialogue.Add("\"I-I’m not to sure what’s going on here...\"\n");
+        options.Add("Apologies, miss. But I have some questions to ask of you.\n");
+        options.Add("Justice waits for no one!\n");
+        options.Add("Now is not the time for manners, but answers.\n");
+        options.Add("One must always be ready for the unexpected.\n");
+        dialogue.Add("\"You have questions for me? I can’t imagine why.\"\n");
         types.Add(2); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response. 
         //it's important that you stick to ~2 types and properly ramp up to them or else the player will think they're unpredictable.
 
-        dialogue.Add("\"I-I’m not to sure what’s going on here...\"\n");
-        options.Add("Me neither.\n");
-        options.Add("It is an odd situation for sure.\n");
-        options.Add("TELL ME WHAT I WANT TO KNOW!\n");
-        options.Add("Wow. It’s a murder, Sherlock. OPEN YOUR EYES!\n");
-        dialogue.Add("\"Um, none of this is what I expected from a party. This isn’t very fun.\"\n");
+        dialogue.Add("\"You have questions for me? I can’t imagine why.\"\n");
+        options.Add("Well, yes I do. I imagine all of this is hard to process.\n");
+        options.Add("No need to imagine, merely speak the truth.\n");
+        options.Add("Yes I do, several. But let’s start with names.\n");
+        options.Add("A man life just ended in this room, something you need not imagine.\n");
+        dialogue.Add("\"I did not expect such a verbal assault when I accepted the invitation to this event.\"\n");
         types.Add(1); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response. 
 
-        dialogue.Add("\"Um, none of this is what I expected from a party. This isn’t very fun.\"\n");
-        options.Add("Murder has put a bit of a damper on things.\n");
-        options.Add("It could be fun, if you used your imagination.\n");
-        options.Add("TELL MEEEE!\n");
-        options.Add("WHAT THIS MURDER ISN’T FUN ENOUGH FOR YOU, YOU SICKO?!\n");
-        dialogue.Add("\"H-h-hey, um, this is all really scary. Could you maybe go talk to someone else? I know Jerry is probably more ready to talk than me.\"\n");
+        dialogue.Add("\"I did not expect such a verbal assault when I accepted the invitation to this event.\"\n");
+        options.Add("I mean no offense, I assure you.\n");
+        options.Add("I must know more, so I can’t let manners hold me back.\n");
+        options.Add("I am doing what is necessary to find justice for our late host.\n");
+        options.Add("And our host didn’t expect a knife in his back. Tonight, we all suffer surprises.\n");
+        dialogue.Add("\"I-I’m not sure what I can tell you...\"\n");
         types.Add(2); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
         //rinse and repeat!!
 
-        dialogue.Add("\"H-h-hey, um, this is all really scary. Could you maybe go talk to someone else? I know Jerry is probably more ready to talk than me.\"\n");
-        options.Add("Y-yeah it is pretty scary out here in the woods, plus the dead guy in here.\n");
-        options.Add("It’s not that scary, just take a breath so we can talk.\n");
-        options.Add("I’LL GIVE YOU SOMETHING TO BE SCARED OF!\n");
-        options.Add("Frickin’ scaredy-cat-loser-baby.\n");
-        dialogue.Add("\"Th-this is all too much for me. Please stop bothering me.\"\n");
+        dialogue.Add("\"I-I’m not sure what I can tell you...\"\n");
+        options.Add("Anything you might think of as helpful, please.\n");
+        options.Add("What is there to be unsure of?\n");
+        options.Add("To start, tell me your name!\n");
+        options.Add("Surely you know your own name, at least?\n");
+        dialogue.Add("\"I-I, uh, well...I’m, uh...\"\n");
         types.Add(2); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
-        dialogue.Add("\"Th-this is all too much for me. Please stop bothering me.\"\n");
-        options.Add("I’m so sorry, I didn’t mean any harm.\n");
-        options.Add("Alright, alright now just relax.\n");
-        options.Add("I’M BOTHERING YOU? YOU’RE BOTHERING ME BY IGNORING ME!\n");
-        options.Add("What’re you gonna do, cry? Ya big baby.\n");
-        dialogue.Add("\"Waaaaaaaaaaaaaah!\"\n");
+        dialogue.Add("\"I-I, uh, well...I’m, uh...\"\n");
+        options.Add("Are you unwell, miss?\n");
+        options.Add("Focus yourself, please.\n");
+        options.Add("Please, your name, miss.\n");
+        options.Add("There’s no need to be so flustered, I’ve only asked your name.\n");
+        dialogue.Add("\"Please, leave me be. This is...too much for me to handle.\"\n");
         types.Add(1); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
-        dialogue.Add("\"Waaaaaaaaaaaaaah!\"\n");
-        options.Add("Oh no, please don’t cry.\n");
-        options.Add("You seriously need to chill out.\n");
-        options.Add("ANSWER MY QUESTIONS DAMMIT!\n");
-        options.Add("WHAT A LITTLE CRY-BITCH BABY!\n");//here is where the script ends
-        dialogue.Add("\"Waaaaaaaaaaaaaah!\"\n");
+        dialogue.Add("\"Please, leave me be. This is...too much for me to handle.\"\n");
+        options.Add("All of this is rather overwhelming.\n");
+        options.Add("Though I’d like to, I can’t leave any stone unturned.\n");
+        options.Add("I cannot, miss, this is too important.\n");
+        options.Add("I’ve only asked your name, and I intend to ask more.\n");//here is where the script ends
+        dialogue.Add("\"Please, leave me be. This is...too much for me to handle.\"\n");
         types.Add(3); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }

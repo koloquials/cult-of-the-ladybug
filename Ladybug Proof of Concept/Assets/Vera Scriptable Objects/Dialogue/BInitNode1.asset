@@ -12,16 +12,19 @@ MonoBehaviour:
   m_Name: BInitNode1
   m_EditorClassIdentifier: 
   nodeName: PersonBNode1
+  ClueTitle: 
   dialogueLines:
   - line: Oh!
     valuableInfo: 0
     duelTrigger: 0
-  - line: "Sorry, I didn\u2019t see you there, scared me a bit."
+  - line: "Sorry, I didn\u2019t see you there, you frightened me."
     valuableInfo: 0
     duelTrigger: 0
-  - line: This whole thing is crazy, huh?
+  - line: "I\u2019m a tad on edge, what with this whole situation, wouldn\u2019t you
+      say?"
     valuableInfo: 0
     duelTrigger: 1
-  - line: "Jerry, that guy over there, he said I shouldn\u2019t talk to anybody\u2026"
+  - line: Jerry, that man over there, advised me not to talk to anyone.
     valuableInfo: 0
     duelTrigger: 0
+  informationIndex: 0

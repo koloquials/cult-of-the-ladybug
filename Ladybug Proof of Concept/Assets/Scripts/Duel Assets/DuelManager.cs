@@ -501,10 +501,13 @@ public class DuelManager : MonoBehaviour {
         tiles = new GameObject[7]; //array of tiles. only important for intialization.
         status = new DuelSqSprite[7];
 
-        for (int i = 0; i < tiles.Length; i++){ //make them tiles
+        for (int i = 0; i < tiles.Length; i++)
+        { //make them tiles
             tiles[i] = Instantiate(tile) as GameObject;
+            tiles[i].gameObject.transform.SetParent(FindObjectOfType<Camera>().transform);
             tiles[i].SetActive(true);
-            tiles[i].transform.Translate((2.3f * i), 0.65f, 0);
+            //tiles[i].transform.Translate((2.3f * i), 0.65f, 0);
+            tiles[i].transform.Translate((2.3f * i), FindObjectOfType<Camera>().transform.position.y + 0.65f, -1f);
             status[i] = tiles[i].GetComponent<DuelSqSprite>();
         }
         crtTable = false;

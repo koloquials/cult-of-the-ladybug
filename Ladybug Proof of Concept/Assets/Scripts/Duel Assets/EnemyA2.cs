@@ -12,54 +12,54 @@ public class EnemyA2 : Enemy {
         dialogue.Add("\n“SHE IS A GENTLE ANGEL AND YOU MADE HER CRY!”");
 
         dialogue.Add("[DUEL:START]\n");
-        options.Add(" It’s all my fault, I’m sorry.\n");
-        options.Add("I didn’t mean to, it just happened.\n");
-        options.Add("She didn’t answer my questions, so I made her cry!\n");
-        options.Add("She sucks and you suck.\n");
+        options.Add("I assure you, that was not my intention.\n");
+        options.Add("I only asked her name.\n");
+        options.Add("I need to get to the bottom of things, I can't worry about feelings.\n");
+        options.Add("I didn;t make her cry, she did that on her own.\n");
         dialogue.Add("\"What could be so damn important that you’d go so far?\"\n");
         types.Add(3); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response. 
         //it's important that you stick to ~2 types and properly ramp up to them or else the player will think they're unpredictable.
 
         dialogue.Add("\"What could be so damn important that you’d go so far?\"\n");
-        options.Add("I’m sorry, I went too far.\n");
-        options.Add("Um, a guy got murdered.\n");
-        options.Add("WE ARE SURROUNDED BY DEATH\n");
-        options.Add("Yo mamma.\n");
-        dialogue.Add("\"You’re gonna answer my questions now. Or else.\"\n");
+        options.Add("I'll concede, I didn't need to push her so far.\n");
+        options.Add("A man has died here tonight, we could all be in danger.\n");
+        options.Add("Justice and the search for truth!\n");
+        options.Add("Can you not see the corpse over there?\n");
+        dialogue.Add("\"I understand our current circumstance, but your behavior is out of bounds!\"\n");
         types.Add(3); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response. 
 
-        dialogue.Add("\"You’re gonna answer my questions now. Or else.\"\n");
-        options.Add("Please don’t hurt me.\n");
-        options.Add("Uh, no.\n");
-        options.Add("You answer me, dangit!\n");
-        options.Add("Hell no, asshole!\n");
-        dialogue.Add("\"GRRRRR\"\n");
+        dialogue.Add("\"I understand our current circumstance, but your behavior is out of bounds!\"\n");
+        options.Add("Perhaps I went to far, but something must be done!\n");
+        options.Add("My behavior and investigation are warranted, considering the crime.\n");
+        options.Add("One must act when in pursuit of justice, regardless of the consequences.\n");
+        options.Add("If you really understand our circumstances, then you'll forgive my behavior!\n");
+        dialogue.Add("\"I've had my fill of you, your behavior, and your questions!\"\n");
         types.Add(3); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
         //rinse and repeat!!
 
-        dialogue.Add("\"GRRRRR\"\n");
-        options.Add("AH! Don’t hurt me please!\n");
-        options.Add("rawr\n");
-        options.Add("Talk like a person and tell me some answers!\n");
-        options.Add("You sound zoo animal  and ya smell like one too.\n");
-        dialogue.Add("\"You are literally the most annoying person here.\"\n");
+        dialogue.Add("\"I've had my fill of you, your behavior, and your questions!\"\n");
+        options.Add("I'm sorry, but I can't just leave this crime unsolved!\n");
+        options.Add("A life has been lost and lives are at stake! I stand by my actions!\n");
+        options.Add("Too bad because I have more of all three!\n");
+        options.Add("I have barely begun to get to my real question!\n");
+        dialogue.Add("\"If you know what's good for you, you'll leave me and my sister alone. Now!\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
-        dialogue.Add("\"You are literally the most annoying person here.\"\n");
-        options.Add("I know. I suck.\n");
-        options.Add("Maybe.\n");
-        options.Add("TELL ME WHAT I WANT TO KNOW\n");
-        options.Add("I know you are but what am I?\n");
-        dialogue.Add("\"I don’t even know what you want me to tell you, asshole.\"\n");
+        dialogue.Add("\"If you know what's good for you, you'll leave me and my sister alone. Now!\"\n");
+        options.Add("I don't mean to harm you or your sister! I mean to do the opposite, in fact!\n");
+        options.Add("My safety is of little importance, the safety of an innocent is another matter.\n");
+        options.Add("You and your sister knew the host, I want to know how.\n");
+        options.Add("I guess I don't know what's good for me, since I don't intend to leave this alone.\n");
+        dialogue.Add("\"I don’t even know what you want me to tell you!\"\n");
         types.Add(2); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
-        dialogue.Add("\"I don’t even know what you want me to tell you, asshole.\"\n");
-        options.Add("Um...how did you know, um…the host? You don’t have to say. Please don’t hurt me Scary Jerry.\n");
-        options.Add("Not much. Were you close with the host?  No pressure.\n");
-        options.Add("HOW DO YOU KNOW THE HOST?\n");
-        options.Add("Fuck you.\n");//here is where the script ends
-        dialogue.Add("\"I don’t even know what you want me to tell you, asshole.\"\n");
+        dialogue.Add("\"I don’t even know what you want me to tell you!\"\n");
+        options.Add("Perhaps I haven't been clear, I want to know how you knew the host.\n");
+        options.Add("I want you to tell me the truth!\n");
+        options.Add("I need to know the nature of your relationship to our mutual dead friend!\n");
+        options.Add("Yes you do! A part of you knows exactly what I want to hear!\n");//here is where the script ends
+        dialogue.Add("\"I don’t even know what you want me to tell you!\"\n");
         types.Add(3); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
     }
 	

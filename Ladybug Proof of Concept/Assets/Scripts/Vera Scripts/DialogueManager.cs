@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
     [System.Serializable]
 
     public enum GameState{ //possible game states to be in
-        DialogueActive, DuelActive, OverworldActive, TimerOut, InfoRight
+        DialogueActive, DuelActive, OverworldActive, TimerOut, MenuActive, IntroScene, Win
     }
     public GameState currentGameState; //current game state we're in (gets updated)
 
@@ -42,6 +42,9 @@ public class DialogueManager : MonoBehaviour
     bool lineComplete = false; //to ensure a line doesn't get repeated.
     Coroutine type; //holds the typing coroutine
 
+
+
+
     private void Start()
     {
         timeManager = FindObjectOfType<TimeManager>(); //finds TimeManager script on start
@@ -58,7 +61,8 @@ public class DialogueManager : MonoBehaviour
         duelCanvas.gameObject.SetActive(false); //turns the duel canvas off at start
         activeDuel = null; //sets active duel to null on start
         player = GameObject.FindGameObjectWithTag("Player"); //finds the player by tag on start
-        currentGameState = GameState.OverworldActive; //sets the current game state the the overworld on start
+        //currentGameState = GameState.OverworldActive; //sets the current game state the the overworld on start
+        currentGameState = GameState.IntroScene; 
 
 
     }
@@ -121,6 +125,7 @@ public class DialogueManager : MonoBehaviour
         currentGameState = GameState.DialogueActive; //sets current game state to dialogue active
         treeToRun = tree; //sets the tree that we're running to the tree in the parameter
         timeManager.modifier = 0f; //stops time from decreasing 
+        lineComplete = false; //fix dialogue loading bug
 
     }
 
@@ -154,6 +159,7 @@ public class DialogueManager : MonoBehaviour
             if (treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].valuableInfo)
             {
                 dialogueText.color = importantText;
+                variableStorage.AddInfo(treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line, treeToRun.dialogueNodes[nodeIndex]);
             }
             else
             {
@@ -239,6 +245,7 @@ public class DialogueManager : MonoBehaviour
                 variableStorage.infoSix = true;
                 break;
         }
+
     }
 
     void EnableDuel() //I slapped all the duel enabling shit in a function because it looked ugly lmao

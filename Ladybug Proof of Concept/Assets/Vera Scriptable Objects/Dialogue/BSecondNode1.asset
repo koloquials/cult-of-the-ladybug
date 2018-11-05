@@ -12,22 +12,23 @@ MonoBehaviour:
   m_Name: BSecondNode1
   m_EditorClassIdentifier: 
   nodeName: PersonBNode2
+  ClueTitle: 
   dialogueLines:
   - line: "Oh, hi. Sorry, have we met? I don\u2019t recognize you."
     valuableInfo: 0
     duelTrigger: 0
-  - line: Are you friends with Jerry? I saw you talking over there.
+  - line: Have you met my brother, Jerry? I saw you two talking over there.
+    valuableInfo: 0
+    duelTrigger: 1
+  - line: So we can talk calmly? Wonderful!
     valuableInfo: 0
     duelTrigger: 0
-  - line: So we can talk calmly now? Good!
+  - line: Alright so um,  you wanna know about Jerry, right? He can be a tough nut
+      to crack.
     valuableInfo: 0
     duelTrigger: 0
-  - line: Okay so um,  you wanna know about Jerry, right? He can be a tough nut to
-      crack, for sure.
-    valuableInfo: 0
-    duelTrigger: 0
-  - line: But he and the host were actually close friends since kindergarten. Sure,
-      they fought sometimes, and sometimes Jerry got outta hand.
+  - line: But he and the host were actually close since kindergarten. Of course, they
+      fought at times, and sometimes Jerry went overboard.
     valuableInfo: 1
     duelTrigger: 0
   - line: "But he couldn\u2019t take part in something like this...could he?"
