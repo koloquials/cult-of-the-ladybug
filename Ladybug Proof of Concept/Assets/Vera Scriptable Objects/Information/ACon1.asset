@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Name: ACon1
   m_EditorClassIdentifier: 
   nodeName: 
+  ClueTitle: 
   dialogueLines:
-  - line: "I ain\u2019t tellin you anything, you\u2019ve got no determination."
+  - line: "Run along, I\u2019ve no patience for lackwits who can\u2019t hold conversation."
     valuableInfo: 0
     duelTrigger: 0
   informationIndex: 0

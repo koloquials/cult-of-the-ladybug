@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Name: ALose1
   m_EditorClassIdentifier: 
   nodeName: 
+  ClueTitle: 
   dialogueLines:
-  - line: 'Time Lost: #:##'
+  - line: Time Lost!
     valuableInfo: 0
     duelTrigger: 0
   informationIndex: 0

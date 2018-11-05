@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: AWin2
   m_EditorClassIdentifier: 
   nodeName: 
-  ClueTitle: Info 2
+  ClueTitle: Jerry is irritable.
   dialogueLines:
-  - line: "QUIT GRILLIN ME I\u2019M NOT TELLIN\u2019 YOU ANYTHING!"
+  - line: Enough of your questions! And enough of you, get out of my sight!
     valuableInfo: 1
     duelTrigger: 0
   informationIndex: 2

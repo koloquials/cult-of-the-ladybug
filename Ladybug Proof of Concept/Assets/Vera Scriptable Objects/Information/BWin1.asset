@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Name: BWin1
   m_EditorClassIdentifier: 
   nodeName: 
+  ClueTitle: 
   dialogueLines:
-  - line: Go away you meanie! Waaaaaaaaah! Wahwahwaaaaaaahh!
+  - line: "Please, go away...I-I can\u2019t handle this *sniffle*."
     valuableInfo: 0
     duelTrigger: 0
   informationIndex: 0

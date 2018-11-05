@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Name: AWin1
   m_EditorClassIdentifier: 
   nodeName: 
-  ClueTitle: Info 1
+  ClueTitle: 'Suspects: Jerry and Moonchild'
   dialogueLines:
-  - line: "Jeez, fine. You wanna know who I am? I\u2019m Jerry and over there is my
-      sister Moonchild. You better be good to her, or I\u2019ll kick your ass."
+  - line: "Alright, alright, you\u2019ve worn me down. I am Jerry, and over there
+      is my sister, Moonchild."
     valuableInfo: 1
+    duelTrigger: 0
+  - line: "If you speak to her, be kind or you and I will have words...violent words.\t"
+    valuableInfo: 0
     duelTrigger: 0
   informationIndex: 1

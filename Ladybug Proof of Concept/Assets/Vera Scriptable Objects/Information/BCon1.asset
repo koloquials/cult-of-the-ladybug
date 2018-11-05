@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Name: BCon1
   m_EditorClassIdentifier: 
   nodeName: 
+  ClueTitle: 
   dialogueLines:
-  - line: "Jerry, that guy over there, he said I shouldn\u2019t talk to anybody\u2026"
+  - line: Jerry, that man over there, advised me not to talk to anyone.
     valuableInfo: 0
     duelTrigger: 0
   informationIndex: 0
