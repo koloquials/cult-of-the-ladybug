@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: BCon2
   m_EditorClassIdentifier: 
   nodeName: 
-  ClueTitle: Info 3
+  ClueTitle: Jerry and the host were longtime friends.
   dialogueLines:
   - line: "So we can talk calmly now? Good! Okay so um,  you wanna know about Jerry,
       right? He can be a tough nut to crack, for sure. But he and the host were actually

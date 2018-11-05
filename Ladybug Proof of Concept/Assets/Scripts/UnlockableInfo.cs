@@ -71,7 +71,8 @@ public class UnlockableInfo : MonoBehaviour {
         if(variableStorage.infoDisp == false){
             textInfo.text = null;
             variableStorage.infoDisp = true;
-            textInfo.text = clueDisplay + "\n" + informationToDisplay;
+            //textInfo.text = clueDisplay + "\n" + informationToDisplay;
+            textInfo.text = clueDisplay + "\n";
         } else {
             variableStorage.infoDisp = false;
             //textInfo.text = null;

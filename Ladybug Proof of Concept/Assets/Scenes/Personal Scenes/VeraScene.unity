@@ -855,6 +855,8 @@ MonoBehaviour:
   unlocked: 0
   textInfo: {fileID: 1565390157}
   openInfo: {fileID: 291158290}
+  informationToDisplay: 
+  clueDisplay: 
 --- !u!114 &291158290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -983,6 +985,8 @@ MonoBehaviour:
   unlocked: 0
   textInfo: {fileID: 1565390157}
   openInfo: {fileID: 347708290}
+  informationToDisplay: 
+  clueDisplay: 
 --- !u!114 &347708290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1713,7 +1717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2251,6 +2255,8 @@ MonoBehaviour:
   unlocked: 0
   textInfo: {fileID: 1565390157}
   openInfo: {fileID: 1159360030}
+  informationToDisplay: 
+  clueDisplay: 
 --- !u!114 &1159360030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2845,6 +2851,8 @@ MonoBehaviour:
   unlocked: 0
   textInfo: {fileID: 1565390157}
   openInfo: {fileID: 1353516328}
+  informationToDisplay: 
+  clueDisplay: 
 --- !u!114 &1353516328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3058,7 +3066,6 @@ MonoBehaviour:
   infoFive: 0
   infoSix: 0
   informationList: []
-  informationTitles: []
   unlockables: []
   infoDisp: 0
 --- !u!114 &1424946404
@@ -4286,6 +4293,8 @@ MonoBehaviour:
   unlocked: 0
   textInfo: {fileID: 1565390157}
   openInfo: {fileID: 1813493654}
+  informationToDisplay: 
+  clueDisplay: 
 --- !u!114 &1813493654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4840,7 +4849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.8714347, g: 0.8773585, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4921,6 +4930,8 @@ MonoBehaviour:
   unlocked: 0
   textInfo: {fileID: 1565390157}
   openInfo: {fileID: 2095112988}
+  informationToDisplay: jerry is mad
+  clueDisplay: 
 --- !u!114 &2095112988
 MonoBehaviour:
   m_ObjectHideFlags: 0
