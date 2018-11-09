@@ -45,11 +45,7 @@ public class DuelSqSprite : MonoBehaviour {
         }
 
         if (struck == true){
-            if (hasEnemy == true){
-                personRenderer.sprite = person[2];
-            } else if (hasPlayer == true){
-                personRenderer.sprite = person[3];
-            }
+            personRenderer.sprite = person[2];
         }
     }
 }
