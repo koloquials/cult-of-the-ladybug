@@ -23,17 +23,25 @@ public class NPC : MonoBehaviour {
 
     public List<NPC> otherNPC;
 
+    public enum NPCStatus{
+        Neutral, Heated
+    }
+    public NPCStatus currentStatus;
+    float heatedTimer;
+
     [HideInInspector]
-    public GameObject interactionIcon;
+    public GameObject interactionIcon, heatedIcon;
 
     public virtual void Start()
     {
         possibleTrees = new List<DialogueTree>();
         variables = FindObjectOfType<VariableStorage>();
         interactionIcon = this.gameObject.transform.Find("InteractionIcon").gameObject;
+        heatedIcon = this.gameObject.transform.Find("HeatedIcon").gameObject;
         interactionIcon.SetActive(false);
         otherNPC = new List<NPC>(FindObjectsOfType<NPC>());
         otherNPC.Remove(this);
+        currentStatus = NPCStatus.Neutral;
     }
 
     public virtual void Update()
@@ -67,13 +75,31 @@ public class NPC : MonoBehaviour {
 
 
         } catch (System.NullReferenceException){}
+
+        switch(currentStatus){
+            case NPCStatus.Neutral:
+                heatedTimer = 10f;
+                heatedIcon.gameObject.SetActive(false);
+                break;
+
+            case NPCStatus.Heated:
+                heatedTimer -= Time.deltaTime;
+                heatedIcon.gameObject.SetActive(true);
+                Color heat = heatedIcon.GetComponent<SpriteRenderer>().color;
+                heat.a = heatedTimer/10f;
+                heatedIcon.GetComponent<SpriteRenderer>().color = heat;
+                if(heatedTimer <=0f){
+                    currentStatus = NPCStatus.Neutral;
+                }
+                break;
+        }
     }
 
 
     void CheckForPlayer()
     {
         var player = FindObjectOfType<PlayerMove>();
-        if((player.gameObject.transform.position - transform.position).magnitude <= player.interactionRadius){
+        if((player.gameObject.transform.position - transform.position).magnitude <= player.interactionRadius && currentStatus!= NPCStatus.Heated){
             interactionIcon.SetActive(true);
         } else {
             interactionIcon.SetActive(false);
