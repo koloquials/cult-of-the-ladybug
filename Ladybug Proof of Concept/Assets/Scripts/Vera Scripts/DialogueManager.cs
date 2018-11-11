@@ -161,8 +161,9 @@ public class DialogueManager : MonoBehaviour
         try
         {
             //dialogueText.text = treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line;
-            nameText.text = activeNPC.npcInfo.npcName; 
-            characterImage.sprite = activeNPC.npcInfo.npcSprites[0].thisSprite;
+            nameText.text = activeNPC.npcInfo.npcName;
+            //characterImage.sprite = activeNPC.npcInfo.npcSprites[0].thisSprite;
+            HandleUISprites(treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex], activeNPC.npcInfo);
 
             if (typing == false && lineComplete == false)
             {
@@ -262,6 +263,17 @@ public class DialogueManager : MonoBehaviour
                 break;
         }
 
+    }
+
+    void HandleUISprites(DialogueNode.DialogueLine currentLine, NpcTemplate npc){
+        for (int i = 0; i < npc.npcSprites.Length; i++){
+            if(currentLine.deliveryTone == npc.npcSprites[i].spriteForTone){
+                characterImage.sprite = npc.npcSprites[i].thisSprite;
+            } else {
+                characterImage.sprite = npc.npcSprites[0].thisSprite;
+            }
+        }
+        
     }
 
     void EnableDuel() //I slapped all the duel enabling shit in a function because it looked ugly lmao

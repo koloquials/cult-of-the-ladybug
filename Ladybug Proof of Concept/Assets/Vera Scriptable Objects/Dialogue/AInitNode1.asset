@@ -18,10 +18,13 @@ MonoBehaviour:
       the main event.
     valuableInfo: 0
     duelTrigger: 0
+    deliveryTone: 0
   - line: "Off with you! I\u2019m not in the mood to socialize."
     valuableInfo: 0
     duelTrigger: 1
+    deliveryTone: 1
   - line: "Run along, I\u2019ve no patience for lackwits who can\u2019t hold conversation."
     valuableInfo: 0
     duelTrigger: 0
+    deliveryTone: 0
   informationIndex: 0

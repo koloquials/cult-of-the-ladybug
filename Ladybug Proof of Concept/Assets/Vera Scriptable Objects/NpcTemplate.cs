@@ -22,6 +22,7 @@ public class NpcTemplate : ScriptableObject {
     public struct UISprite{
         public string spriteName;
         public Sprite thisSprite;
+        public DialogueNode.Tone spriteForTone;
     }
 
     public UISprite[] npcSprites;
