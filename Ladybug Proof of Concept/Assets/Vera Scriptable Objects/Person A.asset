@@ -17,7 +17,7 @@ MonoBehaviour:
     thisSprite: {fileID: 21300000, guid: 103d86317c14841a3806d19b0766dda9, type: 3}
     spriteForTone: 0
   - spriteName: Angry
-    thisSprite: {fileID: 21300000, guid: 63fbe2aba8646e9498ac91ddc97df386, type: 3}
+    thisSprite: {fileID: 21300000, guid: 103d86317c14841a3806d19b0766dda9, type: 3}
     spriteForTone: 1
   npcRelationships:
   - person: {fileID: 11400000, guid: 1ae2a2ae05c7e40c89f64681f863307b, type: 2}

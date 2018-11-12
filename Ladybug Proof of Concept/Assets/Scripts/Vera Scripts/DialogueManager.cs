@@ -100,9 +100,9 @@ public class DialogueManager : MonoBehaviour
 
             if (activeDuel.duelFinished && currentGameState!=GameState.DialogueActive)
             {
-                timeManager.modifier = 1f; //resumes time when the duel concludes
+                //timeManager.modifier = 1f; //resumes time when the duel concludes
 
-                if (activeDuel.enemyWin) //player loss handling
+                if (activeDuel.playerLose) //player loss handling
                 {
                     if (Input.GetKeyDown(KeyCode.Space))
                     {
@@ -139,7 +139,7 @@ public class DialogueManager : MonoBehaviour
     {
         currentGameState = GameState.DialogueActive; //sets current game state to dialogue active
         treeToRun = tree; //sets the tree that we're running to the tree in the parameter
-        timeManager.modifier = 0f; //stops time from decreasing 
+       // timeManager.modifier = 0f; //stops time from decreasing 
         lineComplete = false; //fix dialogue loading bug
 
     }
@@ -147,7 +147,7 @@ public class DialogueManager : MonoBehaviour
     public void StopDialogue() //function that resets all the dialogue shit
     {
         treeToRun = null; //loses the reference to the tree that we passed in StartDialogue()
-        timeManager.modifier = 1f; //resumes timer countdown
+        //timeManager.modifier = 1f; //resumes timer countdown
         nodeIndex = 0; //resets node index to 0
         lineIndex = 0; //resets line index to 0
         if (currentGameState!=GameState.DuelActive) //loses reference to npc we're interacting with unless we're dueling them 
@@ -281,7 +281,7 @@ public class DialogueManager : MonoBehaviour
         duelCanvas.gameObject.SetActive(true); //turns the duel canvas on
         activeNPC.GetComponent<DuelManager>().enabled = true; //enables the duel manager on the npc we're interacting with
         activeDuel = activeNPC.GetComponent<DuelManager>(); //sets active duel to the duel manager on the npc we're interacting with
-        timeManager.modifier = 0f; //stops time from decreasing during the duel
+        //timeManager.modifier = 0f; //stops time from decreasing during the duel
     }
 
     IEnumerator TypeText(string message, Text textToEdit) //scrolling text!
@@ -320,7 +320,7 @@ public class DialogueManager : MonoBehaviour
     {
         currentGameState = GameState.DescriptionActive;
         Debug.Log("here");
-        timeManager.modifier = 0f;
+        //timeManager.modifier = 0f;
         lineComplete = false;
     }
 
@@ -376,7 +376,7 @@ public class DialogueManager : MonoBehaviour
     void StopDescription(){
         activeObject = null;
         nodeToRun = null;
-        timeManager.modifier = 1f;
+        //timeManager.modifier = 1f;
         descriptionIndex = 0;
     }
 

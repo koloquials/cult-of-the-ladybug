@@ -14,7 +14,8 @@ MonoBehaviour:
   nodeName: 
   ClueTitle: 
   dialogueLines:
-  - line: ' Time Lost!'
+  - line: Ugh, stop wasting my time!
     valuableInfo: 0
     duelTrigger: 0
+    deliveryTone: 0
   informationIndex: 0

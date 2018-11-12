@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPC : MonoBehaviour {
 
     public DialogueTree treeToLoad;
     public DialogueTree informationReward;
     public DuelManager thisDuelManager;
+    public PlayerMove player;
 
     public int newDuelId;
 
@@ -22,6 +24,7 @@ public class NPC : MonoBehaviour {
     public VariableStorage variables;
 
     public List<NPC> otherNPC;
+    public Canvas npcCanvas;
 
     public enum NPCStatus{
         Neutral, Heated
@@ -38,10 +41,13 @@ public class NPC : MonoBehaviour {
         variables = FindObjectOfType<VariableStorage>();
         interactionIcon = this.gameObject.transform.Find("InteractionIcon").gameObject;
         heatedIcon = this.gameObject.transform.Find("HeatedIcon").gameObject;
+        npcCanvas = gameObject.transform.Find("npcCanvas").GetComponent<Canvas>();
+        npcCanvas.gameObject.SetActive(false);
         interactionIcon.SetActive(false);
         otherNPC = new List<NPC>(FindObjectsOfType<NPC>());
         otherNPC.Remove(this);
         currentStatus = NPCStatus.Neutral;
+        player = FindObjectOfType<PlayerMove>();
     }
 
     public virtual void Update()
@@ -56,7 +62,7 @@ public class NPC : MonoBehaviour {
                     }
                     break;
                 case Attitude.AngryIfWin:
-                    if(thisDuelManager.enemyWin){
+                    if(thisDuelManager.playerLose){
                         AngryAtPlayer = true;
                     }
                     break;
@@ -98,9 +104,17 @@ public class NPC : MonoBehaviour {
 
     void CheckForPlayer()
     {
-        var player = FindObjectOfType<PlayerMove>();
+        //var player = FindObjectOfType<PlayerMove>();
         if((player.gameObject.transform.position - transform.position).magnitude <= player.interactionRadius && currentStatus!= NPCStatus.Heated){
             interactionIcon.SetActive(true);
+            //if(!player.dossierActive && Input.GetKeyDown(KeyCode.Space)){
+            //    player.dossierActive = true;
+            //    npcCanvas.gameObject.SetActive(true);
+            //}
+            //if(player.dossierActive && Input.GetKeyDown(KeyCode.Space)){
+            //    player.dossierActive = false;
+            //    npcCanvas.gameObject.SetActive(true);
+            //}
         } else {
             interactionIcon.SetActive(false);
         }
@@ -127,7 +141,7 @@ public class NPC : MonoBehaviour {
     public void UpdateInformation(DialogueTree loseTree, DialogueTree winTree){
         try
         {
-            if (thisDuelManager.enemyWin)
+            if (thisDuelManager.playerLose)
             {
                 informationReward = loseTree;
             } else if(thisDuelManager.playerWin){
