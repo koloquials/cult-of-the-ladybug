@@ -13,16 +13,29 @@ public class PlayerMove : MonoBehaviour{
     }
     public void Update()
     {
-        if(dialogue==null || dialogue.currentGameState!=DialogueManager.GameState.OverworldActive || dossierActive){
+        if (dialogue == null || dialogue.currentGameState != DialogueManager.GameState.OverworldActive || dossierActive)
+        {
             return;
-        }else {
+        } else {
             MovePlayer();  
-            if (Input.GetKeyDown(KeyCode.E) && dialogue.currentGameState==DialogueManager.GameState.OverworldActive)
+            if (dialogue.currentGameState==DialogueManager.GameState.OverworldActive)
             {
                 CheckForNPC();
                 CheckForNearbyObjects();
             }
         } 
+        //if (dialogue.currentGameState == DialogueManager.GameState.MenuActive)
+        //{
+        //    if (Input.GetKeyDown(KeyCode.Space))
+        //    {
+        //        dossierActive = false;
+        //        dialogue.currentGameState = DialogueManager.GameState.OverworldActive;
+        //        List<NPC> nPCs = new List<NPC>(FindObjectsOfType<NPC>());
+        //        foreach(var n in nPCs){
+        //            n.npcCanvas.gameObject.SetActive(false);
+        //        }
+        //    }
+        //} 
 
     }
 
@@ -48,16 +61,15 @@ public class PlayerMove : MonoBehaviour{
             
         });
 
-        if (target != null && dialogue.activeNPC == null && target.currentStatus != NPC.NPCStatus.Heated)
+        if (target != null && dialogue.activeNPC == null && target.currentStatus != NPC.NPCStatus.Heated && Input.GetKeyDown(KeyCode.E))
         {
            
                 Debug.Log("Interacting with npc");
                 dialogue.activeNPC = target;
                 dialogue.StartDialogue(dialogue.activeNPC.treeToLoad);
 
-        } else {
-            return;
-        }
+        } 
+
     }
 
     void CheckForNearbyObjects()
@@ -69,7 +81,7 @@ public class PlayerMove : MonoBehaviour{
 
         });
 
-        if(obj != null){
+        if(obj != null && Input.GetKeyDown(KeyCode.E)){
             Debug.Log("Interacting with object");
             dialogue.activeObject = obj;
             dialogue.StartDescription();
