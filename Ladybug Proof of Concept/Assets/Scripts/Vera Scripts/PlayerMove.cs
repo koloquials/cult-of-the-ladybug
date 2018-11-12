@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour{
     public float interactionRadius, speed;
+    public bool dossierActive = false;
     DialogueManager dialogue;
     public void Start()
     {
@@ -12,11 +13,11 @@ public class PlayerMove : MonoBehaviour{
     }
     public void Update()
     {
-        if(dialogue==null || dialogue.currentGameState!=DialogueManager.GameState.OverworldActive){
+        if(dialogue==null || dialogue.currentGameState!=DialogueManager.GameState.OverworldActive || dossierActive){
             return;
         }else {
             MovePlayer();  
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.E) && dialogue.currentGameState==DialogueManager.GameState.OverworldActive)
             {
                 CheckForNPC();
                 CheckForNearbyObjects();
