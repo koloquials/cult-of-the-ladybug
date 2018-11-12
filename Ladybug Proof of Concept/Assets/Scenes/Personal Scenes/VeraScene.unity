@@ -3782,7 +3782,7 @@ MonoBehaviour:
   enterLeft: {x: -9.45, y: 8.15, z: 0}
   enterRight: {x: 9.33, y: 8.15, z: 0}
   enterDining: {x: 0, y: 4.2, z: 0}
-  introSceneTimer: 0.5
+  introSceneTimer: 1
   disable:
   - {fileID: 1622296357}
   - {fileID: 1508396165}

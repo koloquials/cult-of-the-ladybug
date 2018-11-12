@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
     [System.Serializable]
 
     public enum GameState{ //possible game states to be in
-        DialogueActive, DuelActive, DescriptionActive, OverworldActive, TimerOut, MenuActive, IntroScene, Win
+        DialogueActive, DuelActive, DescriptionActive, OverworldActive, TimerOut, MenuActive, IntroScene, Win, DossierActive
     }
     public GameState currentGameState; //current game state we're in (gets updated)
 
@@ -230,9 +230,7 @@ public class DialogueManager : MonoBehaviour
 
     void ReprimandPlayer(float timeToSubtract)
     {
-        //timeManager.currentTime = (timeManager.currentTime - timeToSubtract);
         activeDuel.Reset();
-        //currentGameState = GameState.OverworldActive;
         duelCanvas.gameObject.SetActive(false);
         activeNPC.currentStatus = NPC.NPCStatus.Heated;
     }
@@ -320,7 +318,6 @@ public class DialogueManager : MonoBehaviour
     {
         currentGameState = GameState.DescriptionActive;
         Debug.Log("here");
-        //timeManager.modifier = 0f;
         lineComplete = false;
     }
 
@@ -376,7 +373,6 @@ public class DialogueManager : MonoBehaviour
     void StopDescription(){
         activeObject = null;
         nodeToRun = null;
-        //timeManager.modifier = 1f;
         descriptionIndex = 0;
     }
 

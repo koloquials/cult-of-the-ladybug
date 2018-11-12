@@ -35,6 +35,8 @@ public class NPC : MonoBehaviour {
     [HideInInspector]
     public GameObject interactionIcon, heatedIcon;
 
+    DialogueManager dialogue;
+
     public virtual void Start()
     {
         possibleTrees = new List<DialogueTree>();
@@ -48,6 +50,8 @@ public class NPC : MonoBehaviour {
         otherNPC.Remove(this);
         currentStatus = NPCStatus.Neutral;
         player = FindObjectOfType<PlayerMove>();
+
+        dialogue = FindObjectOfType<DialogueManager>();
     }
 
     public virtual void Update()
@@ -104,17 +108,17 @@ public class NPC : MonoBehaviour {
 
     void CheckForPlayer()
     {
-        //var player = FindObjectOfType<PlayerMove>();
         if((player.gameObject.transform.position - transform.position).magnitude <= player.interactionRadius && currentStatus!= NPCStatus.Heated){
             interactionIcon.SetActive(true);
-            //if(!player.dossierActive && Input.GetKeyDown(KeyCode.Space)){
-            //    player.dossierActive = true;
-            //    npcCanvas.gameObject.SetActive(true);
-            //}
-            //if(player.dossierActive && Input.GetKeyDown(KeyCode.Space)){
-            //    player.dossierActive = false;
-            //    npcCanvas.gameObject.SetActive(true);
-            //}
+            if(Input.GetKeyDown(KeyCode.Space)){
+                if(dialogue.currentGameState == DialogueManager.GameState.OverworldActive && !npcCanvas.gameObject.active){
+                    npcCanvas.gameObject.SetActive(true);
+                    dialogue.currentGameState = DialogueManager.GameState.DossierActive;
+                } else if(dialogue.currentGameState == DialogueManager.GameState.DossierActive && npcCanvas.gameObject.active){
+                    npcCanvas.gameObject.SetActive(false);
+                    dialogue.currentGameState = DialogueManager.GameState.OverworldActive;
+                }
+            }
         } else {
             interactionIcon.SetActive(false);
         }
