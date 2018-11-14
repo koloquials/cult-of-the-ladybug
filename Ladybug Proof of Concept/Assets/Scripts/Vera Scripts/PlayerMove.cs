@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour{
     public float interactionRadius, speed;
+    public bool dossierActive = false;
     DialogueManager dialogue;
     public void Start()
     {
@@ -12,15 +13,29 @@ public class PlayerMove : MonoBehaviour{
     }
     public void Update()
     {
-        if(dialogue==null || dialogue.currentGameState!=DialogueManager.GameState.OverworldActive){
+        if (dialogue == null || dialogue.currentGameState != DialogueManager.GameState.OverworldActive || dossierActive)
+        {
             return;
-        }else {
+        } else {
             MovePlayer();  
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (dialogue.currentGameState==DialogueManager.GameState.OverworldActive)
             {
                 CheckForNPC();
+                CheckForNearbyObjects();
             }
         } 
+        //if (dialogue.currentGameState == DialogueManager.GameState.MenuActive)
+        //{
+        //    if (Input.GetKeyDown(KeyCode.Space))
+        //    {
+        //        dossierActive = false;
+        //        dialogue.currentGameState = DialogueManager.GameState.OverworldActive;
+        //        List<NPC> nPCs = new List<NPC>(FindObjectsOfType<NPC>());
+        //        foreach(var n in nPCs){
+        //            n.npcCanvas.gameObject.SetActive(false);
+        //        }
+        //    }
+        //} 
 
     }
 
@@ -46,13 +61,30 @@ public class PlayerMove : MonoBehaviour{
             
         });
 
-        if (target != null && dialogue.activeNPC == null)
+        if (target != null && dialogue.activeNPC == null && target.currentStatus != NPC.NPCStatus.Heated && Input.GetKeyDown(KeyCode.E))
         {
            
                 Debug.Log("Interacting with npc");
                 dialogue.activeNPC = target;
                 dialogue.StartDialogue(dialogue.activeNPC.treeToLoad);
 
+        } 
+
+    }
+
+    void CheckForNearbyObjects()
+    {
+        var allObjects = new List<EnvObjectManager>(FindObjectsOfType<EnvObjectManager>());
+        var obj = allObjects.Find(delegate (EnvObjectManager env)
+        {
+            return (env.transform.position - this.transform.position).magnitude <= (interactionRadius);
+
+        });
+
+        if(obj != null && Input.GetKeyDown(KeyCode.E)){
+            Debug.Log("Interacting with object");
+            dialogue.activeObject = obj;
+            dialogue.StartDescription();
         } else {
             return;
         }

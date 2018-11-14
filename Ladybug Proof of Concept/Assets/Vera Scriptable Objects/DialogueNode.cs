@@ -10,6 +10,7 @@ public class DialogueNode : ScriptableObject {
         [TextAreaAttribute(3,7)]
         public string line;
         public bool valuableInfo, duelTrigger;
+        public Tone deliveryTone;
     }
     public string nodeName;
     public string ClueTitle;
@@ -20,4 +21,9 @@ public class DialogueNode : ScriptableObject {
         Node, Info1, Info2, Info3, Info4, Info5, Info6
     }
     public InformationIndex informationIndex;
+
+    [System.Serializable]
+    public enum Tone{
+        Neutral, Angry, Sad, Suspicious, Happy, Defensive
+    }
 }

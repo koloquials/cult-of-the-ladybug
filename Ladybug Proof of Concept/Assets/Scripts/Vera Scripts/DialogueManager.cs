@@ -9,12 +9,13 @@ public class DialogueManager : MonoBehaviour
     [System.Serializable]
 
     public enum GameState{ //possible game states to be in
-        DialogueActive, DuelActive, OverworldActive, TimerOut, MenuActive, IntroScene, Win
+        DialogueActive, DuelActive, DescriptionActive, OverworldActive, TimerOut, MenuActive, IntroScene, Win, DossierActive
     }
     public GameState currentGameState; //current game state we're in (gets updated)
 
     public Canvas dialogueCanvas; //reference to the dialogue canvas 
     public Canvas duelCanvas; //reference to the Duel Canvas
+    public Canvas descriptionCanvas;
 
     TimeManager timeManager; //reference to the time manager 
     VariableStorage variableStorage; //reference to information storage
@@ -23,6 +24,7 @@ public class DialogueManager : MonoBehaviour
     Text dialogueText; //text that displays the dialogue being run
     Text nameText; //text that displays the name of the character you're talking to
     Image characterImage; //image that displays the sprite of the character you're talking to
+    Text descriptionText; //text for displaying object description
 
     public DialogueTree treeToRun; //dialogue tree that's getting parsed
 
@@ -32,9 +34,12 @@ public class DialogueManager : MonoBehaviour
 
     public DuelManager activeDuel; //duel that's getting played
     public NPC activeNPC; //npc that is being interacted with
+    public EnvObjectManager activeObject;
 
     private int nodeIndex = 0; //node index for the dialogue node [] on the dialogue tree
     private int lineIndex = 0; //line index for the line [] on the dialogue nodes
+
+    int descriptionIndex = 0; //index for the description node
 
     float letterPause = 0.04f; //amt of time before next letter prints.
     float extraPause = 0.1f; //extra pause used on commas and periods.
@@ -61,9 +66,11 @@ public class DialogueManager : MonoBehaviour
         duelCanvas.gameObject.SetActive(false); //turns the duel canvas off at start
         activeDuel = null; //sets active duel to null on start
         player = GameObject.FindGameObjectWithTag("Player"); //finds the player by tag on start
-        //currentGameState = GameState.OverworldActive; //sets the current game state the the overworld on start
-        currentGameState = GameState.IntroScene; 
+        currentGameState = GameState.IntroScene;
 
+        descriptionText = descriptionCanvas.gameObject.transform.Find("Description").GetComponent<Text>();
+        descriptionText.text = null;
+        descriptionCanvas.gameObject.SetActive(false);
 
     }
     private void Update()
@@ -79,15 +86,23 @@ public class DialogueManager : MonoBehaviour
             StopDialogue();
         }
 
+        if(currentGameState == GameState.DescriptionActive){
+            descriptionCanvas.gameObject.SetActive(true);
+            RunDescription();
+        } else if(currentGameState!= GameState.DescriptionActive){
+            descriptionCanvas.gameObject.SetActive(false);
+            StopDescription();
+        }
+
         if (currentGameState==GameState.DuelActive) 
         {
             EnableDuel(); //enables the duel when it is triggered
 
             if (activeDuel.duelFinished && currentGameState!=GameState.DialogueActive)
             {
-                timeManager.modifier = 1f; //resumes time when the duel concludes
+                //timeManager.modifier = 1f; //resumes time when the duel concludes
 
-                if (activeDuel.enemyWin) //player loss handling
+                if (activeDuel.playerLose) //player loss handling
                 {
                     if (Input.GetKeyDown(KeyCode.Space))
                     {
@@ -124,7 +139,7 @@ public class DialogueManager : MonoBehaviour
     {
         currentGameState = GameState.DialogueActive; //sets current game state to dialogue active
         treeToRun = tree; //sets the tree that we're running to the tree in the parameter
-        timeManager.modifier = 0f; //stops time from decreasing 
+       // timeManager.modifier = 0f; //stops time from decreasing 
         lineComplete = false; //fix dialogue loading bug
 
     }
@@ -132,7 +147,7 @@ public class DialogueManager : MonoBehaviour
     public void StopDialogue() //function that resets all the dialogue shit
     {
         treeToRun = null; //loses the reference to the tree that we passed in StartDialogue()
-        timeManager.modifier = 1f; //resumes timer countdown
+        //timeManager.modifier = 1f; //resumes timer countdown
         nodeIndex = 0; //resets node index to 0
         lineIndex = 0; //resets line index to 0
         if (currentGameState!=GameState.DuelActive) //loses reference to npc we're interacting with unless we're dueling them 
@@ -146,14 +161,15 @@ public class DialogueManager : MonoBehaviour
         try
         {
             //dialogueText.text = treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line;
-            nameText.text = activeNPC.npcInfo.npcName; 
-            characterImage.sprite = activeNPC.npcInfo.npcSprites[0].thisSprite;
+            nameText.text = activeNPC.npcInfo.npcName;
+            //characterImage.sprite = activeNPC.npcInfo.npcSprites[0].thisSprite;
+            HandleUISprites(treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex], activeNPC.npcInfo);
 
             if (typing == false && lineComplete == false)
             {
                 dialogueText.text = "";
                 print("let's type " + treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line);
-                type = StartCoroutine(TypeText(treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line));
+                type = StartCoroutine(TypeText(treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line, dialogueText));
             }
 
             if (treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].valuableInfo)
@@ -214,10 +230,9 @@ public class DialogueManager : MonoBehaviour
 
     void ReprimandPlayer(float timeToSubtract)
     {
-        timeManager.currentTime = (timeManager.currentTime - timeToSubtract);
         activeDuel.Reset();
-        //currentGameState = GameState.OverworldActive;
         duelCanvas.gameObject.SetActive(false);
+        activeNPC.currentStatus = NPC.NPCStatus.Heated;
     }
 
     void UnlockInformation(DialogueNode node) //function that checks the nodes that get passed through the 
@@ -248,20 +263,32 @@ public class DialogueManager : MonoBehaviour
 
     }
 
+    void HandleUISprites(DialogueNode.DialogueLine currentLine, NpcTemplate npc){
+        for (int i = 0; i < npc.npcSprites.Length; i++){
+            if(currentLine.deliveryTone == npc.npcSprites[i].spriteForTone){
+                characterImage.sprite = npc.npcSprites[i].thisSprite;
+            } else {
+                characterImage.sprite = npc.npcSprites[0].thisSprite;
+            }
+        }
+        
+    }
+
     void EnableDuel() //I slapped all the duel enabling shit in a function because it looked ugly lmao
     {
         duelCanvas.gameObject.SetActive(true); //turns the duel canvas on
         activeNPC.GetComponent<DuelManager>().enabled = true; //enables the duel manager on the npc we're interacting with
         activeDuel = activeNPC.GetComponent<DuelManager>(); //sets active duel to the duel manager on the npc we're interacting with
-        timeManager.modifier = 0f; //stops time from decreasing during the duel
+        //timeManager.modifier = 0f; //stops time from decreasing during the duel
     }
 
-    IEnumerator TypeText(string message) //scrolling text!
+    IEnumerator TypeText(string message, Text textToEdit) //scrolling text!
     {
         typing = true;
         foreach (char letter in message.ToCharArray())
         {
-            dialogueText.text += letter;
+            //dialogueText.text += letter;
+            textToEdit.text += letter;
 
             //if (typeSound1 && typeSound2){ //[WIP] Sound! Can be implemented later!
             //    SoundManager.instance.RandomizeSfx(typeSound1, typeSound2);
@@ -284,6 +311,69 @@ public class DialogueManager : MonoBehaviour
         }
         typing = false;
         lineComplete = true;
+    }
+
+
+    public void StartDescription()
+    {
+        currentGameState = GameState.DescriptionActive;
+        Debug.Log("here");
+        lineComplete = false;
+    }
+
+    DialogueNode nodeToRun;
+
+    void RunDescription()
+    {
+        try{
+            nodeToRun = activeObject.thisObject.objectDescription;
+
+            if (typing == false && lineComplete == false)
+            {
+                descriptionText.text = "";//nodeToRun.dialogueLines[descriptionIndex].line;
+                print("let's type " + nodeToRun.dialogueLines[descriptionIndex].line);
+                type = StartCoroutine(TypeText(nodeToRun.dialogueLines[descriptionIndex].line, descriptionText));
+            }
+
+            if (nodeToRun.dialogueLines[descriptionIndex].valuableInfo)
+            {
+                descriptionText.color = importantText;
+            }
+            else
+            {
+                descriptionText.color = normalText;
+            }
+
+            if (Input.GetKeyDown(KeyCode.E) && typing && lineComplete == false)
+            {
+                StopCoroutine(type);
+                typing = false;
+                descriptionText.text = (nodeToRun.dialogueLines[descriptionIndex].line);
+                lineComplete = true;
+            }
+
+            else if (Input.GetKeyDown(KeyCode.E) && currentGameState == GameState.DescriptionActive && lineComplete)
+            {
+                descriptionIndex++;
+                lineComplete = false;
+            }
+
+
+            if (descriptionIndex > nodeToRun.dialogueLines.Length)
+            {
+                currentGameState = GameState.OverworldActive;
+            }
+            
+        } catch(System.IndexOutOfRangeException){
+            currentGameState = GameState.OverworldActive;
+        }
+
+    }
+
+    void StopDescription(){
+        activeObject = null;
+        nodeToRun = null;
+        descriptionIndex = 0;
     }
 
 }

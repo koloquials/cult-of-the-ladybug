@@ -9,13 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 606dab1dcf00c4741bf61375d0db1af1, type: 3}
-  m_Name: ALose1
+  m_Name: TestObjectDescription
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
   dialogueLines:
-  - line: Ugh, stop wasting my time!
+  - line: Description of the object
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
   informationIndex: 0

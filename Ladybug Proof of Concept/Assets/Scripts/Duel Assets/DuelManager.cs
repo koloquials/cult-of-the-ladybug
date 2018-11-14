@@ -6,21 +6,18 @@ using UnityEngine.UI; 
 public class DuelManager : MonoBehaviour {
     public Text textBox;
 
-    //TO LINK A NEW ENEMY SCRIPT IN INSPECTOR: add it to the manager's game object, make it the first Enemy script on the object,
-    //and then hook it up through the list in the inspector, this will add the script on the top of the list.
     public List<Enemy> enemies = new List<Enemy>();
     public int enemyId = 1; //enemy id! iterate through these to change the enemy script you reference.
 
     public GameObject tile; //GameObject for tile on board
     GameObject[] tiles = new GameObject[7]; //array of tiles. only important for intialization.
-    //DuelSquare[] status = new DuelSquare[7]; //array of tiles' status, can be references to ex: change tile color.
     DuelSqSprite[] status = new DuelSqSprite[7]; //array of tiles' status, can be references to ex: change tile color.
 
     public bool inDuel = false; //is a duel currently in process? (for a few dialogue if statements)
     bool crtTable = true; //does a table need to be created?
     bool processTable = false; //does the table need to be updated?
     public bool playerWin = false; //if player has won
-    public bool enemyWin = false; //if enemy has won
+    public bool playerLose = false; //if enemy has won
     public bool duelFinished = false; //if the duel is over
 
     int playerPos; //player's tile on the board: 0 to 6
@@ -51,26 +48,29 @@ public class DuelManager : MonoBehaviour {
     bool typingLose = false; //is it typing the lose result line? used to handle skip
     Coroutine type;
 
-    void Update () {
-
-
-        if (inDuel == false && duelFinished == false && typing == false){
-            //textBox.text = enemies[enemyId].dialogue[step]; //introduction text. limited to only one line of dialogue.
+    void Update()
+    {
+        if (inDuel == false && duelFinished == false && typing == false)
+        {
             textBox.text = "";
             type = StartCoroutine(TypeText(enemies[enemyId].name, enemies[enemyId].dialogue[step], ("\n\n[space]")));
             inDuel = true;
             typingStart = true;
-        } else if (Input.GetKeyDown(KeyCode.Space) && typing == true && typingStart == true && duelFinished == false){
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) && typing == true && typingStart == true && duelFinished == false)
+        {
             StopCoroutine(type);
             typing = false;
             textBox.text = (enemies[enemyId].name + enemies[enemyId].dialogue[step] + "\n\n[space]");
             inDuel = true;
             typingStart = false;
 
-        } else if (Input.GetKeyDown(KeyCode.Space) && inDuel == true && combatRound == true && typing == false)
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) && inDuel == true && combatRound == true && typing == false)
         { //combat round.
             typingStart = false;
             typingResult = false;
+
             //iterate the steps in the enemy document
             step++;
             optStep += 4;
@@ -78,26 +78,31 @@ public class DuelManager : MonoBehaviour {
             combatRound = false;
 
             //detects end of enemy dialogue and resets so that it repeats.
-            if (step == enemies[enemyId].dialogue.Count){ 
-                step = 3; 
+            if (step == enemies[enemyId].dialogue.Count)
+            {
+                step = 3;
                 optStep = 4;
                 enTypeStep = 1;
             }
 
-            if (processTable == true){
+            if (processTable == true)
+            {
                 ProcessCombat(); //reconciles effect of player type vs. enemy type
                 ProcessMovement(); //reconciles a few overlap issues and sees if someone has won or not
                 UpdateTable(); //visually updates the table
                 processTable = false;
             }
-            //if there's a winner, otherwise print next round:
-            if (playerWin == true){
-                textBox.text = (enemies[enemyId].options[optStep + (playerType-5)] + "\n\nPlayer wins!"); //displays the winning dialogue option, too!
+
+            //if there's a winner,
+            if (playerWin == true)
+            {
+                textBox.text = (enemies[enemyId].options[optStep + (playerType - 5)] + "\n\nPlayer wins!"); //displays the winning dialogue option, too!
                 duelFinished = true;
                 inDuel = false;
 
-            }else if (enemyWin == true){
-                //textBox.text = (enemies[enemyId].dialogue[step] + "\n\nEnemy wins!"); //displays the winning dialogue option, too!
+            }
+            else if (playerLose == true)
+            {
                 textBox.text = "";
                 type = StartCoroutine(TypeText("", enemies[enemyId].dialogue[step], "\n\nEnemy wins!"));
                 typingLose = true;
@@ -112,187 +117,62 @@ public class DuelManager : MonoBehaviour {
                     inDuel = false;
                 }
             }
-                else{
-                //displays next round of dialogue + choices
+            //otherwise, displays next round of dialogue + choices
+            else
+            {
 
                 rand.Clear();
-                for (int i = 0; i < 4; i++){
-                   n = Random.Range(0, 4);
-                   while (rand.Contains(n)){
+                for (int i = 0; i < 4; i++)
+                {
+                    n = Random.Range(0, 4);
+                    while (rand.Contains(n))
+                    {
                         n = Random.Range(0, 4);
                     }
                     rand.Add(n);
                 }
-
                 Debug.Log(rand[0] + " " + rand[1] + " " + rand[2] + " " + rand[3]);
-
-                //textBox.text = (enemies[enemyId].dialogue[step] + "[1] " + enemies[enemyId].options[optStep] + "[2] " + enemies[enemyId].options[optStep + 1] +
-                //"[3] " + enemies[enemyId].options[optStep + 2] + "[4] " + enemies[enemyId].options[optStep + 3]);
 
                 textBox.text = (enemies[enemyId].dialogue[step] + "[1] " + enemies[enemyId].options[optStep + rand[0]] + "[2] " + enemies[enemyId].options[optStep + rand[1]] +
                                       "[3] " + enemies[enemyId].options[optStep + rand[2]] + "[4] " + enemies[enemyId].options[optStep + rand[3]]);
             }
         }
-       
+
         //result round. tells the player what they picked + the enemy reaction.
-        //[WIP] enemy dialogue shouldn't display if this is the round where the player wins (an option is to just remove it but i like the drama it elicits) 
-        else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha1) && inDuel == true && combatRound == false) { //player chooses [1]
+        else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha1) && inDuel == true && combatRound == false)
+        { //player chooses [1]
             step++;
-            playerType = rand[0]+1;
-            Debug.Log("playerType is: " + playerType);
-            switch (playerType){
-                case 1:
-                    textBox.text = "[concede] ";
-                    break;
-                case 2:
-                    textBox.text = "[stand] ";
-                    break;
-                case 3:
-                    textBox.text = "[aggress] ";
-                    break;
-                case 4:
-                    textBox.text = "[insult] ";
-                    break;
-            }
+            playerType = rand[0] + 1;
             enemyType = enemies[enemyId].types[enTypeStep];
-            switch (enemyType){
-                case 1:
-                    enemyTag = "[concede] ";
-                    break;
-                case 2:
-                    enemyTag = "[stand] ";
-                    break;
-                case 3:
-                    enemyTag = "[aggress] ";
-                    break;
-                case 4:
-                    enemyTag = "[insult] ";
-                    break;
-            }
+            DetermineType(playerType, enemyType);
 
-            type = StartCoroutine(TypeText((enemies[enemyId].options[optStep-1+playerType] + "\n"), (enemyTag + enemies[enemyId].dialogue[step]), ("\n [space]")));
-            processTable = true;
-            combatRound = true;
-            typingResult = true;
-
-        } else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha2) && inDuel == true && combatRound == false){ //player chooses [2]
+        }
+        else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha2) && inDuel == true && combatRound == false)
+        { //player chooses [2]
             step++;
-            playerType = rand[1]+1;
-            Debug.Log("playerType is: " + playerType);
-            switch (playerType){
-                case 1:
-                    textBox.text = "[concede] ";
-                    break;
-                case 2:
-                    textBox.text = "[stand] ";
-                    break;
-                case 3:
-                    textBox.text = "[aggress] ";
-                    break;
-                case 4:
-                    textBox.text = "[insult] ";
-                    break;
-            }
+            playerType = rand[1] + 1;
             enemyType = enemies[enemyId].types[enTypeStep];
-            switch (enemyType){
-                case 1:
-                    enemyTag = "[concede] ";
-                    break;
-                case 2:
-                    enemyTag = "[stand] ";
-                    break;
-                case 3:
-                    enemyTag = "[aggress] ";
-                    break;
-                case 4:
-                    enemyTag = "[insult] ";
-                    break;
-            }
+            DetermineType(playerType, enemyType);
 
-            type = StartCoroutine(TypeText((enemies[enemyId].options[optStep - 1 + playerType] + "\n"), (enemyTag + enemies[enemyId].dialogue[step]), ("\n [space]")));
-            //textBox.text = (enemies[enemyId].options[optStep-1+playerType] + "\n" + enemies[enemyId].dialogue[step] + "\n [space]");
-            processTable = true;
-            combatRound = true;
-            typingResult = true;
-
-        } else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha3) && inDuel == true && combatRound == false){ //player chooses [3]
+        }
+        else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha3) && inDuel == true && combatRound == false)
+        { //player chooses [3]
             step++;
-            playerType = rand[2]+1;
-            Debug.Log("playerType is: " + playerType);
-            switch (playerType){
-                case 1:
-                    textBox.text = "[concede] ";
-                    break;
-                case 2:
-                    textBox.text = "[stand] ";
-                    break;
-                case 3:
-                    textBox.text = "[aggress] ";
-                    break;
-                case 4:
-                    textBox.text = "[insult] ";
-                    break;
-            }
+            playerType = rand[2] + 1;
             enemyType = enemies[enemyId].types[enTypeStep];
-            switch (enemyType){
-                case 1:
-                    enemyTag = "[concede] ";
-                    break;
-                case 2:
-                    enemyTag = "[stand] ";
-                    break;
-                case 3:
-                    enemyTag = "[aggress] ";
-                    break;
-                case 4:
-                    enemyTag = "[insult] ";
-                    break;
-            }
-            type = StartCoroutine(TypeText((enemies[enemyId].options[optStep - 1 + playerType] + "\n"), (enemyTag + enemies[enemyId].dialogue[step]), ("\n [space]")));
-            //textBox.text = (enemies[enemyId].options[optStep-1+playerType] + "\n" + enemies[enemyId].dialogue[step] + "\n [space]");
-            processTable = true;
-            combatRound = true;
-            typingResult = true;
+            DetermineType(playerType, enemyType);
 
-        } else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha4) && inDuel == true && combatRound == false){ //player chooses [4]
+        }
+        else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha4) && inDuel == true && combatRound == false)
+        { //player chooses [4]
             step++;
-            playerType = rand[3]+1;
-            Debug.Log("playerType is: " + playerType);
-            switch (playerType){
-                case 1:
-                    textBox.text = "[concede] ";
-                    break;
-                case 2:
-                    textBox.text = "[stand] ";
-                    break;
-                case 3:
-                    textBox.text = "[aggress] ";
-                    break;
-                case 4:
-                    textBox.text = "[insult] ";
-                    break;
-            }
+            playerType = rand[3] + 1;
             enemyType = enemies[enemyId].types[enTypeStep];
-            switch (enemyType){
-                case 1:
-                    enemyTag = "[concede] ";
-                    break;
-                case 2:
-                    enemyTag = "[stand] ";
-                    break;
-                case 3:
-                    enemyTag = "[aggress] ";
-                    break;
-                case 4:
-                    enemyTag = "[insult] ";
-                    break;
-            }
-            type = StartCoroutine(TypeText((enemies[enemyId].options[optStep - 1 + playerType] + "\n"), (enemyTag + enemies[enemyId].dialogue[step]), ("\n [space]")));
-            //textBox.text = (enemies[enemyId].options[optStep-1+playerType] + "\n" + enemies[enemyId].dialogue[step] + "\n [space]");
-            processTable = true;
-            combatRound = true;
-            typingResult = true;
-        } else if (Input.GetKeyDown(KeyCode.Space) && typing == true && typingResult == true && duelFinished == false){
+            DetermineType(playerType, enemyType);
+
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) && typing == true && typingResult == true && duelFinished == false)
+        {
             StopCoroutine(type);
             typing = false;
             textBox.text = (enemies[enemyId].options[optStep - 1 + playerType] + "\n" + enemies[enemyId].dialogue[step] + "\n [space]");
@@ -300,27 +180,35 @@ public class DuelManager : MonoBehaviour {
         }
 
         //beginning of duel. create that table.
-        if (step == 1 && crtTable == true){ 
+        if (step == 1 && crtTable == true)
+        {
             CreateTable();
             UpdateTable();
         }
 
     }
 
-    IEnumerator TypeText (string begin, string message, string end) { //scrolling text!
+    IEnumerator TypeText(string begin, string message, string end)
+    { //scrolling text!
         typing = true;
         textBox.text += begin;
-        foreach (char letter in message.ToCharArray()) {
+        foreach (char letter in message.ToCharArray())
+        {
             textBox.text += letter;
             //if (typeSound1 && typeSound2){ //[WIP] Sound! Can be implemented later!
             //    SoundManager.instance.RandomizeSfx(typeSound1, typeSound2);
             //    yield return 0;
             //}
-            if (letter == '.'){
-                yield return new WaitForSeconds (letterPause + extraPause + extraPause);
-            } else if (letter == ',' || letter == ';'){
+            if (letter == '.')
+            {
+                yield return new WaitForSeconds(letterPause + extraPause + extraPause);
+            }
+            else if (letter == ',' || letter == ';')
+            {
                 yield return new WaitForSeconds(letterPause + extraPause);
-            } else {
+            }
+            else
+            {
                 yield return new WaitForSeconds(letterPause);
             }
         }
@@ -328,142 +216,103 @@ public class DuelManager : MonoBehaviour {
         textBox.text += end;
     }
 
-    void ProcessCombat(){ //compares player and enemy type and decides what the interaction does
+    void DetermineType(int playerTy, int enemyTy)
+    {
+        Debug.Log("playerType is: " + playerTy);
+        switch (playerTy)
+        {
+            case 1:
+                textBox.text = "[very bad] ";
+                break;
+            case 2:
+                textBox.text = "[bad] ";
+                break;
+            case 3:
+                textBox.text = "[okay] ";
+                break;
+            case 4:
+                textBox.text = "[great] ";
+                break;
+        }
+
+        type = StartCoroutine(TypeText((enemies[enemyId].options[optStep - 1 + playerType] + "\n"), (enemies[enemyId].dialogue[step]), ("\n [space]")));
+
+        processTable = true;
+        combatRound = true;
+        typingResult = true;
+    }
+
+    void ProcessCombat()
+    { //compares player and enemy type and decides what the interaction does
         enemyType = enemies[enemyId].types[enTypeStep];
-        if (playerType == 1){ //concede
-            if (enemyType == 1){
-                playerPos -= 1;
-                enemyPosFactor = 1;
-            }
-            else if (enemyType == 2){
-                playerPos -= 1;
-                enemyPosFactor = 0;
-            }
-            else if (enemyType == 3){
-                playerPos -= 1;
-                enemyPosFactor = -1;
-            }
-            else if (enemyType == 4){
-                playerPos -= 2;
-                enemyPosFactor = -2;
-            }
+        if (playerType == enemyType)
+        { //correct
+            playerPos += 1;
+            enemyPos += 0;
 
-        } else if (playerType == 2){ //stand
-            if (enemyType == 1){
-                playerPos += 0;
-                enemyPosFactor = 1;
-            }
-            else if (enemyType == 2){
-                playerPos += 0;
-                enemyPosFactor = 0;
-            }
-            else if (enemyType == 3){
-                playerPos += 1;
-                enemyPosFactor = 0;
-            }
-            else if (enemyType == 4){
-                playerPos += 0;
-                enemyPosFactor = -1;
-            }
-
-        } else if (playerType == 3){ //agress
-            if (enemyType == 1){
-                playerPos += 1;
-                enemyPosFactor = 1;
-            }
-            else if (enemyType == 2){
-                playerPos += 0;
-                enemyPosFactor = -1;
-            }
-            else if (enemyType == 3){
-                playerPos += 1;
-                enemyPosFactor = -1;
-            }
-            else if (enemyType == 4){
-                playerPos += 1;
-                enemyPosFactor = 0;
-            }
-
-        } else{ //insult
-            if (enemyType == 1){
-                playerPos += 2;
-                enemyPosFactor = 2;
-            }
-            else if (enemyType == 2){
-                playerPos += 1;
-                enemyPosFactor = 0;
-            }
-            else if (enemyType == 3){
-                playerPos += 0;
-                enemyPosFactor = -1;
-            }
-            else if (enemyType == 4){
-                playerPos += 1;
-                enemyPosFactor = -1;
-            }
+        }
+        else
+        {
+            playerPos += 1;
+            enemyPos += 1;
         }
         Debug.Log(playerType + " " + enemyType);
         playerLine = playerPos;
+        enemyLine = enemyPos;
     }
 
-    void ProcessMovement(){ 
-        if (enemyPos > 6 || playerLine > enemyPos || playerPos == enemyPos){ //detect player win. this goes first because they had the first attack.
+    void ProcessMovement()
+    {
+        if (enemyPos > 6)
+        {
+            playerLose = true;
+        }
+        else if (playerPos == enemyPos)
+        {
             playerWin = true;
-            if (enemyPos <= 6){
-                status[enemyPos].struck = true;
-            }
-        }
-        else{ //else statement used here so enemy doesn't move upon losing.
-
-            enemyPos += enemyPosFactor;
-            enemyLine = enemyPos;
-
-            if (enemyPos > 6){
-                playerWin = true;
-            }
-
-            if (playerPos < 0){ //idk why this needed its own if statement but it did.
-                enemyWin = true;
-            }
-            if (enemyLine < playerPos || playerPos == enemyPos){ //detect enemy win.
-                enemyWin = true;
-                if (playerPos >= 0){
-                    status[playerPos].struck = true;
-                }
-            }
-
+            status[playerPos].struck = true;
         }
     }
 
-    void UpdateTable(){ //visual updates to table
-        for (int i = 0; i < status.Length; i++){ 
-            if (i <= playerLine){
+    void UpdateTable()
+    { //visual updates to table
+        for (int i = 0; i < status.Length; i++)
+        {
+            if (i <= playerLine)
+            {
                 status[i].state = 1;
             }
-            else if (i >= enemyLine){
+            else if (i >= enemyLine)
+            {
                 status[i].state = 2;
             }
-            else{
+            else
+            {
                 status[i].state = 0;
             }
 
-            if (i == playerPos){
+            if (i == playerPos)
+            {
                 status[i].hasPlayer = true;
             }
-            else{
+            else
+            {
                 status[i].hasPlayer = false;
             }
 
-            if (i == enemyPos){
+            if (i == enemyPos)
+            {
                 status[i].hasEnemy = true;
             }
-            else{
+            else
+            {
                 status[i].hasEnemy = false;
             }
         }
     }
 
-    public void Reset(){
+    public void Reset()
+    {
 
         for (int i = 0; i < tiles.Length; i++)
         {
@@ -471,14 +320,12 @@ public class DuelManager : MonoBehaviour {
             Destroy(tiles[i]);
         }
 
-        //tiles = new GameObject[7]; //array of tiles. only important for intialization.
-        //status = new DuelSqSprite[7];
 
         inDuel = false; //is a duel currently in process? (for a few dialogue if statements)
         crtTable = true; //does a table need to be created?
         processTable = false; //does the table need to be updated?
         playerWin = false; //if player has won
-        enemyWin = false; //if enemy has won
+        playerLose = false; //if enemy has won
         duelFinished = false;
 
         step = 0; //enemy dialogue step, follow the documentation!
@@ -486,18 +333,16 @@ public class DuelManager : MonoBehaviour {
         enTypeStep = -1; //line contains enemy's option number.
         combatRound = true;
 
-        typingStart = false; 
-        typingResult = false; 
+        typingStart = false;
+        typingResult = false;
         typingLose = false;
-
-        //CreateTable();
-        //UpdateTable();
 
         textBox.text = "";
 
     }
 
-    void CreateTable(){ //construct the whole dang table
+    void CreateTable()
+    { //construct the whole dang table
         tiles = new GameObject[7]; //array of tiles. only important for intialization.
         status = new DuelSqSprite[7];
 
@@ -506,7 +351,6 @@ public class DuelManager : MonoBehaviour {
             tiles[i] = Instantiate(tile) as GameObject;
             tiles[i].gameObject.transform.SetParent(FindObjectOfType<Camera>().transform);
             tiles[i].SetActive(true);
-            //tiles[i].transform.Translate((2.3f * i), 0.65f, 0);
             tiles[i].transform.Translate((2.3f * i), FindObjectOfType<Camera>().transform.position.y + 0.65f, -1f);
             status[i] = tiles[i].GetComponent<DuelSqSprite>();
         }

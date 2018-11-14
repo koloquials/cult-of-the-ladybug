@@ -22,15 +22,19 @@ public class TimeManager : MonoBehaviour {
     private void Update()
     {
         DisplayTime();
-
         if(currentTime<=0f){
             
             manager.currentGameState = DialogueManager.GameState.TimerOut;
         }
 
-        if (manager.currentGameState != DialogueManager.GameState.TimerOut)
+        if (manager.currentGameState != (DialogueManager.GameState.TimerOut) ||  manager.currentGameState != (DialogueManager.GameState.OverworldActive))
         {
             currentTime -= (Time.deltaTime * modifier);
+            modifier = 1f;
+        } else {
+            Debug.Log("here");
+            return;
+            modifier = 0f;
         }
 
         if(manager.currentGameState == DialogueManager.GameState.TimerOut){

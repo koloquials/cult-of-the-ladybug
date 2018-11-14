@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPC : MonoBehaviour {
 
     public DialogueTree treeToLoad;
     public DialogueTree informationReward;
     public DuelManager thisDuelManager;
+    public PlayerMove player;
 
     public int newDuelId;
 
@@ -22,18 +24,34 @@ public class NPC : MonoBehaviour {
     public VariableStorage variables;
 
     public List<NPC> otherNPC;
+    public Canvas npcCanvas;
+
+    public enum NPCStatus{
+        Neutral, Heated
+    }
+    public NPCStatus currentStatus;
+    float heatedTimer;
 
     [HideInInspector]
-    public GameObject interactionIcon;
+    public GameObject interactionIcon, heatedIcon;
+
+    DialogueManager dialogue;
 
     public virtual void Start()
     {
         possibleTrees = new List<DialogueTree>();
         variables = FindObjectOfType<VariableStorage>();
         interactionIcon = this.gameObject.transform.Find("InteractionIcon").gameObject;
+        heatedIcon = this.gameObject.transform.Find("HeatedIcon").gameObject;
+        npcCanvas = gameObject.transform.Find("npcCanvas").GetComponent<Canvas>();
+        npcCanvas.gameObject.SetActive(false);
         interactionIcon.SetActive(false);
         otherNPC = new List<NPC>(FindObjectsOfType<NPC>());
         otherNPC.Remove(this);
+        currentStatus = NPCStatus.Neutral;
+        player = FindObjectOfType<PlayerMove>();
+
+        dialogue = FindObjectOfType<DialogueManager>();
     }
 
     public virtual void Update()
@@ -48,7 +66,7 @@ public class NPC : MonoBehaviour {
                     }
                     break;
                 case Attitude.AngryIfWin:
-                    if(thisDuelManager.enemyWin){
+                    if(thisDuelManager.playerLose){
                         AngryAtPlayer = true;
                     }
                     break;
@@ -67,14 +85,40 @@ public class NPC : MonoBehaviour {
 
 
         } catch (System.NullReferenceException){}
+
+        switch(currentStatus){
+            case NPCStatus.Neutral:
+                heatedTimer = 10f;
+                heatedIcon.gameObject.SetActive(false);
+                break;
+
+            case NPCStatus.Heated:
+                heatedTimer -= Time.deltaTime;
+                heatedIcon.gameObject.SetActive(true);
+                Color heat = heatedIcon.GetComponent<SpriteRenderer>().color;
+                heat.a = heatedTimer/10f;
+                heatedIcon.GetComponent<SpriteRenderer>().color = heat;
+                if(heatedTimer <=0f){
+                    currentStatus = NPCStatus.Neutral;
+                }
+                break;
+        }
     }
 
 
     void CheckForPlayer()
     {
-        var player = FindObjectOfType<PlayerMove>();
-        if((player.gameObject.transform.position - transform.position).magnitude <= player.interactionRadius){
+        if((player.gameObject.transform.position - transform.position).magnitude <= player.interactionRadius && currentStatus!= NPCStatus.Heated){
             interactionIcon.SetActive(true);
+            if(Input.GetKeyDown(KeyCode.Space)){
+                if(dialogue.currentGameState == DialogueManager.GameState.OverworldActive && !npcCanvas.gameObject.active){
+                    npcCanvas.gameObject.SetActive(true);
+                    dialogue.currentGameState = DialogueManager.GameState.DossierActive;
+                } else if(dialogue.currentGameState == DialogueManager.GameState.DossierActive && npcCanvas.gameObject.active){
+                    npcCanvas.gameObject.SetActive(false);
+                    dialogue.currentGameState = DialogueManager.GameState.OverworldActive;
+                }
+            }
         } else {
             interactionIcon.SetActive(false);
         }
@@ -101,7 +145,7 @@ public class NPC : MonoBehaviour {
     public void UpdateInformation(DialogueTree loseTree, DialogueTree winTree){
         try
         {
-            if (thisDuelManager.enemyWin)
+            if (thisDuelManager.playerLose)
             {
                 informationReward = loseTree;
             } else if(thisDuelManager.playerWin){
