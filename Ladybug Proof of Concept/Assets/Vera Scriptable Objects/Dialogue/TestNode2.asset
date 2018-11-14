@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Name: TestNode2
   m_EditorClassIdentifier: 
   nodeName: Node 2
+  ClueTitle: 
   dialogueLines:
-  - line: FUCK
+  - line: Intro Dialogue Test
     valuableInfo: 1
     duelTrigger: 0
+    deliveryTone: 0
+  informationIndex: 0

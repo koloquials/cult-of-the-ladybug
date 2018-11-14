@@ -35,10 +35,10 @@ public class CameraControl : MonoBehaviour {
 
     private void Update()
     {
-        introSceneTimer -= Time.deltaTime;
-        if(dialogueManager.currentGameState == DialogueManager.GameState.IntroScene && introSceneTimer<0f){
-            dialogueManager.currentGameState = DialogueManager.GameState.OverworldActive;
-        }  
+        //introSceneTimer -= Time.deltaTime;
+        //if(dialogueManager.currentGameState == DialogueManager.GameState.IntroScene && introSceneTimer<0f){
+        //    dialogueManager.currentGameState = DialogueManager.GameState.OverworldActive;
+        //}  
 
         if(dialogueManager.currentGameState == DialogueManager.GameState.OverworldActive && !introDone) {
             mainCam.transform.position = Vector3.Lerp(mainCam.transform.position, lerpToAfterIntro.transform.position, Time.time / 20f);
