@@ -81,7 +81,7 @@ public class DialogueManager : MonoBehaviour
         if(currentGameState == GameState.IntroScene){
             RunIntroScene(introSceneNode);
         } else {
-            introText.gameObject.SetActive(false);
+            introText.gameObject.transform.parent.gameObject.SetActive(false);
         }
         if (currentGameState==GameState.DialogueActive) //turns the dialogue canvas on and runs dialogue when dialogue is triggered 
         {
