@@ -9,17 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca0de9e3bc4944881bf6b6fe48651942, type: 3}
-  m_Name: Person A
+  m_Name: Eleanor
   m_EditorClassIdentifier: 
-  npcName: Jerry
-  npcSprites:
-  - spriteName: Neutral
-    thisSprite: {fileID: 21300000, guid: 103d86317c14841a3806d19b0766dda9, type: 3}
-    spriteForTone: 0
-  - spriteName: Angry
-    thisSprite: {fileID: 21300000, guid: 95a34a315dc4549ae861ae8ac32a6d02, type: 3}
-    spriteForTone: 1
+  npcName: Eleanor Hampshire
+  npcSprites: []
   npcRelationships:
-  - person: {fileID: 11400000, guid: 1ae2a2ae05c7e40c89f64681f863307b, type: 2}
+  - person: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
     nature: 0
     relationshipDescription: 

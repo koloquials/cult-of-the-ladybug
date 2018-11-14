@@ -46,34 +46,43 @@ public class AccuseMenuManager : MonoBehaviour {
     }
 
     public void ToggleMenu(GameObject menu){
-        if (dialogueManager.currentGameState == DialogueManager.GameState.OverworldActive)
-        {
-            if(menu.activeSelf == false){
-                menu.SetActive(true);
-                dialogueManager.currentGameState = DialogueManager.GameState.MenuActive;
+        if(menu.gameObject.tag == "MainMenu"){
+            if(dialogueManager.currentGameState == DialogueManager.GameState.OverworldActive){
+                if(!menu.activeSelf){
+                    menu.SetActive(true);
+                    dialogueManager.currentGameState = DialogueManager.GameState.MenuActive;
+                } 
+            } else
+            {
+                if (menu.activeSelf)
+                {
+                    menu.SetActive(false);
+                    dialogueManager.currentGameState = DialogueManager.GameState.OverworldActive;
+                }
             }
         } else {
             if(menu.activeSelf){
                 menu.SetActive(false);
-                dialogueManager.currentGameState = DialogueManager.GameState.OverworldActive;
+            } else {
+                menu.SetActive(true);
             }
         }
     }
 
     public void MoveMenu(GameObject menu)
     {
-        if (dialogueManager.currentGameState == DialogueManager.GameState.OverworldActive)
+        if (menu.GetComponent<RectTransform>().localPosition.x !=-506f)
         {
-            dialogueManager.currentGameState = DialogueManager.GameState.MenuActive;
-            menu.GetComponent<RectTransform>().localPosition = new Vector3((menu.GetComponent<RectTransform>().localPosition.x+500f),
+            //dialogueManager.currentGameState = DialogueManager.GameState.MenuActive;
+            menu.GetComponent<RectTransform>().localPosition = new Vector3((menu.GetComponent<RectTransform>().localPosition.x+2000f),
                                                                            (menu.GetComponent<RectTransform>().localPosition.y),0f);
         }
         else
         {
             if (dialogueManager.currentGameState == DialogueManager.GameState.MenuActive)
             {
-                dialogueManager.currentGameState = DialogueManager.GameState.OverworldActive;
-                menu.GetComponent<RectTransform>().localPosition = new Vector3((menu.GetComponent<RectTransform>().localPosition.x - 500f),
+                //dialogueManager.currentGameState = DialogueManager.GameState.OverworldActive;
+                menu.GetComponent<RectTransform>().localPosition = new Vector3((menu.GetComponent<RectTransform>().localPosition.x - 2000f),
                                                                                (menu.GetComponent<RectTransform>().localPosition.y), 0f);
                 FindObjectOfType<VariableStorage>().infoDisp = false;
             }
