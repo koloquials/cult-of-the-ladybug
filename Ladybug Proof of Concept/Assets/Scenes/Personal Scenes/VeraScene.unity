@@ -378,9 +378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d836d1ec007a45ccb15a8d3f2694258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 150
-  currentTime: 0
-  modifier: 1
   gameOverText: {fileID: 73958834}
   GameOverSceneIndex: 0
 --- !u!1 &73958834
@@ -1531,7 +1528,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.016, y: 0.25}
+  m_AnchoredPosition: {x: 0.016, y: 1.85}
   m_SizeDelta: {x: 4.871, y: 4.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &526669729
@@ -1737,7 +1734,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 533179690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: -2, z: 0}
+  m_LocalPosition: {x: 0.03, y: -3.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 526669728}
