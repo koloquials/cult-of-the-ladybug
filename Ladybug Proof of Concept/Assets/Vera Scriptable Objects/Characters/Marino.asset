@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Marino
   m_EditorClassIdentifier: 
   npcName: Marino "The Vine" Montemarano
+  dossierCloseup: {fileID: 21300018, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
   npcSprites:
   - spriteName: Neutral
     thisSprite: {fileID: 21300006, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}

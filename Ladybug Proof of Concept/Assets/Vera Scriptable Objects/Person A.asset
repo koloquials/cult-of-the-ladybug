@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Name: Person A
   m_EditorClassIdentifier: 
   npcName: Jerry
+  dossierCloseup: {fileID: 21300020, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
   npcSprites:
   - spriteName: Neutral
-    thisSprite: {fileID: 21300000, guid: 103d86317c14841a3806d19b0766dda9, type: 3}
+    thisSprite: {fileID: 21300008, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
     spriteForTone: 0
   - spriteName: Angry
     thisSprite: {fileID: 21300000, guid: 95a34a315dc4549ae861ae8ac32a6d02, type: 3}

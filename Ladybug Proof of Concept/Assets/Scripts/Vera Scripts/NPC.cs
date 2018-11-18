@@ -59,6 +59,7 @@ public class NPC : MonoBehaviour {
         try{
             thisDuelManager = GetComponent<DuelManager>();
             CheckForPlayer();
+            PopulateDossier();
             switch (attitude){
                 case Attitude.AngryIfLose:
                     if(thisDuelManager.playerWin){
@@ -108,8 +109,11 @@ public class NPC : MonoBehaviour {
 
     void CheckForPlayer()
     {
+        CameraControl camera = FindObjectOfType<CameraControl>();
+
         if((player.gameObject.transform.position - transform.position).magnitude <= player.interactionRadius && currentStatus!= NPCStatus.Heated){
             interactionIcon.SetActive(true);
+            camera.SlightZoom(3f);
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(dialogue.currentGameState == DialogueManager.GameState.OverworldActive && !npcCanvas.gameObject.active){
                     npcCanvas.gameObject.SetActive(true);
@@ -121,6 +125,7 @@ public class NPC : MonoBehaviour {
             }
         } else {
             interactionIcon.SetActive(false);
+            camera.ResetOrtho();
         }
     }
 
@@ -154,5 +159,29 @@ public class NPC : MonoBehaviour {
 
         }
         catch (System.NullReferenceException) {  }
+    }
+
+    void PopulateDossier(){
+        GameObject dossier = npcCanvas.gameObject.transform.Find("Dossier").gameObject;
+        dossier.transform.Find("NameText").GetComponent<Text>().text = npcInfo.npcName;
+        dossier.transform.Find("Closeup").GetComponent<Image>().sprite = npcInfo.dossierCloseup;
+        Button[] relationships = new Button [3];
+        for (int i = 0; i < relationships.Length;i++){
+            relationships[i] = dossier.transform.Find("RelationshipButtons").transform.GetChild(i).GetComponent<Button>();
+            try{
+                relationships[i].transform.Find("Text").GetComponent<Text>().text = npcInfo.npcRelationships[i].person.npcName;
+            } catch(System.IndexOutOfRangeException){}
+        }
+    }
+
+    bool relationshipDisclosed = false;
+
+    void OnClickDiscloseRelationship(int index){
+        if(!relationshipDisclosed){
+            
+        } else {
+            
+        }
+        
     }
 }

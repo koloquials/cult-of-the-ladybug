@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Lillian
   m_EditorClassIdentifier: 
   npcName: Lillian Flores
+  dossierCloseup: {fileID: 21300016, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
   npcSprites:
   - spriteName: Neutral
     thisSprite: {fileID: 21300004, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}

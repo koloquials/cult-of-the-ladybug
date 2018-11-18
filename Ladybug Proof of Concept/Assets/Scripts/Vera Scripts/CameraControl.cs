@@ -35,13 +35,9 @@ public class CameraControl : MonoBehaviour {
 
     private void Update()
     {
-        //introSceneTimer -= Time.deltaTime;
-        //if(dialogueManager.currentGameState == DialogueManager.GameState.IntroScene && introSceneTimer<0f){
-        //    dialogueManager.currentGameState = DialogueManager.GameState.OverworldActive;
-        //}  
-
+      
         if(dialogueManager.currentGameState == DialogueManager.GameState.OverworldActive && !introDone) {
-            mainCam.transform.position = Vector3.Lerp(mainCam.transform.position, lerpToAfterIntro.transform.position, Time.time / 20f);
+            mainCam.transform.position = Vector3.Lerp(mainCam.transform.position, lerpToAfterIntro.transform.position, Time.time/20f);
             for (int i = 0; i < disable.Length; i++)
             {
                 disable[i].interactable = true;
@@ -85,14 +81,18 @@ public class CameraControl : MonoBehaviour {
         }
 
         mainCam.transform.position = Vector3.Lerp(mainCam.transform.position, 
-                                                  new Vector3(focus.transform.position.x, focus.transform.position.y + 1f,
+                                                  new Vector3(focus.transform.position.x+4.5f, focus.transform.position.y + 1f,
                                                              -10f), Time.deltaTime * 1.5f);
         mainCam.orthographicSize = Mathf.Lerp(mainCam.orthographicSize, focusOrtho, Mathf.Pow(Time.deltaTime * 15f, 2f));
 
 
     }
 
-    void ResetOrtho(){
+    public void SlightZoom(float newSize){
+        mainCam.orthographicSize = Mathf.Lerp(mainCam.orthographicSize, newSize, Time.deltaTime);
+    }
+
+    public void ResetOrtho(){
         mainCam.orthographicSize = Mathf.Lerp(mainCam.orthographicSize, overworldOrtho, Mathf.Pow(Time.deltaTime * 15f, 2f));
     }
 }
