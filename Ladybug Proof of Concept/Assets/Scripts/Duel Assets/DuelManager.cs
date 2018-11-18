@@ -130,6 +130,8 @@ public class DuelManager : MonoBehaviour {
                     inDuel = false;
 
                     enemies[enemyId].resumedStep = (step - 3)/2;
+                    enemies[enemyId].resumeInterrogation = true;
+                    print(enemies[enemyId].resumedStep);
                     resumeInterrogation = true;
                 }
 
@@ -191,6 +193,9 @@ public class DuelManager : MonoBehaviour {
         //beginning of duel. create that table.
         if (step == 1 && crtTable == true){
             CreateTable();
+            UpdateTable();
+        } else if(step>1 && crtTable == true){
+            ResumeTable();
             UpdateTable();
         }
 
@@ -355,6 +360,39 @@ public class DuelManager : MonoBehaviour {
 
         playerPos = 0;
         enemyPos = enemies[enemyId].startPos;
+
+        playerLine = playerPos;
+        enemyLine = enemyPos;
+
+        status[playerPos].hasPlayer = true;
+        status[enemyPos].hasEnemy = true;
+    }
+
+    void ResumeTable(){
+        tiles = new GameObject[7]; //array of tiles. only important for intialization.
+        status = new DuelSqSprite[7];
+
+        for (int i = 0; i < tiles.Length; i++)
+        { //make them tiles
+            tiles[i] = Instantiate(tile) as GameObject;
+            tiles[i].gameObject.transform.SetParent(FindObjectOfType<Camera>().transform);
+            tiles[i].SetActive(true);
+            tiles[i].transform.Translate((2.3f * i), FindObjectOfType<Camera>().transform.position.y + 0.65f, -1f);
+            status[i] = tiles[i].GetComponent<DuelSqSprite>();
+        }
+        crtTable = false;
+
+        //sets beginning tile states
+        status[0].state = 1;
+        status[1].state = 0;
+        status[2].state = 0;
+        status[3].state = 0;
+        status[4].state = 0;
+        status[5].state = 0;
+        status[6].state = 0;
+
+        playerPos = 0;
+        enemyPos = enemies[enemyId].resumedStep;
 
         playerLine = playerPos;
         enemyLine = enemyPos;

@@ -594,9 +594,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
+  startPos: 3
   dialogue: []
   options: []
   types: 
+  returnText: Back, huh?
+  resumeInterrogation: 0
+  resumedStep: 0
 --- !u!114 &208066417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,9 +613,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
+  startPos: 3
   dialogue: []
   options: []
   types: 
+  returnText: Back, huh?
+  resumeInterrogation: 0
+  resumedStep: 0
 --- !u!114 &208066418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -629,6 +637,7 @@ MonoBehaviour:
   - {fileID: 208066417}
   - {fileID: 208066424}
   enemyId: 0
+  resumeInterrogation: 0
   tile: {fileID: 1036162826896518, guid: c60699c2a830b46a2a6368f12881950f, type: 2}
   inDuel: 0
   playerWin: 0
@@ -732,6 +741,8 @@ MonoBehaviour:
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
   newDuelId: 0
+  resumeInterrogation: 0
+  resumedStep: 0
   possibleTrees: []
   npcInfo: {fileID: 11400000, guid: 1ae2a2ae05c7e40c89f64681f863307b, type: 2}
   AngryAtPlayer: 0
@@ -766,9 +777,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
+  startPos: 3
   dialogue: []
   options: []
   types: 
+  returnText: Back, huh?
+  resumeInterrogation: 0
+  resumedStep: 0
 --- !u!1 &219078520
 GameObject:
   m_ObjectHideFlags: 0
@@ -4980,6 +4995,7 @@ MonoBehaviour:
   - {fileID: 1552525555}
   - {fileID: 1552525557}
   enemyId: 0
+  resumeInterrogation: 0
   tile: {fileID: 1036162826896518, guid: c60699c2a830b46a2a6368f12881950f, type: 2}
   inDuel: 0
   playerWin: 0
@@ -4997,9 +5013,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
+  startPos: 3
   dialogue: []
   options: []
   types: 
+  returnText: Back, huh?
+  resumeInterrogation: 0
+  resumedStep: 0
 --- !u!114 &1552525555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5012,9 +5032,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
+  startPos: 3
   dialogue: []
   options: []
   types: 
+  returnText: Back, huh?
+  resumeInterrogation: 0
+  resumedStep: 0
 --- !u!114 &1552525556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5031,6 +5055,8 @@ MonoBehaviour:
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
   newDuelId: 0
+  resumeInterrogation: 0
+  resumedStep: 0
   possibleTrees: []
   npcInfo: {fileID: 11400000, guid: dfaa959e329674e2da24fd2a53459270, type: 2}
   AngryAtPlayer: 0
@@ -5065,9 +5091,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
+  startPos: 3
   dialogue: []
   options: []
   types: 
+  returnText: Back, huh?
+  resumeInterrogation: 0
+  resumedStep: 0
 --- !u!1 &1565390155
 GameObject:
   m_ObjectHideFlags: 0
