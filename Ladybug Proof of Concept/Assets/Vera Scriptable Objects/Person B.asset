@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Person B
   m_EditorClassIdentifier: 
   npcName: Moonchild
+  dossierCloseup: {fileID: 21300022, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
   npcSprites:
   - spriteName: Neutral
     thisSprite: {fileID: 21300000, guid: 946b31c3f35eb4b9c8ba2d5f6b936bcb, type: 3}

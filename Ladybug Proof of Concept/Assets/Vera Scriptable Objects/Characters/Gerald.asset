@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Gerald
   m_EditorClassIdentifier: 
   npcName: Gerald Hauser
+  dossierCloseup: {fileID: 21300020, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
   npcSprites:
   - spriteName: Neutral
     thisSprite: {fileID: 21300008, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
