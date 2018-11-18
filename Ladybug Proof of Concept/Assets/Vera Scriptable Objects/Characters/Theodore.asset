@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Theodore
   m_EditorClassIdentifier: 
   npcName: Theodore Hampshire
+  dossierCloseup: {fileID: 21300012, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
   npcSprites:
   - spriteName: Neutral
     thisSprite: {fileID: 21300000, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}

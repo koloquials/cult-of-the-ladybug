@@ -6,24 +6,24 @@ using UnityEngine;
 public class NpcTemplate : ScriptableObject {
 
     public string npcName;
+    [TextAreaAttribute(4,7)]
+    public string description;
 
     [System.Serializable]
     public struct Relationship{
         public NpcTemplate person;
-        public RelationshipNature nature;
         [TextAreaAttribute(3, 7)]
         public string relationshipDescription;
     }
 
-    public enum RelationshipNature{
-        Positive, Negative, StronglyPositive, StronglyNegative, Neutral
-    }
     [System.Serializable]
     public struct UISprite{
         public string spriteName;
         public Sprite thisSprite;
         public DialogueNode.Tone spriteForTone;
     }
+
+    public Sprite dossierCloseup;
 
     public UISprite[] npcSprites;
     public Relationship[] npcRelationships;

@@ -2,12 +2,18 @@ fileFormatVersion: 2
 guid: 51bbd35a5f76b472e89a26f74318c0b6
 TextureImporter:
   fileIDToRecycleName:
-    21300000: COLT_0
-    21300002: COLT_1
-    21300004: COLT_2
-    21300006: COLT_3
-    21300008: COLT_4
-    21300010: COLT_5
+    21300000: Theodore_N
+    21300002: Eleanor_Neutral
+    21300004: Lillian_Neutral
+    21300006: Marino_Neutral
+    21300008: Gerald_Neutral
+    21300010: Moonchild_Neutral
+    21300012: Theodore_Closeup
+    21300014: Eleanor_Closeup
+    21300016: Lillian_Closeup
+    21300018: Marino_Closeup
+    21300020: Gerald_Closeup
+    21300022: Moonchild_Closeup
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -101,7 +107,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: COLT_0
+      name: Theodore_N
       rect:
         serializedVersion: 2
         x: 0
@@ -109,7 +115,7 @@ TextureImporter:
         width: 500
         height: 678
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,7 +127,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: COLT_1
+      name: Eleanor_Neutral
       rect:
         serializedVersion: 2
         x: 500
@@ -129,7 +135,7 @@ TextureImporter:
         width: 500
         height: 678
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -141,7 +147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: COLT_2
+      name: Lillian_Neutral
       rect:
         serializedVersion: 2
         x: 1000
@@ -149,7 +155,7 @@ TextureImporter:
         width: 500
         height: 678
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -161,7 +167,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: COLT_3
+      name: Marino_Neutral
       rect:
         serializedVersion: 2
         x: 1500
@@ -169,7 +175,7 @@ TextureImporter:
         width: 500
         height: 678
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,7 +187,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: COLT_4
+      name: Gerald_Neutral
       rect:
         serializedVersion: 2
         x: 2000
@@ -189,7 +195,7 @@ TextureImporter:
         width: 500
         height: 678
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: COLT_5
+      name: Moonchild_Neutral
       rect:
         serializedVersion: 2
         x: 2500
@@ -209,13 +215,133 @@ TextureImporter:
         width: 500
         height: 678
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 0f414893274034c329dd6db9d58ad0a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Theodore_Closeup
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 417
+        width: 230
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7d3fdeb90804b3d871856e058afe81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eleanor_Closeup
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 413
+        width: 230
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ddf6da8011e44f019149c3ffaa67d35
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lillian_Closeup
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 401
+        width: 230
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0ceccca0b5c409b983198fe7212e1e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marino_Closeup
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 373
+        width: 230
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5530392071f43b4949eb96c44aa8dc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gerald_Closeup
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 416
+        width: 230
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458e9cb5e00c846b48bf6ed351bd604f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonchild_Closeup
+      rect:
+        serializedVersion: 2
+        x: 2591
+        y: 346
+        width: 230
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde173407e22b4f69967511923a89b52
       vertices: []
       indices: 
       edges: []
