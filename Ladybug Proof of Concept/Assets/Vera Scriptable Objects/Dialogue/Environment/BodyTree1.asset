@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Name: BodyTree1
   m_EditorClassIdentifier: 
   treeName: 
-  dialogueNodes: []
+  dialogueNodes:
+  - {fileID: 11400000, guid: dd7e2ab2842cc73409e5660c595eeb33, type: 2}

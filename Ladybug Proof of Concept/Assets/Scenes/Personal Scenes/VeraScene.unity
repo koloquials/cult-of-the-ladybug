@@ -2909,10 +2909,8 @@ GameObject:
   - component: {fileID: 561457229}
   - component: {fileID: 561457228}
   - component: {fileID: 561457227}
-  - component: {fileID: 561457226}
-  - component: {fileID: 561457225}
-  - component: {fileID: 561457224}
   - component: {fileID: 561457223}
+  - component: {fileID: 561457224}
   m_Layer: 0
   m_Name: Moonchild
   m_TagString: Untagged
@@ -2955,49 +2953,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 561457222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae0c24cfc78c01469fe26751ecf3f1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &561457225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 561457222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a885add87c313bf4995c6bd587ecbe0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &561457226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 561457222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e3a3efc9a59a94ba90bfb9bb5f16a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 0aa393fded26a674dae72a6aced7a25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
@@ -3024,8 +2980,6 @@ MonoBehaviour:
   textBox: {fileID: 528584853}
   enemies:
   - {fileID: 561457224}
-  - {fileID: 561457225}
-  - {fileID: 561457226}
   enemyId: 0
   resumeInterrogation: 0
   tile: {fileID: 1036162826896518, guid: c60699c2a830b46a2a6368f12881950f, type: 2}
@@ -3259,10 +3213,8 @@ GameObject:
   - component: {fileID: 607971288}
   - component: {fileID: 607971287}
   - component: {fileID: 607971286}
-  - component: {fileID: 607971285}
-  - component: {fileID: 607971284}
-  - component: {fileID: 607971283}
   - component: {fileID: 607971282}
+  - component: {fileID: 607971283}
   m_Layer: 0
   m_Name: Lillian
   m_TagString: Untagged
@@ -3305,49 +3257,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 607971281}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae0c24cfc78c01469fe26751ecf3f1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &607971284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 607971281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a885add87c313bf4995c6bd587ecbe0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &607971285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 607971281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e3a3efc9a59a94ba90bfb9bb5f16a7, type: 3}
+  m_Script: {fileID: 11500000, guid: fe45e0639e4b1044cbc02b38a4f462b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
@@ -3374,8 +3284,6 @@ MonoBehaviour:
   textBox: {fileID: 528584853}
   enemies:
   - {fileID: 607971283}
-  - {fileID: 607971284}
-  - {fileID: 607971285}
   enemyId: 0
   resumeInterrogation: 0
   tile: {fileID: 1036162826896518, guid: c60699c2a830b46a2a6368f12881950f, type: 2}
@@ -9063,10 +8971,8 @@ GameObject:
   - component: {fileID: 1887592431}
   - component: {fileID: 1887592430}
   - component: {fileID: 1887592429}
-  - component: {fileID: 1887592428}
-  - component: {fileID: 1887592427}
-  - component: {fileID: 1887592426}
   - component: {fileID: 1887592425}
+  - component: {fileID: 1887592426}
   m_Layer: 0
   m_Name: Eleanor
   m_TagString: Untagged
@@ -9109,49 +9015,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1887592424}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae0c24cfc78c01469fe26751ecf3f1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &1887592427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1887592424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a885add87c313bf4995c6bd587ecbe0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &1887592428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1887592424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e3a3efc9a59a94ba90bfb9bb5f16a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 77e60c2fb4373194aa79d2b228a9ed48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
@@ -9178,8 +9042,6 @@ MonoBehaviour:
   textBox: {fileID: 528584853}
   enemies:
   - {fileID: 1887592426}
-  - {fileID: 1887592427}
-  - {fileID: 1887592428}
   enemyId: 0
   resumeInterrogation: 0
   tile: {fileID: 1036162826896518, guid: c60699c2a830b46a2a6368f12881950f, type: 2}
@@ -9280,10 +9142,8 @@ GameObject:
   - component: {fileID: 1924797327}
   - component: {fileID: 1924797326}
   - component: {fileID: 1924797325}
-  - component: {fileID: 1924797324}
-  - component: {fileID: 1924797323}
-  - component: {fileID: 1924797322}
   - component: {fileID: 1924797321}
+  - component: {fileID: 1924797322}
   m_Layer: 0
   m_Name: Gerald
   m_TagString: Untagged
@@ -9326,49 +9186,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1924797320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae0c24cfc78c01469fe26751ecf3f1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &1924797323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1924797320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a885add87c313bf4995c6bd587ecbe0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &1924797324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1924797320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e3a3efc9a59a94ba90bfb9bb5f16a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 65789f6be41717048989e046fba171b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
@@ -9395,8 +9213,6 @@ MonoBehaviour:
   textBox: {fileID: 528584853}
   enemies:
   - {fileID: 1924797322}
-  - {fileID: 1924797323}
-  - {fileID: 1924797324}
   enemyId: 0
   resumeInterrogation: 0
   tile: {fileID: 1036162826896518, guid: c60699c2a830b46a2a6368f12881950f, type: 2}
@@ -9595,10 +9411,8 @@ GameObject:
   - component: {fileID: 1983016539}
   - component: {fileID: 1983016538}
   - component: {fileID: 1983016537}
-  - component: {fileID: 1983016536}
-  - component: {fileID: 1983016535}
-  - component: {fileID: 1983016534}
   - component: {fileID: 1983016533}
+  - component: {fileID: 1983016534}
   m_Layer: 0
   m_Name: Marino
   m_TagString: Untagged
@@ -9641,49 +9455,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1983016532}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae0c24cfc78c01469fe26751ecf3f1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &1983016535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1983016532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a885add87c313bf4995c6bd587ecbe0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &1983016536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1983016532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e3a3efc9a59a94ba90bfb9bb5f16a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 17fda3637122bbf48962764b520c0e83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
@@ -9710,8 +9482,6 @@ MonoBehaviour:
   textBox: {fileID: 528584853}
   enemies:
   - {fileID: 1983016534}
-  - {fileID: 1983016535}
-  - {fileID: 1983016536}
   enemyId: 0
   resumeInterrogation: 0
   tile: {fileID: 1036162826896518, guid: c60699c2a830b46a2a6368f12881950f, type: 2}

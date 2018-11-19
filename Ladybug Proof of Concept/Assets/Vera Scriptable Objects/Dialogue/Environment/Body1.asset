@@ -13,5 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
-  dialogueLines: []
+  dialogueLines:
+  - line: The body lies, not yet cold, with eight knives in its back.
+    valuableInfo: 1
+    duelTrigger: 0
+    deliveryTone: 0
   informationIndex: 0

@@ -9,9 +9,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 606dab1dcf00c4741bf61375d0db1af1, type: 3}
-  m_Name: NewNode
+  m_Name: MarinoNode
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
-  dialogueLines: []
+  dialogueLines:
+  - line: Oh Gerald what did you get yourself into?
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: Oh hello...Did you want to ask me something
+    valuableInfo: 0
+    duelTrigger: 1
+    deliveryTone: 0
+  - line: Eleanor, the boy's aunt, was more involved in Theodore's personal affairs
+      than I was. I cared for the boy like he was family, but our relationship was
+      mostly professional.
+    valuableInfo: 1
+    duelTrigger: 0
+    deliveryTone: 0
   informationIndex: 0

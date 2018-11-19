@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Name: GeraldTree
   m_EditorClassIdentifier: 
   treeName: 
-  dialogueNodes: []
+  dialogueNodes:
+  - {fileID: 11400000, guid: ed3c842dffc27754ebc989df8e75ef52, type: 2}

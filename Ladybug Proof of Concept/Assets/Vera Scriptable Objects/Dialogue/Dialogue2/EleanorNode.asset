@@ -13,5 +13,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
-  dialogueLines: []
+  dialogueLines:
+  - line: I saw you talking with that criminal over there, are you another shady acquaintance
+      of young Theo?
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: No matter, I have no time to waste. Someone has to consider funeral arrangements.
+    valuableInfo: 0
+    duelTrigger: 1
+    deliveryTone: 0
+  - line: The boy was always foolish! Without my steady hand he would have become
+      an outright failure!
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: And though he may have been a flighty idiot, I did love the boy...
+    valuableInfo: 1
+    duelTrigger: 0
+    deliveryTone: 0
   informationIndex: 0

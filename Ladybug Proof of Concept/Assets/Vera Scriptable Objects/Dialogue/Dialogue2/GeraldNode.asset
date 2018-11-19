@@ -13,5 +13,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
-  dialogueLines: []
+  dialogueLines:
+  - line: Lets get pleasantries over with. I am Gerald Hauser, friend and business
+      partner to our late host. Best friend, actually.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: What you must know is that this whole seance business is a silly farse.
+    valuableInfo: 0
+    duelTrigger: 1
+    deliveryTone: 0
+  - line: Yes, sometimes we fought, over money and what have you. But I am not the
+      one you should be questioning, there are others more suspicious than I!
+    valuableInfo: 1
+    duelTrigger: 0
+    deliveryTone: 0
   informationIndex: 0
