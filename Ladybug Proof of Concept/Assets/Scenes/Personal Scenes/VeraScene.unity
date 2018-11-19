@@ -1003,6 +1003,8 @@ MonoBehaviour:
   returnText: Back, huh?
   resumeInterrogation: 0
   resumedStep: 0
+  resumedOptStep: 0
+  resumedEnTypeStep: 0
   resumedPlayerPos: 0
   resumedEnemyPos: 0
 --- !u!114 &208066417
@@ -1024,6 +1026,8 @@ MonoBehaviour:
   returnText: Back, huh?
   resumeInterrogation: 0
   resumedStep: 0
+  resumedOptStep: 0
+  resumedEnTypeStep: 0
   resumedPlayerPos: 0
   resumedEnemyPos: 0
 --- !u!114 &208066418
@@ -1149,7 +1153,9 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
+  npcCanDuel: 0
   informationIndices: 0
+  clueNeededToDuel: {fileID: 0}
   npcInfo: {fileID: 11400000, guid: 1ae2a2ae05c7e40c89f64681f863307b, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -1190,6 +1196,8 @@ MonoBehaviour:
   returnText: Back, huh?
   resumeInterrogation: 0
   resumedStep: 0
+  resumedOptStep: 0
+  resumedEnTypeStep: 0
   resumedPlayerPos: 0
   resumedEnemyPos: 0
 --- !u!1 &219078520
@@ -2996,7 +3004,9 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
+  npcCanDuel: 0
   informationIndices: 3
+  clueNeededToDuel: {fileID: 0}
   npcInfo: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -3025,6 +3035,8 @@ MonoBehaviour:
   returnText: Back, huh?
   resumeInterrogation: 0
   resumedStep: 0
+  resumedOptStep: 0
+  resumedEnTypeStep: 0
   resumedPlayerPos: 0
   resumedEnemyPos: 0
 --- !u!114 &561457227
@@ -3301,7 +3313,9 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
+  npcCanDuel: 0
   informationIndices: 6
+  clueNeededToDuel: {fileID: 0}
   npcInfo: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -3330,6 +3344,8 @@ MonoBehaviour:
   returnText: Back, huh?
   resumeInterrogation: 0
   resumedStep: 0
+  resumedOptStep: 0
+  resumedEnTypeStep: 0
   resumedPlayerPos: 0
   resumedEnemyPos: 0
 --- !u!114 &607971286
@@ -6132,6 +6148,7 @@ MonoBehaviour:
   infoSix: 0
   informationList: []
   unlockables: []
+  clueList: []
   infoDisp: 0
 --- !u!114 &1424946404
 MonoBehaviour:
@@ -7315,6 +7332,8 @@ MonoBehaviour:
   returnText: Back, huh?
   resumeInterrogation: 0
   resumedStep: 0
+  resumedOptStep: 0
+  resumedEnTypeStep: 0
   resumedPlayerPos: 0
   resumedEnemyPos: 0
 --- !u!114 &1552525555
@@ -7336,6 +7355,8 @@ MonoBehaviour:
   returnText: Back, huh?
   resumeInterrogation: 0
   resumedStep: 0
+  resumedOptStep: 0
+  resumedEnTypeStep: 0
   resumedPlayerPos: 0
   resumedEnemyPos: 0
 --- !u!114 &1552525556
@@ -7356,7 +7377,9 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
+  npcCanDuel: 0
   informationIndices: 0
+  clueNeededToDuel: {fileID: 0}
   npcInfo: {fileID: 11400000, guid: dfaa959e329674e2da24fd2a53459270, type: 2}
   AngryAtPlayer: 0
   attitude: 3
@@ -7397,6 +7420,8 @@ MonoBehaviour:
   returnText: Back, huh?
   resumeInterrogation: 0
   resumedStep: 0
+  resumedOptStep: 0
+  resumedEnTypeStep: 0
   resumedPlayerPos: 0
   resumedEnemyPos: 0
 --- !u!1 &1563016332
@@ -9061,7 +9086,9 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
+  npcCanDuel: 0
   informationIndices: 1
+  clueNeededToDuel: {fileID: 11400000, guid: e8a1ed5368bc4429e8fd22a9cb25b365, type: 2}
   npcInfo: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -9090,6 +9117,8 @@ MonoBehaviour:
   returnText: Back, huh?
   resumeInterrogation: 0
   resumedStep: 0
+  resumedOptStep: 0
+  resumedEnTypeStep: 0
   resumedPlayerPos: 0
   resumedEnemyPos: 0
 --- !u!114 &1887592429
@@ -9233,7 +9262,9 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
+  npcCanDuel: 0
   informationIndices: 2
+  clueNeededToDuel: {fileID: 0}
   npcInfo: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -9262,6 +9293,8 @@ MonoBehaviour:
   returnText: Back, huh?
   resumeInterrogation: 0
   resumedStep: 0
+  resumedOptStep: 0
+  resumedEnTypeStep: 0
   resumedPlayerPos: 0
   resumedEnemyPos: 0
 --- !u!114 &1924797325
@@ -9503,7 +9536,9 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
+  npcCanDuel: 0
   informationIndices: 0
+  clueNeededToDuel: {fileID: 0}
   npcInfo: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -9532,6 +9567,8 @@ MonoBehaviour:
   returnText: Back, huh?
   resumeInterrogation: 0
   resumedStep: 0
+  resumedOptStep: 0
+  resumedEnTypeStep: 0
   resumedPlayerPos: 0
   resumedEnemyPos: 0
 --- !u!114 &1983016537

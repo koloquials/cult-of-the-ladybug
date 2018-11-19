@@ -13,7 +13,11 @@ public class NPC : MonoBehaviour {
     public int newDuelId;
 
     public bool canDuel = false;
+
+    public bool npcCanDuel = false;
+
     public DialogueNode.InformationIndex informationIndices;
+    public Clue clueNeededToDuel;
     List<UnlockableInfo> unlocked;
 
     public NpcTemplate npcInfo;
@@ -62,10 +66,12 @@ public class NPC : MonoBehaviour {
         if (informationIndices == DialogueNode.InformationIndex.Node)
         {
             canDuel = true;
+            npcCanDuel = true;
         }
         else
         {
             LockDuel();
+            ManageDuels();
         }
         try{
             thisDuelManager = GetComponent<DuelManager>();
@@ -119,17 +125,17 @@ public class NPC : MonoBehaviour {
 
 
     void LockDuel(){
-      
-        //foreach(var ind in informationIndices){
             foreach(var u in unlocked){
             if(informationIndices == u.thisInfo && u.unlocked){
-                    print("yo");
                     canDuel = true;
-                } else {
-                canDuel = false;
-                }
+                } 
             }
-        //}
+    }
+
+    void ManageDuels(){
+        if(variables.clueList.Contains(clueNeededToDuel)){
+            npcCanDuel = true;
+        }
     }
 
     void CheckForPlayer()

@@ -184,6 +184,8 @@ public class DialogueManager : MonoBehaviour
             {
                 dialogueText.color = importantText;
                 variableStorage.AddInfo(treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line, treeToRun.dialogueNodes[nodeIndex]);
+                variableStorage.DiscoverClue(treeToRun.dialogueNodes[nodeIndex]);
+
             }
             else
             {
@@ -210,7 +212,7 @@ public class DialogueManager : MonoBehaviour
                 lineIndex = 0;
             }
 
-            if (treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].duelTrigger && activeNPC.canDuel)
+            if (treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].duelTrigger && activeNPC.npcCanDuel)
             {
                 duelTrigger.SetActive(true);
                 if (Input.GetKeyUp(KeyCode.Space))

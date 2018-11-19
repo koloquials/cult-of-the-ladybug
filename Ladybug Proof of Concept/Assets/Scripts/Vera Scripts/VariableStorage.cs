@@ -9,6 +9,9 @@ public class VariableStorage : MonoBehaviour {
     public List<string> informationList = new List<string>();
     public List<UnlockableInfo> unlockables;
 
+
+    public List<Clue> clueList = new List<Clue>();
+
     public bool infoDisp = false;
 
     private void Start()
@@ -24,6 +27,14 @@ public class VariableStorage : MonoBehaviour {
                     u.informationToDisplay = toAdd;
                     u.clueDisplay = node.ClueTitle;
                 }
+            }
+        }
+    }
+
+    public void DiscoverClue(DialogueNode node){
+        if(node.clueDiscovered!=null){
+            if(!clueList.Contains(node.clueDiscovered)){
+                clueList.Add(node.clueDiscovered);
             }
         }
     }
