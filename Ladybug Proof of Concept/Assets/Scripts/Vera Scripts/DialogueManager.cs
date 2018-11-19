@@ -116,7 +116,7 @@ public class DialogueManager : MonoBehaviour
                     {
                         ReprimandPlayer(10f); //reprimands player upon loss when they press space 
                         activeDuel.enabled = false; //turns of the duel component on the npc we're interacting with
-                        StartDialogue(activeNPC.informationReward);
+                        StartDialogue(activeNPC.lossTree);
                     }
                 }
                 else if (activeDuel.playerWin) //player win handling

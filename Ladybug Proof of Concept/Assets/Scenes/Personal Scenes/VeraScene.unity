@@ -1144,6 +1144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treeToLoad: {fileID: 11400000, guid: d1b1d3b2b40e99e4d96ca447a18a9721, type: 2}
   informationReward: {fileID: 11400000, guid: 28ab0714b36e4b145b46f9b3cde7fc59, type: 2}
+  lossTree: {fileID: 0}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
   newDuelId: 0
@@ -2990,6 +2991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treeToLoad: {fileID: 11400000, guid: 956b1321bf743cc45a2e2f473b8c704d, type: 2}
   informationReward: {fileID: 0}
+  lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
   newDuelId: 0
@@ -3294,6 +3296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treeToLoad: {fileID: 11400000, guid: e0b297cd684633e4ebee717964e1bacc, type: 2}
   informationReward: {fileID: 0}
+  lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
   newDuelId: 0
@@ -7348,6 +7351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treeToLoad: {fileID: 11400000, guid: e05722ae307a7e34984a017d40527657, type: 2}
   informationReward: {fileID: 11400000, guid: 28ab0714b36e4b145b46f9b3cde7fc59, type: 2}
+  lossTree: {fileID: 0}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
   newDuelId: 0
@@ -9052,6 +9056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treeToLoad: {fileID: 11400000, guid: 25e853e03449cf642a81f60900f33b1c, type: 2}
   informationReward: {fileID: 0}
+  lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
   newDuelId: 0
@@ -9223,6 +9228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treeToLoad: {fileID: 11400000, guid: 2a280d25dcc69074a8e4c5cb9d58804f, type: 2}
   informationReward: {fileID: 0}
+  lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
   newDuelId: 0
@@ -9492,6 +9498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treeToLoad: {fileID: 11400000, guid: f0c8fda10223522439c4dba5451ee2c7, type: 2}
   informationReward: {fileID: 0}
+  lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
   newDuelId: 0
