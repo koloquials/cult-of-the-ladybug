@@ -8,10 +8,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 606dab1dcf00c4741bf61375d0db1af1, type: 3}
-  m_Name: MarinoNode
+  m_Script: {fileID: 11500000, guid: 6ee5ebb426ddc4629bc439ea14a170f5, type: 3}
+  m_Name: Theo
   m_EditorClassIdentifier: 
-  nodeName: 
-  ClueTitle: 
-  dialogueLines: []
-  informationIndex: 0
+  objectName: 
+  objectDescription: {fileID: 11400000, guid: dd7e2ab2842cc73409e5660c595eeb33, type: 2}
+  objectSprite: {fileID: 0}
