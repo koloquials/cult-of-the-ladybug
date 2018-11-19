@@ -9,8 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 075334b926d654961be97b2678c6f974, type: 3}
-  m_Name: DeskTree
+  m_Name: LilReward
   m_EditorClassIdentifier: 
   treeName: 
   dialogueNodes:
-  - {fileID: 11400000, guid: e927e241f6629c146804451315f77b24, type: 2}
+  - {fileID: 11400000, guid: b765073867a2f9a419ef05f291004c8f, type: 2}

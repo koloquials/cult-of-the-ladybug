@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Name: MarinoTree
   m_EditorClassIdentifier: 
   treeName: 
-  dialogueNodes: []
+  dialogueNodes:
+  - {fileID: 11400000, guid: 36abe756290429c4f990e6c6bbdcfe78, type: 2}

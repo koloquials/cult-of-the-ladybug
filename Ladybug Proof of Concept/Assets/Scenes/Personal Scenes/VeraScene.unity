@@ -2968,10 +2968,8 @@ GameObject:
   - component: {fileID: 561457229}
   - component: {fileID: 561457228}
   - component: {fileID: 561457227}
-  - component: {fileID: 561457226}
-  - component: {fileID: 561457225}
-  - component: {fileID: 561457224}
   - component: {fileID: 561457223}
+  - component: {fileID: 561457224}
   m_Layer: 0
   m_Name: Moonchild
   m_TagString: Untagged
@@ -2990,7 +2988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bb0d52e8c804c1db91f6f8ee956167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treeToLoad: {fileID: 0}
+  treeToLoad: {fileID: 11400000, guid: 956b1321bf743cc45a2e2f473b8c704d, type: 2}
   informationReward: {fileID: 0}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
@@ -3014,49 +3012,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 561457222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae0c24cfc78c01469fe26751ecf3f1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &561457225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 561457222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a885add87c313bf4995c6bd587ecbe0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &561457226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 561457222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e3a3efc9a59a94ba90bfb9bb5f16a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 0aa393fded26a674dae72a6aced7a25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
@@ -3083,8 +3039,6 @@ MonoBehaviour:
   textBox: {fileID: 528584853}
   enemies:
   - {fileID: 561457224}
-  - {fileID: 561457225}
-  - {fileID: 561457226}
   enemyId: 0
   resumeInterrogation: 0
   tile: {fileID: 1036162826896518, guid: c60699c2a830b46a2a6368f12881950f, type: 2}
@@ -3318,10 +3272,8 @@ GameObject:
   - component: {fileID: 607971288}
   - component: {fileID: 607971287}
   - component: {fileID: 607971286}
-  - component: {fileID: 607971285}
-  - component: {fileID: 607971284}
-  - component: {fileID: 607971283}
   - component: {fileID: 607971282}
+  - component: {fileID: 607971283}
   m_Layer: 0
   m_Name: Lillian
   m_TagString: Untagged
@@ -3340,7 +3292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bb0d52e8c804c1db91f6f8ee956167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treeToLoad: {fileID: 0}
+  treeToLoad: {fileID: 11400000, guid: e0b297cd684633e4ebee717964e1bacc, type: 2}
   informationReward: {fileID: 0}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
@@ -3364,49 +3316,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 607971281}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae0c24cfc78c01469fe26751ecf3f1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &607971284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 607971281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a885add87c313bf4995c6bd587ecbe0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &607971285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 607971281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e3a3efc9a59a94ba90bfb9bb5f16a7, type: 3}
+  m_Script: {fileID: 11500000, guid: fe45e0639e4b1044cbc02b38a4f462b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
@@ -3433,8 +3343,6 @@ MonoBehaviour:
   textBox: {fileID: 528584853}
   enemies:
   - {fileID: 607971283}
-  - {fileID: 607971284}
-  - {fileID: 607971285}
   enemyId: 0
   resumeInterrogation: 0
   tile: {fileID: 1036162826896518, guid: c60699c2a830b46a2a6368f12881950f, type: 2}
@@ -6418,7 +6326,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: 21300000, guid: 248ef7cfb55544091bffd9777d67a40f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9122,10 +9030,8 @@ GameObject:
   - component: {fileID: 1887592431}
   - component: {fileID: 1887592430}
   - component: {fileID: 1887592429}
-  - component: {fileID: 1887592428}
-  - component: {fileID: 1887592427}
-  - component: {fileID: 1887592426}
   - component: {fileID: 1887592425}
+  - component: {fileID: 1887592426}
   m_Layer: 0
   m_Name: Eleanor
   m_TagString: Untagged
@@ -9144,7 +9050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bb0d52e8c804c1db91f6f8ee956167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treeToLoad: {fileID: 0}
+  treeToLoad: {fileID: 11400000, guid: 25e853e03449cf642a81f60900f33b1c, type: 2}
   informationReward: {fileID: 0}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
@@ -9168,49 +9074,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1887592424}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae0c24cfc78c01469fe26751ecf3f1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &1887592427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1887592424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a885add87c313bf4995c6bd587ecbe0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &1887592428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1887592424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e3a3efc9a59a94ba90bfb9bb5f16a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 77e60c2fb4373194aa79d2b228a9ed48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
@@ -9237,8 +9101,6 @@ MonoBehaviour:
   textBox: {fileID: 528584853}
   enemies:
   - {fileID: 1887592426}
-  - {fileID: 1887592427}
-  - {fileID: 1887592428}
   enemyId: 0
   resumeInterrogation: 0
   tile: {fileID: 1036162826896518, guid: c60699c2a830b46a2a6368f12881950f, type: 2}
@@ -9339,10 +9201,8 @@ GameObject:
   - component: {fileID: 1924797327}
   - component: {fileID: 1924797326}
   - component: {fileID: 1924797325}
-  - component: {fileID: 1924797324}
-  - component: {fileID: 1924797323}
-  - component: {fileID: 1924797322}
   - component: {fileID: 1924797321}
+  - component: {fileID: 1924797322}
   m_Layer: 0
   m_Name: Gerald
   m_TagString: Untagged
@@ -9361,7 +9221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bb0d52e8c804c1db91f6f8ee956167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treeToLoad: {fileID: 0}
+  treeToLoad: {fileID: 11400000, guid: 2a280d25dcc69074a8e4c5cb9d58804f, type: 2}
   informationReward: {fileID: 0}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
@@ -9385,49 +9245,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1924797320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae0c24cfc78c01469fe26751ecf3f1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &1924797323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1924797320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a885add87c313bf4995c6bd587ecbe0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &1924797324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1924797320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e3a3efc9a59a94ba90bfb9bb5f16a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 65789f6be41717048989e046fba171b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
@@ -9454,8 +9272,6 @@ MonoBehaviour:
   textBox: {fileID: 528584853}
   enemies:
   - {fileID: 1924797322}
-  - {fileID: 1924797323}
-  - {fileID: 1924797324}
   enemyId: 0
   resumeInterrogation: 0
   tile: {fileID: 1036162826896518, guid: c60699c2a830b46a2a6368f12881950f, type: 2}
@@ -9518,7 +9334,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 40
-  m_Sprite: {fileID: 21300000, guid: 946b31c3f35eb4b9c8ba2d5f6b936bcb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: caaed0b3a20094976b7f1d76246a31d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9654,10 +9470,8 @@ GameObject:
   - component: {fileID: 1983016539}
   - component: {fileID: 1983016538}
   - component: {fileID: 1983016537}
-  - component: {fileID: 1983016536}
-  - component: {fileID: 1983016535}
-  - component: {fileID: 1983016534}
   - component: {fileID: 1983016533}
+  - component: {fileID: 1983016534}
   m_Layer: 0
   m_Name: Marino
   m_TagString: Untagged
@@ -9676,7 +9490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bb0d52e8c804c1db91f6f8ee956167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treeToLoad: {fileID: 0}
+  treeToLoad: {fileID: 11400000, guid: f0c8fda10223522439c4dba5451ee2c7, type: 2}
   informationReward: {fileID: 0}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
@@ -9700,49 +9514,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1983016532}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae0c24cfc78c01469fe26751ecf3f1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &1983016535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1983016532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a885add87c313bf4995c6bd587ecbe0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  startPos: 3
-  dialogue: []
-  options: []
-  types: 
-  returnText: Back, huh?
-  resumeInterrogation: 0
-  resumedStep: 0
-  resumedPlayerPos: 0
-  resumedEnemyPos: 0
---- !u!114 &1983016536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1983016532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e3a3efc9a59a94ba90bfb9bb5f16a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 17fda3637122bbf48962764b520c0e83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
@@ -9769,8 +9541,6 @@ MonoBehaviour:
   textBox: {fileID: 528584853}
   enemies:
   - {fileID: 1983016534}
-  - {fileID: 1983016535}
-  - {fileID: 1983016536}
   enemyId: 0
   resumeInterrogation: 0
   tile: {fileID: 1036162826896518, guid: c60699c2a830b46a2a6368f12881950f, type: 2}

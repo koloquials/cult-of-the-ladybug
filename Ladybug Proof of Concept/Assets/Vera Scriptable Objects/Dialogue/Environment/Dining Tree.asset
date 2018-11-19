@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Name: Dining Tree
   m_EditorClassIdentifier: 
   treeName: 
-  dialogueNodes: []
+  dialogueNodes:
+  - {fileID: 11400000, guid: 46cc3c64e5dcba047944dcf6449dd6b5, type: 2}

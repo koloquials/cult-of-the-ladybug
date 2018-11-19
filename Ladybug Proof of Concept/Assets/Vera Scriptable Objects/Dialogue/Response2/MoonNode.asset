@@ -9,13 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 606dab1dcf00c4741bf61375d0db1af1, type: 3}
-  m_Name: Seance Table
+  m_Name: MoonNode
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
   dialogueLines:
-  - line: The table is adorned with a crystal ball, and a cross engraved with the
-      words "Marino X Robert".
+  - line: If you ask me, Gerald and Lillian are the only ones with chips on their
+      shoulders for old Theo. Though, his aunt was nevver happy with how he chose
+      to spend their money.
     valuableInfo: 1
     duelTrigger: 0
     deliveryTone: 0

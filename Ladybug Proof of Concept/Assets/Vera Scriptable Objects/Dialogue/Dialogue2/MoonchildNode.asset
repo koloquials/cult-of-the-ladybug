@@ -13,5 +13,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
-  dialogueLines: []
+  dialogueLines:
+  - line: Hello there, no need to speak I already know who you are.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: I am completely willing to cooperate, so ask your questions. Ask away!
+    valuableInfo: 0
+    duelTrigger: 1
+    deliveryTone: 0
   informationIndex: 0
