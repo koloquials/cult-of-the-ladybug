@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0de9e3bc4944881bf6b6fe48651942, type: 3}
+  m_Name: Marino
+  m_EditorClassIdentifier: 
+  npcName: Marino "The Vine" Montemarano
+  description: "A born-again former mafioso who\u2019s left crime and violent past
+    behind him. Haunted by his past. In his torment he turned to faith, but now worries
+    for his soul. Frequently seeks validation that his soul can be saved/that he is
+    a good man. "
+  dossierCloseup: {fileID: 21300018, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
+  npcSprites:
+  - spriteName: Neutral
+    thisSprite: {fileID: 21300006, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
+    spriteForTone: 0
+  npcRelationships:
+  - person: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+    relationshipDescription: "Was in \u201Cbusiness\u201D with Theodore\u2019s late
+      father. His crime family partnered with one of Hampshire\u2019s business enterprises
+      years earlier-- Hampshire would give the mafia cover jobs as a way of hiding
+      their suspicious incomes and make them seem like average working class members
+      of society. Marino \u201Cworked\u201D at the business for  years-- until he
+      left the family; Due to his time with the Hampshires, he got close to their
+      family."
+  - person: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
+    relationshipDescription: "Along with her, Marino helped raise Theodore. The two
+      don\u2019t often directly interact, but Eleanor finds him rather repulsive due
+      to his history. The two share a subtle respect for one another, though, due
+      to having both been close to Theodore\u2019s parents.\n"
+  - person: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
+    relationshipDescription: 'Marino sees her as a blessing in disguise. She could
+      be his link to one day seeing the spirit of his old partner again. He treats
+      her very well because he thinks it will help his chances. He often asks her
+      for private seances.
+
+'

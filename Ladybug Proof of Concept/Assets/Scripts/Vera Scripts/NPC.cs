@@ -12,7 +12,9 @@ public class NPC : MonoBehaviour {
 
     public int newDuelId;
 
-    public List<DialogueTree> possibleTrees;
+    public bool canDuel = true;
+    public List<DialogueNode.InformationIndex> informationIndices;
+    List<UnlockableInfo> unlocked;
 
     public NpcTemplate npcInfo;
 
@@ -39,7 +41,8 @@ public class NPC : MonoBehaviour {
 
     public virtual void Start()
     {
-        possibleTrees = new List<DialogueTree>();
+        informationIndices = new List<DialogueNode.InformationIndex>();
+        unlocked = new List<UnlockableInfo>(FindObjectsOfType<UnlockableInfo>());
         variables = FindObjectOfType<VariableStorage>();
         interactionIcon = this.gameObject.transform.Find("InteractionIcon").gameObject;
         heatedIcon = this.gameObject.transform.Find("HeatedIcon").gameObject;
@@ -59,6 +62,8 @@ public class NPC : MonoBehaviour {
         try{
             thisDuelManager = GetComponent<DuelManager>();
             CheckForPlayer();
+            PopulateDossier();
+            LockDuel();
             switch (attitude){
                 case Attitude.AngryIfLose:
                     if(thisDuelManager.playerWin){
@@ -106,8 +111,22 @@ public class NPC : MonoBehaviour {
     }
 
 
+    void LockDuel(){
+        foreach(var ind in informationIndices){
+            foreach(var u in unlocked){
+                if(ind == u.thisInfo && !u.unlocked){
+                    canDuel = false;
+                } else if(ind == u.thisInfo && u.unlocked){
+                    canDuel = true;
+                }
+            }
+        }
+    }
+
     void CheckForPlayer()
     {
+        CameraControl camera = FindObjectOfType<CameraControl>();
+
         if((player.gameObject.transform.position - transform.position).magnitude <= player.interactionRadius && currentStatus!= NPCStatus.Heated){
             interactionIcon.SetActive(true);
             if(Input.GetKeyDown(KeyCode.Space)){
@@ -154,5 +173,53 @@ public class NPC : MonoBehaviour {
 
         }
         catch (System.NullReferenceException) {  }
+    }
+
+
+    int relIndex = 0;
+    bool relationshipDisclosed = false;
+    void PopulateDossier(){
+        GameObject dossier = npcCanvas.gameObject.transform.Find("Dossier").gameObject;
+        dossier.transform.Find("NameText").GetComponent<Text>().text = npcInfo.npcName;
+        dossier.transform.Find("Closeup").GetComponent<Image>().sprite = npcInfo.dossierCloseup;
+        dossier.transform.Find("DescriptionText").GetComponent<Text>().text = npcInfo.description;
+        dossier.transform.Find("Disclose").gameObject.transform.GetChild(0).GetComponent<Button>().onClick.AddListener(OnClickDiscloseFalse);
+        Button[] relationships = new Button [3];
+        for (int i = 0; i < relationships.Length;i++){
+            int tempIndex = i;
+            relationships[i] = dossier.transform.Find("RelationshipButtons").transform.GetChild(i).GetComponent<Button>();
+            relationships[i].onClick.AddListener(() => OnClickDiscloseRelationship(tempIndex));;
+            if (!relationshipDisclosed)
+            {
+                dossier.transform.Find("Disclose").gameObject.SetActive(false);
+                dossier.transform.Find("RelationshipText").GetComponent<Text>().text = null;
+            }
+            else
+            {
+                dossier.transform.Find("Disclose").gameObject.SetActive(true);
+                dossier.transform.Find("RelationshipText").GetComponent<Text>().text = npcInfo.npcRelationships[relIndex].relationshipDescription;
+
+            }
+            try{
+                relationships[i].transform.Find("Text").GetComponent<Text>().text = npcInfo.npcRelationships[i].person.npcName;
+            } catch(System.IndexOutOfRangeException){}
+        }
+
+        if(dialogue.currentGameState != DialogueManager.GameState.DossierActive){
+            relationshipDisclosed = false;
+        }
+    }
+
+    void OnClickDiscloseRelationship(int i){
+        if (!relationshipDisclosed)
+        {
+            relationshipDisclosed = true;
+        }
+        relIndex = i;
+        
+    }
+
+    void OnClickDiscloseFalse(){
+        relationshipDisclosed = false;
     }
 }

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0de9e3bc4944881bf6b6fe48651942, type: 3}
+  m_Name: Eleanor
+  m_EditorClassIdentifier: 
+  npcName: Eleanor Hampshire
+  description: "The matriarch of the Hampshire family and Theodore\u2019s widowed
+    aunt. Believes that were she to leave Theodore alone, he\u2019d squander the entire
+    fortune leaving her penniless. Attends the seances to keep an eye on him and his
+    social circle, partly to ensure they all stay in line of her expectations but
+    also out of a subtle, secret genuine concern for his well-being. "
+  dossierCloseup: {fileID: 21300014, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
+  npcSprites:
+  - spriteName: Neutral
+    thisSprite: {fileID: 21300002, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
+    spriteForTone: 0
+  npcRelationships:
+  - person: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+    relationshipDescription: "Her nephew. She didn\u2019t care much about him, until
+      her sister entrusted him to her in her will. In her eyes, Theodore was the proof
+      that her sister trusted her more than anyone else. "
+  - person: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
+    relationshipDescription: "She is not approving of Marino, and often refers to
+      him as a gangster or criminal. Deep down, she recognizes the work he has put
+      in to her late brother-in-law\u2019s company since his death. "
+  - person: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+    relationshipDescription: One day, Gerald came to her with a business proposal,
+      knowing she was the gate between them. The business plan was airtight, and she
+      knew the man was laser focused. She believed that focus would be good for Theodore,
+      and allowed him to proceed to work with Theodore.

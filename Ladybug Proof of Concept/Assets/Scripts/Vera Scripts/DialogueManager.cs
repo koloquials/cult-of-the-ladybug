@@ -25,8 +25,10 @@ public class DialogueManager : MonoBehaviour
     Text nameText; //text that displays the name of the character you're talking to
     Image characterImage; //image that displays the sprite of the character you're talking to
     Text descriptionText; //text for displaying object description
+    public Text introText;
 
     public DialogueTree treeToRun; //dialogue tree that's getting parsed
+    public DialogueNode introSceneNode;
 
     GameObject duelTrigger; //image that gets toggled to signify that a duel can be triggered
     public Color normalText, importantText; //colors to change the text to depending on how valuable it is
@@ -75,6 +77,12 @@ public class DialogueManager : MonoBehaviour
     }
     private void Update()
     {
+
+        if(currentGameState == GameState.IntroScene){
+            RunIntroScene(introSceneNode);
+        } else {
+            introText.gameObject.transform.parent.gameObject.SetActive(false);
+        }
         if (currentGameState==GameState.DialogueActive) //turns the dialogue canvas on and runs dialogue when dialogue is triggered 
         {
             dialogueCanvas.gameObject.SetActive(true);
@@ -202,7 +210,7 @@ public class DialogueManager : MonoBehaviour
                 lineIndex = 0;
             }
 
-            if (treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].duelTrigger)
+            if (treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].duelTrigger && activeNPC.canDuel)
             {
                 duelTrigger.SetActive(true);
                 if (Input.GetKeyUp(KeyCode.Space))
@@ -374,6 +382,46 @@ public class DialogueManager : MonoBehaviour
         activeObject = null;
         nodeToRun = null;
         descriptionIndex = 0;
+    }
+    int introLineIndex = 0;
+
+    void RunIntroScene(DialogueNode introNode){
+        try
+        {
+
+            if (typing == false && lineComplete == false)
+            {
+                introText.text = "";//nodeToRun.dialogueLines[descriptionIndex].line;
+                print("let's type " + introNode.dialogueLines[introLineIndex].line);
+                type = StartCoroutine(TypeText(introNode.dialogueLines[introLineIndex].line, introText));
+            }
+
+            if (Input.GetKeyDown(KeyCode.E) && typing && lineComplete == false)
+            {
+                StopCoroutine(type);
+                typing = false;
+                introText.text = (introNode.dialogueLines[introLineIndex].line);
+                lineComplete = true;
+            }
+
+            else if (Input.GetKeyDown(KeyCode.E) && currentGameState == GameState.IntroScene && lineComplete)
+            {
+                introLineIndex++;
+                lineComplete = false;
+            }
+
+
+            if (introLineIndex > introNode.dialogueLines.Length)
+            {
+                currentGameState = GameState.OverworldActive;
+            }
+
+        }
+        catch (System.IndexOutOfRangeException)
+        {
+            currentGameState = GameState.OverworldActive;
+        }
+
     }
 
 }
