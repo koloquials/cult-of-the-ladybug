@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: MarniNode
   m_EditorClassIdentifier: 
   nodeName: 
-  ClueTitle: 
+  ClueTitle: Marino = family. relationship = "business"
   dialogueLines:
   - line: Eleanor, the boy's aunt, was more involved in Theodore's personal affairs
       than I was. I cared for the boy like he was family, but our relationship was
@@ -20,4 +20,4 @@ MonoBehaviour:
     valuableInfo: 1
     duelTrigger: 0
     deliveryTone: 0
-  informationIndex: 0
+  informationIndex: 1

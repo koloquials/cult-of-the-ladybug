@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: LilNode
   m_EditorClassIdentifier: 
   nodeName: 
-  ClueTitle: 
+  ClueTitle: Theodore broke his promises to Lillian.
   dialogueLines:
   - line: Theodore promised me that he would return the spark of inspiration to my
       life, and he lied. Now he's dead, and the world is just as dark for it. What
@@ -20,4 +20,4 @@ MonoBehaviour:
     valuableInfo: 1
     duelTrigger: 0
     deliveryTone: 0
-  informationIndex: 0
+  informationIndex: 6

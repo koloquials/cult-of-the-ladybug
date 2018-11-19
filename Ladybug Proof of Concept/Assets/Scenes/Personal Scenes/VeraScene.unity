@@ -2994,7 +2994,7 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
-  informationIndices: 06000000
+  informationIndices: 04000000
   npcInfo: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -3126,7 +3126,7 @@ Transform:
   - {fileID: 1326726055}
   - {fileID: 932434239}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &571270216
 GameObject:
@@ -3298,7 +3298,7 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
-  informationIndices: 
+  informationIndices: 06000000
   npcInfo: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -3430,7 +3430,7 @@ Transform:
   - {fileID: 722415046}
   - {fileID: 312493886}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &646432909
 GameObject:
@@ -9056,7 +9056,7 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
-  informationIndices: 
+  informationIndices: 02000000
   npcInfo: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -9188,7 +9188,7 @@ Transform:
   - {fileID: 1443996758}
   - {fileID: 269941828}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1924797320
 GameObject:
@@ -9227,7 +9227,7 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
-  informationIndices: 
+  informationIndices: 03000000
   npcInfo: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -9359,7 +9359,7 @@ Transform:
   - {fileID: 50735204}
   - {fileID: 1814946986}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1944297148
 GameObject:
@@ -9496,7 +9496,7 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
-  informationIndices: 
+  informationIndices: 01000000
   npcInfo: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -9628,7 +9628,7 @@ Transform:
   - {fileID: 2063035857}
   - {fileID: 1453538128}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2023277894
 GameObject:
