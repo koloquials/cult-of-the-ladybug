@@ -12,7 +12,9 @@ public class NPC : MonoBehaviour {
 
     public int newDuelId;
 
-    public List<DialogueTree> possibleTrees;
+    public bool canDuel = true;
+    public List<DialogueNode.InformationIndex> informationIndices;
+    List<UnlockableInfo> unlocked;
 
     public NpcTemplate npcInfo;
 
@@ -39,7 +41,8 @@ public class NPC : MonoBehaviour {
 
     public virtual void Start()
     {
-        possibleTrees = new List<DialogueTree>();
+        informationIndices = new List<DialogueNode.InformationIndex>();
+        unlocked = new List<UnlockableInfo>(FindObjectsOfType<UnlockableInfo>());
         variables = FindObjectOfType<VariableStorage>();
         interactionIcon = this.gameObject.transform.Find("InteractionIcon").gameObject;
         heatedIcon = this.gameObject.transform.Find("HeatedIcon").gameObject;
@@ -60,6 +63,7 @@ public class NPC : MonoBehaviour {
             thisDuelManager = GetComponent<DuelManager>();
             CheckForPlayer();
             PopulateDossier();
+            LockDuel();
             switch (attitude){
                 case Attitude.AngryIfLose:
                     if(thisDuelManager.playerWin){
@@ -106,6 +110,18 @@ public class NPC : MonoBehaviour {
         }
     }
 
+
+    void LockDuel(){
+        foreach(var ind in informationIndices){
+            foreach(var u in unlocked){
+                if(ind == u.thisInfo && !u.unlocked){
+                    canDuel = false;
+                } else if(ind == u.thisInfo && u.unlocked){
+                    canDuel = true;
+                }
+            }
+        }
+    }
 
     void CheckForPlayer()
     {

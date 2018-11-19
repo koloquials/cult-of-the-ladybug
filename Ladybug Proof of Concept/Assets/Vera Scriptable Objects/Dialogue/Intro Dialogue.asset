@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 606dab1dcf00c4741bf61375d0db1af1, type: 3}
-  m_Name: TestNode2
+  m_Name: Intro Dialogue
   m_EditorClassIdentifier: 
   nodeName: Node 2
   ClueTitle: 

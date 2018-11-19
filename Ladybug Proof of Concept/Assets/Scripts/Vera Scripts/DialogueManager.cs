@@ -210,7 +210,7 @@ public class DialogueManager : MonoBehaviour
                 lineIndex = 0;
             }
 
-            if (treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].duelTrigger)
+            if (treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].duelTrigger && activeNPC.canDuel)
             {
                 duelTrigger.SetActive(true);
                 if (Input.GetKeyUp(KeyCode.Space))
