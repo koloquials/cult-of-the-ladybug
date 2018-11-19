@@ -61,7 +61,7 @@ public class PlayerMove : MonoBehaviour{
             
         });
 
-        if (target != null && dialogue.activeNPC == null && target.currentStatus != NPC.NPCStatus.Heated && Input.GetKeyDown(KeyCode.E))
+        if (target != null && dialogue.activeNPC == null && target.currentStatus != NPC.NPCStatus.Heated && Input.GetKeyDown(KeyCode.E) && target.treeToLoad!=null)
         {
            
                 Debug.Log("Interacting with npc");

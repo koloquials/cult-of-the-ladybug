@@ -12,9 +12,28 @@ MonoBehaviour:
   m_Name: Moonchild
   m_EditorClassIdentifier: 
   npcName: Moonchild
+  description: "Seances are her source of income, and spirits are baloney. She has
+    no faith in the supernatural, she just likes scamming rich idiots. Sometime takes
+    pity on hard-core believers, but always tells customers what they want to hear.
+    She attends Theodore\u2019s seance for the consistent income and free food. \n"
   dossierCloseup: {fileID: 21300022, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
   npcSprites:
   - spriteName: Neutral
     thisSprite: {fileID: 21300010, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
     spriteForTone: 0
-  npcRelationships: []
+  npcRelationships:
+  - person: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+    relationshipDescription: 'Her own naive little piggy bank. She appreciates all
+      the business he has given her, but recognizes he is naive and in over his head.
+      She is pretty familiar with his life, as she has learned most of his life details
+      from questions in seances. '
+  - person: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
+    relationshipDescription: "Her best customer. Moonchild recognizes that Lillian
+      is desperate for meaning, and in her eyes an extremely lucrative target. She
+      sees the girl as shallow and doesn\u2019t feel bad about tricking her whatsoever."
+  - person: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
+    relationshipDescription: 'She knows all his secrets, personal and professional.
+      She pities his lot in life and tries to make him feel better by giving him hope
+      of talking to his late partner.
+
+'

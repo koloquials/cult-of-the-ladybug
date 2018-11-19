@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Name: Theodore
   m_EditorClassIdentifier: 
   npcName: Theodore Hampshire
+  description: The host, came into riches through his family. If left unsupervised,
+    would be very reckless with his finances and squander his fortune. Recently interested
+    in spiritualism and the supernatural. He makes his own money by investing in up-and-coming
+    businesses.
   dossierCloseup: {fileID: 21300012, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
   npcSprites:
   - spriteName: Neutral

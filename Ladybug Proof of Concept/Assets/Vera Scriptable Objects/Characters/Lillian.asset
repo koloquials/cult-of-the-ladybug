@@ -12,9 +12,25 @@ MonoBehaviour:
   m_Name: Lillian
   m_EditorClassIdentifier: 
   npcName: Lillian Flores
+  description: 'A young flapper who has a great passion for the nightlife and an even
+    greater pull to the supernatural. She never really wants to be alone for a minute
+    and seems to have a way with relating to everyone she meets. '
   dossierCloseup: {fileID: 21300016, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
   npcSprites:
   - spriteName: Neutral
     thisSprite: {fileID: 21300004, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
     spriteForTone: 0
-  npcRelationships: []
+  npcRelationships:
+  - person: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+    relationshipDescription: A man she knew from friends of friends. The concept of
+      practicing spiritualism is what drew him into a friendship with him.
+  - person: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+    relationshipDescription: "She knows Gerald is Theodore\u2019s best friend. She
+      also recognizes that he wants to get closer to his old friend, and is protective
+      of him. At previous seances, he has probed her for information on her past,
+      as he is suspicious of her."
+  - person: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
+    relationshipDescription: "She trusted Theodore\u2019s recommendation of her, and
+      trusts she is the authority on communing with the dead. She tells her anything
+      and everything she can, and offers her own money to get more accurate readings
+      on her own time, and often purchases charms from her.\n"
