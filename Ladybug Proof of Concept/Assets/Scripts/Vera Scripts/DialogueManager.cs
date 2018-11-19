@@ -336,6 +336,7 @@ public class DialogueManager : MonoBehaviour
         try{
             nodeToRun = activeObject.thisObject.objectDescription;
 
+
             if (typing == false && lineComplete == false)
             {
                 descriptionText.text = "";//nodeToRun.dialogueLines[descriptionIndex].line;
@@ -366,6 +367,7 @@ public class DialogueManager : MonoBehaviour
                 lineComplete = false;
             }
 
+            UnlockInformation(nodeToRun);
 
             if (descriptionIndex > nodeToRun.dialogueLines.Length)
             {

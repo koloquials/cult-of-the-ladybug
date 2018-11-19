@@ -355,7 +355,7 @@ public class DuelManager : MonoBehaviour {
             tiles[i] = Instantiate(tile) as GameObject;
             tiles[i].gameObject.transform.SetParent(FindObjectOfType<Camera>().transform);
             tiles[i].SetActive(true);
-            tiles[i].transform.Translate((2.3f * i), FindObjectOfType<Camera>().transform.position.y + 0.65f, -1f);
+            tiles[i].transform.Translate((FindObjectOfType<Camera>().transform.position.x+(2.3f * i)), FindObjectOfType<Camera>().transform.position.y + 0.65f, -1f);
             status[i] = tiles[i].GetComponent<DuelSqSprite>();
         }
         crtTable = false;
