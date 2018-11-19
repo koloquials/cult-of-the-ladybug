@@ -11,8 +11,6 @@ public class NPC : MonoBehaviour {
     public PlayerMove player;
 
     public int newDuelId;
-    public bool resumeInterrogation = false;
-    public int resumedStep = 0;
 
     public List<DialogueTree> possibleTrees;
 
