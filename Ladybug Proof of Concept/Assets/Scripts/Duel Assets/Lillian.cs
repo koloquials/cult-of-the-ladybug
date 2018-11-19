@@ -10,57 +10,57 @@ public class Lillian : Enemy {
         //items to replace will be {inside these brackets!}, write inside them/follow their instructions and then delete the brackets!
         name = "Lillian\n";
 
-        dialogue.Add("\n“This whole party is some big joke, and he now he’s died for it.”");
+        dialogue.Add("\n“What? You are asking me questions now?”");
 
         dialogue.Add("[DUEL:START]\n");
-        options.Add("I understand that this is a difficult situation, but I have some questions for you.\n");
-        options.Add("Jokes aside, this is a murder scene.\n");
-        options.Add("What are you talking about? He was a comedian?\n");
-        options.Add("Are you saying he died as a joke?\n");
-        dialogue.Add("\"Yeah, no. My best friend is lying dead. It’s not a joke. These seances, spiritualism, talking to the dead, THAT’S the real joke. It’s all boloney.\"\n");
+        options.Add("From what I can tell, you’re just as suspicious as anyone here.\n");
+        options.Add("Yes I am asking you questions, you are the only one left to ask.\n");
+        options.Add("You bet your bottom dollar!\n");
+        options.Add("You must admit you are rather suspicious.\n");
+        dialogue.Add("\"Have you even talked to what’s-his-name? The mafia guy, he’s scary!\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response. 
         //it's important that you stick to ~2 types and properly ramp up to them or else the player will think they're unpredictable.
 
-        dialogue.Add("\"Yeah, no. My best friend is lying dead. It’s not a joke. These seances, spiritualism, talking to the dead, THAT’S the real joke. It’s all boloney.\"\n");
-        options.Add("Who do you believe could do this?\n");
-        options.Add("I hear you, I only came because I thought it might be amusing.\n");
-        options.Add("So you aren’t a true believer? \n");
-        options.Add("Maybe, maybe not. All I believe is that I will find his killer.\n");
-        dialogue.Add("\"I believe that some here are more suspicious than others, Lillian and Moonchild for instance.\"\n");
+        dialogue.Add("\"Have you even talked to what’s-his-name? The mafia guy, he’s scary!\"\n");
+        options.Add("His name is Marino “The Vine” Montemarano, and he’s quite kind. You though, are still up for debate.\n");
+        options.Add("I have, and he’s haunted and harmless. What about you?\n");
+        options.Add("Forget him I am talking to you now.\n");
+        options.Add("I came over here to question you.\n");
+        dialogue.Add("\"Why, how could you think I am even involved in any of this?\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response. 
 
-        dialogue.Add("\"I believe that some here are more suspicious than others, Lillian and Moonchild for instance.\"\n");
-        options.Add("Why are you suspicious of those two, what did they do?\n");
-        options.Add("What is so suspicious about them?\n");
-        options.Add("What did they ever do to you to deserve a murder accusation?\n");
-        options.Add("They seem like a fine pair of ladies to me.\n");
-        dialogue.Add("\"Moonchild has spoonfed them all lies with her tricks, and Lillian shows up out of nowhere and suddenly loves Theodore? He wasn’t that handsome.\"\n");
+        dialogue.Add("\"Why, how could you think I am even involved in any of this?\"\n");
+        options.Add("You and Theodore were rather close, and from what I hear he hadn’t done right by you.\n");
+        options.Add("You were present when the lights went out and you were here, for one.\n");
+        options.Add("We are all involved in this.\n");
+        options.Add("Gerald thinks you are very involved, and so does Moonchild.\n");
+        dialogue.Add("\"I was rather fond of Theodore, we were together, you know.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
         //rinse and repeat!!
 
-        dialogue.Add("\"Moonchild has spoonfed them all lies with her tricks, and Lillian shows up out of nowhere and suddenly loves Theodore? He wasn’t that handsome.\"\n");
-        options.Add("That is for me to decide, since I am the only one gathering the facts.\n");
-        options.Add("It’s hard to see if he was ever handsome with all those knives.\n");
-        options.Add("Tricks, lies, and a golddigger. That is pretty suspicious if it’s true.\n");
-        options.Add("You’re suspicious because you haven’t bothered to get to know them.\n");
-        dialogue.Add("\"Then allow me to enlighten you: there is no way that Moonchild is a real psychic, and Lillian is obviously only interested in his wealth.\"\n");
+        dialogue.Add("\"I was rather fond of Theodore, we were together, you know.\"\n");
+        options.Add("Was he the one who got you into this seance business?\n");
+        options.Add("Oh I am well aware, my dear.\n");
+        options.Add("By together, you mean dating, right?\n");
+        options.Add("Gerald seems to think you were together because you were after his wealth.\n");
+        dialogue.Add("\"He promised me that we would have fun together. I believed him, too, and for a while we did have fun, lots of it. Not anymore though, it seems.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
-        dialogue.Add("\"Then allow me to enlighten you: there is no way that Moonchild is a real psychic,  and Lillian is obviously only interested in his wealth.\"\n");
-        options.Add("Have you actually told them of your suspicions, in upfront confrontation?\n");
-        options.Add("A couple of con artists, eh? Were you going to call the cops?\n");
-        options.Add("Were you going to tell Theodore any of this?\n");
-        options.Add("You weren’t going to keep this to yourself, were you?\n");
-        dialogue.Add("\"No, why would I? There’s no need, the only one who needed to know was Theo, and that won’t do him any good anymore.\"\n");
+        dialogue.Add("\"He promised me that we would have fun together. I believed him, too, and for a while we did have fun, lots of it. Not anymore though, it seems.\"\n");
+        options.Add("Moonchild said as much, she said he was stringing you along with the whole seance business.\n");
+        options.Add("I heard that the seances were fake, was the relationship fake as well?\n");
+        options.Add("Sounds like his whole heart wasn’t in it.\n");
+        options.Add("So his promises ran thin and the fun went with it.\n");
+        dialogue.Add("\"Well it sure felt that way. I only realized that too late though, I’ve wasted so much time chasing ghosts. No longer and never again!\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
-        dialogue.Add("\"No, why would I? There’s no need, the only one who needed to know was Theo, and that won’t do him any good anymore.\"\n");
-        options.Add("Then I will! After all, if they are the most suspicious, then they deserve my attention.\n");
-        options.Add("You should’ve done something when he was still alive.\n");
-        options.Add("You’ve got that right, he’s just a human shishkebab now.\n");
-        options.Add("Someone has to do something about this, a man is dead!\n");//here is where the script ends
-        dialogue.Add("\"No, why would I? There’s no need, the only one who needed to know was Theo, and that won’t do him any good anymore.\"\n");
+        dialogue.Add("\"Well it sure felt that way. I only realized that too late though, I’ve wasted so much time chasing ghosts. No longer and never again!\"\n");
+        options.Add("You must’ve been upset with him for fooling you. How upset, I wonder?\n");
+        options.Add("Glad this murder has gotten you motivated, at least.\n");
+        options.Add("Good for you! Get back on that horse!\n");
+        options.Add("The ghosts were never there, according to Moonchild.\n");//here is where the script ends
+        dialogue.Add("\"Well it sure felt that way. I only realized that too late though, I’ve wasted so much time chasing ghosts. No longer and never again!\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
     }
 

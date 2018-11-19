@@ -10,57 +10,57 @@ public class Moonchild : Enemy {
         //items to replace will be {inside these brackets!}, write inside them/follow their instructions and then delete the brackets!
         name = "Moonchild\n";
 
-        dialogue.Add("\n“This whole party is some big joke, and he now he’s died for it.”");
+        dialogue.Add("\n“I can assure you, I know all the gritty details of the people here. They’ve shown me the skeletons in their closets, and paid me well for the privilege.”");
 
         dialogue.Add("[DUEL:START]\n");
-        options.Add("I understand that this is a difficult situation, but I have some questions for you.\n");
-        options.Add("Jokes aside, this is a murder scene.\n");
-        options.Add("What are you talking about? He was a comedian?\n");
-        options.Add("Are you saying he died as a joke?\n");
-        dialogue.Add("\"Yeah, no. My best friend is lying dead. It’s not a joke. These seances, spiritualism, talking to the dead, THAT’S the real joke. It’s all boloney.\"\n");
+        options.Add("So you willingly admit that you aren’t a real medium?\n");
+        options.Add("Skeletons! Do tell miss Real Psychic!\n");
+        options.Add("You sound more like a conwoman than an actual medium.\n");
+        options.Add("Pay? A real medium isn’t interested in that are they?\n");
+        dialogue.Add("\"I’m as real as any other! But no, I can’t see any ghosts or the future, if that’s what you want to hear.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response. 
         //it's important that you stick to ~2 types and properly ramp up to them or else the player will think they're unpredictable.
 
-        dialogue.Add("\"Yeah, no. My best friend is lying dead. It’s not a joke. These seances, spiritualism, talking to the dead, THAT’S the real joke. It’s all boloney.\"\n");
-        options.Add("Who do you believe could do this?\n");
-        options.Add("I hear you, I only came because I thought it might be amusing.\n");
-        options.Add("So you aren’t a true believer? \n");
-        options.Add("Maybe, maybe not. All I believe is that I will find his killer.\n");
-        dialogue.Add("\"I believe that some here are more suspicious than others, Lillian and Moonchild for instance.\"\n");
+        dialogue.Add("\"I’m as real as any other! But no, I can’t see any ghosts or the future, if that’s what you want to hear.\"\n");
+        options.Add("So you are a liar, why should I trust any further answers I get from you?\n");
+        options.Add("So Theodore isn’t floating around the room, trying to tell me who the murderer is?\n");
+        options.Add("Can mediums see the future? That doesn’t sound right. \n");
+        options.Add("You only tell people what they want to hear, eh? What reason is there to trust you?\n");
+        dialogue.Add("\"You should trust me, because my life could be at stake. There’s a killer among us, darling. And I don’t intend to be next.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response. 
 
-        dialogue.Add("\"I believe that some here are more suspicious than others, Lillian and Moonchild for instance.\"\n");
-        options.Add("Why are you suspicious of those two, what did they do?\n");
-        options.Add("What is so suspicious about them?\n");
-        options.Add("What did they ever do to you to deserve a murder accusation?\n");
-        options.Add("They seem like a fine pair of ladies to me.\n");
-        dialogue.Add("\"Moonchild has spoonfed them all lies with her tricks, and Lillian shows up out of nowhere and suddenly loves Theodore? He wasn’t that handsome.\"\n");
+        dialogue.Add("\"You should trust me, because my life could be at stake. There’s a killer among us, darling. And I don’t intend to be next.\"\n");
+        options.Add("Who could have done this? Why would someone kill Theo?\n");
+        options.Add("Nor do I, that’s why I intend to catch whoever did this.\n");
+        options.Add("He seemed like a nice guy, I can’t imagine why someone would do this.\n");
+        options.Add("All our lives are in danger, so I have to figure out the who and why of Theodore’s death.\n");
+        dialogue.Add("\"Well the why is obvious to me.The boy threw vibrant parties and wasted his fortune left and right. Not only that, he squandered his love as well! That poor girl...\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
         //rinse and repeat!!
 
-        dialogue.Add("\"Moonchild has spoonfed them all lies with her tricks, and Lillian shows up out of nowhere and suddenly loves Theodore? He wasn’t that handsome.\"\n");
-        options.Add("That is for me to decide, since I am the only one gathering the facts.\n");
-        options.Add("It’s hard to see if he was ever handsome with all those knives.\n");
-        options.Add("Tricks, lies, and a golddigger. That is pretty suspicious if it’s true.\n");
-        options.Add("You’re suspicious because you haven’t bothered to get to know them.\n");
-        dialogue.Add("\"Then allow me to enlighten you: there is no way that Moonchild is a real psychic, and Lillian is obviously only interested in his wealth.\"\n");
+        dialogue.Add("\"Well the why is obvious to me.The boy threw vibrant parties and wasted his fortune left and right. Not only that, he squandered his love as well! That poor girl...\"\n");
+        options.Add("Lillian? What did he do to her?\n");
+        options.Add("A frequent party goer and thrower is not much of a reason for murder.\n");
+        options.Add("Wasted fortune?\n");
+        options.Add("How does one squander love?\n");
+        dialogue.Add("\"He spent so much on these gatherings, not that I’m complaining, and he assured his lady-friend that seeing the spirits would light up her life. Suffice to say, there have been no spirits.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
-        dialogue.Add("\"Then allow me to enlighten you: there is no way that Moonchild is a real psychic,  and Lillian is obviously only interested in his wealth.\"\n");
-        options.Add("Have you actually told them of your suspicions, in upfront confrontation?\n");
-        options.Add("A couple of con artists, eh? Were you going to call the cops?\n");
-        options.Add("Were you going to tell Theodore any of this?\n");
-        options.Add("You weren’t going to keep this to yourself, were you?\n");
-        dialogue.Add("\"No, why would I? There’s no need, the only one who needed to know was Theo, and that won’t do him any good anymore.\"\n");
+        dialogue.Add("\"He spent so much on these gatherings, not that I’m complaining, and he assured his lady-friend that seeing the spirits would light up her life. Suffice to say, there have been no spirits.\"\n");
+        options.Add("What about the others? Marino, Gerald and Eleanor?\n");
+        options.Add("The seances were fake, if Marino knew he’d have gone berserk!\n");
+        options.Add("Eleanor couldn’t have been enjoying Theodore wasting their fortune.\n");
+        options.Add("Gerald must not have liked Theodore wasting their time and resources on whims.\n");
+        dialogue.Add("\"Oh poor Marino, these days he couldn’t hurt a fly. And Eleanor and Gerald both loved Theodore, but Gerald was arguing with him earlier tonight.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
-        dialogue.Add("\"No, why would I? There’s no need, the only one who needed to know was Theo, and that won’t do him any good anymore.\"\n");
-        options.Add("Then I will! After all, if they are the most suspicious, then they deserve my attention.\n");
-        options.Add("You should’ve done something when he was still alive.\n");
-        options.Add("You’ve got that right, he’s just a human shishkebab now.\n");
-        options.Add("Someone has to do something about this, a man is dead!\n");//here is where the script ends
-        dialogue.Add("\"No, why would I? There’s no need, the only one who needed to know was Theo, and that won’t do him any good anymore.\"\n");
+        dialogue.Add("\"Oh poor Marino, these days he couldn’t hurt a fly. And Eleanor and Gerald both loved Theodore, but Gerald was arguing with him earlier tonight.\"\n");
+        options.Add("So Gerald was fighting Theodore, and he was lying to Lillian, stringing her along?\n");
+        options.Add("I KNEW Marino was good!\n");
+        options.Add("I don’t know, Eleanor seemed cruel in her description of Theodore.\n");
+        options.Add("Gerald did seem rather irritable, wasn’t giving too much care to his dead “best friend”.\n");//here is where the script ends
+        dialogue.Add("\"Oh poor Marino, these days he couldn’t hurt a fly. And Eleanor and Gerald both loved Theodore, but Gerald was arguing with him earlier tonight.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
     }
 
