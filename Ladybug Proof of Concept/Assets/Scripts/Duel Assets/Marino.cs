@@ -39,7 +39,7 @@ public class Marino : Enemy {
 
         //rinse and repeat!!
 
-        dialogue.Add("\It isn’t something I am very comfortable discussing, especially not with strangers.\"\n");
+        dialogue.Add("\"It isn’t something I am very comfortable discussing, especially not with strangers.\"\n");
         options.Add("I understand, but if it can help with this case.\n");
         options.Add("Then you better get comfortable, because I want to know.\n");
         options.Add("Don’t think of me as a stranger, then! Pretend we’re best friends and it’ll be easy.\n");
