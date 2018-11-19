@@ -11,8 +11,6 @@ public class NPC : MonoBehaviour {
     public PlayerMove player;
 
     public int newDuelId;
-    public bool resumeInterrogation = false;
-    public int resumedStep = 0;
 
     public List<DialogueTree> possibleTrees;
 
@@ -115,7 +113,6 @@ public class NPC : MonoBehaviour {
 
         if((player.gameObject.transform.position - transform.position).magnitude <= player.interactionRadius && currentStatus!= NPCStatus.Heated){
             interactionIcon.SetActive(true);
-            camera.SlightZoom(3f);
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(dialogue.currentGameState == DialogueManager.GameState.OverworldActive && !npcCanvas.gameObject.active){
                     npcCanvas.gameObject.SetActive(true);
@@ -127,7 +124,6 @@ public class NPC : MonoBehaviour {
             }
         } else {
             interactionIcon.SetActive(false);
-            camera.ResetOrtho();
         }
     }
 
@@ -163,27 +159,51 @@ public class NPC : MonoBehaviour {
         catch (System.NullReferenceException) {  }
     }
 
+
+    int relIndex = 0;
+    bool relationshipDisclosed = false;
     void PopulateDossier(){
         GameObject dossier = npcCanvas.gameObject.transform.Find("Dossier").gameObject;
         dossier.transform.Find("NameText").GetComponent<Text>().text = npcInfo.npcName;
         dossier.transform.Find("Closeup").GetComponent<Image>().sprite = npcInfo.dossierCloseup;
+        dossier.transform.Find("DescriptionText").GetComponent<Text>().text = npcInfo.description;
+        dossier.transform.Find("Disclose").gameObject.transform.GetChild(0).GetComponent<Button>().onClick.AddListener(OnClickDiscloseFalse);
         Button[] relationships = new Button [3];
         for (int i = 0; i < relationships.Length;i++){
+            int tempIndex = i;
             relationships[i] = dossier.transform.Find("RelationshipButtons").transform.GetChild(i).GetComponent<Button>();
+            relationships[i].onClick.AddListener(() => OnClickDiscloseRelationship(tempIndex));;
+            if (!relationshipDisclosed)
+            {
+                dossier.transform.Find("Disclose").gameObject.SetActive(false);
+                dossier.transform.Find("RelationshipText").GetComponent<Text>().text = null;
+            }
+            else
+            {
+                dossier.transform.Find("Disclose").gameObject.SetActive(true);
+                dossier.transform.Find("RelationshipText").GetComponent<Text>().text = npcInfo.npcRelationships[relIndex].relationshipDescription;
+
+            }
             try{
                 relationships[i].transform.Find("Text").GetComponent<Text>().text = npcInfo.npcRelationships[i].person.npcName;
             } catch(System.IndexOutOfRangeException){}
         }
+
+        if(dialogue.currentGameState != DialogueManager.GameState.DossierActive){
+            relationshipDisclosed = false;
+        }
     }
 
-    bool relationshipDisclosed = false;
-
-    void OnClickDiscloseRelationship(int index){
-        if(!relationshipDisclosed){
-            
-        } else {
-            
+    void OnClickDiscloseRelationship(int i){
+        if (!relationshipDisclosed)
+        {
+            relationshipDisclosed = true;
         }
+        relIndex = i;
         
+    }
+
+    void OnClickDiscloseFalse(){
+        relationshipDisclosed = false;
     }
 }
