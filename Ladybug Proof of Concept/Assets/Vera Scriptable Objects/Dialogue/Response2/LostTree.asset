@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Name: LostTree
   m_EditorClassIdentifier: 
   treeName: 
-  dialogueNodes: []
+  dialogueNodes:
+  - {fileID: 11400000, guid: 969f5c4ae3de2f14ca8275bf306a5cec, type: 2}

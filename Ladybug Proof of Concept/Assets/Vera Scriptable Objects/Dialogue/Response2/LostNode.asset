@@ -13,5 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
-  dialogueLines: []
+  dialogueLines:
+  - line: You failed.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
   informationIndex: 0
