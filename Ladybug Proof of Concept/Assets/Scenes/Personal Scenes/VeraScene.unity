@@ -2988,7 +2988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bb0d52e8c804c1db91f6f8ee956167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treeToLoad: {fileID: 0}
+  treeToLoad: {fileID: 11400000, guid: 956b1321bf743cc45a2e2f473b8c704d, type: 2}
   informationReward: {fileID: 0}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
@@ -3292,7 +3292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bb0d52e8c804c1db91f6f8ee956167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treeToLoad: {fileID: 0}
+  treeToLoad: {fileID: 11400000, guid: e0b297cd684633e4ebee717964e1bacc, type: 2}
   informationReward: {fileID: 0}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
@@ -6326,7 +6326,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: 21300000, guid: 248ef7cfb55544091bffd9777d67a40f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9050,7 +9050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bb0d52e8c804c1db91f6f8ee956167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treeToLoad: {fileID: 0}
+  treeToLoad: {fileID: 11400000, guid: 25e853e03449cf642a81f60900f33b1c, type: 2}
   informationReward: {fileID: 0}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
@@ -9221,7 +9221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bb0d52e8c804c1db91f6f8ee956167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treeToLoad: {fileID: 0}
+  treeToLoad: {fileID: 11400000, guid: 2a280d25dcc69074a8e4c5cb9d58804f, type: 2}
   informationReward: {fileID: 0}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
@@ -9334,7 +9334,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 40
-  m_Sprite: {fileID: 21300000, guid: 946b31c3f35eb4b9c8ba2d5f6b936bcb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: caaed0b3a20094976b7f1d76246a31d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9490,7 +9490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bb0d52e8c804c1db91f6f8ee956167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treeToLoad: {fileID: 0}
+  treeToLoad: {fileID: 11400000, guid: f0c8fda10223522439c4dba5451ee2c7, type: 2}
   informationReward: {fileID: 0}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}

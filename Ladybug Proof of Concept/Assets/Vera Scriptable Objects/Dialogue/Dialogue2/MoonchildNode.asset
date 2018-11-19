@@ -22,10 +22,4 @@ MonoBehaviour:
     valuableInfo: 0
     duelTrigger: 1
     deliveryTone: 0
-  - line: If you ask me, Gerald and Lillian are the only ones with chips on their
-      shoulders for old Theo. Though, his aunt was nevver happy with how he chose
-      to spend their money.
-    valuableInfo: 1
-    duelTrigger: 0
-    deliveryTone: 0
   informationIndex: 0

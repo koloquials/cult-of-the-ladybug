@@ -23,9 +23,4 @@ MonoBehaviour:
     valuableInfo: 0
     duelTrigger: 1
     deliveryTone: 0
-  - line: Yes, sometimes we fought, over money and what have you. But I am not the
-      one you should be questioning, there are others more suspicious than I!
-    valuableInfo: 1
-    duelTrigger: 0
-    deliveryTone: 0
   informationIndex: 0

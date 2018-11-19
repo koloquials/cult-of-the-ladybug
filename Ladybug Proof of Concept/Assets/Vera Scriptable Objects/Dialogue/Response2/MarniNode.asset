@@ -9,18 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 606dab1dcf00c4741bf61375d0db1af1, type: 3}
-  m_Name: LillianNode
+  m_Name: MarniNode
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
   dialogueLines:
-  - line: You were an acquaintance of Theo, yes? You're the detective if I'm not mistaken.
-    valuableInfo: 0
+  - line: Eleanor, the boy's aunt, was more involved in Theodore's personal affairs
+      than I was. I cared for the boy like he was family, but our relationship was
+      mostly professional.
+    valuableInfo: 1
     duelTrigger: 0
-    deliveryTone: 0
-  - line: He mentioned you before. You've been asking around, yes? Are you looking
-      for the killer?
-    valuableInfo: 0
-    duelTrigger: 1
     deliveryTone: 0
   informationIndex: 0

@@ -28,8 +28,4 @@ MonoBehaviour:
     valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0
-  - line: And though he may have been a flighty idiot, I did love the boy...
-    valuableInfo: 1
-    duelTrigger: 0
-    deliveryTone: 0
   informationIndex: 0
