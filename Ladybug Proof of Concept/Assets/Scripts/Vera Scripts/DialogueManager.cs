@@ -373,6 +373,7 @@ public class DialogueManager : MonoBehaviour
             }
             
         } catch(System.IndexOutOfRangeException){
+            print("we outta here");
             currentGameState = GameState.OverworldActive;
         }
 
