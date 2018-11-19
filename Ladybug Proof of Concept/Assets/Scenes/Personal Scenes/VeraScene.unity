@@ -550,17 +550,17 @@ Prefab:
     - target: {fileID: 212438332040980348, guid: 9b13994f1c20644a9a3313ce441b689d,
         type: 2}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 212438332040980348, guid: 9b13994f1c20644a9a3313ce441b689d,
         type: 2}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 212438332040980348, guid: 9b13994f1c20644a9a3313ce441b689d,
         type: 2}
       propertyPath: m_Color.a
-      value: 0.4627451
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4565662065790938, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
       propertyPath: m_LocalScale.y
@@ -578,7 +578,7 @@ Prefab:
         type: 2}
       propertyPath: thisObject
       value: 
-      objectReference: {fileID: 11400000, guid: b609972eb2fbb4269b5f39339c3ea84b,
+      objectReference: {fileID: 11400000, guid: f76a5af0096a0484eb7391b44d5132ae,
         type: 2}
     - target: {fileID: 212438332040980348, guid: 9b13994f1c20644a9a3313ce441b689d,
         type: 2}
@@ -2990,7 +2990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeToLoad: {fileID: 11400000, guid: 956b1321bf743cc45a2e2f473b8c704d, type: 2}
-  informationReward: {fileID: 0}
+  informationReward: {fileID: 11400000, guid: 0508a3f7fc62e6b45b7eeab98d5123c2, type: 2}
   lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
@@ -3295,7 +3295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeToLoad: {fileID: 11400000, guid: e0b297cd684633e4ebee717964e1bacc, type: 2}
-  informationReward: {fileID: 0}
+  informationReward: {fileID: 11400000, guid: dcb6cab27a00ae94f91902bbd75b1289, type: 2}
   lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
@@ -9055,7 +9055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeToLoad: {fileID: 11400000, guid: 25e853e03449cf642a81f60900f33b1c, type: 2}
-  informationReward: {fileID: 0}
+  informationReward: {fileID: 11400000, guid: 25c10efc39bdfdd4fa77480d00180eb0, type: 2}
   lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
@@ -9227,7 +9227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeToLoad: {fileID: 11400000, guid: 2a280d25dcc69074a8e4c5cb9d58804f, type: 2}
-  informationReward: {fileID: 0}
+  informationReward: {fileID: 11400000, guid: 79f07401ad49fd34abfba2775dc62b2a, type: 2}
   lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
@@ -9497,7 +9497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeToLoad: {fileID: 11400000, guid: f0c8fda10223522439c4dba5451ee2c7, type: 2}
-  informationReward: {fileID: 0}
+  informationReward: {fileID: 11400000, guid: d7fd045daf8364748ad11704d8565460, type: 2}
   lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
