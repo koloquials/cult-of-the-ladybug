@@ -958,9 +958,8 @@ MonoBehaviour:
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
   newDuelId: 0
-  resumeInterrogation: 0
-  resumedStep: 0
-  possibleTrees: []
+  canDuel: 1
+  informationIndices: 
   npcInfo: {fileID: 11400000, guid: 1ae2a2ae05c7e40c89f64681f863307b, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -2624,9 +2623,8 @@ MonoBehaviour:
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
   newDuelId: 0
-  resumeInterrogation: 0
-  resumedStep: 0
-  possibleTrees: []
+  canDuel: 1
+  informationIndices: 06000000
   npcInfo: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -2969,9 +2967,8 @@ MonoBehaviour:
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
   newDuelId: 0
-  resumeInterrogation: 0
-  resumedStep: 0
-  possibleTrees: []
+  canDuel: 1
+  informationIndices: 
   npcInfo: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -7131,9 +7128,8 @@ MonoBehaviour:
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
   newDuelId: 0
-  resumeInterrogation: 0
-  resumedStep: 0
-  possibleTrees: []
+  canDuel: 1
+  informationIndices: 
   npcInfo: {fileID: 11400000, guid: dfaa959e329674e2da24fd2a53459270, type: 2}
   AngryAtPlayer: 0
   attitude: 3
@@ -8728,9 +8724,8 @@ MonoBehaviour:
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
   newDuelId: 0
-  resumeInterrogation: 0
-  resumedStep: 0
-  possibleTrees: []
+  canDuel: 1
+  informationIndices: 
   npcInfo: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -8940,9 +8935,8 @@ MonoBehaviour:
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
   newDuelId: 0
-  resumeInterrogation: 0
-  resumedStep: 0
-  possibleTrees: []
+  canDuel: 1
+  informationIndices: 
   npcInfo: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -9250,9 +9244,8 @@ MonoBehaviour:
   thisDuelManager: {fileID: 0}
   player: {fileID: 0}
   newDuelId: 0
-  resumeInterrogation: 0
-  resumedStep: 0
-  possibleTrees: []
+  canDuel: 1
+  informationIndices: 
   npcInfo: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
   AngryAtPlayer: 0
   attitude: 0
