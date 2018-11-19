@@ -578,7 +578,7 @@ Prefab:
         type: 2}
       propertyPath: thisObject
       value: 
-      objectReference: {fileID: 11400000, guid: f76a5af0096a0484eb7391b44d5132ae,
+      objectReference: {fileID: 11400000, guid: b609972eb2fbb4269b5f39339c3ea84b,
         type: 2}
     - target: {fileID: 212438332040980348, guid: 9b13994f1c20644a9a3313ce441b689d,
         type: 2}
@@ -983,7 +983,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &208066416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7187,7 +7187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1552525550
 Rigidbody2D:
   serializedVersion: 4
