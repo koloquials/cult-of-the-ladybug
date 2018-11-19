@@ -14,7 +14,37 @@ MonoBehaviour:
   nodeName: Node 2
   ClueTitle: 
   dialogueLines:
-  - line: Intro Dialogue Test
+  - line: You were invited by your casual acquaintance, Theodore Hampshire, to attend
+      a dinner party followed by a seance.
+    valuableInfo: 1
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: You hadn't been there for more than an hour, when all the lights suddenly
+      went out!
+    valuableInfo: 1
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: In the dark, you heard some clanging and a couple of screams. And when they
+      finally came back on...
+    valuableInfo: 1
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: Theodore laid still on the floor, with eight knives stuck in his body, as
+      his blood pooled beneath him.
+    valuableInfo: 1
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: You, being an accomplished detective, must now take it upon yourself to
+      find his killer and serve out justice!
+    valuableInfo: 1
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: Inspect your surroundings, interrogate those present, and gather enough
+      information to make an educated accusation.
+    valuableInfo: 1
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: You must catch the killer! Justice must be served!
     valuableInfo: 1
     duelTrigger: 0
     deliveryTone: 0

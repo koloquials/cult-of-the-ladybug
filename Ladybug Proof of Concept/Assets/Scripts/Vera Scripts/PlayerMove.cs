@@ -77,11 +77,13 @@ public class PlayerMove : MonoBehaviour{
         var allObjects = new List<EnvObjectManager>(FindObjectsOfType<EnvObjectManager>());
         var obj = allObjects.Find(delegate (EnvObjectManager env)
         {
+            print("here");
             return (env.transform.position - this.transform.position).magnitude <= (interactionRadius);
+           
 
         });
 
-        if(obj != null && Input.GetKeyDown(KeyCode.E)){
+        if(obj != null && Input.GetKeyDown(KeyCode.E) && dialogue.currentGameState == DialogueManager.GameState.OverworldActive){
             Debug.Log("Interacting with object");
             dialogue.activeObject = obj;
             dialogue.StartDescription();
