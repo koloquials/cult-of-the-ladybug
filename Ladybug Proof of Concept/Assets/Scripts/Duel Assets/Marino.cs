@@ -62,6 +62,14 @@ public class Marino : Enemy {
         options.Add("Be careful don’t take the lord’s name in vain.\n");//here is where the script ends
         dialogue.Add("\"I...used to be on the wrong side of the law. But I swear to god I had nothing to do with this!\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
+
+        dialogue.Add("\"we fucked up!!!\"\n");
+        options.Add("...\n");
+        options.Add("...\n");
+        options.Add("...\n");
+        options.Add("...\n");
+        dialogue.Add("\"AAAAAAAA!\"\n");
+        types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
     }
 
     // Update is called once per frame
