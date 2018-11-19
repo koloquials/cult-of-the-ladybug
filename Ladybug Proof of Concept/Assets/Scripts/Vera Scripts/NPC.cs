@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class NPC : MonoBehaviour {
 
     public DialogueTree treeToLoad;
-    public DialogueTree informationReward;
+    public DialogueTree informationReward, lossTree;
     public DuelManager thisDuelManager;
     public PlayerMove player;
 
