@@ -12,6 +12,8 @@ public abstract class Enemy : MonoBehaviour {
 
     public bool resumeInterrogation = false;
     public int resumedStep = 0;
+    public int resumedPlayerPos = 0;
+    public int resumedEnemyPos = 0;
 
     //the enemy abstract class!! don't touch it you don't need to do anything with it. make copies of ExampleEnemy!
 
