@@ -71,9 +71,10 @@ public class DuelManager : MonoBehaviour {
             type = StartCoroutine(TypeText(enemies[enemyId].name, enemies[enemyId].returnText, ("\n\n[space]")));
             inDuel = true;
             typingStart = true;
-            step = (3 + (enemies[enemyId].resumedStep * 2));
-            optStep = (4 + (enemies[enemyId].resumedStep * 4));
-            enTypeStep = (1 + (enemies[enemyId].resumedStep * 1));
+            step = (1 + (enemies[enemyId].resumedStep * 2));
+            optStep = (0 + (enemies[enemyId].resumedStep * 4));
+            enTypeStep = (0 + (enemies[enemyId].resumedStep * 1));
+            Debug.Log("RESUMED: step[" + step + "], optStep[" + optStep + "], enTypeStep[" + enTypeStep + "]");
         }
         else if (Input.GetKeyDown(KeyCode.Space) && typing == true && typingStart == true && duelFinished == false && resumeInterrogation == true){
             StopCoroutine(type);
@@ -94,6 +95,7 @@ public class DuelManager : MonoBehaviour {
             optStep += 4;
             enTypeStep++;
             combatRound = false;
+            Debug.Log("A: step[" + step + "], optStep[" + optStep + "], enTypeStep [" + enTypeStep + "]");
 
             //detects end of enemy dialogue and resets so that it repeats.
             if (step == enemies[enemyId].dialogue.Count)
@@ -129,10 +131,19 @@ public class DuelManager : MonoBehaviour {
                     typingLose = false;
                     inDuel = false;
 
-                    enemies[enemyId].resumedStep = (step - 3)/2;
+                    enemies[enemyId].resumedStep = playerPos;
                     enemies[enemyId].resumeInterrogation = true;
+                    enemies[enemyId].resumedPlayerPos = playerPos;
+
+                    if ((playerPos + enemies[enemyId].startPos) > 6){
+                        enemies[enemyId].resumedEnemyPos = 6;
+                    } else {
+                        enemies[enemyId].resumedEnemyPos = (playerPos + enemies[enemyId].startPos);
+                    }
+
                     print(enemies[enemyId].resumedStep);
                     resumeInterrogation = true;
+
                 }
 
             }
@@ -159,6 +170,7 @@ public class DuelManager : MonoBehaviour {
             playerType = rand[0] + 1;
             enemyType = enemies[enemyId].types[enTypeStep];
             DetermineType(playerType, enemyType);
+            Debug.Log("B: step[" + step + "], optStep[" + optStep + "], enTypeStep [" + enTypeStep + "]");
 
         }
         else if (step > 0 && Input.GetKeyDown(KeyCode.Alpha2) && inDuel == true && combatRound == false){ //player chooses [2]
@@ -339,8 +351,7 @@ public class DuelManager : MonoBehaviour {
         tiles = new GameObject[7]; //array of tiles. only important for intialization.
         status = new DuelSqSprite[7];
 
-        for (int i = 0; i < tiles.Length; i++)
-        { //make them tiles
+        for (int i = 0; i < tiles.Length; i++){ //make them tiles
             tiles[i] = Instantiate(tile) as GameObject;
             tiles[i].gameObject.transform.SetParent(FindObjectOfType<Camera>().transform);
             tiles[i].SetActive(true);
@@ -391,8 +402,10 @@ public class DuelManager : MonoBehaviour {
         status[5].state = 0;
         status[6].state = 0;
 
-        playerPos = 0;
-        enemyPos = enemies[enemyId].resumedStep;
+        playerPos = enemies[enemyId].resumedPlayerPos;
+        enemyPos = enemies[enemyId].resumedEnemyPos;
+
+
 
         playerLine = playerPos;
         enemyLine = enemyPos;
