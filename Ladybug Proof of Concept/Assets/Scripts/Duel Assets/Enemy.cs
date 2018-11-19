@@ -12,6 +12,8 @@ public abstract class Enemy : MonoBehaviour {
 
     public bool resumeInterrogation = false;
     public int resumedStep = 0;
+    public int resumedOptStep = 0;
+    public int resumedEnTypeStep = 0;
     public int resumedPlayerPos = 0;
     public int resumedEnemyPos = 0;
 

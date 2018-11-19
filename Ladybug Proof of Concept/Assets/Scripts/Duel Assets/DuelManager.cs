@@ -71,9 +71,9 @@ public class DuelManager : MonoBehaviour {
             type = StartCoroutine(TypeText(enemies[enemyId].name, enemies[enemyId].returnText, ("\n\n[space]")));
             inDuel = true;
             typingStart = true;
-            step = (1 + (enemies[enemyId].resumedStep * 2));
-            optStep = (0 + (enemies[enemyId].resumedStep * 4));
-            enTypeStep = (0 + (enemies[enemyId].resumedStep * 1));
+            step = enemies[enemyId].resumedStep;
+            optStep = enemies[enemyId].resumedOptStep;
+            enTypeStep = enemies[enemyId].resumedEnTypeStep;
             Debug.Log("RESUMED: step[" + step + "], optStep[" + optStep + "], enTypeStep[" + enTypeStep + "]");
         }
         else if (Input.GetKeyDown(KeyCode.Space) && typing == true && typingStart == true && duelFinished == false && resumeInterrogation == true){
@@ -131,18 +131,20 @@ public class DuelManager : MonoBehaviour {
                     typingLose = false;
                     inDuel = false;
 
-                    enemies[enemyId].resumedStep = playerPos;
-                    enemies[enemyId].resumeInterrogation = true;
-                    enemies[enemyId].resumedPlayerPos = playerPos;
+                    //enemies[enemyId].resumedStep = step;
+                    //enemies[enemyId].resumedOptStep = optStep;
+                    //enemies[enemyId].resumedEnTypeStep = enTypeStep;
+                    //enemies[enemyId].resumeInterrogation = true;
+                    //enemies[enemyId].resumedPlayerPos = playerPos;
 
-                    if ((playerPos + enemies[enemyId].startPos) > 6){
-                        enemies[enemyId].resumedEnemyPos = 6;
-                    } else {
-                        enemies[enemyId].resumedEnemyPos = (playerPos + enemies[enemyId].startPos);
-                    }
+                    //if ((playerPos + enemies[enemyId].startPos) > 6){
+                    //    enemies[enemyId].resumedEnemyPos = 6;
+                    //} else {
+                    //    enemies[enemyId].resumedEnemyPos = (playerPos + enemies[enemyId].startPos);
+                    //}
 
-                    print(enemies[enemyId].resumedStep);
-                    resumeInterrogation = true;
+                    //print(enemies[enemyId].resumedStep);
+                    //resumeInterrogation = true;
 
                 }
 
@@ -388,7 +390,7 @@ public class DuelManager : MonoBehaviour {
             tiles[i] = Instantiate(tile) as GameObject;
             tiles[i].gameObject.transform.SetParent(FindObjectOfType<Camera>().transform);
             tiles[i].SetActive(true);
-            tiles[i].transform.Translate((2.3f * i), FindObjectOfType<Camera>().transform.position.y + 0.65f, -1f);
+            tiles[i].transform.Translate((FindObjectOfType<Camera>().transform.position.x+(2.3f * i)), FindObjectOfType<Camera>().transform.position.y + 0.65f, -1f);
             status[i] = tiles[i].GetComponent<DuelSqSprite>();
         }
         crtTable = false;
