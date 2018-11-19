@@ -1149,7 +1149,7 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
-  informationIndices: 
+  informationIndices: 0
   npcInfo: {fileID: 11400000, guid: 1ae2a2ae05c7e40c89f64681f863307b, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -2996,7 +2996,7 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
-  informationIndices: 04000000
+  informationIndices: 3
   npcInfo: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -3301,7 +3301,7 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
-  informationIndices: 06000000
+  informationIndices: 6
   npcInfo: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -7356,7 +7356,7 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
-  informationIndices: 
+  informationIndices: 0
   npcInfo: {fileID: 11400000, guid: dfaa959e329674e2da24fd2a53459270, type: 2}
   AngryAtPlayer: 0
   attitude: 3
@@ -7688,7 +7688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1645728286
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9061,7 +9061,7 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
-  informationIndices: 02000000
+  informationIndices: 1
   npcInfo: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -9233,7 +9233,7 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
-  informationIndices: 03000000
+  informationIndices: 2
   npcInfo: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -9503,7 +9503,7 @@ MonoBehaviour:
   player: {fileID: 0}
   newDuelId: 0
   canDuel: 1
-  informationIndices: 01000000
+  informationIndices: 0
   npcInfo: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
   AngryAtPlayer: 0
   attitude: 0

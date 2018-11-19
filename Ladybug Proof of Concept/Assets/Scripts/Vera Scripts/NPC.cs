@@ -12,8 +12,8 @@ public class NPC : MonoBehaviour {
 
     public int newDuelId;
 
-    public bool canDuel = true;
-    public List<DialogueNode.InformationIndex> informationIndices;
+    public bool canDuel = false;
+    public DialogueNode.InformationIndex informationIndices;
     List<UnlockableInfo> unlocked;
 
     public NpcTemplate npcInfo;
@@ -41,7 +41,7 @@ public class NPC : MonoBehaviour {
 
     public virtual void Start()
     {
-        informationIndices = new List<DialogueNode.InformationIndex>();
+        //informationIndices = new DialogueNode.InformationIndex;
         unlocked = new List<UnlockableInfo>(FindObjectsOfType<UnlockableInfo>());
         variables = FindObjectOfType<VariableStorage>();
         interactionIcon = this.gameObject.transform.Find("InteractionIcon").gameObject;
@@ -59,11 +59,18 @@ public class NPC : MonoBehaviour {
 
     public virtual void Update()
     {
+        if (informationIndices == DialogueNode.InformationIndex.Node)
+        {
+            canDuel = true;
+        }
+        else
+        {
+            LockDuel();
+        }
         try{
             thisDuelManager = GetComponent<DuelManager>();
             CheckForPlayer();
             PopulateDossier();
-            LockDuel();
             switch (attitude){
                 case Attitude.AngryIfLose:
                     if(thisDuelManager.playerWin){
@@ -112,15 +119,17 @@ public class NPC : MonoBehaviour {
 
 
     void LockDuel(){
-        foreach(var ind in informationIndices){
+      
+        //foreach(var ind in informationIndices){
             foreach(var u in unlocked){
-                if(ind == u.thisInfo && !u.unlocked){
-                    canDuel = false;
-                } else if(ind == u.thisInfo && u.unlocked){
+            if(informationIndices == u.thisInfo && u.unlocked){
+                    print("yo");
                     canDuel = true;
+                } else {
+                canDuel = false;
                 }
             }
-        }
+        //}
     }
 
     void CheckForPlayer()
