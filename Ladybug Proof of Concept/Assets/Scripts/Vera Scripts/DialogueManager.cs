@@ -349,6 +349,7 @@ public class DialogueManager : MonoBehaviour
             if (nodeToRun.dialogueLines[descriptionIndex].valuableInfo)
             {
                 descriptionText.color = importantText;
+                variableStorage.DiscoverClue(nodeToRun);
             }
             else
             {

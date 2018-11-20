@@ -3006,7 +3006,7 @@ MonoBehaviour:
   canDuel: 1
   npcCanDuel: 0
   informationIndices: 3
-  clueNeededToDuel: {fileID: 0}
+  clueNeededToDuel: {fileID: 11400000, guid: 1e52a34646b5847378e3fec8695f2a2b, type: 2}
   npcInfo: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -3315,7 +3315,7 @@ MonoBehaviour:
   canDuel: 1
   npcCanDuel: 0
   informationIndices: 6
-  clueNeededToDuel: {fileID: 0}
+  clueNeededToDuel: {fileID: 11400000, guid: f498e85e86f3c47b499c107dc8886f26, type: 2}
   npcInfo: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
   AngryAtPlayer: 0
   attitude: 0
@@ -9264,7 +9264,7 @@ MonoBehaviour:
   canDuel: 1
   npcCanDuel: 0
   informationIndices: 2
-  clueNeededToDuel: {fileID: 0}
+  clueNeededToDuel: {fileID: 11400000, guid: 4080ea8d7c32c4644a41290159c3c6f1, type: 2}
   npcInfo: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
   AngryAtPlayer: 0
   attitude: 0
