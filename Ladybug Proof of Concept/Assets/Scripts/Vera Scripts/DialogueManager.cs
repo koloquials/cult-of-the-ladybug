@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     public Canvas dialogueCanvas; //reference to the dialogue canvas 
     public Canvas duelCanvas; //reference to the Duel Canvas
     public Canvas descriptionCanvas;
+    public Canvas cutsceneCanvas;
 
     TimeManager timeManager; //reference to the time manager 
     VariableStorage variableStorage; //reference to information storage
@@ -25,10 +26,10 @@ public class DialogueManager : MonoBehaviour
     Text nameText; //text that displays the name of the character you're talking to
     Image characterImage; //image that displays the sprite of the character you're talking to
     Text descriptionText; //text for displaying object description
-    public Text introText;
+    public Text cutsceneText;
 
     public DialogueTree treeToRun; //dialogue tree that's getting parsed
-    public DialogueNode introSceneNode;
+    public Cutscene introCutscene;
 
     GameObject duelTrigger; //image that gets toggled to signify that a duel can be triggered
     public Color normalText, importantText; //colors to change the text to depending on how valuable it is
@@ -74,14 +75,15 @@ public class DialogueManager : MonoBehaviour
         descriptionText.text = null;
         descriptionCanvas.gameObject.SetActive(false);
 
+
     }
     private void Update()
     {
 
         if(currentGameState == GameState.IntroScene){
-            RunIntroScene(introSceneNode);
+            RunCutScene(introCutscene, cutsceneText);
         } else {
-            introText.gameObject.transform.parent.gameObject.SetActive(false);
+            cutsceneCanvas.gameObject.SetActive(false);
         }
         if (currentGameState==GameState.DialogueActive) //turns the dialogue canvas on and runs dialogue when dialogue is triggered 
         {
@@ -390,23 +392,23 @@ public class DialogueManager : MonoBehaviour
         descriptionIndex = 0;
     }
     int introLineIndex = 0;
+    int introSceneIndex = 0;
 
-    void RunIntroScene(DialogueNode introNode){
-        try
-        {
+    void RunCutScene(Cutscene cutscene, Text cutText){
+        try{
 
-            if (typing == false && lineComplete == false)
-            {
-                introText.text = "";//nodeToRun.dialogueLines[descriptionIndex].line;
-                print("let's type " + introNode.dialogueLines[introLineIndex].line);
-                type = StartCoroutine(TypeText(introNode.dialogueLines[introLineIndex].line, introText));
+            HandleCutsceneActors(cutscene, cutsceneCanvas);
+
+            if(typing == false && lineComplete == false){
+                cutText.text = "";
+                type = StartCoroutine(TypeText(cutscene.scenesInCutscene[introSceneIndex].linesInScene[introLineIndex], cutText));
             }
 
             if (Input.GetKeyDown(KeyCode.E) && typing && lineComplete == false)
             {
                 StopCoroutine(type);
                 typing = false;
-                introText.text = (introNode.dialogueLines[introLineIndex].line);
+                cutText.text = (cutscene.scenesInCutscene[introSceneIndex].linesInScene[introLineIndex]);
                 lineComplete = true;
             }
 
@@ -417,17 +419,51 @@ public class DialogueManager : MonoBehaviour
             }
 
 
-            if (introLineIndex > introNode.dialogueLines.Length)
+            if (introLineIndex > cutscene.scenesInCutscene[introSceneIndex].linesInScene.Length-1)
+            {
+                introLineIndex = 0;
+                introSceneIndex++;
+            }
+            if (introSceneIndex > cutscene.scenesInCutscene.Length)
             {
                 currentGameState = GameState.OverworldActive;
             }
 
-        }
-        catch (System.IndexOutOfRangeException)
-        {
+            
+        } catch (System.IndexOutOfRangeException){
             currentGameState = GameState.OverworldActive;
         }
 
     }
 
+    public Color active, notActive;
+
+    void HandleCutsceneActors(Cutscene cutscene, Canvas canvas){
+        GameObject actorList = canvas.gameObject.transform.Find("Actors").gameObject;
+        int maxActors = actorList.transform.childCount;
+        Image[] ActorImageSprites = new Image[maxActors];
+        Text cutNameText = canvas.gameObject.transform.Find("NameText").GetComponent<Text>();
+        cutNameText.text = cutscene.scenesInCutscene[introSceneIndex].currentSpeaker.thisActor.npcName;
+        for (int i = 0; i < ActorImageSprites.Length; i++)
+        {
+            ActorImageSprites[i] = actorList.transform.GetChild(i).GetComponent<Image>();
+            try
+            {
+                ActorImageSprites[i].gameObject.SetActive(true);
+                for (int j = 0; j < cutscene.scenesInCutscene[introSceneIndex].actorsInScene[i].thisActor.npcSprites.Length;j++){
+                    if(cutscene.scenesInCutscene[introSceneIndex].actorsInScene[i].thisActor.npcSprites[j].spriteForTone 
+                       == cutscene.scenesInCutscene[introSceneIndex].actorsInScene[i].tone){
+                        ActorImageSprites[i].sprite = cutscene.scenesInCutscene[introSceneIndex].actorsInScene[i].thisActor.npcSprites[j].thisSprite;
+                        if(cutscene.scenesInCutscene[introSceneIndex].currentSpeaker.thisActor == cutscene.scenesInCutscene[introSceneIndex].actorsInScene[i].thisActor){
+                            ActorImageSprites[i].color = active;
+                        } else {
+                            ActorImageSprites[i].color = notActive;
+                        }
+                    }
+                }
+            } catch (System.IndexOutOfRangeException){
+                ActorImageSprites[i].gameObject.SetActive(false);
+            }
+        }
+    }
 }

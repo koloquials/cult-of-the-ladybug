@@ -22,6 +22,7 @@ public class DuelSqSprite : MonoBehaviour {
 
         zoneRenderer = GetComponent<SpriteRenderer>();
         //personRenderer.sprite = person[2];
+        personRenderer.sortingLayerName = "Duel Tiles";
 
     }
 
