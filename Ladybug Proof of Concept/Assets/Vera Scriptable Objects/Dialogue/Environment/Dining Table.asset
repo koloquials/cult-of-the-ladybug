@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
+  clueDiscovered: {fileID: 11400000, guid: f498e85e86f3c47b499c107dc8886f26, type: 2}
   dialogueLines:
   - line: A table set for 8, two for Theodore's departed family. Upon further inspection,
       it's clear that the table settings lack knives.

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: Theodore broke his promises to Lillian.
+  clueDiscovered: {fileID: 11400000, guid: e6bee93a37edd4b528d46ef756d01f08, type: 2}
   dialogueLines:
   - line: Theodore promised me that he would return the spark of inspiration to my
       life, and he lied. Now he's dead, and the world is just as dark for it. What

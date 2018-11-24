@@ -43,3 +43,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Duel Tiles
+    uniqueID: 1396714435
+    locked: 0

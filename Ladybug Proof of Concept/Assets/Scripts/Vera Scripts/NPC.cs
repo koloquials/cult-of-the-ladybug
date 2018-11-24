@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public class NPC : MonoBehaviour {
 
+    [Header("Dialogue Information")]
     public DialogueTree treeToLoad;
     public DialogueTree informationReward, lossTree;
+
+    [Header ("Duel Information")]
     public DuelManager thisDuelManager;
-    public PlayerMove player;
-
     public int newDuelId;
-
     public bool canDuel = false;
-    public DialogueNode.InformationIndex informationIndices;
+    public bool npcCanDuel = false;
+    public Clue clueNeededToDuel;
     List<UnlockableInfo> unlocked;
 
     public NpcTemplate npcInfo;
@@ -24,6 +25,7 @@ public class NPC : MonoBehaviour {
     }
     public Attitude attitude;
     public VariableStorage variables;
+    PlayerMove player;
 
     public List<NPC> otherNPC;
     public Canvas npcCanvas;
@@ -41,7 +43,6 @@ public class NPC : MonoBehaviour {
 
     public virtual void Start()
     {
-        //informationIndices = new DialogueNode.InformationIndex;
         unlocked = new List<UnlockableInfo>(FindObjectsOfType<UnlockableInfo>());
         variables = FindObjectOfType<VariableStorage>();
         interactionIcon = this.gameObject.transform.Find("InteractionIcon").gameObject;
@@ -59,13 +60,13 @@ public class NPC : MonoBehaviour {
 
     public virtual void Update()
     {
-        if (informationIndices == DialogueNode.InformationIndex.Node)
+        if (clueNeededToDuel == null)
         {
-            canDuel = true;
+            npcCanDuel = true;
         }
         else
         {
-            LockDuel();
+            ManageDuels();
         }
         try{
             thisDuelManager = GetComponent<DuelManager>();
@@ -117,19 +118,10 @@ public class NPC : MonoBehaviour {
         }
     }
 
-
-    void LockDuel(){
-      
-        //foreach(var ind in informationIndices){
-            foreach(var u in unlocked){
-            if(informationIndices == u.thisInfo && u.unlocked){
-                    print("yo");
-                    canDuel = true;
-                } else {
-                canDuel = false;
-                }
-            }
-        //}
+    void ManageDuels(){
+        if(variables.clueList.Contains(clueNeededToDuel)){
+            npcCanDuel = true;
+        }
     }
 
     void CheckForPlayer()

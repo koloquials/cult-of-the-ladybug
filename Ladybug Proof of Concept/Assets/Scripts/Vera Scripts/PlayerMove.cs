@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 public class PlayerMove : MonoBehaviour{
-    public float interactionRadius, speed;
+    public float interactionRadius, objInteract, speed;
     public bool dossierActive = false;
     DialogueManager dialogue;
     public void Start()
@@ -24,19 +24,6 @@ public class PlayerMove : MonoBehaviour{
                 CheckForNearbyObjects();
             }
         } 
-        //if (dialogue.currentGameState == DialogueManager.GameState.MenuActive)
-        //{
-        //    if (Input.GetKeyDown(KeyCode.Space))
-        //    {
-        //        dossierActive = false;
-        //        dialogue.currentGameState = DialogueManager.GameState.OverworldActive;
-        //        List<NPC> nPCs = new List<NPC>(FindObjectsOfType<NPC>());
-        //        foreach(var n in nPCs){
-        //            n.npcCanvas.gameObject.SetActive(false);
-        //        }
-        //    }
-        //} 
-
     }
 
     void MovePlayer()
@@ -78,7 +65,7 @@ public class PlayerMove : MonoBehaviour{
         var obj = allObjects.Find(delegate (EnvObjectManager env)
         {
             print("here");
-            return (env.transform.position - this.transform.position).magnitude <= (interactionRadius);
+            return (env.transform.position - this.transform.position).magnitude <= (objInteract);
            
 
         });
