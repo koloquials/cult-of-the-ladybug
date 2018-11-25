@@ -13,59 +13,57 @@ public class Marino : Enemy {
         dialogue.Add("\n“Slow your roll, kid. I guarantee you I had nothing to do with this.”");
 
         dialogue.Add("[DUEL:START]\n");
-        options.Add("Why do you say that?\n");
-        options.Add("You slow yours, I haven’t even gotten started yet.\n");
-        options.Add("My roll is perfectly slow, thank you very much!\n");
-        options.Add("I’m willing to bet good money that’s not true.\n");
-        dialogue.Add("\"Wait, are you saying you haven’t heard of me? Marino, Marino Montemarano? “The Vine”?\"\n");
+        options.Add("Hm. And I’m willing to bet good money you can't guarantee that.\n");
+        options.Add("You slow yours. We can't prove anything yet.\n");
+        options.Add("Okay, but no need to get snappy. I just want to work through some things.\n");
+        options.Add("While you may be able to guarantee it, I'm not there yet. Help me prove your innocence.\n");
+        dialogue.Add("\"So be it. With God as my witness, I swear my days as “The Vine” Montemarano are behind me.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response. 
         //it's important that you stick to ~2 types and properly ramp up to them or else the player will think they're unpredictable.
 
-        dialogue.Add("\"Wait, are you saying you haven’t heard of me? Marino, Marino Montemarano? “The Vine”?\"\n");
-        options.Add("Can’t say I have. Should I?\n");
-        options.Add("What, are you a famous vineyard guy?\n");
-        options.Add("Not a word.\n");
-        options.Add("Well you are clearly an acquaintance of our late host.\n");
-        dialogue.Add("\"Oh! This is...it’s great! My past isn’t all too pleasant, or important considering our current circumstances.\"\n");
+        dialogue.Add("\"So be it. With God as my witness, I swear my days as “The Vine” Montemarano are behind me.\"\n");
+        options.Add("Perhaps. Yet there has been a truly gruesome murder tonight. Characteristic of the trade, no?\n");
+        options.Add("Who's to say these petty words are worth anything, can you back this up, mafioso?\n");
+        options.Add("Ah, right. You were with the mob. If there is any correlation, it will help us all to speak up.\n");
+        options.Add("Say that I trust you're here for other, decent reasons. Will you deny a possible connection, though?\n");
+        dialogue.Add("\"You have to believe me when I say I'm a changed man. In what happened tonight, I did not play a part.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response. 
 
-        dialogue.Add("\"Oh! This is...it’s great! My past isn’t all too pleasant, or important considering our current circumstances.\"\n");
-        options.Add("You never know, in my line of work anything and everything can be a clue.\n");
-        options.Add("I wouldn’t say great, a man is dead and I have zero answers.\n");
-        options.Add("Something you don’t want me to know?\n");
-        options.Add("Pleasant or not, it could be helpful.\n");
-        dialogue.Add("\"It isn’t something I am very comfortable discussing, especially not with strangers.\"\n");
+        dialogue.Add("\"You have to believe me when I say I'm a changed man. In what happened tonight, I did not play a part.\"\n");
+        options.Add("Interesting. But habits are hard to shake. People don't often make a clean break from their pasts.\n");
+        options.Add("But surely you would know some old buddies with a motive? Anything incriminating?\n");
+        options.Add("Maybe so. What are you keeping hidden, then? Something you don’t to reveal?\n");
+        options.Add("I understand, I do. Wouldn't it help you reach absolution to lend me what you know?\n");
+        dialogue.Add("\"Mm. I'm here because of my ties to Theo, the victim. That's the part of my history that matters here.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
-        //rinse and repeat!!
-
-        dialogue.Add("\"It isn’t something I am very comfortable discussing, especially not with strangers.\"\n");
-        options.Add("I understand, but if it can help with this case.\n");
-        options.Add("Then you better get comfortable, because I want to know.\n");
-        options.Add("Don’t think of me as a stranger, then! Pretend we’re best friends and it’ll be easy.\n");
-        options.Add("It doesn’t look like we have time to get to know each other, with a killer on the loose.\n");
-        dialogue.Add("\"This ‘case’? You are a cop, and you haven’t heard of me?\"\n");
+        dialogue.Add("\"Mm. I'm here because of my ties to Theo, the victim. That's the part of my history that matters here.\"\n");
+        options.Add("A good deflection! But let's get back on topic. You wanted something from our host, didn't you?\n");
+        options.Add("Oddly cagey, but alright. You know something about our host? Any ancient enemies?\n");
+        options.Add("You have to tell me what part of your history connects then. Come on, man.\n");
+        options.Add("Please. It will be tough, but I need you to elaborate. For Theo's sake, if not the case.\n");
+        dialogue.Add("\"I'm connected with the boy through family, but he's isn't the only reason I attend.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
-        dialogue.Add("\"This ‘case’? You are a cop, and you haven’t heard of me?\"\n");
-        options.Add("I’m a private detective and there is a dead body, so I am calling this a homicide case. Why should I have heard of you?\n");
-        options.Add("I’m not a cop and I haven’t heard of you, can we move on?\n");
-        options.Add("Well, not an official case, but still important.\n");
-        options.Add("Maybe you can tell me who you are, then I’ll know.\n");
-        dialogue.Add("\"I...used to be on the wrong side of the law. But I swear to god I had nothing to do with this!\"\n");
+        dialogue.Add("\"I'm connected with the boy through family, but he's isn't the only reason I attend.\"\n");
+        options.Add("But. Are you sure? Are you trying to obscure how you're connected to our victim?\n");
+        options.Add("Is the other reason you attend to settle a score, pay off a residual debt?\n");
+        options.Add("What else do you attend such a wild event for? Surely you are not a believer of the supernatural.\n");
+        options.Add("It's alright to admit you aren't quite free of your criminal roots. Are you looking for liberation?\n");
+        dialogue.Add("\"People come to these events seeking all kinds of things. I guess I'm looking for freedom, yeah.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
-        dialogue.Add("\"I...used to be on the wrong side of the law. But I swear to god I had nothing to do with this!\"\n");
-        options.Add("The wrong side of the law? What did you do?\n");
-        options.Add("Prove it!\n");
-        options.Add("You’re a criminal? A murderer, maybe?\n");
-        options.Add("Be careful don’t take the lord’s name in vain.\n");//here is where the script ends
-        dialogue.Add("\"I...used to be on the wrong side of the law. But I swear to god I had nothing to do with this!\"\n");
+        dialogue.Add("\"People come to these events seeking all kinds of things. I guess I'm looking for freedom, yeah.\"\n");
+        options.Add("What does this have to do with the case, though? Can we get back on topic?\n");
+        options.Add("Would the lord not be disappointed in what you've provided thus far? What else can you tell me?\n");
+        options.Add("You've given me a lot, but I'm not sure it's enough, surely you aren't giving all you have to provide.\n");
+        options.Add("I think you've helped, in whatever way you can. May they lead to that forgiveness you desire.\n");//here is where the script ends
+        dialogue.Add("\"I'm just a man with a tired past. If you are finished, I ask that you leave me be.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
-        dialogue.Add("\"we fucked up!!!\"\n");
+        dialogue.Add("\"I'm just a man with a tired past. If you are finished, I ask that you leave me be.\"\n");
         options.Add("...\n");
-        options.Add("...\n");
+        options.Add("we fucked up!!!");
         options.Add("...\n");
         options.Add("...\n");
         dialogue.Add("\"AAAAAAAA!\"\n");
