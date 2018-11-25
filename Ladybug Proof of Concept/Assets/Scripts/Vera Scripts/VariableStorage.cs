@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class VariableStorage : MonoBehaviour {
 
+    [HideInInspector]
     public bool infoOne, infoTwo, infoThree, infoFour, infoFive, infoSix;
+    [HideInInspector]
     public List<string> informationList = new List<string>();
+    [HideInInspector]
     public List<UnlockableInfo> unlockables;
 
     public Clue[] clueDataBase;
@@ -19,11 +22,6 @@ public class VariableStorage : MonoBehaviour {
     private void Start()
     {
         unlockables = new List<UnlockableInfo>(FindObjectsOfType<UnlockableInfo>());
-    }
-
-    private void Update()
-    {
-        
     }
 
     public void AddInfo(string toAdd, DialogueNode node){

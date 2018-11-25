@@ -16,6 +16,8 @@ MonoBehaviour:
   - personInQuestion: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
     dossierEntry: Acted as Theodore's Uncle, teaching him the ins-&-outs of the business
       world along with Theo's biological Aunt, Eleanor.
+  - personInQuestion: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
+    dossierEntry: What the fuck man just fucking work
   relationshipsToDisclose:
   - personInQuestion: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
     hasRelationshipWith: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6,
