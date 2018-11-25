@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d9208b39ee240e89c4eb01edf227b6, type: 3}
+  m_Name: IntroCutsceneTest
+  m_EditorClassIdentifier: 
+  scenesInCutscene:
+  - actorsInScene:
+    - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
+      tone: 0
+    - thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+      tone: 0
+    currentSpeaker:
+      thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
+      tone: 0
+    linesInScene:
+    - Hey Diego, this is a test of the new Cutscene functionality I worked on on Thursday/Friday.
+    - It works based off a list of scenes containing actors, their moods, and their
+      lines of dialogue.
+    blackfadeAlpha: 1
+  - actorsInScene:
+    - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
+      tone: 0
+    - thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+      tone: 0
+    currentSpeaker:
+      thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+      tone: 0
+    linesInScene:
+    - I can manipulate who's talking, signify when, and eventually we'll have some
+      nice cutscene art made by Rachel!
+    - For now this is it though, the rest of the game is the same as of this build,
+      but finishable!
+    - I also locked the accuse menu depending on information gained, and changed the
+      underlying system for how unlocking information works.
+    - Its all implemented the same, but today and tomorrow is when I'm going to be
+      changing the mechanic behind it in a noticeable manner.
+    blackfadeAlpha: 1

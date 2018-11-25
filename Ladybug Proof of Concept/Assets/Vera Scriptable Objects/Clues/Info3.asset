@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Name: Info3
   m_EditorClassIdentifier: 
   clueDescription: Marino Clue 1
+  dossierEntries: []
+  relationshipsToDisclose: []
+  accuseMenuDropdown: Gerald Info
+  accuseMenuDescription: 
+  index: 3
