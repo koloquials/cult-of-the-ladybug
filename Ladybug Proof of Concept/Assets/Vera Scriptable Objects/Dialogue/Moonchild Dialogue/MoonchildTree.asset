@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treeName: 
   dialogueNodes:
-  - {fileID: 11400000, guid: 2b7b55407bab6f44abdc1f37b32914ec, type: 2}
+  - {fileID: 11400000, guid: 5346d63bddd10495e892c0ac7ed50043, type: 2}

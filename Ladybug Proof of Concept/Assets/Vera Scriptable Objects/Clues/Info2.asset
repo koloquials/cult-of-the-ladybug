@@ -11,8 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6b94f8423fb47bfadebbcb71b2f524, type: 3}
   m_Name: Info2
   m_EditorClassIdentifier: 
-  clueDescription: Marino Clue 1
-  dossierEntries: []
+  clueDescription: Eleanor Clue
+  dossierEntries:
+  - personInQuestion: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
+    dossierEntry: Though seemingly cold and detatched, Eleanor holds a secret love
+      for her naive nephew.
   relationshipsToDisclose: []
   accuseMenuDropdown: 'Eleanor, Theo''s icy Aunt with a secret love '
   accuseMenuDescription: 

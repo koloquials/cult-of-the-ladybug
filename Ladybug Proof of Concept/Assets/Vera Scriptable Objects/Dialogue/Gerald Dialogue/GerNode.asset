@@ -13,7 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: Best business friend. Fought often.
-  clueDiscovered: {fileID: 11400000, guid: 1e52a34646b5847378e3fec8695f2a2b, type: 2}
+  cluesDiscovered:
+  - {fileID: 11400000, guid: 1e52a34646b5847378e3fec8695f2a2b, type: 2}
   dialogueLines:
   - line: Yes, sometimes we fought, over money and what have you. But I am not the
       one you should be questioning, there are others more suspicious than I!

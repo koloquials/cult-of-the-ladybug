@@ -9,16 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 606dab1dcf00c4741bf61375d0db1af1, type: 3}
-  m_Name: MoonchildNode
+  m_Name: MoonchildReadyNode
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
+  cluesDiscovered: []
   dialogueLines:
-  - line: Hello there, no need to speak I already know who you are.
-    valuableInfo: 0
-    duelTrigger: 0
-    deliveryTone: 0
-  - line: I am completely willing to cooperate, so ask your questions. Ask away!
+  - line: Temporary moonchild node pls fix thx
     valuableInfo: 0
     duelTrigger: 1
     deliveryTone: 0
