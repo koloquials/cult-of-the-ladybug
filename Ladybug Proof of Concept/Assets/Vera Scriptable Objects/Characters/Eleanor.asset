@@ -12,12 +12,10 @@ MonoBehaviour:
   m_Name: Eleanor
   m_EditorClassIdentifier: 
   npcName: Eleanor Hampshire
-  description: "The matriarch of the Hampshire family and Theodore\u2019s widowed
-    aunt. Believes that were she to leave Theodore alone, he\u2019d squander the entire
-    fortune leaving her penniless. Attends the seances to keep an eye on him and his
-    social circle, partly to ensure they all stay in line of her expectations but
-    also out of a subtle, secret genuine concern for his well-being. "
+  description: 'Age: 68 / Hampshire Matriarch'
   dossierCloseup: {fileID: 21300014, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
+  dossierClues: []
+  relationshipClues: []
   npcSprites:
   - spriteName: Neutral
     thisSprite: {fileID: 21300002, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}

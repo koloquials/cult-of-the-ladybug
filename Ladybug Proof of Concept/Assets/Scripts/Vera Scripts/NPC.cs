@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public class NPC : MonoBehaviour {
 
+    [Header("Dialogue Information")]
     public DialogueTree treeToLoad;
     public DialogueTree informationReward, lossTree;
+
+    [Header ("Duel Information")]
     public DuelManager thisDuelManager;
-    public PlayerMove player;
-
     public int newDuelId;
-
     public bool canDuel = false;
-    public DialogueNode.InformationIndex informationIndices;
+    public bool npcCanDuel = false;
+    public Clue clueNeededToDuel;
     List<UnlockableInfo> unlocked;
 
     public NpcTemplate npcInfo;
@@ -24,6 +25,7 @@ public class NPC : MonoBehaviour {
     }
     public Attitude attitude;
     public VariableStorage variables;
+    PlayerMove player;
 
     public List<NPC> otherNPC;
     public Canvas npcCanvas;
@@ -41,7 +43,6 @@ public class NPC : MonoBehaviour {
 
     public virtual void Start()
     {
-        //informationIndices = new DialogueNode.InformationIndex;
         unlocked = new List<UnlockableInfo>(FindObjectsOfType<UnlockableInfo>());
         variables = FindObjectOfType<VariableStorage>();
         interactionIcon = this.gameObject.transform.Find("InteractionIcon").gameObject;
@@ -59,18 +60,18 @@ public class NPC : MonoBehaviour {
 
     public virtual void Update()
     {
-        if (informationIndices == DialogueNode.InformationIndex.Node)
+        if (clueNeededToDuel == null)
         {
-            canDuel = true;
+            npcCanDuel = true;
         }
         else
         {
-            LockDuel();
+            ManageDuels();
         }
         try{
             thisDuelManager = GetComponent<DuelManager>();
             CheckForPlayer();
-            PopulateDossier();
+            ManageDossierInformation();
             switch (attitude){
                 case Attitude.AngryIfLose:
                     if(thisDuelManager.playerWin){
@@ -117,19 +118,10 @@ public class NPC : MonoBehaviour {
         }
     }
 
-
-    void LockDuel(){
-      
-        //foreach(var ind in informationIndices){
-            foreach(var u in unlocked){
-            if(informationIndices == u.thisInfo && u.unlocked){
-                    print("yo");
-                    canDuel = true;
-                } else {
-                canDuel = false;
-                }
-            }
-        //}
+    void ManageDuels(){
+        if(variables.clueList.Contains(clueNeededToDuel)){
+            npcCanDuel = true;
+        }
     }
 
     void CheckForPlayer()
@@ -184,51 +176,55 @@ public class NPC : MonoBehaviour {
         catch (System.NullReferenceException) {  }
     }
 
+    Color unlockAlpha;
 
-    int relIndex = 0;
-    bool relationshipDisclosed = false;
-    void PopulateDossier(){
+    void ManageDossierInformation(){
         GameObject dossier = npcCanvas.gameObject.transform.Find("Dossier").gameObject;
         dossier.transform.Find("NameText").GetComponent<Text>().text = npcInfo.npcName;
         dossier.transform.Find("Closeup").GetComponent<Image>().sprite = npcInfo.dossierCloseup;
         dossier.transform.Find("DescriptionText").GetComponent<Text>().text = npcInfo.description;
-        dossier.transform.Find("Disclose").gameObject.transform.GetChild(0).GetComponent<Button>().onClick.AddListener(OnClickDiscloseFalse);
-        Button[] relationships = new Button [3];
-        for (int i = 0; i < relationships.Length;i++){
-            int tempIndex = i;
-            relationships[i] = dossier.transform.Find("RelationshipButtons").transform.GetChild(i).GetComponent<Button>();
-            relationships[i].onClick.AddListener(() => OnClickDiscloseRelationship(tempIndex));;
-            if (!relationshipDisclosed)
+        GameObject[] dossierUnlockables = new GameObject[3];
+        Image[] relationShipUnlockables = new Image[3];
+        for (int i = 0; i < dossierUnlockables.Length; i++){
+            dossierUnlockables[i] = dossier.transform.Find("Unlockables").gameObject.transform.GetChild(i).gameObject;
+            try
             {
-                dossier.transform.Find("Disclose").gameObject.SetActive(false);
-                dossier.transform.Find("RelationshipText").GetComponent<Text>().text = null;
+                if (variables.clueList.Contains(npcInfo.dossierClues[i]))
+                {
+                    for (int j = 0; j < npcInfo.dossierClues[i].dossierEntries.Length; j++)
+                    {
+                        if (npcInfo.dossierClues[i].dossierEntries[j].personInQuestion == npcInfo)
+                        {
+                            dossierUnlockables[i].transform.GetChild(0).GetComponent<Text>().text = npcInfo.dossierClues[i].dossierEntries[j].dossierEntry;
+                            unlockAlpha.a = 0f;
+                        }
+                        else
+                        {
+                            dossierUnlockables[i].transform.GetChild(0).GetComponent<Text>().text = "";
+                            unlockAlpha.a = 1f;
+                        }
+                    }
+                }
+                dossierUnlockables[i].GetComponent<Image>().color = unlockAlpha;
+            } catch(System.IndexOutOfRangeException){
+                dossierUnlockables[i].transform.GetChild(0).GetComponent<Text>().text = "";
+                unlockAlpha.a = 0f;
+                dossierUnlockables[i].GetComponent<Image>().color = unlockAlpha;
             }
-            else
-            {
-                dossier.transform.Find("Disclose").gameObject.SetActive(true);
-                dossier.transform.Find("RelationshipText").GetComponent<Text>().text = npcInfo.npcRelationships[relIndex].relationshipDescription;
+        }
 
-            }
+        for (int k = 0; k < relationShipUnlockables.Length; k++){
+            relationShipUnlockables[k] = dossier.transform.Find("Relationships").gameObject.transform.GetChild(k).GetComponent<Image>();
             try{
-                relationships[i].transform.Find("Text").GetComponent<Text>().text = npcInfo.npcRelationships[i].person.npcName;
-            } catch(System.IndexOutOfRangeException){}
+                if(variables.clueList.Contains(npcInfo.relationshipClues[k])){
+                    for (int l = 0; l < npcInfo.relationshipClues[k].relationshipsToDisclose.Length; l++){
+                        if(npcInfo.relationshipClues[k].relationshipsToDisclose[l].personInQuestion == npcInfo){
+                            relationShipUnlockables[k].sprite = npcInfo.relationshipClues[k].relationshipsToDisclose[l].hasRelationshipWith.dossierCloseup;
+                        }
+                    }
+                } 
+            } catch (System.IndexOutOfRangeException){}
         }
 
-        if(dialogue.currentGameState != DialogueManager.GameState.DossierActive){
-            relationshipDisclosed = false;
-        }
-    }
-
-    void OnClickDiscloseRelationship(int i){
-        if (!relationshipDisclosed)
-        {
-            relationshipDisclosed = true;
-        }
-        relIndex = i;
-        
-    }
-
-    void OnClickDiscloseFalse(){
-        relationshipDisclosed = false;
     }
 }

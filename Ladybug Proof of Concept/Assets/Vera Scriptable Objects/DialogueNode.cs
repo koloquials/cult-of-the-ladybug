@@ -14,6 +14,7 @@ public class DialogueNode : ScriptableObject {
     }
     public string nodeName;
     public string ClueTitle;
+    public Clue clueDiscovered;
     public DialogueLine[] dialogueLines;
 
     [System.Serializable]

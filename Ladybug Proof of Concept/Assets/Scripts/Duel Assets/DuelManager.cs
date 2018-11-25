@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI; 
 
 public class DuelManager : MonoBehaviour {
-    public Text textBox;
+    public Text textBox; //Text container for the player's dialogue
+    public Text enemyBox; //Text container for the enemy's dialogue
 
     public List<Enemy> enemies = new List<Enemy>();
     public int enemyId = 1; //enemy id! iterate through these to change the enemy script you reference.
@@ -359,6 +360,7 @@ public class DuelManager : MonoBehaviour {
             tiles[i].SetActive(true);
             tiles[i].transform.Translate((FindObjectOfType<Camera>().transform.position.x+(2.3f * i)), FindObjectOfType<Camera>().transform.position.y + 0.65f, -1f);
             status[i] = tiles[i].GetComponent<DuelSqSprite>();
+            tiles[i].GetComponent<SpriteRenderer>().sortingLayerName = "Duel Tiles"; //makes the part of a new sorting layer
         }
         crtTable = false;
 
@@ -392,6 +394,7 @@ public class DuelManager : MonoBehaviour {
             tiles[i].SetActive(true);
             tiles[i].transform.Translate((FindObjectOfType<Camera>().transform.position.x+(2.3f * i)), FindObjectOfType<Camera>().transform.position.y + 0.65f, -1f);
             status[i] = tiles[i].GetComponent<DuelSqSprite>();
+            tiles[i].GetComponent<SpriteRenderer>().sortingLayerName = "Duel Tiles"; //makes the part of a new sorting layer
         }
         crtTable = false;
 

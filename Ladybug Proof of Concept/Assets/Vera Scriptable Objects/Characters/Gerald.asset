@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Name: Gerald
   m_EditorClassIdentifier: 
   npcName: Gerald Hauser
-  description: "A young entrepreneur and Theodore\u2019s business partner and longtime
-    friend. Comes to the seances so he can get one-on-one time with Theodore, whom
-    he calls Theo. Often to talk about business matters, but secretly because he misses
-    his friend and doesn\u2019t get to see him without big groups of people around."
+  description: 'Age: 27 / Business Man'
   dossierCloseup: {fileID: 21300020, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
+  dossierClues: []
+  relationshipClues: []
   npcSprites:
   - spriteName: Neutral
     thisSprite: {fileID: 21300008, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}

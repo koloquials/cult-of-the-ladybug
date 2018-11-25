@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour {
 
-    float timeLimit, currentTime, modifier;
+    public float timeLimit; 
+    float currentTime, modifier;
     DialogueManager manager;
 
     public GameObject gameOverText;
@@ -14,7 +15,7 @@ public class TimeManager : MonoBehaviour {
 
     private void Start()
     {
-        timeLimit = 100f;
+        //timeLimit = 100f;
         currentTime = timeLimit;
         manager = FindObjectOfType<DialogueManager>();
         gameOverText.SetActive(false);

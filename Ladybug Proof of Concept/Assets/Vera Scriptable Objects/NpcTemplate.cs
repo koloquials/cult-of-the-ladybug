@@ -25,6 +25,8 @@ public class NpcTemplate : ScriptableObject {
 
     public Sprite dossierCloseup;
 
+    public Clue[] dossierClues, relationshipClues;
+
     public UISprite[] npcSprites;
     public Relationship[] npcRelationships;
 
