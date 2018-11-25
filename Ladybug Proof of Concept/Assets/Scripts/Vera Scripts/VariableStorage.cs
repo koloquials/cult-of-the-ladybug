@@ -39,14 +39,18 @@ public class VariableStorage : MonoBehaviour {
     }
 
     public void DiscoverClue(DialogueNode node){
-        if(node.clueDiscovered!=null){
-            if(!clueList.Contains(node.clueDiscovered)){
-                clueList.Add(node.clueDiscovered);
-                Dropdown.OptionData newOption = new Dropdown.OptionData();
-                newOption.text = node.clueDiscovered.accuseMenuDropdown;
-                var accuse = FindObjectOfType<AccuseMenuManager>();
-                for (int i = 0; i < accuse.clueDropdowns.Length;i++){
-                    accuse.clueDropdowns[i].options.Add(newOption);
+        if(node.cluesDiscovered.Length!=0){
+            for (int j = 0; j < node.cluesDiscovered.Length; j++){
+                if (!clueList.Contains(node.cluesDiscovered[j]))
+                {
+                    clueList.Add(node.cluesDiscovered[j]);
+                    Dropdown.OptionData newOption = new Dropdown.OptionData();
+                    newOption.text = node.cluesDiscovered[j].accuseMenuDropdown;
+                    var accuse = FindObjectOfType<AccuseMenuManager>();
+                    for (int i = 0; i < accuse.clueDropdowns.Length; i++)
+                    {
+                        accuse.clueDropdowns[i].options.Add(newOption);
+                    }
                 }
             }
         }

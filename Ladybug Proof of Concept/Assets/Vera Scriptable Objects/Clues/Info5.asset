@@ -11,9 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6b94f8423fb47bfadebbcb71b2f524, type: 3}
   m_Name: Info5
   m_EditorClassIdentifier: 
-  clueDescription: Marino Clue 1
+  clueDescription: Theo's body
   dossierEntries: []
   relationshipsToDisclose: []
-  accuseMenuDropdown: 
+  accuseMenuDropdown: Theodore's body, with 8 knives stuck in him
   accuseMenuDescription: 
   index: 5
