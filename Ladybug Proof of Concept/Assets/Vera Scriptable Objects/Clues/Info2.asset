@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Name: Info2
   m_EditorClassIdentifier: 
   clueDescription: Marino Clue 1
+  dossierEntries: []
+  relationshipsToDisclose: []
+  accuseMenuDropdown: 'Eleanor, Theo''s icy Aunt with a secret love '
+  accuseMenuDescription: 
+  index: 2

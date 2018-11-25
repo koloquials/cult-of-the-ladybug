@@ -100,12 +100,12 @@ TextureImporter:
       name: DeadTheo
       rect:
         serializedVersion: 2
-        x: 1936
-        y: 1695
-        width: 411
-        height: 318
+        x: 2015
+        y: 1727
+        width: 255
+        height: 221
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -125,7 +125,7 @@ TextureImporter:
         width: 4879
         height: 3518
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

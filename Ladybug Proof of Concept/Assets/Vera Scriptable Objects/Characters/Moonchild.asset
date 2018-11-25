@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Name: Moonchild
   m_EditorClassIdentifier: 
   npcName: Moonchild
-  description: "Seances are her source of income, and spirits are baloney. She has
-    no faith in the supernatural, she just likes scamming rich idiots. Sometime takes
-    pity on hard-core believers, but always tells customers what they want to hear.
-    She attends Theodore\u2019s seance for the consistent income and free food. \n"
+  description: 'Age: 36 / Medium'
   dossierCloseup: {fileID: 21300022, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
+  dossierClues: []
+  relationshipClues: []
   npcSprites:
   - spriteName: Neutral
     thisSprite: {fileID: 21300010, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}

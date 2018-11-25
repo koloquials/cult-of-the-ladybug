@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Name: Info5
   m_EditorClassIdentifier: 
   clueDescription: Marino Clue 1
+  dossierEntries: []
+  relationshipsToDisclose: []
+  accuseMenuDropdown: 
+  accuseMenuDescription: 
+  index: 5

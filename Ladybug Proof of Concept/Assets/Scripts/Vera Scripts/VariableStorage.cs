@@ -9,6 +9,8 @@ public class VariableStorage : MonoBehaviour {
     public List<string> informationList = new List<string>();
     public List<UnlockableInfo> unlockables;
 
+    public Clue[] clueDataBase;
+
 
     public List<Clue> clueList = new List<Clue>();
 
@@ -17,6 +19,11 @@ public class VariableStorage : MonoBehaviour {
     private void Start()
     {
         unlockables = new List<UnlockableInfo>(FindObjectsOfType<UnlockableInfo>());
+    }
+
+    private void Update()
+    {
+        
     }
 
     public void AddInfo(string toAdd, DialogueNode node){
@@ -35,6 +42,12 @@ public class VariableStorage : MonoBehaviour {
         if(node.clueDiscovered!=null){
             if(!clueList.Contains(node.clueDiscovered)){
                 clueList.Add(node.clueDiscovered);
+                Dropdown.OptionData newOption = new Dropdown.OptionData();
+                newOption.text = node.clueDiscovered.accuseMenuDropdown;
+                var accuse = FindObjectOfType<AccuseMenuManager>();
+                for (int i = 0; i < accuse.clueDropdowns.Length;i++){
+                    accuse.clueDropdowns[i].options.Add(newOption);
+                }
             }
         }
     }
