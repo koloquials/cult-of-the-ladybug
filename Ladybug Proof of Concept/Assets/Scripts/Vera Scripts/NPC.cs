@@ -24,6 +24,14 @@ public class NPC : MonoBehaviour {
     public enum Attitude {
         AngryIfLose, AngryIfWin, Neutral, AngryIfOthersLose, AlwaysAngry
     }
+
+    public enum DuelingStatus
+    {
+        PreDuel, CanDuel, PostDuel
+    }
+
+    public DuelingStatus duelingStatus;
+        
     public Attitude attitude;
     public VariableStorage variables;
     PlayerMove player;
@@ -63,22 +71,26 @@ public class NPC : MonoBehaviour {
 
     public virtual void Update()
     {
-        if (clueNeededToDuel == null)
+        if (clueNeededToDuel == null && duelingStatus==DuelingStatus.PreDuel)
         {
             npcCanDuel = true;
+            duelingStatus = DuelingStatus.CanDuel;
         }
         else
         {
             ManageDuels();
         }
-        if(!npcBeaten && !npcCanDuel){
-            treeToLoad = npcInfo.possibleTrees[0];
-        }
-        if(npcCanDuel && !npcBeaten){
-            treeToLoad = npcInfo.possibleTrees[1];
-        }
-        if(npcBeaten){
-            treeToLoad = npcInfo.possibleTrees[2];
+      
+        switch(duelingStatus){
+            case DuelingStatus.PreDuel:
+                treeToLoad = npcInfo.possibleTrees[0];
+                break;
+            case DuelingStatus.CanDuel:
+                treeToLoad = npcInfo.possibleTrees[1];
+                break;
+            case DuelingStatus.PostDuel:
+                treeToLoad = npcInfo.possibleTrees[2];
+                break;
         }
 
         try{
@@ -132,8 +144,9 @@ public class NPC : MonoBehaviour {
     }
 
     void ManageDuels(){
-        if(variables.clueList.Contains(clueNeededToDuel)){
+        if(variables.clueList.Contains(clueNeededToDuel) && duelingStatus == DuelingStatus.PreDuel){
             npcCanDuel = true;
+            duelingStatus = DuelingStatus.CanDuel;
         }
     }
 

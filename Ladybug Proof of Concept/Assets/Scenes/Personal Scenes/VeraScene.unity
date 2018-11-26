@@ -1354,8 +1354,8 @@ MonoBehaviour:
   lossTree: {fileID: 0}
   thisDuelManager: {fileID: 0}
   newDuelId: 0
-  canDuel: 1
   npcCanDuel: 0
+  npcBeaten: 0
   clueNeededToDuel: {fileID: 0}
   npcInfo: {fileID: 11400000, guid: 1ae2a2ae05c7e40c89f64681f863307b, type: 2}
   AngryAtPlayer: 0
@@ -3922,8 +3922,8 @@ MonoBehaviour:
   lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 561457227}
   newDuelId: 0
-  canDuel: 1
   npcCanDuel: 0
+  npcBeaten: 0
   clueNeededToDuel: {fileID: 11400000, guid: 1e52a34646b5847378e3fec8695f2a2b, type: 2}
   npcInfo: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
   AngryAtPlayer: 0
@@ -4333,8 +4333,8 @@ MonoBehaviour:
   lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
   newDuelId: 0
-  canDuel: 1
   npcCanDuel: 0
+  npcBeaten: 0
   clueNeededToDuel: {fileID: 11400000, guid: f498e85e86f3c47b499c107dc8886f26, type: 2}
   npcInfo: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
   AngryAtPlayer: 0
@@ -6444,7 +6444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.6862745}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7485,7 +7485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.60784316}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.7607843}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7517,7 +7517,7 @@ GameObject:
   - component: {fileID: 1244975835}
   - component: {fileID: 1244975837}
   - component: {fileID: 1244975836}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7554,7 +7554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.20392157}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8412,15 +8412,12 @@ MonoBehaviour:
   openAccuseMenu: {fileID: 1622296357}
   culpritIndex: 0
   cluesNeededToAccuse:
-  - {fileID: 11400000, guid: e8a1ed5368bc4429e8fd22a9cb25b365, type: 2}
-  - {fileID: 11400000, guid: 4080ea8d7c32c4644a41290159c3c6f1, type: 2}
+  - {fileID: 11400000, guid: e6bee93a37edd4b528d46ef756d01f08, type: 2}
   accuseBacking: {fileID: 2109259441}
   clueDropdowns:
   - {fileID: 463586957}
-  - {fileID: 13866636}
   correctClues:
-  - {fileID: 11400000, guid: e8a1ed5368bc4429e8fd22a9cb25b365, type: 2}
-  - {fileID: 11400000, guid: 1e52a34646b5847378e3fec8695f2a2b, type: 2}
+  - {fileID: 11400000, guid: e6bee93a37edd4b528d46ef756d01f08, type: 2}
   accuseButtons:
   - thisNpc: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
     accusalButton: {fileID: 1729701822}
@@ -9651,8 +9648,8 @@ MonoBehaviour:
   lossTree: {fileID: 0}
   thisDuelManager: {fileID: 0}
   newDuelId: 0
-  canDuel: 1
   npcCanDuel: 0
+  npcBeaten: 0
   clueNeededToDuel: {fileID: 0}
   npcInfo: {fileID: 11400000, guid: dfaa959e329674e2da24fd2a53459270, type: 2}
   AngryAtPlayer: 0
@@ -11881,8 +11878,8 @@ MonoBehaviour:
   lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
   newDuelId: 0
-  canDuel: 1
   npcCanDuel: 0
+  npcBeaten: 0
   clueNeededToDuel: {fileID: 11400000, guid: e8a1ed5368bc4429e8fd22a9cb25b365, type: 2}
   npcInfo: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
   AngryAtPlayer: 0
@@ -12056,8 +12053,8 @@ MonoBehaviour:
   lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
   newDuelId: 0
-  canDuel: 1
   npcCanDuel: 0
+  npcBeaten: 0
   clueNeededToDuel: {fileID: 11400000, guid: 4080ea8d7c32c4644a41290159c3c6f1, type: 2}
   npcInfo: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
   AngryAtPlayer: 0
@@ -12689,8 +12686,8 @@ MonoBehaviour:
   lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
   newDuelId: 0
-  canDuel: 1
   npcCanDuel: 0
+  npcBeaten: 0
   clueNeededToDuel: {fileID: 0}
   npcInfo: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
   AngryAtPlayer: 0
@@ -13399,7 +13396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.60784316}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.7411765}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
