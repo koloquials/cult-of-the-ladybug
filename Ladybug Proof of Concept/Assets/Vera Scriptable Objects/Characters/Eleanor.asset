@@ -14,13 +14,6 @@ MonoBehaviour:
   npcName: Eleanor Hampshire
   description: 'Age: 68 / Hampshire Matriarch'
   dossierCloseup: {fileID: 21300014, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
-  dossierClues:
-  - {fileID: 11400000, guid: e8a1ed5368bc4429e8fd22a9cb25b365, type: 2}
-  - {fileID: 11400000, guid: 4080ea8d7c32c4644a41290159c3c6f1, type: 2}
-  relationshipClues:
-  - {fileID: 11400000, guid: e8a1ed5368bc4429e8fd22a9cb25b365, type: 2}
-  - {fileID: 11400000, guid: e8a1ed5368bc4429e8fd22a9cb25b365, type: 2}
-  - {fileID: 11400000, guid: 4080ea8d7c32c4644a41290159c3c6f1, type: 2}
   npcSprites:
   - spriteName: Neutral
     thisSprite: {fileID: 21300002, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
@@ -39,3 +32,7 @@ MonoBehaviour:
       knowing she was the gate between them. The business plan was airtight, and she
       knew the man was laser focused. She believed that focus would be good for Theodore,
       and allowed him to proceed to work with Theodore.
+  possibleTrees:
+  - {fileID: 11400000, guid: 25e853e03449cf642a81f60900f33b1c, type: 2}
+  - {fileID: 11400000, guid: 25e853e03449cf642a81f60900f33b1c, type: 2}
+  - {fileID: 11400000, guid: 25e853e03449cf642a81f60900f33b1c, type: 2}
