@@ -25,7 +25,7 @@ public class Gerlad : Enemy {
         options.Add("How inconvenient for you, I'm sure. He must have only dragged you down. Must have been frustrating.\n");
         options.Add("You speak as if you were not extorting him of his wealth just like everyone else in his life.\n");
         options.Add("It doesn't seem a wise move to stick with him then. Unless he was the only only one willing to invest in you? Why stay?\n");
-        options.Add("Were the two of you close? How was that like?\n");
+        options.Add("Were the two of you close? I get the feeling you were. I'd love some insight.\n");
         dialogue.Add("\"Fool that he may have been, it was not the money that brought us together. We've known each other since childhood.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response. 
 
@@ -48,18 +48,18 @@ public class Gerlad : Enemy {
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
         dialogue.Add("\"Look. We dwell in a nest of vipers. I would not trust a single one of these vagrants with honest intentions.\"\n");
-        options.Add("A very bold move, casting fingers while you yourself are under fire. Maybe you all used your dear 'friend'.\n");
-        options.Add(".\n");
-        options.Add("Were you going to tell Theodore any of this? You didn't, in the end, huh. Do you regret that?\n");
-        options.Add("\n");
-        dialogue.Add("\"Theo's incompetence . As great a vice as his failings were.\"\n");
+        options.Add("A bold move, casting fingers while you yourself are under fire. You all used your dear 'friend' and you kept him in the dark.\n");
+        options.Add("Oh? Why is that? Too much competition for you to navigate around? Theo would be harder to handle if he was in the know.\n");
+        options.Add("Were you going to clue Theo into any of this? You didn't, right? Some friend you turned out to be.\n");
+        options.Add("I guess the chance to tell him never arose then. He was clueless to the end, huh? Do you regret that?\n");
+        dialogue.Add("\"Theo's incompetence...it was only in the back of my mind. Hah. Seems his credulity was ultimately his greatest vice.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
-        dialogue.Add("\"I won't dwell over Theo's incompetence. As great a vice as his failings were.\"\n");
-        options.Add(".\n");
-        options.Add(".\n");
-        options.Add(".\n");
-        options.Add("He deserved better\n");//here is where the script ends
+        dialogue.Add("\"Theo's incompetence...it was only in the back of my mind. Hah. Seems his credulity was ultimately his greatest vice.\"\n");
+        options.Add("Seems like there were a lot of things happening behind the scenes. And a world of things you never did to improve the situation.\n");
+        options.Add("A better friend would have cared more for such a hapless individual. The shame is yours.\n");
+        options.Add("In the end, that inattention cost him his life. Is there anything else you'd like to add, or?\n");
+        options.Add("He deserved better. You were caught up in your own life, and that's understandable. But you were there for him.\n");//here is where the script ends
         dialogue.Add("\"I do not appreciate having my time wasted. Men of this day and age should understand effective brevity.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
