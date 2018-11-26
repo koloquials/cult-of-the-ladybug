@@ -747,17 +747,17 @@ Prefab:
     - target: {fileID: 212438332040980348, guid: 9b13994f1c20644a9a3313ce441b689d,
         type: 2}
       propertyPath: m_Color.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 212438332040980348, guid: 9b13994f1c20644a9a3313ce441b689d,
         type: 2}
       propertyPath: m_Color.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 212438332040980348, guid: 9b13994f1c20644a9a3313ce441b689d,
         type: 2}
       propertyPath: m_Color.a
-      value: 0
+      value: 0.5019608
       objectReference: {fileID: 0}
     - target: {fileID: 4565662065790938, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
       propertyPath: m_LocalScale.y
@@ -786,6 +786,10 @@ Prefab:
         type: 2}
       propertyPath: m_SortingOrder
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522289331708938, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.58716
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
@@ -1428,11 +1432,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 0, y: -0.0000076293945}
-=======
   m_AnchoredPosition: {x: 0, y: -0.000022888184}
->>>>>>> master
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &213721465
@@ -3765,7 +3765,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.1, y: -250.2}
+  m_AnchoredPosition: {x: 71, y: -269}
   m_SizeDelta: {x: 1780.7, y: 463.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &528584853
@@ -3789,17 +3789,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 19ae4adbdd73f4cab92fa6a1ba545298, type: 3}
-    m_FontSize: 50
+    m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 0.7
+    m_LineSpacing: 1.6
   m_Text: 'Press Space to Start Duel
 
 '
@@ -3917,11 +3917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bb0d52e8c804c1db91f6f8ee956167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  treeToLoad: {fileID: 11400000, guid: 956b1321bf743cc45a2e2f473b8c704d, type: 2}
-=======
   treeToLoad: {fileID: 11400000, guid: cbd74c6491d284a43baf708877f49e8a, type: 2}
->>>>>>> master
   informationReward: {fileID: 11400000, guid: 0508a3f7fc62e6b45b7eeab98d5123c2, type: 2}
   lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
@@ -13410,7 +13406,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4565662065790938, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
       propertyPath: m_LocalScale.y
-      value: 3.618897
+      value: 4.524345
       objectReference: {fileID: 0}
     - target: {fileID: 4565662065790938, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
       propertyPath: m_LocalScale.x
@@ -13435,6 +13431,26 @@ Prefab:
         type: 2}
       propertyPath: m_SortingOrder
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522289331708938, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522289331708938, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.437
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522289331708938, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.50152
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522289331708938, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.50152
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522289331708938, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.27394024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}

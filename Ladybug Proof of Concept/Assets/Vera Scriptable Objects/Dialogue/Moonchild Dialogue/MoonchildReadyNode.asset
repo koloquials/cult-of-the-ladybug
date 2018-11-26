@@ -13,8 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
-<<<<<<< HEAD:Ladybug Proof of Concept/Assets/Vera Scriptable Objects/Dialogue/Dialogue2/MoonchildNode.asset
-  clueDiscovered: {fileID: 0}
+  cluesDiscovered: []
   dialogueLines:
   - line: Hello there Suzanne, I already know who you are. Forces beyond our ken work
       in mysterious ways.
@@ -27,11 +26,6 @@ MonoBehaviour:
     deliveryTone: 0
   - line: I already know plenty about each and every guest in attendance. It is my
       trade to know things, after all.
-=======
-  cluesDiscovered: []
-  dialogueLines:
-  - line: Temporary moonchild node pls fix thx
->>>>>>> master:Ladybug Proof of Concept/Assets/Vera Scriptable Objects/Dialogue/Moonchild Dialogue/MoonchildReadyNode.asset
     valuableInfo: 0
     duelTrigger: 1
     deliveryTone: 0
@@ -40,8 +34,8 @@ MonoBehaviour:
     valuableInfo: 0
     duelTrigger: 1
     deliveryTone: 0
-  - line: 'Will you be playing the part of a real sleuth tonight? I wish you the best
-      of luck, little detective. '
+  - line: Will you be playing the part of a real sleuth tonight? I wish you the best
+      of luck, little detective.
     valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0
