@@ -17,6 +17,6 @@ MonoBehaviour:
     dossierEntry: Does not believe in the supernatural whatsoever. Sees seances as
       scams and wastes of time.
   relationshipsToDisclose: []
-  accuseMenuDropdown: 
-  accuseMenuDescription: 
+  accuseMenuDropdown: Supernatural = super fake
+  accuseMenuDescription: Gerald strongly disbelieves in the supernatural.
   index: 0

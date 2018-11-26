@@ -1359,6 +1359,7 @@ MonoBehaviour:
   clueNeededToDuel: {fileID: 0}
   npcInfo: {fileID: 11400000, guid: 1ae2a2ae05c7e40c89f64681f863307b, type: 2}
   AngryAtPlayer: 0
+  duelingStatus: 0
   attitude: 0
   variables: {fileID: 0}
   otherNPC: []
@@ -3927,6 +3928,7 @@ MonoBehaviour:
   clueNeededToDuel: {fileID: 11400000, guid: 1e52a34646b5847378e3fec8695f2a2b, type: 2}
   npcInfo: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
   AngryAtPlayer: 0
+  duelingStatus: 0
   attitude: 0
   variables: {fileID: 0}
   otherNPC: []
@@ -4338,6 +4340,7 @@ MonoBehaviour:
   clueNeededToDuel: {fileID: 11400000, guid: f498e85e86f3c47b499c107dc8886f26, type: 2}
   npcInfo: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
   AngryAtPlayer: 0
+  duelingStatus: 0
   attitude: 0
   variables: {fileID: 0}
   otherNPC: []
@@ -8371,6 +8374,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e6bee93a37edd4b528d46ef756d01f08, type: 2}
   - {fileID: 11400000, guid: 116831c5e13324ca3be2ed4b0233fcdf, type: 2}
   - {fileID: 11400000, guid: fd412defb92fd42d7a2d02355f789c79, type: 2}
+  - {fileID: 11400000, guid: b4b5e23318b3f544ba3cce4a71d2da41, type: 2}
+  - {fileID: 11400000, guid: 52dff28b00eafcf4687747f3b018f79f, type: 2}
+  - {fileID: 11400000, guid: 2e7017fed173e4a48b7f3d332ffed1cc, type: 2}
+  - {fileID: 11400000, guid: 3afd42838b737f24db752f97a0bb0e67, type: 2}
+  - {fileID: 11400000, guid: 8654aef52b030214cbb81d5885f6b335, type: 2}
+  - {fileID: 11400000, guid: 7c2d637f2aaa9b04faec88462d81132d, type: 2}
   clueList: []
   infoDisp: 0
 --- !u!114 &1424946404
@@ -9653,6 +9662,7 @@ MonoBehaviour:
   clueNeededToDuel: {fileID: 0}
   npcInfo: {fileID: 11400000, guid: dfaa959e329674e2da24fd2a53459270, type: 2}
   AngryAtPlayer: 0
+  duelingStatus: 0
   attitude: 3
   variables: {fileID: 0}
   otherNPC: []
@@ -11883,6 +11893,7 @@ MonoBehaviour:
   clueNeededToDuel: {fileID: 11400000, guid: e8a1ed5368bc4429e8fd22a9cb25b365, type: 2}
   npcInfo: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
   AngryAtPlayer: 0
+  duelingStatus: 0
   attitude: 0
   variables: {fileID: 0}
   otherNPC: []
@@ -12058,6 +12069,7 @@ MonoBehaviour:
   clueNeededToDuel: {fileID: 11400000, guid: 4080ea8d7c32c4644a41290159c3c6f1, type: 2}
   npcInfo: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
   AngryAtPlayer: 0
+  duelingStatus: 0
   attitude: 0
   variables: {fileID: 0}
   otherNPC: []
@@ -12691,6 +12703,7 @@ MonoBehaviour:
   clueNeededToDuel: {fileID: 0}
   npcInfo: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
   AngryAtPlayer: 0
+  duelingStatus: 0
   attitude: 0
   variables: {fileID: 0}
   otherNPC: []
