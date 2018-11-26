@@ -16,8 +16,14 @@ MonoBehaviour:
   dossierCloseup: {fileID: 21300018, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
   dossierClues:
   - {fileID: 11400000, guid: e8a1ed5368bc4429e8fd22a9cb25b365, type: 2}
+  - {fileID: 11400000, guid: 116831c5e13324ca3be2ed4b0233fcdf, type: 2}
   relationshipClues:
   - {fileID: 11400000, guid: e8a1ed5368bc4429e8fd22a9cb25b365, type: 2}
+  - {fileID: 11400000, guid: e8a1ed5368bc4429e8fd22a9cb25b365, type: 2}
+  dossierClueList:
+  - {fileID: 11400000, guid: e8a1ed5368bc4429e8fd22a9cb25b365, type: 2}
+  - {fileID: 11400000, guid: 116831c5e13324ca3be2ed4b0233fcdf, type: 2}
+  relationshipList: []
   npcSprites:
   - spriteName: Neutral
     thisSprite: {fileID: 21300006, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
