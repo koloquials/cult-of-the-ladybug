@@ -15,10 +15,29 @@ MonoBehaviour:
   ClueTitle: Gerald, Lillian, Eleanor = suspicious
   clueDiscovered: {fileID: 11400000, guid: 9b5ff129bd5874d298a2cf62ff2b2099, type: 2}
   dialogueLines:
-  - line: If you ask me, Gerald and Lillian are the only ones with chips on their
-      shoulders for old Theo. Though, his aunt was nevver happy with how he chose
-      to spend their money.
+  - line: I am culpable for swindling Theodore out of his funds. I will not deny you
+      this.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: To enact a murder, however, is far out my motive. Why would I do away with
+      my source of income?
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: In this line of work, I do little more than learn what people want to hear,
+      and say it.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: 'But in my learnings, I would say those with deepseated dissatisfactions
+      towards our host warrant investigation. '
     valuableInfo: 1
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: This does little to narrow your search, I'm certain. But allow me to pass
+      this nugget of insight from one observer to another.
+    valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0
   informationIndex: 4

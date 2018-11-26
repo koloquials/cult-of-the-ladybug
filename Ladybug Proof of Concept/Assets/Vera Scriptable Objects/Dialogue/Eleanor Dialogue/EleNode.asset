@@ -12,11 +12,21 @@ MonoBehaviour:
   m_Name: EleNode
   m_EditorClassIdentifier: 
   nodeName: 
-  ClueTitle: Though cruel, Eleanor loved Theodore
+  ClueTitle: Theo left behind many financial troubles.
   clueDiscovered: {fileID: 11400000, guid: 4080ea8d7c32c4644a41290159c3c6f1, type: 2}
   dialogueLines:
-  - line: And though he may have been a flighty idiot, I did love the boy...
+  - line: Though he may have been a flighty, naive child, I did love that boy.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: He's left behind a world of financial troubles, never clever in the face
+      of social pressure.
     valuableInfo: 1
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: But I'll shoulder them from here. What irresponsible guardian would I be
+      otherwise?
+    valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0
   informationIndex: 2

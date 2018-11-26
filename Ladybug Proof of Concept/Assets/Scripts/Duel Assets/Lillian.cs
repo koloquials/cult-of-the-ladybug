@@ -8,11 +8,12 @@ public class Lillian : Enemy {
 	void Start ()
     {
         //items to replace will be {inside these brackets!}, write inside them/follow their instructions and then delete the brackets!
-        name = "Lillian\n";
+        name = "[LILLIAN]\n";
+        startPos = 4;
 
-        dialogue.Add("\n“What? You are asking me questions now?”");
+        dialogue.Add("\n“Oh, my! Please, I'm not sure my poor heart can take this at the moment. But what can I do for you?”");
 
-        dialogue.Add("[DUEL:START]\n");
+        dialogue.Add("\n“Oh, my! Please, I'm not sure my poor heart can take this at the moment. But what can I do for you?”");
         options.Add("From what I can tell, you’re just as suspicious as anyone here.\n");
         options.Add("Yes I am asking you questions, you are the only one left to ask.\n");
         options.Add("You bet your bottom dollar!\n");
@@ -62,6 +63,14 @@ public class Lillian : Enemy {
         options.Add("The ghosts were never there, according to Moonchild.\n");//here is where the script ends
         dialogue.Add("\"Well it sure felt that way. I only realized that too late though, I’ve wasted so much time chasing ghosts. No longer and never again!\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
+
+        dialogue.Add("\"...Are you satisfied with this ceaseless questioning? I have plenty on my mind as is.\"\n");
+        options.Add("...\n");
+        options.Add("we fucked up!!!");
+        options.Add("...\n");
+        options.Add("...\n");
+        dialogue.Add("\"AAAAAAAA!\"\n");
+        types.Add(4);
     }
 
     // Update is called once per frame

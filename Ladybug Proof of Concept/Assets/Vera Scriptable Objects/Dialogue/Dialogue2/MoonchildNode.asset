@@ -13,13 +13,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
+  clueDiscovered: {fileID: 0}
   dialogueLines:
-  - line: Hello there, no need to speak I already know who you are.
+  - line: Hello there Suzanne, I already know who you are. Forces beyond our ken work
+      in mysterious ways.
     valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0
-  - line: I am completely willing to cooperate, so ask your questions. Ask away!
+  - line: That, and I did my research, of course.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: I already know plenty about each and every guest in attendance. It is my
+      trade to know things, after all.
     valuableInfo: 0
     duelTrigger: 1
+    deliveryTone: 0
+  - line: My wisdom is vast, but it is of little help here. I'm afraid I did not prepare
+      myself for the tragedy that has beset us tonight.
+    valuableInfo: 0
+    duelTrigger: 1
+    deliveryTone: 0
+  - line: 'Will you be playing the part of a real sleuth tonight? I wish you the best
+      of luck, little detective. '
+    valuableInfo: 0
+    duelTrigger: 0
     deliveryTone: 0
   informationIndex: 0

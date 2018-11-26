@@ -15,13 +15,22 @@ MonoBehaviour:
   ClueTitle: 
   clueDiscovered: {fileID: 0}
   dialogueLines:
-  - line: You were an acquaintance of Theo, yes? You're the detective if I'm not mistaken.
+  - line: Ah, greetings! For a brief moment, you frightened the daylight straight
+      out of me.
     valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0
-  - line: He mentioned you before. You've been asking around, yes? Are you looking
+  - line: 'You were an acquaintance of Theo, yes? He mentioned you before, darling. '
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: You deal in private investigations if I'm not mistaken. Are you looking
       for the killer?
     valuableInfo: 0
     duelTrigger: 1
+    deliveryTone: 0
+  - line: 'Please, do not let a shaken creature such as myself keep you. '
+    valuableInfo: 0
+    duelTrigger: 0
     deliveryTone: 0
   informationIndex: 0

@@ -12,13 +12,28 @@ MonoBehaviour:
   m_Name: MarniNode
   m_EditorClassIdentifier: 
   nodeName: 
-  ClueTitle: Marino = family. relationship = "business"
+  ClueTitle: Eleanor is the most connected with Theo's personal life.
   clueDiscovered: {fileID: 11400000, guid: e8a1ed5368bc4429e8fd22a9cb25b365, type: 2}
   dialogueLines:
-  - line: Eleanor, the boy's aunt, was more involved in Theodore's personal affairs
-      than I was. I cared for the boy like he was family, but our relationship was
-      mostly professional.
+  - line: When he lost his parents young, I cared for Theodore like he was my own.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: Admittedly, from a distance. I'm no good with these things.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: Eleanor, the boy's aunt, was far more involved in his life than I was. A
+      dusty old crow, but tough.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: She would have a better grasp of his personal affairs.
     valuableInfo: 1
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: As for my innocence, you make that call for yourself.
+    valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0
   informationIndex: 1
