@@ -13,8 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clueDescription: 
   dossierEntries:
-  - personInQuestion: {fileID: 0}
-    dossierEntry: 'Lillian was feeling disillusioned. Theodore promised '
+  - personInQuestion: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
+    dossierEntry: Was feeling disillusioned. Theodore promised to bring meaning to
+      her life.
   relationshipsToDisclose:
   - personInQuestion: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
     hasRelationshipWith: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6,
