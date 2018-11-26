@@ -15,6 +15,9 @@ MonoBehaviour:
   dossierEntries:
   - personInQuestion: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
     dossierEntry: Theodore's girlfriend.
+  - personInQuestion: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
+    dossierEntry: Was angry with Theodore for stringing her along with uneventful
+      seances.
   relationshipsToDisclose: []
   accuseMenuDropdown: Lillian's frustration with Theo's promises
   accuseMenuDescription: 
