@@ -3920,7 +3920,7 @@ MonoBehaviour:
   treeToLoad: {fileID: 11400000, guid: cbd74c6491d284a43baf708877f49e8a, type: 2}
   informationReward: {fileID: 11400000, guid: 0508a3f7fc62e6b45b7eeab98d5123c2, type: 2}
   lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
-  thisDuelManager: {fileID: 0}
+  thisDuelManager: {fileID: 561457227}
   newDuelId: 0
   canDuel: 1
   npcCanDuel: 0
