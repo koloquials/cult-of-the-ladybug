@@ -13,11 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
-  cluesDiscovered: []
+  cluesDiscovered:
+  - {fileID: 11400000, guid: 8654aef52b030214cbb81d5885f6b335, type: 2}
   dialogueLines:
   - line: Hello there Suzanne, I already know who you are. Forces beyond our ken work
       in mysterious ways.
-    valuableInfo: 0
+    valuableInfo: 1
     duelTrigger: 0
     deliveryTone: 0
   - line: That, and I did my research, of course.

@@ -12,8 +12,32 @@ MonoBehaviour:
   m_Name: Info3
   m_EditorClassIdentifier: 
   clueDescription: Gerald Clue
-  dossierEntries: []
-  relationshipsToDisclose: []
+  dossierEntries:
+  - personInQuestion: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+    dossierEntry: Gerald was unhappy with how Theodore was mishandling their shared
+      business.
+  - personInQuestion: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
+    dossierEntry: Would not allow any distractions in Theodore's business education,
+      and cut him off from Gerald until they went into business together.
+  relationshipsToDisclose:
+  - personInQuestion: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+    hasRelationshipWith: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6,
+      type: 2}
+  - personInQuestion: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+    hasRelationshipWith: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40,
+      type: 2}
+  - personInQuestion: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+    hasRelationshipWith: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c,
+      type: 2}
+  - personInQuestion: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
+    hasRelationshipWith: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b,
+      type: 2}
+  - personInQuestion: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
+    hasRelationshipWith: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b,
+      type: 2}
+  - personInQuestion: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+    hasRelationshipWith: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b,
+      type: 2}
   accuseMenuDropdown: Gerald, the attention-seeking friend
   accuseMenuDescription: 
   index: 3

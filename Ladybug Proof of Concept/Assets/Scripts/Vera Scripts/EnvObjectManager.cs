@@ -16,7 +16,7 @@ public class EnvObjectManager : MonoBehaviour {
 
     private void Update()
     {
-        CheckForPlayer();
+        //CheckForPlayer();
     }
 
     void CheckForPlayer()

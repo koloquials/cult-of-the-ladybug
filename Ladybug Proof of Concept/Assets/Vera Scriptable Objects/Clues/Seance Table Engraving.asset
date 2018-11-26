@@ -14,9 +14,8 @@ MonoBehaviour:
   clueDescription: The Seance Table
   dossierEntries:
   - personInQuestion: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
-    dossierEntry: Marino "worked" with Theodore's late father as a cover up for his
-      mafia life.
+    dossierEntry: Left the mafia when his partner died. Has since tried to repent.
   relationshipsToDisclose: []
-  accuseMenuDropdown: Marino & Theo'd father's partnership
+  accuseMenuDropdown: Marino & Theo's father's partnership
   accuseMenuDescription: 
   index: 0

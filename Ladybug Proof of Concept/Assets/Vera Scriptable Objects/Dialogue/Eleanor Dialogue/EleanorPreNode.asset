@@ -9,17 +9,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 606dab1dcf00c4741bf61375d0db1af1, type: 3}
-  m_Name: Bookshelf
+  m_Name: EleanorPreNode
   m_EditorClassIdentifier: 
   nodeName: 
-  ClueTitle: Theodore's Promise to Lillian
-  cluesDiscovered:
-  - {fileID: 11400000, guid: b4b5e23318b3f544ba3cce4a71d2da41, type: 2}
+  ClueTitle: 
+  cluesDiscovered: []
   dialogueLines:
-  - line: The shelves are lined with books on the occult. One such title has an inscription,
-      "From Theodore to my beloved Lillian, May we find the spark your life has been
-      lacking, together!"
-    valuableInfo: 1
+  - line: 'Oh that blasted fool nephew of mine! I knew his frivolous interests would
+      lead to not good... '
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: Cease your snooping young lady, I am in no mood for your pestering!
+    valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0
   informationIndex: 0

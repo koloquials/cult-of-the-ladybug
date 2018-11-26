@@ -12,8 +12,9 @@ public class NPC : MonoBehaviour {
     [Header ("Duel Information")]
     public DuelManager thisDuelManager;
     public int newDuelId;
-    public bool canDuel = false;
+    //public bool canDuel = false;
     public bool npcCanDuel = false;
+    public bool npcBeaten = false;
     public Clue clueNeededToDuel;
     List<UnlockableInfo> unlocked;
 
@@ -23,6 +24,14 @@ public class NPC : MonoBehaviour {
     public enum Attitude {
         AngryIfLose, AngryIfWin, Neutral, AngryIfOthersLose, AlwaysAngry
     }
+
+    public enum DuelingStatus
+    {
+        PreDuel, CanDuel, PostDuel
+    }
+
+    public DuelingStatus duelingStatus;
+        
     public Attitude attitude;
     public VariableStorage variables;
     PlayerMove player;
@@ -62,14 +71,28 @@ public class NPC : MonoBehaviour {
 
     public virtual void Update()
     {
-        if (clueNeededToDuel == null)
+        if (clueNeededToDuel == null && duelingStatus==DuelingStatus.PreDuel)
         {
             npcCanDuel = true;
+            duelingStatus = DuelingStatus.CanDuel;
         }
         else
         {
             ManageDuels();
         }
+      
+        switch(duelingStatus){
+            case DuelingStatus.PreDuel:
+                treeToLoad = npcInfo.possibleTrees[0];
+                break;
+            case DuelingStatus.CanDuel:
+                treeToLoad = npcInfo.possibleTrees[1];
+                break;
+            case DuelingStatus.PostDuel:
+                treeToLoad = npcInfo.possibleTrees[2];
+                break;
+        }
+
         try{
             thisDuelManager = GetComponent<DuelManager>();
             CheckForPlayer();
@@ -121,8 +144,9 @@ public class NPC : MonoBehaviour {
     }
 
     void ManageDuels(){
-        if(variables.clueList.Contains(clueNeededToDuel)){
+        if(variables.clueList.Contains(clueNeededToDuel) && duelingStatus == DuelingStatus.PreDuel){
             npcCanDuel = true;
+            duelingStatus = DuelingStatus.CanDuel;
         }
     }
 

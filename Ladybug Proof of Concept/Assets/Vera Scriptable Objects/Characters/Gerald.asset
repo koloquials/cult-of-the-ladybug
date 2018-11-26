@@ -14,8 +14,6 @@ MonoBehaviour:
   npcName: Gerald Hauser
   description: 'Age: 27 / Business Man'
   dossierCloseup: {fileID: 21300020, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
-  dossierClues: []
-  relationshipClues: []
   npcSprites:
   - spriteName: Neutral
     thisSprite: {fileID: 21300008, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
@@ -35,3 +33,7 @@ MonoBehaviour:
     relationshipDescription: "He knows she puts money and business first, so around
       her he is the business partner. When she isn\u2019t looking, Gerald is looking
       out for his naive friend. \n"
+  possibleTrees:
+  - {fileID: 11400000, guid: 2a280d25dcc69074a8e4c5cb9d58804f, type: 2}
+  - {fileID: 11400000, guid: 2a280d25dcc69074a8e4c5cb9d58804f, type: 2}
+  - {fileID: 11400000, guid: 2a280d25dcc69074a8e4c5cb9d58804f, type: 2}

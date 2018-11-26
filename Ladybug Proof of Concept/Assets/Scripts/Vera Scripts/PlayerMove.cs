@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour{
     public void Start()
     {
         dialogue = FindObjectOfType<DialogueManager>();
+        transform.GetChild(0).gameObject.SetActive(false);
     }
     public void Update()
     {
@@ -69,6 +70,12 @@ public class PlayerMove : MonoBehaviour{
            
 
         });
+
+        if(obj!=null){
+            transform.GetChild(0).gameObject.SetActive(true);
+        } else {
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
 
         if(obj != null && Input.GetKeyDown(KeyCode.E) && dialogue.currentGameState == DialogueManager.GameState.OverworldActive){
             Debug.Log("Interacting with object");
