@@ -21,9 +21,12 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
       tone: 0
     linesInScene:
-    - Hey Diego, this is a test of the new Cutscene functionality I worked on on Thursday/Friday.
-    - It works based off a list of scenes containing actors, their moods, and their
-      lines of dialogue.
+    - Heads up, the character portraits here are part of a test for cutscenes, they
+      aren't actually talking to you right now.
+    - You were invited to Hampshire Manor, a mansion in the woods, by the wealthy
+      Theodore Hampshire.
+    - 'He was planning on throwing a dinner party and seance with a group of his close
+      confidants. '
     blackfadeAlpha: 1
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
@@ -34,12 +37,18 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
       tone: 0
     linesInScene:
-    - I can manipulate who's talking, signify when, and eventually we'll have some
-      nice cutscene art made by Rachel!
-    - For now this is it though, the rest of the game is the same as of this build,
-      but finishable!
-    - I also locked the accuse menu depending on information gained, and changed the
-      underlying system for how unlocking information works.
-    - Its all implemented the same, but today and tomorrow is when I'm going to be
-      changing the mechanic behind it in a noticeable manner.
+    - You arrived when the lights suddenly went out, and when they came back on, Theodore
+      was dead. You must interrogate guests, inspect your surroundings and accuse
+      the right suspect.
+    - 'To talk to a guest or inspect an environment object, press ''e''.
+
+      When talking to a guest and the interrogate symbol appears, press ''space''
+      to start the interrogation.'
+    - When talking or inspecting, a text line might appear in yellow. This means it
+      is key information--a clue. Clues are recorded and will help when you want to
+      accuse someone.
+    - You will only be able to interrogate them in a certain order. Another interrogation
+      will become available once the last one is completed.
+    - To accuse a guest, click on the accuse button. Then, select a culprit and a
+      clue, then hit accuse. Good Luck!
     blackfadeAlpha: 1

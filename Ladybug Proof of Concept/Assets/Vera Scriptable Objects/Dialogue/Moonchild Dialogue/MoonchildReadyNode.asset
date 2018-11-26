@@ -14,7 +14,7 @@ MonoBehaviour:
   nodeName: 
   ClueTitle: 
   cluesDiscovered:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 8654aef52b030214cbb81d5885f6b335, type: 2}
   dialogueLines:
   - line: Hello there Suzanne, I already know who you are. Forces beyond our ken work
       in mysterious ways.
