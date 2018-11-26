@@ -13,6 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
+  cluesDiscovered:
+  - {fileID: 11400000, guid: 52dff28b00eafcf4687747f3b018f79f, type: 2}
   dialogueLines:
   - line: Letters are stored in the desk drawer. The are from Gerald to Theodore.
       Some are about their business venture, and others are about missing the good

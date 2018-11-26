@@ -11,9 +11,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6b94f8423fb47bfadebbcb71b2f524, type: 3}
   m_Name: Desk
   m_EditorClassIdentifier: 
-  clueDescription: 
-  dossierEntries: []
-  relationshipsToDisclose: []
+  clueDescription: The Letters in the Desk
+  dossierEntries:
+  - personInQuestion: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+    dossierEntry: Gerald got into business with Theo as a way to stay close.
+  relationshipsToDisclose:
+  - personInQuestion: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+    hasRelationshipWith: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6,
+      type: 2}
   accuseMenuDropdown: 
-  accuseMenuDescription: 
+  accuseMenuDescription: Gerald's business was personal
   index: 0

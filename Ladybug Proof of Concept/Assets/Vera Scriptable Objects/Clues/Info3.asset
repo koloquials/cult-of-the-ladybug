@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Name: Info3
   m_EditorClassIdentifier: 
   clueDescription: Gerald Clue
-  dossierEntries: []
+  dossierEntries:
+  - personInQuestion: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+    dossierEntry: Gerald was unhappy with how Theodore was mishandling their shared
+      business.
   relationshipsToDisclose: []
   accuseMenuDropdown: Gerald, the attention-seeking friend
   accuseMenuDescription: 

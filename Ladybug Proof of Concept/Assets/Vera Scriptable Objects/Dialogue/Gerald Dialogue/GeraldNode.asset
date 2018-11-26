@@ -13,7 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
-  clueDiscovered: {fileID: 0}
+  cluesDiscovered:
+  - {fileID: 11400000, guid: 52dff28b00eafcf4687747f3b018f79f, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   dialogueLines:
   - line: Lets get pleasantries over with. I am Gerald Hauser, friend and business
       partner to our late host. Best friend, actually.
