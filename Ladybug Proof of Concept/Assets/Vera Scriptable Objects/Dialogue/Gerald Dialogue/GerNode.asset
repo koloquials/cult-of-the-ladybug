@@ -16,9 +16,26 @@ MonoBehaviour:
   cluesDiscovered:
   - {fileID: 11400000, guid: 1e52a34646b5847378e3fec8695f2a2b, type: 2}
   dialogueLines:
-  - line: Yes, sometimes we fought, over money and what have you. But I am not the
-      one you should be questioning, there are others more suspicious than I!
+  - line: Business is always going to be ruthless. We fought over financials, but
+      Theo is first and foremost my closest friend.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: 'I am not the fiend you are looking for, I promise you this. '
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: For all the decades I've known him, Theo has always been eager to please.
     valuableInfo: 1
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: I'm confident whoever took advange of him, whoever wanted his money must
+      be the culprit.
+    valuableInfo: 1
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: Good luck. Find the rat bastard responsible.
+    valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0
   informationIndex: 3
