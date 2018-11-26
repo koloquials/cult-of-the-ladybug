@@ -116,7 +116,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.Space))
                     {
-                        ReprimandPlayer(10f); //reprimands player upon loss when they press space 
+                        ReprimandPlayer(1f); //reprimands player upon loss when they press space 
                         activeDuel.enabled = false; //turns of the duel component on the npc we're interacting with
                         StartDialogue(activeNPC.lossTree);
                     }
@@ -128,6 +128,7 @@ public class DialogueManager : MonoBehaviour
                         activeDuel.Reset(); //reset the duel componenet on the npc
                         activeDuel.enabled = false; //turn the duel component on the npc off
                         StartDialogue(activeNPC.informationReward); //run the information to load tree on the npc
+                        activeNPC.npcBeaten = true;
                     }
                 }
             }

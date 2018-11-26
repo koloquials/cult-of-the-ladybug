@@ -28,4 +28,6 @@ public class NpcTemplate : ScriptableObject {
     public UISprite[] npcSprites;
     public Relationship[] npcRelationships;
 
+    public DialogueTree[] possibleTrees;
+
 }

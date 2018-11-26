@@ -12,8 +12,9 @@ public class NPC : MonoBehaviour {
     [Header ("Duel Information")]
     public DuelManager thisDuelManager;
     public int newDuelId;
-    public bool canDuel = false;
+    //public bool canDuel = false;
     public bool npcCanDuel = false;
+    public bool npcBeaten = false;
     public Clue clueNeededToDuel;
     List<UnlockableInfo> unlocked;
 
@@ -70,6 +71,16 @@ public class NPC : MonoBehaviour {
         {
             ManageDuels();
         }
+        if(!npcBeaten && !npcCanDuel){
+            treeToLoad = npcInfo.possibleTrees[0];
+        }
+        if(npcCanDuel && !npcBeaten){
+            treeToLoad = npcInfo.possibleTrees[1];
+        }
+        if(npcBeaten){
+            treeToLoad = npcInfo.possibleTrees[2];
+        }
+
         try{
             thisDuelManager = GetComponent<DuelManager>();
             CheckForPlayer();

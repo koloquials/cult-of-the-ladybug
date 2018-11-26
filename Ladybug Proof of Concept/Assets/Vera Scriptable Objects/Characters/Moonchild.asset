@@ -14,8 +14,6 @@ MonoBehaviour:
   npcName: Moonchild
   description: 'Age: 36 / Medium'
   dossierCloseup: {fileID: 21300022, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
-  dossierClues: []
-  relationshipClues: []
   npcSprites:
   - spriteName: Neutral
     thisSprite: {fileID: 21300010, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
@@ -36,3 +34,7 @@ MonoBehaviour:
       of talking to his late partner.
 
 '
+  possibleTrees:
+  - {fileID: 11400000, guid: cbd74c6491d284a43baf708877f49e8a, type: 2}
+  - {fileID: 11400000, guid: cbd74c6491d284a43baf708877f49e8a, type: 2}
+  - {fileID: 11400000, guid: cbd74c6491d284a43baf708877f49e8a, type: 2}
