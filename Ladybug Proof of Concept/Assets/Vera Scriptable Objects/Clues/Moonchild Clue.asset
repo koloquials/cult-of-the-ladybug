@@ -25,6 +25,6 @@ MonoBehaviour:
   - personInQuestion: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
     hasRelationshipWith: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40,
       type: 2}
-  accuseMenuDropdown: 
+  accuseMenuDropdown: Moonchild knows all
   accuseMenuDescription: 
   index: 0
