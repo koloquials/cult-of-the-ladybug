@@ -56,6 +56,8 @@ public class NPC : MonoBehaviour {
         player = FindObjectOfType<PlayerMove>();
 
         dialogue = FindObjectOfType<DialogueManager>();
+
+        SetDefaultDossier();
     }
 
     public virtual void Update()
@@ -176,55 +178,99 @@ public class NPC : MonoBehaviour {
         catch (System.NullReferenceException) {  }
     }
 
-    Color unlockAlpha;
+    Color[] unlockAlpha = new Color[3];
+
+    [System.Serializable]
+    public struct DossierUnlockable {
+        public GameObject unlockObject;
+        public bool unlocked;
+    }
+
+    [System.Serializable]
+    public struct RelationshipUnlockable{
+        public Image closeup;
+        public bool unlocked;
+    }
+
+    DossierUnlockable[] dossierUnlockables = new DossierUnlockable[3];
+    RelationshipUnlockable[] relationShipUnlockables = new RelationshipUnlockable[3];
+    List<Clue.DossierEntry> currentDossierEntries = new List<Clue.DossierEntry>(3);
+    List<Clue.HiddenRelationship> currentRelationshipEntries = new List<Clue.HiddenRelationship>(3);
 
     void ManageDossierInformation(){
         GameObject dossier = npcCanvas.gameObject.transform.Find("Dossier").gameObject;
         dossier.transform.Find("NameText").GetComponent<Text>().text = npcInfo.npcName;
         dossier.transform.Find("Closeup").GetComponent<Image>().sprite = npcInfo.dossierCloseup;
         dossier.transform.Find("DescriptionText").GetComponent<Text>().text = npcInfo.description;
-        GameObject[] dossierUnlockables = new GameObject[3];
-        Image[] relationShipUnlockables = new Image[3];
+        currentDossierEntries.Capacity = 3;
+        currentRelationshipEntries.Capacity = 3;
+        try
+        {
+            foreach (var c in variables.clueList)
+            {
+                for (int j = 0; j < c.dossierEntries.Length; j++)
+                {
+                    if(c.dossierEntries[j].personInQuestion==npcInfo && !currentDossierEntries.Contains(c.dossierEntries[j])){
+                        currentDossierEntries.Add(c.dossierEntries[j]);
+                    }
+                }
+
+                for (int l = 0; l < c.relationshipsToDisclose.Length; l++){
+                    if(c.relationshipsToDisclose[l].personInQuestion == npcInfo && !currentRelationshipEntries.Contains(c.relationshipsToDisclose[l])){
+                        currentRelationshipEntries.Add(c.relationshipsToDisclose[l]);
+                    }
+                }
+            }
+        } catch (System.NullReferenceException){}
+
         for (int i = 0; i < dossierUnlockables.Length; i++){
-            dossierUnlockables[i] = dossier.transform.Find("Unlockables").gameObject.transform.GetChild(i).gameObject;
+            dossierUnlockables[i].unlockObject = dossier.transform.Find("Unlockables").gameObject.transform.GetChild(i).gameObject;
             try
             {
-                if (variables.clueList.Contains(npcInfo.dossierClues[i]))
+                if (!dossierUnlockables[i].unlocked)
                 {
-                    for (int j = 0; j < npcInfo.dossierClues[i].dossierEntries.Length; j++)
+                    foreach (var e in currentDossierEntries)
                     {
-                        if (npcInfo.dossierClues[i].dossierEntries[j].personInQuestion == npcInfo)
+                        if (currentDossierEntries.IndexOf(e) == i)
                         {
-                            dossierUnlockables[i].transform.GetChild(0).GetComponent<Text>().text = npcInfo.dossierClues[i].dossierEntries[j].dossierEntry;
-                            unlockAlpha.a = 0f;
-                        }
-                        else
-                        {
-                            dossierUnlockables[i].transform.GetChild(0).GetComponent<Text>().text = "";
-                            unlockAlpha.a = 1f;
+                            dossierUnlockables[i].unlocked = true;
+                            unlockAlpha[i].a = 0f;
+                            dossierUnlockables[i].unlockObject.transform.GetChild(0).GetComponent<Text>().text = e.dossierEntry;
                         }
                     }
                 }
-                dossierUnlockables[i].GetComponent<Image>().color = unlockAlpha;
+
+                dossierUnlockables[i].unlockObject.GetComponent<Image>().color = unlockAlpha[i];
             } catch(System.IndexOutOfRangeException){
-                dossierUnlockables[i].transform.GetChild(0).GetComponent<Text>().text = "";
-                unlockAlpha.a = 0f;
-                dossierUnlockables[i].GetComponent<Image>().color = unlockAlpha;
+                
             }
         }
 
         for (int k = 0; k < relationShipUnlockables.Length; k++){
-            relationShipUnlockables[k] = dossier.transform.Find("Relationships").gameObject.transform.GetChild(k).GetComponent<Image>();
+            relationShipUnlockables[k].closeup = dossier.transform.Find("Relationships").gameObject.transform.GetChild(k).GetComponent<Image>();
             try{
-                if(variables.clueList.Contains(npcInfo.relationshipClues[k])){
-                    for (int l = 0; l < npcInfo.relationshipClues[k].relationshipsToDisclose.Length; l++){
-                        if(npcInfo.relationshipClues[k].relationshipsToDisclose[l].personInQuestion == npcInfo){
-                            relationShipUnlockables[k].sprite = npcInfo.relationshipClues[k].relationshipsToDisclose[l].hasRelationshipWith.dossierCloseup;
+                if(!relationShipUnlockables[k].unlocked){
+                    foreach(var r in currentRelationshipEntries){
+                        if(currentRelationshipEntries.IndexOf(r)==k){
+                            relationShipUnlockables[k].unlocked = true;
+                            relationShipUnlockables[k].closeup.sprite = r.hasRelationshipWith.dossierCloseup;
                         }
                     }
-                } 
+                }
             } catch (System.IndexOutOfRangeException){}
         }
+    }
+
+    void SetDefaultDossier(){
+        GameObject dossier = npcCanvas.gameObject.transform.Find("Dossier").gameObject;
+
+        for (int i = 0; i < dossierUnlockables.Length; i++){
+            dossierUnlockables[i].unlockObject = dossier.transform.Find("Unlockables").gameObject.transform.GetChild(i).gameObject;
+            dossierUnlockables[i].unlockObject.transform.GetChild(0).GetComponent<Text>().text = "";
+            unlockAlpha[i].a = 1f;
+            dossierUnlockables[i].unlockObject.GetComponent<Image>().color = unlockAlpha[i];
+        }
+
 
     }
 }
