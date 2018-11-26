@@ -12,8 +12,14 @@ MonoBehaviour:
   m_Name: EleNode
   m_EditorClassIdentifier: 
   nodeName: 
+<<<<<<< HEAD
   ClueTitle: Theo left behind many financial troubles.
   clueDiscovered: {fileID: 11400000, guid: 4080ea8d7c32c4644a41290159c3c6f1, type: 2}
+=======
+  ClueTitle: Though cruel, Eleanor loved Theodore
+  cluesDiscovered:
+  - {fileID: 11400000, guid: 4080ea8d7c32c4644a41290159c3c6f1, type: 2}
+>>>>>>> master
   dialogueLines:
   - line: Though he may have been a flighty, naive child, I did love that boy.
     valuableInfo: 0

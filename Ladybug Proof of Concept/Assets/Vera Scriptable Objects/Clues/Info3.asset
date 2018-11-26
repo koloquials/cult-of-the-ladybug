@@ -11,9 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6b94f8423fb47bfadebbcb71b2f524, type: 3}
   m_Name: Info3
   m_EditorClassIdentifier: 
-  clueDescription: Marino Clue 1
+  clueDescription: Gerald Clue
   dossierEntries: []
   relationshipsToDisclose: []
-  accuseMenuDropdown: Gerald Info
+  accuseMenuDropdown: Gerald, the attention-seeking friend
   accuseMenuDescription: 
   index: 3

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: Gerald, Lillian, Eleanor = suspicious
-  clueDiscovered: {fileID: 11400000, guid: 9b5ff129bd5874d298a2cf62ff2b2099, type: 2}
+  cluesDiscovered:
+  - {fileID: 11400000, guid: 9b5ff129bd5874d298a2cf62ff2b2099, type: 2}
   dialogueLines:
   - line: I am culpable for swindling Theodore out of his funds. I will not deny you
       this.

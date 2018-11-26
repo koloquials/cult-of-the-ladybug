@@ -14,8 +14,13 @@ MonoBehaviour:
   npcName: Eleanor Hampshire
   description: 'Age: 68 / Hampshire Matriarch'
   dossierCloseup: {fileID: 21300014, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
-  dossierClues: []
-  relationshipClues: []
+  dossierClues:
+  - {fileID: 11400000, guid: e8a1ed5368bc4429e8fd22a9cb25b365, type: 2}
+  - {fileID: 11400000, guid: 4080ea8d7c32c4644a41290159c3c6f1, type: 2}
+  relationshipClues:
+  - {fileID: 11400000, guid: e8a1ed5368bc4429e8fd22a9cb25b365, type: 2}
+  - {fileID: 11400000, guid: e8a1ed5368bc4429e8fd22a9cb25b365, type: 2}
+  - {fileID: 11400000, guid: 4080ea8d7c32c4644a41290159c3c6f1, type: 2}
   npcSprites:
   - spriteName: Neutral
     thisSprite: {fileID: 21300002, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
