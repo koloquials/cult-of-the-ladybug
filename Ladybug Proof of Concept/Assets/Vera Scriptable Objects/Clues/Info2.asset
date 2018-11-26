@@ -14,8 +14,10 @@ MonoBehaviour:
   clueDescription: Eleanor Clue
   dossierEntries:
   - personInQuestion: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
-    dossierEntry: Though seemingly cold and detatched, Eleanor holds a secret love
-      for her naive nephew.
+    dossierEntry: Though seemingly detached, Eleanor secretly loves her naive nephew.
+  - personInQuestion: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+    dossierEntry: Eleanor saw him as a distraction, until he proposed a lucrative
+      business venture.
   relationshipsToDisclose:
   - personInQuestion: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
     hasRelationshipWith: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b,

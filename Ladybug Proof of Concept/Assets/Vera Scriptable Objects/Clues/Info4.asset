@@ -12,8 +12,22 @@ MonoBehaviour:
   m_Name: Info4
   m_EditorClassIdentifier: 
   clueDescription: Moonchild
-  dossierEntries: []
-  relationshipsToDisclose: []
+  dossierEntries:
+  - personInQuestion: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
+    dossierEntry: A fake psychic.
+  relationshipsToDisclose:
+  - personInQuestion: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
+    hasRelationshipWith: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b,
+      type: 2}
+  - personInQuestion: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
+    hasRelationshipWith: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40,
+      type: 2}
+  - personInQuestion: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
+    hasRelationshipWith: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c,
+      type: 2}
+  - personInQuestion: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
+    hasRelationshipWith: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c,
+      type: 2}
   accuseMenuDropdown: Gerald, Marino, and Eleanor all have something to gain
   accuseMenuDescription: 
   index: 4

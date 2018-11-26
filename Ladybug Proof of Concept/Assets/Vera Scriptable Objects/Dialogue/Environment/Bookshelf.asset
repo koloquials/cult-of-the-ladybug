@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Name: Bookshelf
   m_EditorClassIdentifier: 
   nodeName: 
-  ClueTitle: 
+  ClueTitle: Theodore's Promise to Lillian
+  cluesDiscovered:
+  - {fileID: 11400000, guid: b4b5e23318b3f544ba3cce4a71d2da41, type: 2}
   dialogueLines:
   - line: The shelves are lined with books on the occult. One such title has an inscription,
       "From Theodore to my beloved Lillian, May we find the spark your life has been

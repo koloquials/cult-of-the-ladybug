@@ -9,16 +9,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b6b94f8423fb47bfadebbcb71b2f524, type: 3}
-  m_Name: Info6
+  m_Name: Bookshelf
   m_EditorClassIdentifier: 
-  clueDescription: Lillian Clue
+  clueDescription: 
   dossierEntries:
   - personInQuestion: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
-    dossierEntry: Theodore's girlfriend.
+    dossierEntry: Was feeling disillusioned. Theodore promised to bring meaning to
+      her life.
+  relationshipsToDisclose:
   - personInQuestion: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
-    dossierEntry: Was angry with Theodore for stringing her along with uneventful
-      seances.
-  relationshipsToDisclose: []
-  accuseMenuDropdown: Lillian's frustration with Theo's promises
+    hasRelationshipWith: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6,
+      type: 2}
+  accuseMenuDropdown: 
   accuseMenuDescription: 
-  index: 6
+  index: 0

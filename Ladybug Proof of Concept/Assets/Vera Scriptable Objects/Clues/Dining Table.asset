@@ -9,14 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b6b94f8423fb47bfadebbcb71b2f524, type: 3}
-  m_Name: Marino's Past
+  m_Name: Dining Table
   m_EditorClassIdentifier: 
-  clueDescription: Marino the former mafioso
-  dossierEntries:
-  - personInQuestion: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
-    dossierEntry: Had violent past as a part of the mafia-- best known for murder
-      by strangling.
+  clueDescription: Missing Knives
+  dossierEntries: []
   relationshipsToDisclose: []
-  accuseMenuDropdown: Marino's violent past
-  accuseMenuDescription: 
-  index: 0
+  accuseMenuDropdown: 
+  accuseMenuDescription: Host = Dead by knives
+  index: 5
