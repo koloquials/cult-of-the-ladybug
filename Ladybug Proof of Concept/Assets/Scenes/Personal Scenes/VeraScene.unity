@@ -3950,7 +3950,7 @@ MonoBehaviour:
   dialogue: []
   options: []
   types: 
-  returnText: Back, huh?
+  returnText: Child, why have you returned?
   resumeInterrogation: 0
   resumedStep: 0
   resumedOptStep: 0
@@ -4361,7 +4361,7 @@ MonoBehaviour:
   dialogue: []
   options: []
   types: 
-  returnText: Back, huh?
+  returnText: Um! Can I help you?
   resumeInterrogation: 0
   resumedStep: 0
   resumedOptStep: 0
@@ -11833,7 +11833,7 @@ MonoBehaviour:
   dialogue: []
   options: []
   types: 
-  returnText: Back, huh?
+  returnText: You truly don't know your place.
   resumeInterrogation: 0
   resumedStep: 0
   resumedOptStep: 0
@@ -12008,7 +12008,7 @@ MonoBehaviour:
   dialogue: []
   options: []
   types: 
-  returnText: Back, huh?
+  returnText: What more could you want?
   resumeInterrogation: 0
   resumedStep: 0
   resumedOptStep: 0

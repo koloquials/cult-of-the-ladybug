@@ -18,13 +18,20 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   dialogueLines:
-  - line: Lets get pleasantries over with. I am Gerald Hauser, friend and business
-      partner to our late host. Best friend, actually.
+  - line: Hello. Lets get pleasantries over with.
     valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0
-  - line: What you must know is that this whole seance business is a silly farse.
+  - line: I am Gerald Hauser, friend and business partner to our late host.
     valuableInfo: 0
     duelTrigger: 1
+    deliveryTone: 0
+  - line: What you must know is that this whole seance business is a silly farse.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: 'I''ve never considered this sort of thing a propitious idea. '
+    valuableInfo: 0
+    duelTrigger: 0
     deliveryTone: 0
   informationIndex: 0

@@ -15,17 +15,22 @@ MonoBehaviour:
   ClueTitle: 
   clueDiscovered: {fileID: 0}
   dialogueLines:
-  - line: I saw you talking with that criminal over there, are you another shady acquaintance
+  - line: Don't think I don't see you snooping around. Are you another shady acquaintance
       of young Theo?
     valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0
-  - line: No matter, I have no time to waste. Someone has to consider funeral arrangements.
+  - line: No matter, I have no patience for you. Someone has to focus on funeral arrangements.
     valuableInfo: 0
     duelTrigger: 1
     deliveryTone: 0
-  - line: The boy was always foolish! Without my steady hand he would have become
-      an outright failure!
+  - line: Without my steady hand he would have turned out a failure! Even now I must
+      take care of things.
+    valuableInfo: 0
+    duelTrigger: 1
+    deliveryTone: 0
+  - line: I always told him these wild forrays were silly. And I was right, look at
+      him now.
     valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0
