@@ -268,6 +268,7 @@ public class NPC : MonoBehaviour {
             dossierUnlockables[i].unlockObject = dossier.transform.Find("Unlockables").gameObject.transform.GetChild(i).gameObject;
             dossierUnlockables[i].unlockObject.transform.GetChild(0).GetComponent<Text>().text = "";
             unlockAlpha[i].a = 1f;
+            unlockAlpha[i].r = 1f; unlockAlpha[i].g = 1f; unlockAlpha[i].b = 1f; 
             dossierUnlockables[i].unlockObject.GetComponent<Image>().color = unlockAlpha[i];
         }
 
