@@ -129,6 +129,7 @@ public class DialogueManager : MonoBehaviour
                         activeDuel.enabled = false; //turn the duel component on the npc off
                         StartDialogue(activeNPC.informationReward); //run the information to load tree on the npc
                         activeNPC.npcBeaten = true;
+                        activeNPC.duelingStatus = NPC.DuelingStatus.PostDuel;
                     }
                 }
             }
