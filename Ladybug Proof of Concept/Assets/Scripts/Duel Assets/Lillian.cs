@@ -13,58 +13,58 @@ public class Lillian : Enemy {
 
         dialogue.Add("\n“Oh, my! Please, I'm not sure my poor heart can take this at the moment. But what can I do for you?”");
 
-        dialogue.Add("\n“[WE DIDN'T FINISH THIS INTERROGATION, JUST SELECT THE TAGGED ONES.] Oh, my! Please, I'm not sure my poor heart can take this at the moment. But what can I do for you?”");
-        options.Add("From what I can tell, you’re just as suspicious as anyone here.\n");
-        options.Add("Yes I am asking you questions, you are the only one left to ask.\n");
-        options.Add("You bet your bottom dollar!\n");
-        options.Add("[!]You must admit you are rather suspicious.\n");
-        dialogue.Add("\"Have you even talked to what’s-his-name? The mafia guy, he’s scary!\"\n");
+        dialogue.Add("\n“Oh, my! Please, I'm not sure my poor heart can take this at the moment. But what can I do for you?”");
+        options.Add("Please, darling, I just need a few moments of your time if you'd spare them.\n");
+        options.Add("You can start by helling me what the hell's up with you!\n");
+        options.Add("Well, I'm going around asking questions. Do you have any answers?\n");
+        options.Add("I have to barge in, regardless. Could you help clarify some things?\n");
+        dialogue.Add("\"Are you sure you've talked to everyone? You've already done that?\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response. 
         //it's important that you stick to ~2 types and properly ramp up to them or else the player will think they're unpredictable.
 
-        dialogue.Add("\"Have you even talked to what’s-his-name? The mafia guy, he’s scary!\"\n");
-        options.Add("His name is Marino “The Vine” Montemarano, and he’s quite kind. You though, are still up for debate.\n");
-        options.Add("I have, and he’s haunted and harmless. What about you?\n");
-        options.Add("Forget him I am talking to you now.\n");
-        options.Add("[!]I came over here to question you.\n");
-        dialogue.Add("\"Why, how could you think I am even involved in any of this?\"\n");
+        dialogue.Add("\"Are you sure you've talked to everyone? You've already done that?\"\n");
+        options.Add("I'm certain times are tough for you right now. Please hold out a little longer.\n");
+        options.Add("It's been hard work, but I have, that's why I'm here now.\n");
+        options.Add("Forget that, I'm talking to you now.\n");
+        options.Add("I have, and they're all very harmless. What about you?\n");
+        dialogue.Add("\"I just want to warn you, make sure you've hit all your bases, I want to figure things out too.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response. 
 
-        dialogue.Add("\"Why, how could you think I am even involved in any of this?\"\n");
-        options.Add("You and Theodore were rather close, and from what I hear he hadn’t done right by you.\n");
-        options.Add("You were present when the lights went out and you were here, for one.\n");
-        options.Add("We are all involved in this.\n");
-        options.Add("[!]Gerald thinks you are very involved, and so does Moonchild.\n");
-        dialogue.Add("\"I was rather fond of Theodore, we were together, you know.\"\n");
+        dialogue.Add("\"I just want to warn you, make sure you've hit all your bases, I want to figure things out too.\"\n");
+        options.Add("You're a good person, and I thank you for that. You and Theo were close, we need that.\n");
+        options.Add("Of course, ideally we all figure things out very soon.\n");
+        options.Add("We are all involved in this. And that's why you should cooperate.\n");
+        options.Add("Could you stop deflecting and start telling me what your relationship with the victim was?\n");
+        dialogue.Add("\"Ah. I can only assume you're here on the basis of rumor. All you need to know is I loved Theo!\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
         //rinse and repeat!!
 
-        dialogue.Add("\"I was rather fond of Theodore, we were together, you know.\"\n");
-        options.Add("Was he the one who got you into this seance business?\n");
-        options.Add("Oh I am well aware, my dear.\n");
-        options.Add("By together, you mean dating, right?\n");
-        options.Add("[!]Gerald seems to think you were together because you were after his wealth.\n");
-        dialogue.Add("\"He promised me that we would have fun together. I believed him, too, and for a while we did have fun, lots of it. Not anymore though, it seems.\"\n");
+        dialogue.Add("\"Ah. I can only assume you're here on the basis of rumor. All you need to know is I loved Theo!\"\n");
+        options.Add("You two did seem awfull involved in each other's lives, right? What kind of man was he?\n");
+        options.Add("Oh I am well aware, my dear. But I'm dyng to hear more if you could.\n");
+        options.Add("That's sweet. It is. I'm sure you're beyond upset. How were you?\n");
+        options.Add("Odd that you'd need to reaffirm that, isn't it? Can you elaborate?\n");
+        dialogue.Add("\"I think he treated me right, no matter what. He was truly a gentleman and I was enamoured by that.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
-        dialogue.Add("\"He promised me that we would have fun together. I believed him, too, and for a while we did have fun, lots of it. Not anymore though, it seems.\"\n");
-        options.Add("Moonchild said as much, she said he was stringing you along with the whole seance business.\n");
-        options.Add("I heard that the seances were fake, was the relationship fake as well?\n");
-        options.Add("Sounds like his whole heart wasn’t in it.\n");
-        options.Add("[!]So his promises ran thin and the fun went with it.\n");
-        dialogue.Add("\"Well it sure felt that way. I only realized that too late though, I’ve wasted so much time chasing ghosts. No longer and never again!\"\n");
+        dialogue.Add("\"I think he treated me right, no matter what. He was truly a gentleman and I was enamoured by that.\"\n");
+        options.Add("I understand, I really do. This was no way for someone as good as him to go.\n");
+        options.Add("I'm truly sorry for his grisly passing then. May the mourning be swift.\n");
+        options.Add("Good of you to emphasize his pros but let's go further. What about his cons?\n");
+        options.Add("Was his whole heart in it? I feel like there's more to this you aren't telling.\n");
+        dialogue.Add("\"However, he was the wishy washy type. In a lot of ways he wasn't reliable. It was cause for concern.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
-        dialogue.Add("\"Well it sure felt that way. I only realized that too late though, I’ve wasted so much time chasing ghosts. No longer and never again!\"\n");
-        options.Add("You must’ve been upset with him for fooling you. How upset, I wonder?\n");
-        options.Add("Glad this murder has gotten you motivated, at least.\n");
-        options.Add("Good for you! Get back on that horse!\n");
-        options.Add("[!]The ghosts were never there, according to Moonchild.\n");//here is where the script ends
-        dialogue.Add("\"Well it sure felt that way. I only realized that too late though, I’ve wasted so much time chasing ghosts. No longer and never again!\"\n");
+        dialogue.Add("\"However, he was the wishy washy type. In a lot of ways he wasn't reliable. It was cause for concern.\"\n");
+        options.Add("I'm sorry it was the sort of thing you couldn't get patched up in time then.\n");
+        options.Add("Time is truly cruel, but at least his weaknesses are no longer alive to hurt people.\n");
+        options.Add("Must be hard work, living with such a man. But you persisted and you should be proud of that.\n");
+        options.Add("You must’ve been upset with him for being noncommital. Upsetting, I wonder?\n");
+        dialogue.Add("\"If you don't mind, my poor head is fraught with woes. Please, could I be alone for some time?\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
-        dialogue.Add("\"...Are you satisfied with this ceaseless questioning? I have plenty on my mind as is.\"\n");
+        dialogue.Add("\"If you don't mind, my poor head is fraught with woes. Please, could I be alone for some time?\"\n");
         options.Add("...\n");
         options.Add("we fucked up!!!");
         options.Add("...\n");
