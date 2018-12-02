@@ -12,14 +12,13 @@ public class NPC : MonoBehaviour {
     [Header ("Duel Information")]
     public DuelManager thisDuelManager;
     public int newDuelId;
-    //public bool canDuel = false;
-    public bool npcCanDuel = false;
-    public bool npcBeaten = false;
     public Clue clueNeededToDuel;
     List<UnlockableInfo> unlocked;
 
     public NpcTemplate npcInfo;
+    public NpcPositionManager.NpcPositioning npcPositioning;
 
+    [HideInInspector]
     public bool AngryAtPlayer = false;
     public enum Attitude {
         AngryIfLose, AngryIfWin, Neutral, AngryIfOthersLose, AlwaysAngry
@@ -32,6 +31,7 @@ public class NPC : MonoBehaviour {
 
     public DuelingStatus duelingStatus;
         
+    [HideInInspector]
     public Attitude attitude;
     public VariableStorage variables;
     PlayerMove player;
@@ -50,6 +50,11 @@ public class NPC : MonoBehaviour {
 
     DialogueManager dialogue;
 
+    private void Awake()
+    {
+        npcPositioning.startPosition = transform.position;
+    }
+
     public virtual void Start()
     {
         unlocked = new List<UnlockableInfo>(FindObjectsOfType<UnlockableInfo>());
@@ -65,15 +70,15 @@ public class NPC : MonoBehaviour {
         player = FindObjectOfType<PlayerMove>();
 
         dialogue = FindObjectOfType<DialogueManager>();
-
         SetDefaultDossier();
+        npcPositioning.npc = npcInfo;
+
     }
 
     public virtual void Update()
     {
         if (clueNeededToDuel == null && duelingStatus==DuelingStatus.PreDuel)
         {
-            npcCanDuel = true;
             duelingStatus = DuelingStatus.CanDuel;
         }
         else
@@ -145,7 +150,6 @@ public class NPC : MonoBehaviour {
 
     void ManageDuels(){
         if(variables.clueList.Contains(clueNeededToDuel) && duelingStatus == DuelingStatus.PreDuel){
-            npcCanDuel = true;
             duelingStatus = DuelingStatus.CanDuel;
         }
     }
@@ -201,6 +205,7 @@ public class NPC : MonoBehaviour {
         }
         catch (System.NullReferenceException) {  }
     }
+
 
     Color[] unlockAlpha = new Color[3];
 

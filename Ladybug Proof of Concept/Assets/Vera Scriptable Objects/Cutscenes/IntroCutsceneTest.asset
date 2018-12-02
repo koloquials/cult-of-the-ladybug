@@ -33,6 +33,8 @@ MonoBehaviour:
       tone: 0
     - thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
       tone: 0
+    - thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
+      tone: 0
     currentSpeaker:
       thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
       tone: 0

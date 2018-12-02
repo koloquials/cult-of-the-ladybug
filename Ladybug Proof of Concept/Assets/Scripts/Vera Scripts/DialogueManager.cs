@@ -128,7 +128,6 @@ public class DialogueManager : MonoBehaviour
                         activeDuel.Reset(); //reset the duel componenet on the npc
                         activeDuel.enabled = false; //turn the duel component on the npc off
                         StartDialogue(activeNPC.informationReward); //run the information to load tree on the npc
-                        activeNPC.npcBeaten = true;
                         activeNPC.duelingStatus = NPC.DuelingStatus.PostDuel;
                     }
                 }
@@ -216,7 +215,7 @@ public class DialogueManager : MonoBehaviour
                 lineIndex = 0;
             }
 
-            if (treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].duelTrigger && activeNPC.npcCanDuel)
+            if (treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].duelTrigger && activeNPC.duelingStatus == NPC.DuelingStatus.CanDuel)
             {
                 duelTrigger.SetActive(true);
                 if (Input.GetKeyUp(KeyCode.Space))
