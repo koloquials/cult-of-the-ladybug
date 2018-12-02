@@ -11936,6 +11936,8 @@ GameObject:
   - component: {fileID: 1887592429}
   - component: {fileID: 1887592425}
   - component: {fileID: 1887592426}
+  - component: {fileID: 1887592428}
+  - component: {fileID: 1887592427}
   m_Layer: 0
   m_Name: Eleanor
   m_TagString: Untagged
@@ -12001,6 +12003,49 @@ MonoBehaviour:
   resumedEnTypeStep: 0
   resumedPlayerPos: 0
   resumedEnemyPos: 0
+--- !u!114 &1887592427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1887592424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 794fc41c58043473aa2a6341b66b273a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDuelCondition:
+    cluesNeededForCondition: []
+    duelId: 0
+  duelConditions:
+  - cluesNeededForCondition: []
+    duelId: 0
+  - cluesNeededForCondition:
+    - {fileID: 11400000, guid: e6bee93a37edd4b528d46ef756d01f08, type: 2}
+    duelId: 1
+--- !u!114 &1887592428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1887592424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 150c6ed64d42b4755a83bf33a7df7695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  startPos: 3
+  dialogue: []
+  options: []
+  types: 
+  returnText: Back, huh?
+  resumeInterrogation: 0
+  resumedStep: 0
+  resumedOptStep: 0
+  resumedEnTypeStep: 0
+  resumedPlayerPos: 0
+  resumedEnemyPos: 0
 --- !u!114 &1887592429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12016,6 +12061,7 @@ MonoBehaviour:
   enemyBox: {fileID: 0}
   enemies:
   - {fileID: 1887592426}
+  - {fileID: 1887592428}
   enemyId: 0
   resumeInterrogation: 0
   tile: {fileID: 1036162826896518, guid: c60699c2a830b46a2a6368f12881950f, type: 2}
