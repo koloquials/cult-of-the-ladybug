@@ -261,6 +261,7 @@ public class DuelManager : MonoBehaviour {
                 Debug.Log("[okay] ");
                 break;
             case 4:
+                //where the correct answer is shown
                 textBox.text = "[!] ";
                 Debug.Log("[great] ");
                 break;
