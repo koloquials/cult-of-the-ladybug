@@ -34,7 +34,9 @@ MonoBehaviour:
       of talking to his late partner.
 
 '
-  possibleTrees:
+  preDuelTrees:
   - {fileID: 11400000, guid: cbd74c6491d284a43baf708877f49e8a, type: 2}
+  dialogueTrees:
   - {fileID: 11400000, guid: cbd74c6491d284a43baf708877f49e8a, type: 2}
+  postDuelTrees:
   - {fileID: 11400000, guid: cbd74c6491d284a43baf708877f49e8a, type: 2}

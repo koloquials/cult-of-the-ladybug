@@ -32,7 +32,9 @@ MonoBehaviour:
       trusts she is the authority on communing with the dead. She tells her anything
       and everything she can, and offers her own money to get more accurate readings
       on her own time, and often purchases charms from her.\n"
-  possibleTrees:
+  preDuelTrees:
   - {fileID: 11400000, guid: e0b297cd684633e4ebee717964e1bacc, type: 2}
+  dialogueTrees:
   - {fileID: 11400000, guid: e0b297cd684633e4ebee717964e1bacc, type: 2}
+  postDuelTrees:
   - {fileID: 11400000, guid: e0b297cd684633e4ebee717964e1bacc, type: 2}

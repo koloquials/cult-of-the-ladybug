@@ -33,7 +33,9 @@ MonoBehaviour:
     relationshipDescription: "He knows she puts money and business first, so around
       her he is the business partner. When she isn\u2019t looking, Gerald is looking
       out for his naive friend. \n"
-  possibleTrees:
+  preDuelTrees:
   - {fileID: 11400000, guid: 2a280d25dcc69074a8e4c5cb9d58804f, type: 2}
+  dialogueTrees:
   - {fileID: 11400000, guid: 2a280d25dcc69074a8e4c5cb9d58804f, type: 2}
+  postDuelTrees:
   - {fileID: 11400000, guid: 2a280d25dcc69074a8e4c5cb9d58804f, type: 2}
