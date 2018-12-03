@@ -17,9 +17,21 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e6bee93a37edd4b528d46ef756d01f08, type: 2}
   dialogueLines:
   - line: Theodore promised me that he would return the spark of inspiration to my
-      life, and he lied. Now he's dead, and the world is just as dark for it. What
-      more is there to say?
+      life, and he lied.
     valuableInfo: 1
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: Now he's dead, and the world is just as dark for it. What more is there
+      to say?
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: Tonight, we can't trust a single person in this mansion. Be vigilant, please.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: I'm counting on you.
+    valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0
   informationIndex: 6
