@@ -12,6 +12,7 @@ public class ConditionalDuelManager : MonoBehaviour {
         public List<Clue> cluesNeededForCondition;
         public DialogueTree newInfoReward;
         public int duelId;
+        public int preDuel, postDuel, dialogue;
     }
 
     public DuelCondition currentDuelCondition;
@@ -49,6 +50,9 @@ public class ConditionalDuelManager : MonoBehaviour {
         if(conditionsMet == condition.cluesNeededForCondition.Count){
             currentDuelCondition = condition;
             nPC.informationReward = condition.newInfoReward;
+            nPC.preDuelIndex = condition.preDuel;
+            nPC.dialogueIndex = condition.dialogue;
+            nPC.postDuelIndex = condition.postDuel;
         }
     }
 }
