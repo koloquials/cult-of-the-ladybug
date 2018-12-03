@@ -1336,7 +1336,7 @@ Transform:
   - {fileID: 1731234336}
   - {fileID: 596866034}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &208066423
 MonoBehaviour:
@@ -1354,10 +1354,12 @@ MonoBehaviour:
   lossTree: {fileID: 0}
   thisDuelManager: {fileID: 0}
   newDuelId: 0
-  npcCanDuel: 0
-  npcBeaten: 0
   clueNeededToDuel: {fileID: 0}
   npcInfo: {fileID: 11400000, guid: 1ae2a2ae05c7e40c89f64681f863307b, type: 2}
+  npcPositioning:
+    npc: {fileID: 0}
+    positions: []
+    startPosition: {x: 0, y: 0, z: 0}
   AngryAtPlayer: 0
   duelingStatus: 0
   attitude: 0
@@ -1876,7 +1878,7 @@ RectTransform:
   - {fileID: 1486736373}
   - {fileID: 1953165650}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3885,7 +3887,7 @@ Transform:
   m_Children:
   - {fileID: 526669728}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &561457222
 GameObject:
@@ -3923,10 +3925,16 @@ MonoBehaviour:
   lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 561457227}
   newDuelId: 0
-  npcCanDuel: 0
-  npcBeaten: 0
   clueNeededToDuel: {fileID: 11400000, guid: 1e52a34646b5847378e3fec8695f2a2b, type: 2}
   npcInfo: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
+  npcPositioning:
+    npc: {fileID: 0}
+    positions:
+    - xyPos: {x: 0, y: 0}
+      type: 0
+    - xyPos: {x: -4.17, y: 6.45}
+      type: 1
+    startPosition: {x: 0, y: 0, z: 0}
   AngryAtPlayer: 0
   duelingStatus: 0
   attitude: 0
@@ -4061,8 +4069,48 @@ Transform:
   - {fileID: 1326726055}
   - {fileID: 932434239}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &564379124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 564379125}
+  - component: {fileID: 564379126}
+  m_Layer: 0
+  m_Name: NPC Position Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &564379125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 564379124}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.1255274, y: 10.911256, z: 0.8429185}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &564379126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 564379124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d42184c30c1b64471be04defead57f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &571270216
 GameObject:
   m_ObjectHideFlags: 0
@@ -4335,10 +4383,16 @@ MonoBehaviour:
   lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
   newDuelId: 0
-  npcCanDuel: 0
-  npcBeaten: 0
   clueNeededToDuel: {fileID: 11400000, guid: f498e85e86f3c47b499c107dc8886f26, type: 2}
   npcInfo: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
+  npcPositioning:
+    npc: {fileID: 0}
+    positions:
+    - xyPos: {x: 0, y: 0}
+      type: 0
+    - xyPos: {x: 12.39, y: 10.53}
+      type: 1
+    startPosition: {x: 0, y: 0, z: 0}
   AngryAtPlayer: 0
   duelingStatus: 0
   attitude: 0
@@ -4473,7 +4527,7 @@ Transform:
   - {fileID: 722415046}
   - {fileID: 312493886}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &620502484
 GameObject:
@@ -7029,7 +7083,7 @@ RectTransform:
   - {fileID: 1850065314}
   - {fileID: 734371626}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7434,7 +7488,7 @@ RectTransform:
   - {fileID: 1091659708}
   - {fileID: 985891802}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8318,7 +8372,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1424946402
 MonoBehaviour:
@@ -8611,7 +8665,7 @@ Transform:
   m_Children:
   - {fileID: 1707523485}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1446439189
 MonoBehaviour:
@@ -9111,12 +9165,27 @@ PolygonCollider2D:
       - {x: -8.679551, y: 6.85116}
       - {x: -8.666807, y: -0.45101166}
       - {x: -8.315393, y: -0.4361515}
-      - {x: -8.37515, y: 0.44817448}
-      - {x: -6.6087327, y: 0.439126}
+      - {x: -8.344655, y: 7.004446}
+      - {x: -6.6218605, y: 6.9953976}
+      - {x: -2.8209026, y: 9.544193}
+      - {x: 2.7058618, y: 9.536259}
+      - {x: 6.563275, y: 7.0721874}
+      - {x: 8.27458, y: 7.0627193}
+      - {x: 8.322396, y: 3.3722706}
+      - {x: 7.1568947, y: 2.708374}
+      - {x: 6.5551677, y: 3.2619257}
+      - {x: 6.617576, y: 5.728503}
+      - {x: 2.6708257, y: 8.067894}
+      - {x: -2.613714, y: 8.076698}
+      - {x: -6.577185, y: 5.7263575}
       - {x: -6.5437694, y: 3.2625685}
-      - {x: 6.600158, y: 3.267848}
+      - {x: -6.585323, y: 0.41203022}
+      - {x: -6.5640154, y: 3.237897}
+      - {x: 6.483795, y: 3.2179775}
       - {x: 6.5747175, y: 0.4219761}
-      - {x: 8.326239, y: 0.39672852}
+      - {x: 6.5705824, y: 5.767662}
+      - {x: 8.309287, y: 5.787383}
+      - {x: 8.307841, y: 0.8382635}
       - {x: 8.361753, y: -0.44772434}
       - {x: 8.725106, y: -0.48098564}
       - {x: 8.738423, y: 7.58827}
@@ -9376,7 +9445,7 @@ Transform:
   - {fileID: 1756766063}
   - {fileID: 428890479}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1519369590
 Rigidbody2D:
@@ -9569,7 +9638,7 @@ Transform:
   - {fileID: 950108222}
   - {fileID: 295689763}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1552525553
 MonoBehaviour:
@@ -9657,10 +9726,12 @@ MonoBehaviour:
   lossTree: {fileID: 0}
   thisDuelManager: {fileID: 0}
   newDuelId: 0
-  npcCanDuel: 0
-  npcBeaten: 0
   clueNeededToDuel: {fileID: 0}
   npcInfo: {fileID: 11400000, guid: dfaa959e329674e2da24fd2a53459270, type: 2}
+  npcPositioning:
+    npc: {fileID: 0}
+    positions: []
+    startPosition: {x: 0, y: 0, z: 0}
   AngryAtPlayer: 0
   duelingStatus: 0
   attitude: 3
@@ -10960,7 +11031,7 @@ Transform:
   - {fileID: 385242925}
   - {fileID: 2131959759}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1761454518
 GameObject:
@@ -11515,7 +11586,7 @@ RectTransform:
   - {fileID: 528584852}
   - {fileID: 1645728286}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11582,7 +11653,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1850065313
 GameObject:
@@ -11865,6 +11936,8 @@ GameObject:
   - component: {fileID: 1887592429}
   - component: {fileID: 1887592425}
   - component: {fileID: 1887592426}
+  - component: {fileID: 1887592428}
+  - component: {fileID: 1887592427}
   m_Layer: 0
   m_Name: Eleanor
   m_TagString: Untagged
@@ -11888,10 +11961,16 @@ MonoBehaviour:
   lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
   newDuelId: 0
-  npcCanDuel: 0
-  npcBeaten: 0
   clueNeededToDuel: {fileID: 11400000, guid: e8a1ed5368bc4429e8fd22a9cb25b365, type: 2}
   npcInfo: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
+  npcPositioning:
+    npc: {fileID: 0}
+    positions:
+    - xyPos: {x: 0, y: 0}
+      type: 0
+    - xyPos: {x: -16.89, y: 12.47}
+      type: 1
+    startPosition: {x: 0, y: 0, z: 0}
   AngryAtPlayer: 0
   duelingStatus: 0
   attitude: 0
@@ -11924,6 +12003,49 @@ MonoBehaviour:
   resumedEnTypeStep: 0
   resumedPlayerPos: 0
   resumedEnemyPos: 0
+--- !u!114 &1887592427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1887592424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 794fc41c58043473aa2a6341b66b273a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDuelCondition:
+    cluesNeededForCondition: []
+    duelId: 0
+  duelConditions:
+  - cluesNeededForCondition: []
+    duelId: 0
+  - cluesNeededForCondition:
+    - {fileID: 11400000, guid: e6bee93a37edd4b528d46ef756d01f08, type: 2}
+    duelId: 1
+--- !u!114 &1887592428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1887592424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 150c6ed64d42b4755a83bf33a7df7695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  startPos: 3
+  dialogue: []
+  options: []
+  types: 
+  returnText: Back, huh?
+  resumeInterrogation: 0
+  resumedStep: 0
+  resumedOptStep: 0
+  resumedEnTypeStep: 0
+  resumedPlayerPos: 0
+  resumedEnemyPos: 0
 --- !u!114 &1887592429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11939,6 +12061,7 @@ MonoBehaviour:
   enemyBox: {fileID: 0}
   enemies:
   - {fileID: 1887592426}
+  - {fileID: 1887592428}
   enemyId: 0
   resumeInterrogation: 0
   tile: {fileID: 1036162826896518, guid: c60699c2a830b46a2a6368f12881950f, type: 2}
@@ -12026,7 +12149,7 @@ Transform:
   - {fileID: 1443996758}
   - {fileID: 269941828}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1924797320
 GameObject:
@@ -12064,10 +12187,16 @@ MonoBehaviour:
   lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
   newDuelId: 0
-  npcCanDuel: 0
-  npcBeaten: 0
   clueNeededToDuel: {fileID: 11400000, guid: 4080ea8d7c32c4644a41290159c3c6f1, type: 2}
   npcInfo: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+  npcPositioning:
+    npc: {fileID: 0}
+    positions:
+    - xyPos: {x: 0, y: 0}
+      type: 0
+    - xyPos: {x: 5.34, y: 8.55}
+      type: 1
+    startPosition: {x: 0, y: 0, z: 0}
   AngryAtPlayer: 0
   duelingStatus: 0
   attitude: 0
@@ -12202,7 +12331,7 @@ Transform:
   - {fileID: 50735204}
   - {fileID: 1814946986}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1935677593
 Prefab:
@@ -12698,10 +12827,16 @@ MonoBehaviour:
   lossTree: {fileID: 11400000, guid: e0210097e9d005149b5e1c5228c2e9d5, type: 2}
   thisDuelManager: {fileID: 0}
   newDuelId: 0
-  npcCanDuel: 0
-  npcBeaten: 0
   clueNeededToDuel: {fileID: 0}
   npcInfo: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
+  npcPositioning:
+    npc: {fileID: 0}
+    positions:
+    - xyPos: {x: 0, y: 0}
+      type: 0
+    - xyPos: {x: -14.23, y: 9.3}
+      type: 1
+    startPosition: {x: 0, y: 0, z: 0}
   AngryAtPlayer: 0
   duelingStatus: 0
   attitude: 0
@@ -12836,7 +12971,7 @@ Transform:
   - {fileID: 2063035857}
   - {fileID: 1453538128}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2023277894
 GameObject:
@@ -12931,7 +13066,7 @@ RectTransform:
   - {fileID: 1520555985}
   - {fileID: 1680282453}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
