@@ -39,7 +39,9 @@ MonoBehaviour:
       for private seances.
 
 '
-  possibleTrees:
+  preDuelTrees:
   - {fileID: 11400000, guid: f0c8fda10223522439c4dba5451ee2c7, type: 2}
+  dialogueTrees:
   - {fileID: 11400000, guid: f0c8fda10223522439c4dba5451ee2c7, type: 2}
+  postDuelTrees:
   - {fileID: 11400000, guid: ddbd70fb1fe52453f8dfa2c0520a57c7, type: 2}

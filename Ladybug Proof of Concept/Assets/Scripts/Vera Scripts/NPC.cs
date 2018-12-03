@@ -12,6 +12,7 @@ public class NPC : MonoBehaviour {
     [Header ("Duel Information")]
     public DuelManager thisDuelManager;
     public int newDuelId;
+    public int preDuelIndex, postDuelIndex, dialogueIndex;
     public Clue clueNeededToDuel;
     List<UnlockableInfo> unlocked;
 
@@ -88,13 +89,13 @@ public class NPC : MonoBehaviour {
       
         switch(duelingStatus){
             case DuelingStatus.PreDuel:
-                treeToLoad = npcInfo.possibleTrees[0];
+                treeToLoad = npcInfo.preDuelTrees[preDuelIndex];
                 break;
             case DuelingStatus.CanDuel:
-                treeToLoad = npcInfo.possibleTrees[1];
+                treeToLoad = npcInfo.dialogueTrees[dialogueIndex];
                 break;
             case DuelingStatus.PostDuel:
-                treeToLoad = npcInfo.possibleTrees[2];
+                treeToLoad = npcInfo.postDuelTrees[postDuelIndex];
                 break;
         }
 
