@@ -10,6 +10,7 @@ public class ConditionalDuelManager : MonoBehaviour {
     [System.Serializable]
     public struct DuelCondition {
         public List<Clue> cluesNeededForCondition;
+        public DialogueTree newInfoReward;
         public int duelId;
     }
 
@@ -47,6 +48,7 @@ public class ConditionalDuelManager : MonoBehaviour {
 
         if(conditionsMet == condition.cluesNeededForCondition.Count){
             currentDuelCondition = condition;
+            nPC.informationReward = condition.newInfoReward;
         }
     }
 }
