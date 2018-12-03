@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Name: Seance Table 2
   m_EditorClassIdentifier: 
   clueDescription: 
-  dossierEntries: []
+  dossierEntries:
+  - personInQuestion: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
+    dossierEntry: "You look under the table and discover an odd metal box--a fog machine!
+      The fog is \r\nfed through a tube into the crystal ball on the table, to create
+      the illusion of magic.\r\n"
   relationshipsToDisclose: []
-  accuseMenuDropdown: 
+  accuseMenuDropdown: Secret Fog Machine
   accuseMenuDescription: 
   index: 0
