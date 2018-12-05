@@ -9,22 +9,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 606dab1dcf00c4741bf61375d0db1af1, type: 3}
-  m_Name: MarinoPostNode
+  m_Name: LillianPostNode
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
   cluesDiscovered: []
   dialogueLines:
-  - line: I've told you all I have to say, Miss.
+  - line: Everyone here lies. We don't go our lives without living in some kind of
+      deceit.
     valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0
-  - line: Eleanor, the old crow right over there, is far more familiar with the boy's
-      personal affairs.
+  - line: Even Theo. He promised me great, beautiful things that will never come to
+      be. He lied.
     valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0
-  - line: Everything else, you can decide for yourself. God bless you.
+  - line: I would not trust a single soul in these halls. Hold those most capable
+      of lying close.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: I have the utmost faith in you.
     valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0
