@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 606dab1dcf00c4741bf61375d0db1af1, type: 3}
+  m_Name: EleNode2
+  m_EditorClassIdentifier: 
+  nodeName: 
+  ClueTitle: Eleanor says that Nobody is Innocent
+  cluesDiscovered: []
+  dialogueLines:
+  - line: 'Theodore was a disappointment. He always will be one, this is something
+      his death will not absolve. '
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: It will be hard, even impossible, for me to forget this facet of him.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: "Maybe you don\u2019t believe me, but no matter what hate I held in my heart
+      for him, I would never want to tear it all down. "
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: I take more pride in my work than this.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: "If I were you, I\u2019d be careful of what everyone here says. You\u2019re
+      a private investigator for a living, aren\u2019t you?"
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: Nobody in this house is innocent. Come to your conclusions wisely.
+    valuableInfo: 1
+    duelTrigger: 0
+    deliveryTone: 0
+  informationIndex: 0

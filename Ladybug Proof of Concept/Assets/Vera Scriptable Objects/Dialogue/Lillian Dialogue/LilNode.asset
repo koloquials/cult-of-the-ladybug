@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Name: LilNode
   m_EditorClassIdentifier: 
   nodeName: 
-  ClueTitle: Theodore broke his promises to Lillian.
+  ClueTitle: Theodore broke his promises to Lillian, everyone lies
   cluesDiscovered:
   - {fileID: 11400000, guid: e6bee93a37edd4b528d46ef756d01f08, type: 2}
   dialogueLines:
+  - line: You know. I had high hopes the seance tonight would feel more special than
+      this.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
   - line: Theodore promised me that he would return the spark of inspiration to my
       life, and he lied.
     valuableInfo: 1

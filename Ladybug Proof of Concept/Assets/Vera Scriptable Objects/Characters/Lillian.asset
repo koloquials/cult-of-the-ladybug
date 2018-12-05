@@ -37,4 +37,4 @@ MonoBehaviour:
   dialogueTrees:
   - {fileID: 11400000, guid: e0b297cd684633e4ebee717964e1bacc, type: 2}
   postDuelTrees:
-  - {fileID: 11400000, guid: e0b297cd684633e4ebee717964e1bacc, type: 2}
+  - {fileID: 11400000, guid: 62479f86af3234d9bbc88829f9fd36b9, type: 2}
