@@ -9,16 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b6b94f8423fb47bfadebbcb71b2f524, type: 3}
-  m_Name: Desk
+  m_Name: Ashtray
   m_EditorClassIdentifier: 
-  clueDescription: The Letters in the Desk
+  clueDescription: Stress smoking
   dossierEntries:
   - personInQuestion: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
-    dossierEntry: Gerald got into business with Theo as a way to stay close.
-  relationshipsToDisclose:
-  - personInQuestion: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
-    hasRelationshipWith: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6,
-      type: 2}
-  accuseMenuDropdown: Gerald and Theo were friends
-  accuseMenuDescription: Gerald's business was personal
+    dossierEntry: An avid cigar connosieur, especially when he is stressed.
+  relationshipsToDisclose: []
+  accuseMenuDropdown: Ash tray cigars
+  accuseMenuDescription: Gerald stress smoking cigars
   index: 0

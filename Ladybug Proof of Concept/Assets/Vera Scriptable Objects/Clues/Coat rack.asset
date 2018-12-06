@@ -9,15 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b6b94f8423fb47bfadebbcb71b2f524, type: 3}
-  m_Name: Seance Table 2
+  m_Name: Coat rack
   m_EditorClassIdentifier: 
-  clueDescription: Fake seance
+  clueDescription: Moonchild--a thief
   dossierEntries:
   - personInQuestion: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
-    dossierEntry: "You look under the table and discover an odd metal box--a fog machine!
-      The fog is \r\nfed through a tube into the crystal ball on the table, to create
-      the illusion of magic.\r\n"
+    dossierEntry: May have filled her pockets with everyone else's valuables.
   relationshipsToDisclose: []
-  accuseMenuDropdown: Secret Fog Machine
-  accuseMenuDescription: 
+  accuseMenuDropdown: Coat rack
+  accuseMenuDescription: Moonchild is a possible thief
   index: 0
