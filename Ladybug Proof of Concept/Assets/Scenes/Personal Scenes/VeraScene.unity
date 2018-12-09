@@ -4088,7 +4088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 528584853}
-  enemyBox: {fileID: 0}
+  enemyBox: {fileID: 1645728287}
   enemies:
   - {fileID: 561457224}
   enemyId: 0
@@ -4549,7 +4549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 528584853}
-  enemyBox: {fileID: 0}
+  enemyBox: {fileID: 1645728287}
   enemies:
   - {fileID: 607971283}
   enemyId: 0
@@ -12154,7 +12154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 528584853}
-  enemyBox: {fileID: 0}
+  enemyBox: {fileID: 1645728287}
   enemies:
   - {fileID: 1887592426}
   - {fileID: 1887592428}
@@ -12340,7 +12340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 528584853}
-  enemyBox: {fileID: 0}
+  enemyBox: {fileID: 1645728287}
   enemies:
   - {fileID: 1924797322}
   enemyId: 0
@@ -12983,7 +12983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 528584853}
-  enemyBox: {fileID: 0}
+  enemyBox: {fileID: 1645728287}
   enemies:
   - {fileID: 1983016534}
   enemyId: 0
