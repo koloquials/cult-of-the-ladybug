@@ -281,6 +281,8 @@ public class DuelManager : MonoBehaviour {
         } else {
             playerPos += 1;
             enemyPos += 1;
+            Camera.main.GetComponent<ScreenShake>().shakeDuration = 1f;
+            Camera.main.GetComponent<ScreenShake>().Shake();
         }
         Debug.Log(playerType + " " + enemyType);
         playerLine = playerPos;

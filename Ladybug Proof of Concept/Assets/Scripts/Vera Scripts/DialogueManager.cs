@@ -398,6 +398,10 @@ public class DialogueManager : MonoBehaviour
     void RunCutScene(Cutscene cutscene, Text cutText){
         try{
 
+            Image mask = cutsceneCanvas.transform.Find("Mask").gameObject.GetComponent<Image>();
+            Color alpha = new Color(0f, 0f, 0f, Mathf.Lerp(mask.color.a, cutscene.scenesInCutscene[introSceneIndex].blackfadeAlpha, .5f * Time.deltaTime));
+            mask.color = alpha;
+
             HandleCutsceneActors(cutscene, cutsceneCanvas);
 
             if(typing == false && lineComplete == false){
@@ -419,7 +423,6 @@ public class DialogueManager : MonoBehaviour
                 lineComplete = false;
             }
 
-
             if (introLineIndex > cutscene.scenesInCutscene[introSceneIndex].linesInScene.Length-1)
             {
                 introLineIndex = 0;
@@ -429,8 +432,7 @@ public class DialogueManager : MonoBehaviour
             {
                 currentGameState = GameState.OverworldActive;
             }
-
-            
+                      
         } catch (System.IndexOutOfRangeException){
             currentGameState = GameState.OverworldActive;
         }
@@ -444,23 +446,34 @@ public class DialogueManager : MonoBehaviour
         int maxActors = actorList.transform.childCount;
         Image[] ActorImageSprites = new Image[maxActors];
         Text cutNameText = canvas.gameObject.transform.Find("NameText").GetComponent<Text>();
-        cutNameText.text = cutscene.scenesInCutscene[introSceneIndex].currentSpeaker.thisActor.npcName;
+        Color noAlpha = new Color(0f,0f,0f,0f);
         for (int i = 0; i < ActorImageSprites.Length; i++)
         {
             ActorImageSprites[i] = actorList.transform.GetChild(i).GetComponent<Image>();
             try
             {
                 ActorImageSprites[i].gameObject.SetActive(true);
-                for (int j = 0; j < cutscene.scenesInCutscene[introSceneIndex].actorsInScene[i].thisActor.npcSprites.Length;j++){
-                    if(cutscene.scenesInCutscene[introSceneIndex].actorsInScene[i].thisActor.npcSprites[j].spriteForTone 
-                       == cutscene.scenesInCutscene[introSceneIndex].actorsInScene[i].tone){
-                        ActorImageSprites[i].sprite = cutscene.scenesInCutscene[introSceneIndex].actorsInScene[i].thisActor.npcSprites[j].thisSprite;
-                        if(cutscene.scenesInCutscene[introSceneIndex].currentSpeaker.thisActor == cutscene.scenesInCutscene[introSceneIndex].actorsInScene[i].thisActor){
-                            ActorImageSprites[i].color = active;
-                        } else {
-                            ActorImageSprites[i].color = notActive;
+                if(!cutscene.scenesInCutscene[introSceneIndex].narration){
+                    cutNameText.text = cutscene.scenesInCutscene[introSceneIndex].currentSpeaker.thisActor.npcName;
+                    for (int j = 0; j < cutscene.scenesInCutscene[introSceneIndex].actorsInScene[i].thisActor.npcSprites.Length; j++)
+                    {
+                        if (cutscene.scenesInCutscene[introSceneIndex].actorsInScene[i].thisActor.npcSprites[j].spriteForTone
+                           == cutscene.scenesInCutscene[introSceneIndex].actorsInScene[i].tone)
+                        {
+                            ActorImageSprites[i].sprite = cutscene.scenesInCutscene[introSceneIndex].actorsInScene[i].thisActor.npcSprites[j].thisSprite;
+                            if (cutscene.scenesInCutscene[introSceneIndex].currentSpeaker.thisActor == cutscene.scenesInCutscene[introSceneIndex].actorsInScene[i].thisActor)
+                            {
+                                ActorImageSprites[i].color = active;
+                            }
+                            else
+                            {
+                                ActorImageSprites[i].color = notActive;
+                            }
                         }
                     }
+                } else {
+                    cutNameText.text = "Narrator";
+                    ActorImageSprites[i].color = noAlpha;
                 }
             } catch (System.IndexOutOfRangeException){
                 ActorImageSprites[i].gameObject.SetActive(false);
