@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: GerNode
   m_EditorClassIdentifier: 
   nodeName: 
-  ClueTitle: Best business friend. Fought often.
+  ClueTitle: Theo sponsored Gerald's business, but is easily taken advantage of
   cluesDiscovered:
   - {fileID: 11400000, guid: 1e52a34646b5847378e3fec8695f2a2b, type: 2}
   dialogueLines:

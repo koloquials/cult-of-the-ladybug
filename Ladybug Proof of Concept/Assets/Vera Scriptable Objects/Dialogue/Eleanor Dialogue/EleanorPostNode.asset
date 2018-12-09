@@ -15,7 +15,20 @@ MonoBehaviour:
   ClueTitle: 
   cluesDiscovered: []
   dialogueLines:
-  - line: First my brother...now my nephew...So many Hampshire funerals...
+  - line: First my brother, now my nephew.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: So many Hampshire funerals in my time. When will it finally get to be my
+      turn? I wonder.
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: 'Theo left behind a world of financial issues we''ll have to shoulder. '
+    valuableInfo: 0
+    duelTrigger: 0
+    deliveryTone: 0
+  - line: Taking responsibility is one thing, but we will not be without spite.
     valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0

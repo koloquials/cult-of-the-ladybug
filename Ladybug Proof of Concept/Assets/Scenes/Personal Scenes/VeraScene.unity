@@ -12107,14 +12107,14 @@ MonoBehaviour:
     dialogue: 0
   duelConditions:
   - cluesNeededForCondition: []
-    newInfoReward: {fileID: 0}
+    newInfoReward: {fileID: 11400000, guid: 25c10efc39bdfdd4fa77480d00180eb0, type: 2}
     duelId: 0
     preDuel: 0
     postDuel: 0
     dialogue: 0
   - cluesNeededForCondition:
     - {fileID: 11400000, guid: e6bee93a37edd4b528d46ef756d01f08, type: 2}
-    newInfoReward: {fileID: 11400000, guid: 25c10efc39bdfdd4fa77480d00180eb0, type: 2}
+    newInfoReward: {fileID: 11400000, guid: d362fa560ac4943ceb6e06c0d89dc11c, type: 2}
     duelId: 1
     preDuel: 0
     postDuel: 1
@@ -12135,7 +12135,7 @@ MonoBehaviour:
   dialogue: []
   options: []
   types: 
-  returnText: Back, huh?
+  returnText: You truly don't know your place.
   resumeInterrogation: 0
   resumedStep: 0
   resumedOptStep: 0
