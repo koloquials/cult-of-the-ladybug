@@ -77,6 +77,12 @@ public class AccuseMenuManager : MonoBehaviour {
             openAccuseMenu.interactable = true;
         }
 
+        if(dialogueManager.currentGameState == DialogueManager.GameState.MenuActive){
+            openAccuseMenu.transform.GetChild(0).GetComponent<Text>().text = "Return";
+        } else {
+            openAccuseMenu.transform.GetChild(0).GetComponent<Text>().text = "Accuse!";
+        }
+
         try{
             for (int i = 0; i < clueDropdowns.Length; i++)
             {
@@ -117,11 +123,11 @@ public class AccuseMenuManager : MonoBehaviour {
     }
 
     public void ToggleMenu(GameObject menu){
-        if(menu.gameObject.tag == "MainMenu"){
+       // if(menu.gameObject.tag == "AccuseMenu"){
             if(dialogueManager.currentGameState == DialogueManager.GameState.OverworldActive){
                 if(!menu.activeSelf){
                     menu.SetActive(true);
-                    dialogueManager.currentGameState = DialogueManager.GameState.MenuActive;
+                dialogueManager.currentGameState = DialogueManager.GameState.MenuActive;
                 } 
             } else
             {
@@ -131,13 +137,13 @@ public class AccuseMenuManager : MonoBehaviour {
                     dialogueManager.currentGameState = DialogueManager.GameState.OverworldActive;
                 }
             }
-        } else {
-            if(menu.activeSelf){
-                menu.SetActive(false);
-            } else {
-                menu.SetActive(true);
-            }
-        }
+        //} else {
+        //    if(menu.activeSelf){
+        //        menu.SetActive(false);
+        //    } else {
+        //        menu.SetActive(true);
+        //    }
+        //}
     }
 
     public void MoveMenu(GameObject menu)
