@@ -53,7 +53,7 @@ public class DuelManager : MonoBehaviour {
     void Update()
     {
         if (inDuel == false && duelFinished == false && typing == false && resumeInterrogation == false){
-            textBox.text = "";
+            enemyBox.text = "";
             type = StartCoroutine(TypeText(enemies[enemyId].name, enemies[enemyId].dialogue[step], ("\n\n[space]")));
             inDuel = true;
             typingStart = true;
@@ -61,14 +61,14 @@ public class DuelManager : MonoBehaviour {
         else if (Input.GetKeyDown(KeyCode.Space) && typing == true && typingStart == true && duelFinished == false && resumeInterrogation == false){
             StopCoroutine(type);
             typing = false;
-            textBox.text = (enemies[enemyId].name + enemies[enemyId].dialogue[step] + "\n\n[space]");
+            enemyBox.text = (enemies[enemyId].name + enemies[enemyId].dialogue[step] + "\n\n[space]");
             inDuel = true;
             typingStart = false;
 
         }
 
         if (inDuel == false && duelFinished == false && typing == false && resumeInterrogation == true){
-            textBox.text = "";
+            enemyBox.text = "";
             type = StartCoroutine(TypeText(enemies[enemyId].name, enemies[enemyId].returnText, ("\n\n[space]")));
             inDuel = true;
             typingStart = true;
@@ -80,7 +80,7 @@ public class DuelManager : MonoBehaviour {
         else if (Input.GetKeyDown(KeyCode.Space) && typing == true && typingStart == true && duelFinished == false && resumeInterrogation == true){
             StopCoroutine(type);
             typing = false;
-            textBox.text = (enemies[enemyId].name + enemies[enemyId].returnText + "\n\n[space]");
+            enemyBox.text = (enemies[enemyId].name + enemies[enemyId].returnText + "\n\n[space]");
             inDuel = true;
             typingStart = false;
 
@@ -115,12 +115,12 @@ public class DuelManager : MonoBehaviour {
 
             //if there's a winner,
             if (playerWin == true){
-                textBox.text = (enemies[enemyId].options[optStep + (playerType - 5)] + "\n\nBreakthrough!"); //displays the winning dialogue option, too!
+                enemyBox.text = (enemies[enemyId].options[optStep + (playerType - 5)] + "\n\nBreakthrough!"); //displays the winning dialogue option, too!
                 duelFinished = true;
                 inDuel = false;
 
             } else if (playerLose == true){
-                textBox.text = "";
+                enemyBox.text = "";
                 type = StartCoroutine(TypeText("", enemies[enemyId].dialogue[step], "\n\nInterrogation failed."));
                 typingLose = true;
                 duelFinished = true;
@@ -128,7 +128,7 @@ public class DuelManager : MonoBehaviour {
                 if (Input.GetKeyDown(KeyCode.Space) && typing == true && typingLose == true){
                     StopCoroutine(type);
                     typing = false;
-                    textBox.text = (enemies[enemyId].dialogue[step] + "\n\nInterrogation failed.");
+                    enemyBox.text = (enemies[enemyId].dialogue[step] + "\n\nInterrogation failed.");
                     typingLose = false;
                     inDuel = false;
 
@@ -161,8 +161,8 @@ public class DuelManager : MonoBehaviour {
                     rand.Add(n);
                 }
                 Debug.Log(rand[0] + " " + rand[1] + " " + rand[2] + " " + rand[3]);
-
-                textBox.text = (enemies[enemyId].dialogue[step] + "[1] " + enemies[enemyId].options[optStep + rand[0]] + "[2] " + enemies[enemyId].options[optStep + rand[1]] +
+                enemyBox.text = (enemies[enemyId].dialogue[step]);
+                textBox.text = ("[1] " + enemies[enemyId].options[optStep + rand[0]] + "[2] " + enemies[enemyId].options[optStep + rand[1]] +
                                       "[3] " + enemies[enemyId].options[optStep + rand[2]] + "[4] " + enemies[enemyId].options[optStep + rand[3]]);
             }
         }
@@ -201,7 +201,8 @@ public class DuelManager : MonoBehaviour {
         {
             StopCoroutine(type);
             typing = false;
-            textBox.text = (enemies[enemyId].options[optStep - 1 + playerType] + "\n" + enemies[enemyId].dialogue[step] + "\n [space]");
+            textBox.text = (enemies[enemyId].options[optStep - 1 + playerType] + "\n [space]");
+            enemyBox.text = (enemies[enemyId].dialogue[step]);
             typingResult = false;
         }
 
@@ -219,10 +220,10 @@ public class DuelManager : MonoBehaviour {
     IEnumerator TypeText(string begin, string message, string end)
     { //scrolling text!
         typing = true;
-        textBox.text += begin;
+        enemyBox.text += begin;
         foreach (char letter in message.ToCharArray())
         {
-            textBox.text += letter;
+            enemyBox.text += letter;
             //if (typeSound1 && typeSound2){ //[WIP] Sound! Can be implemented later!
             //    SoundManager.instance.RandomizeSfx(typeSound1, typeSound2);
             //    yield return 0;
@@ -241,7 +242,7 @@ public class DuelManager : MonoBehaviour {
             }
         }
         typing = false;
-        textBox.text += end;
+        enemyBox.text += end;
     }
 
     void DetermineType(int playerTy, int enemyTy)
@@ -267,7 +268,9 @@ public class DuelManager : MonoBehaviour {
                 break;
         }
 
-        type = StartCoroutine(TypeText((enemies[enemyId].options[optStep - 1 + playerType] + "\n"), (enemies[enemyId].dialogue[step]), ("\n [space]")));
+        textBox.text = (enemies[enemyId].options[optStep - 1 + playerType]);
+        enemyBox.text = "";
+        type = StartCoroutine(TypeText((""), (enemies[enemyId].dialogue[step]), ("\n [space]")));
 
         processTable = true;
         combatRound = true;
@@ -282,6 +285,8 @@ public class DuelManager : MonoBehaviour {
         } else {
             playerPos += 1;
             enemyPos += 1;
+            Camera.main.GetComponent<ScreenShake>().shakeDuration = 1f;
+            Camera.main.GetComponent<ScreenShake>().Shake();
         }
         Debug.Log(playerType + " " + enemyType);
         playerLine = playerPos;
@@ -347,6 +352,7 @@ public class DuelManager : MonoBehaviour {
         typingLose = false;
 
         textBox.text = "";
+        enemyBox.text = "";
 
     }
 

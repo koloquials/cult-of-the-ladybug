@@ -13,11 +13,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Marino "The Vine" Montemarano
   description: 'Age: 45 / Business Man'
-  dossierCloseup: {fileID: 21300018, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
+  dossierCloseup: {fileID: 21300006, guid: 38b957f137b934e25a1b807f71d8c2b7, type: 3}
   npcSprites:
   - spriteName: Neutral
-    thisSprite: {fileID: 21300006, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
+    thisSprite: {fileID: 21300006, guid: 3f0d6e3b2ecc24c1ca1f9c90331f3cd0, type: 3}
     spriteForTone: 0
+  - spriteName: Angry
+    thisSprite: {fileID: 21300022, guid: 3f0d6e3b2ecc24c1ca1f9c90331f3cd0, type: 3}
+    spriteForTone: 1
+  - spriteName: Peaceful
+    thisSprite: {fileID: 21300030, guid: 3f0d6e3b2ecc24c1ca1f9c90331f3cd0, type: 3}
+    spriteForTone: 2
   npcRelationships:
   - person: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
     relationshipDescription: "Was in \u201Cbusiness\u201D with Theodore\u2019s late
@@ -39,7 +45,9 @@ MonoBehaviour:
       for private seances.
 
 '
-  possibleTrees:
+  preDuelTrees:
   - {fileID: 11400000, guid: f0c8fda10223522439c4dba5451ee2c7, type: 2}
+  dialogueTrees:
   - {fileID: 11400000, guid: f0c8fda10223522439c4dba5451ee2c7, type: 2}
+  postDuelTrees:
   - {fileID: 11400000, guid: ddbd70fb1fe52453f8dfa2c0520a57c7, type: 2}

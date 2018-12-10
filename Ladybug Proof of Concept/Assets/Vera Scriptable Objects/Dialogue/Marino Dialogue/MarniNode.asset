@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: MarniNode
   m_EditorClassIdentifier: 
   nodeName: 
-  ClueTitle: Marino = family. relationship = "business"
+  ClueTitle: Marino was formerly in the mob, says he just wants to repent now.
   cluesDiscovered:
   - {fileID: 11400000, guid: e8a1ed5368bc4429e8fd22a9cb25b365, type: 2}
   - {fileID: 11400000, guid: 116831c5e13324ca3be2ed4b0233fcdf, type: 2}

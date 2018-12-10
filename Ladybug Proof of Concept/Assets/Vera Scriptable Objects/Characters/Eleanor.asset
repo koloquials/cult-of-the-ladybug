@@ -13,11 +13,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Eleanor Hampshire
   description: 'Age: 68 / Hampshire Matriarch'
-  dossierCloseup: {fileID: 21300014, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
+  dossierCloseup: {fileID: 21300002, guid: 38b957f137b934e25a1b807f71d8c2b7, type: 3}
   npcSprites:
   - spriteName: Neutral
-    thisSprite: {fileID: 21300002, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
+    thisSprite: {fileID: 21300002, guid: 3f0d6e3b2ecc24c1ca1f9c90331f3cd0, type: 3}
     spriteForTone: 0
+  - spriteName: Sad
+    thisSprite: {fileID: 21300014, guid: 3f0d6e3b2ecc24c1ca1f9c90331f3cd0, type: 3}
+    spriteForTone: 1
+  - spriteName: Happy
+    thisSprite: {fileID: 21300026, guid: 3f0d6e3b2ecc24c1ca1f9c90331f3cd0, type: 3}
+    spriteForTone: 2
   npcRelationships:
   - person: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
     relationshipDescription: "Her nephew. She didn\u2019t care much about him, until
@@ -32,7 +38,10 @@ MonoBehaviour:
       knowing she was the gate between them. The business plan was airtight, and she
       knew the man was laser focused. She believed that focus would be good for Theodore,
       and allowed him to proceed to work with Theodore.
-  possibleTrees:
-  - {fileID: 11400000, guid: 012084c7fa1a2464d977aecc664a2f39, type: 2}
+  preDuelTrees:
   - {fileID: 11400000, guid: 25e853e03449cf642a81f60900f33b1c, type: 2}
+  dialogueTrees:
+  - {fileID: 11400000, guid: 25e853e03449cf642a81f60900f33b1c, type: 2}
+  postDuelTrees:
+  - {fileID: 11400000, guid: a6eba3c3051604c9e9045f4b6ff464c4, type: 2}
   - {fileID: 11400000, guid: a6eba3c3051604c9e9045f4b6ff464c4, type: 2}

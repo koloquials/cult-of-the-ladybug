@@ -13,10 +13,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Theodore Hampshire
   description: 'Age: 26 / Hampshire Heir & Business Man'
-  dossierCloseup: {fileID: 21300012, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
+  dossierCloseup: {fileID: 21300000, guid: 38b957f137b934e25a1b807f71d8c2b7, type: 3}
   npcSprites:
   - spriteName: Neutral
-    thisSprite: {fileID: 21300000, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
+    thisSprite: {fileID: 21300000, guid: 3f0d6e3b2ecc24c1ca1f9c90331f3cd0, type: 3}
     spriteForTone: 0
+  - spriteName: Shocked
+    thisSprite: {fileID: 21300012, guid: 3f0d6e3b2ecc24c1ca1f9c90331f3cd0, type: 3}
+    spriteForTone: 1
+  - spriteName: Happy
+    thisSprite: {fileID: 21300024, guid: 3f0d6e3b2ecc24c1ca1f9c90331f3cd0, type: 3}
+    spriteForTone: 2
   npcRelationships: []
-  possibleTrees: []
+  preDuelTrees: []
+  dialogueTrees: []
+  postDuelTrees: []

@@ -13,11 +13,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Lillian Flores
   description: 'Age: 23 / Flapper'
-  dossierCloseup: {fileID: 21300016, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
+  dossierCloseup: {fileID: 21300004, guid: 38b957f137b934e25a1b807f71d8c2b7, type: 3}
   npcSprites:
   - spriteName: Neutral
-    thisSprite: {fileID: 21300004, guid: 51bbd35a5f76b472e89a26f74318c0b6, type: 3}
+    thisSprite: {fileID: 21300004, guid: 3f0d6e3b2ecc24c1ca1f9c90331f3cd0, type: 3}
     spriteForTone: 0
+  - spriteName: Shocked
+    thisSprite: {fileID: 21300028, guid: 3f0d6e3b2ecc24c1ca1f9c90331f3cd0, type: 3}
+    spriteForTone: 1
+  - spriteName: Happy
+    thisSprite: {fileID: 21300016, guid: 3f0d6e3b2ecc24c1ca1f9c90331f3cd0, type: 3}
+    spriteForTone: 2
   npcRelationships:
   - person: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
     relationshipDescription: A man she knew from friends of friends. The concept of
@@ -32,7 +38,9 @@ MonoBehaviour:
       trusts she is the authority on communing with the dead. She tells her anything
       and everything she can, and offers her own money to get more accurate readings
       on her own time, and often purchases charms from her.\n"
-  possibleTrees:
+  preDuelTrees:
   - {fileID: 11400000, guid: e0b297cd684633e4ebee717964e1bacc, type: 2}
+  dialogueTrees:
   - {fileID: 11400000, guid: e0b297cd684633e4ebee717964e1bacc, type: 2}
-  - {fileID: 11400000, guid: e0b297cd684633e4ebee717964e1bacc, type: 2}
+  postDuelTrees:
+  - {fileID: 11400000, guid: 62479f86af3234d9bbc88829f9fd36b9, type: 2}

@@ -25,6 +25,6 @@ public class DialogueNode : ScriptableObject {
 
     [System.Serializable]
     public enum Tone{
-        Neutral, Suspicious, Happy, Defensive
+        Neutral, Negative, Positive
     }
 }

@@ -19,8 +19,8 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
     linesInScene:
-    - "Wow. Despite the life you\u2019d lived, you never expected yourself front and
-      center of the scene you now inhabited."
+    - "Damn. Despite the life you\u2019d lived, you never expected yourself front
+      and center of the scene you now inhabited."
     - When you answered the beck and call of an old friend, someone who last surfaced
       during your university days, you imagined Theodore would want to catch up over
       lunch in a cafe.
@@ -39,7 +39,8 @@ MonoBehaviour:
     - "You\u2019d done precursory research on them, but Theo had wanted you to do
       more work here at the seance. Unorthodox, but it wasn\u2019t like you got out
       much.\n"
-    blackfadeAlpha: 1
+    blackfadeAlpha: 0
+    narration: 1
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -54,7 +55,8 @@ MonoBehaviour:
     - "It was so good that you could make it, truly. Everyone we are in esteemed company,
       it\u2019s been a while since we\u2019ve had a new guest join us."
     - In fact, hah, the last was probably you, Gerald.
-    blackfadeAlpha: 1
+    blackfadeAlpha: 0.6
+    narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -67,7 +69,8 @@ MonoBehaviour:
       tone: 0
     linesInScene:
     - "Couldn\u2019t have you doing these alone with such. Folk."
-    blackfadeAlpha: 1
+    blackfadeAlpha: 0.6
+    narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -80,7 +83,8 @@ MonoBehaviour:
       tone: 0
     linesInScene:
     - "Well, come now, don\u2019t be rude. Suzanne is a guest."
-    blackfadeAlpha: 1
+    blackfadeAlpha: 0.6
+    narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -95,7 +99,8 @@ MonoBehaviour:
     - Mm.
     - It has been half a year by now.
     - "Welcome. Any friend of Theo\u2019s, I will be watching closely."
-    blackfadeAlpha: 1
+    blackfadeAlpha: 0.6
+    narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -111,7 +116,8 @@ MonoBehaviour:
     - Such a joy that you could join us on this journey into the unknown, my child.
     - 'This will be the eighth seance I have conducted with mister Theodore here,
       in his lovely estate. '
-    blackfadeAlpha: 1
+    blackfadeAlpha: 0.6
+    narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -126,7 +132,8 @@ MonoBehaviour:
     - 'Yes, this lovely affair started from such humble beginnings! '
     - Originally it was just Moonchild, Theodore, and I!
     - Our ventures have grown slowly, but dazzlingly, over the years.
-    blackfadeAlpha: 1
+    blackfadeAlpha: 0.6
+    narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -140,7 +147,8 @@ MonoBehaviour:
     linesInScene:
     - 'Lillian, my love, was the one that truly brought us together, in that aspect
       I think. '
-    blackfadeAlpha: 1
+    blackfadeAlpha: 0.6
+    narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -154,7 +162,8 @@ MonoBehaviour:
     linesInScene:
     - Oh but darling, it was all you! Without you the stars would not have aligned
       so.
-    blackfadeAlpha: 1
+    blackfadeAlpha: 0.6
+    narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -168,7 +177,8 @@ MonoBehaviour:
     linesInScene:
     - Only if you insist.
     - The two keeping quiet in the corner are uncle Marino and aunt Gertrude.
-    blackfadeAlpha: 1
+    blackfadeAlpha: 0.6
+    narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -183,7 +193,8 @@ MonoBehaviour:
     - "I am, of course, Theo\u2019s aunt by blood."
     - I do think these occasions are certainly, interesting.
     - 'Nonetheless, if you are a guest of his, then you have my hospitality. '
-    blackfadeAlpha: 1
+    blackfadeAlpha: 0.6
+    narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -197,7 +208,8 @@ MonoBehaviour:
     linesInScene:
     - "And as he said, I\u2019m Marino. Pleasant evening to you miss."
     - "I\u2019m a family friend, his father and I were like brothers."
-    blackfadeAlpha: 1
+    blackfadeAlpha: 0.6
+    narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -210,7 +222,8 @@ MonoBehaviour:
       tone: 0
     linesInScene:
     - "But you weren\u2019t really."
-    blackfadeAlpha: 1
+    blackfadeAlpha: 0.6
+    narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -224,7 +237,8 @@ MonoBehaviour:
     linesInScene:
     - Do you enjoy starting quarrels before a rite, woman?
     - "Let\u2019s get this underway, why don\u2019t we? "
-    blackfadeAlpha: 1
+    blackfadeAlpha: 0.6
+    narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -238,7 +252,8 @@ MonoBehaviour:
     linesInScene:
     - "Y-yes! Now that these introductions are out of the way, why don\u2019t we allow
       Moonchild to get set up? "
-    blackfadeAlpha: 1
+    blackfadeAlpha: 0.6
+    narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -253,7 +268,8 @@ MonoBehaviour:
     - "Yes, let\u2019s. Thus with Marino, our party is complete."
     - Soon we will see if something of a higher calling would like to fill the still-empty
       space left in this room and make itself known.
-    blackfadeAlpha: 1
+    blackfadeAlpha: 0.6
+    narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -282,4 +298,5 @@ MonoBehaviour:
       unsure as to how to react.
     - '...'
     - 'It seemed you had different work to do tonight. '
-    blackfadeAlpha: 1
+    blackfadeAlpha: 0
+    narration: 0
