@@ -14,6 +14,7 @@ public class Cutscene : ScriptableObject {
         public string[] linesInScene;
         public float blackfadeAlpha;
         public bool narration;
+        public bool exit;
     }
 
     [System.Serializable]
