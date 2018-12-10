@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0d9208b39ee240e89c4eb01edf227b6, type: 3}
-  m_Name: SSCut
+  m_Name: LoseCut
   m_EditorClassIdentifier: 
   scenesInCutscene:
   - actorsInScene:
@@ -23,31 +23,22 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
       tone: 2
     linesInScene:
-    - Sup Twitter I made a thing
-    blackfadeAlpha: 0
+    - ENding
+    blackfadeAlpha: 0.6
+    narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
       tone: 0
     - thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
-      tone: 0
+      tone: 2
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
     currentSpeaker:
       thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
-      tone: 0
+      tone: 2
     linesInScene:
-    - Its alright I guess
-    blackfadeAlpha: 0
-  - actorsInScene:
-    - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
-      tone: 1
-    - thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
-      tone: 1
-    - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
-      tone: 0
-    currentSpeaker:
-      thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
-      tone: 1
-    linesInScene:
-    - I want to just work on modeling stuff but I have to do this shit instead
-    blackfadeAlpha: 0
+    - Exit
+    blackfadeAlpha: 1
+    narration: 0
+    exit: 1
