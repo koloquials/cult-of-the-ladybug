@@ -9718,7 +9718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &663795480
 Animator:
   serializedVersion: 3
@@ -13584,6 +13584,8 @@ MonoBehaviour:
   cutsceneText: {fileID: 1486736374}
   treeToRun: {fileID: 0}
   introCutscene: {fileID: 11400000, guid: d7fc95bbd5ab94dd4a3cb106549562c5, type: 2}
+  endingCutscene: {fileID: 11400000, guid: 62215a5fd5cb848489be305b559491f5, type: 2}
+  toRun: {fileID: 0}
   normalText: {r: 0, g: 0, b: 0, a: 1}
   importantText: {r: 1, g: 0.79322517, b: 0, a: 1}
   activeDuel: {fileID: 0}
@@ -13671,6 +13673,8 @@ MonoBehaviour:
   culprit: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
   accuseMenu: {fileID: 243689827}
   openAccuseMenu: {fileID: 1622296357}
+  gameOver: {fileID: 11400000, guid: c5d7be0d18d4e42f89fcc832a68f1934, type: 2}
+  gameWon: {fileID: 11400000, guid: 62215a5fd5cb848489be305b559491f5, type: 2}
   culpritIndex: 0
   cluesNeededToAccuse:
   - {fileID: 11400000, guid: e6bee93a37edd4b528d46ef756d01f08, type: 2}
@@ -15340,7 +15344,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1645728286
 RectTransform:
   m_ObjectHideFlags: 0

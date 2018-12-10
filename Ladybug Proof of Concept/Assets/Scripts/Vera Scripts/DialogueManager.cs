@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class DialogueManager : MonoBehaviour
@@ -30,7 +31,8 @@ public class DialogueManager : MonoBehaviour
     public Text cutsceneText;
 
     public DialogueTree treeToRun; //dialogue tree that's getting parsed
-    public Cutscene introCutscene;
+    public Cutscene introCutscene, endingCutscene;
+    public Cutscene toRun;
 
     GameObject duelTrigger; //image that gets toggled to signify that a duel can be triggered
     public Color normalText, importantText; //colors to change the text to depending on how valuable it is
@@ -76,6 +78,7 @@ public class DialogueManager : MonoBehaviour
         descriptionText.text = null;
         descriptionCanvas.gameObject.SetActive(false);
         hudCanvas.gameObject.SetActive(false);
+        toRun = introCutscene;
 
 
     }
@@ -83,10 +86,22 @@ public class DialogueManager : MonoBehaviour
     {
         if(currentGameState == GameState.OverworldActive){
             hudCanvas.gameObject.SetActive(true);
+            introLineIndex = 0;
+            introSceneIndex = 0;
+            toRun = null;
         }
 
-        if(currentGameState == GameState.IntroScene){
-            RunCutScene(introCutscene, cutsceneText);
+        if (currentGameState == GameState.IntroScene)
+        {
+            RunCutScene(toRun, cutsceneText);
+        }
+        else if (currentGameState == GameState.Win || currentGameState == GameState.TimerOut)
+        {
+            toRun = endingCutscene;
+            cutsceneCanvas.gameObject.SetActive(true);
+            hudCanvas.gameObject.SetActive(false);
+            RunCutScene(toRun, cutsceneText);
+
         } else {
             cutsceneCanvas.gameObject.SetActive(false);
         }
@@ -402,12 +417,13 @@ public class DialogueManager : MonoBehaviour
     }
     int introLineIndex = 0;
     int introSceneIndex = 0;
+    float mult = 0.75f;
 
     void RunCutScene(Cutscene cutscene, Text cutText){
         try{
 
             Image mask = cutsceneCanvas.transform.Find("Mask").gameObject.GetComponent<Image>();
-            Color alpha = new Color(0f, 0f, 0f, Mathf.Lerp(mask.color.a, cutscene.scenesInCutscene[introSceneIndex].blackfadeAlpha, .5f * Time.deltaTime));
+            Color alpha = new Color(0f, 0f, 0f, Mathf.Lerp(mask.color.a, cutscene.scenesInCutscene[introSceneIndex].blackfadeAlpha, mult * Time.deltaTime));
             mask.color = alpha;
 
             HandleCutsceneActors(cutscene, cutsceneCanvas);
@@ -425,10 +441,29 @@ public class DialogueManager : MonoBehaviour
                 lineComplete = true;
             }
 
-            else if (Input.GetKeyDown(KeyCode.E) && currentGameState == GameState.IntroScene && lineComplete)
+            else if (Input.GetKeyDown(KeyCode.E) && lineComplete && !cutscene.scenesInCutscene[introSceneIndex].exit)
             {
-                introLineIndex++;
-                lineComplete = false;
+
+                if(currentGameState == GameState.IntroScene || currentGameState == GameState.TimerOut || currentGameState == GameState.Win){
+                    introLineIndex++;
+                    lineComplete = false;
+                }
+
+            } 
+
+            if (cutscene.scenesInCutscene[introSceneIndex].exit)
+            {
+                mult = 0.35f;
+                mask.transform.SetAsLastSibling();
+                if (mask.color.a >= 0.95f)
+                {
+                    print("Change Scene");
+                    SceneManager.LoadScene(2);
+                }
+                else
+                {
+                    print("bitch what the fuck");
+                }
             }
 
             if (introLineIndex > cutscene.scenesInCutscene[introSceneIndex].linesInScene.Length-1)
@@ -436,10 +471,11 @@ public class DialogueManager : MonoBehaviour
                 introLineIndex = 0;
                 introSceneIndex++;
             }
-            if (introSceneIndex > cutscene.scenesInCutscene.Length)
+            if (introSceneIndex > cutscene.scenesInCutscene.Length && !cutscene.scenesInCutscene[introSceneIndex].exit)
             {
                 currentGameState = GameState.OverworldActive;
-            }
+            } 
+
                       
         } catch (System.IndexOutOfRangeException){
             currentGameState = GameState.OverworldActive;
