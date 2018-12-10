@@ -9,18 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 606dab1dcf00c4741bf61375d0db1af1, type: 3}
-  m_Name: Ashtray
+  m_Name: Coat rack
   m_EditorClassIdentifier: 
   nodeName: 
-  ClueTitle: 
-  cluesDiscovered: []
+  ClueTitle: Moonchild--stealing?
+  cluesDiscovered:
+  - {fileID: 11400000, guid: e1b1f22c55bf22740ac611a00a255634, type: 2}
   dialogueLines:
-  - line: An ashtray sits on the banister, chock full of ash.
+  - line: A coat rack from which 5 distinct coats are hanging.
     valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0
-  - line: "In the pile of burnt remains, you can make out some cigar butts. Someone's
-      clearly been stress smoking.\r"
+  - line: The pockets have all been picked clean, save for Moonchild's.
     valuableInfo: 1
     duelTrigger: 0
     deliveryTone: 0
