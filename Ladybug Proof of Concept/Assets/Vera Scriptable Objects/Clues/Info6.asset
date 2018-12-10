@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clueDescription: Lillian Clue
   dossierEntries:
-  - personInQuestion: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
+  - personInQuestion: {fileID: 0}
     dossierEntry: Theodore's girlfriend.
   relationshipsToDisclose: []
   accuseMenuDropdown: Lillian's frustration with Theo's promises
   accuseMenuDescription: 
-  index: 6
+  index: 0
