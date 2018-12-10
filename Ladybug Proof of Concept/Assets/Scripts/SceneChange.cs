@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour {
-
+    public int sceneToLoad; 
 	// Use this for initialization
 	void Start () {
 		
@@ -15,6 +15,6 @@ public class SceneChange : MonoBehaviour {
 	}
     public void OnMouseUp()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(sceneToLoad);
     }
 }
