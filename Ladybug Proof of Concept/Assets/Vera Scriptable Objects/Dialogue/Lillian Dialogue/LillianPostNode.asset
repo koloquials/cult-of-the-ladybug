@@ -19,12 +19,12 @@ MonoBehaviour:
       deceit.
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   - line: Even Theo. He promised me great, beautiful things that will never come to
       be. He lied.
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   - line: I would not trust a single soul in these halls. Hold those most capable
       of lying close.
     valuableInfo: 0
@@ -33,5 +33,5 @@ MonoBehaviour:
   - line: I have the utmost faith in you.
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 2
   informationIndex: 0

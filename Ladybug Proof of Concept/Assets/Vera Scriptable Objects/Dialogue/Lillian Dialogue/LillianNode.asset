@@ -13,13 +13,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
-  clueDiscovered: {fileID: 0}
+  cluesDiscovered: []
   dialogueLines:
   - line: Ah, greetings! For a brief moment, you frightened the daylight straight
       out of me.
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 2
   - line: 'You were an acquaintance of Theo, yes? He mentioned you before, darling. '
     valuableInfo: 0
     duelTrigger: 0
@@ -32,5 +32,5 @@ MonoBehaviour:
   - line: 'Please, do not let a shaken creature such as myself keep you. '
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   informationIndex: 0

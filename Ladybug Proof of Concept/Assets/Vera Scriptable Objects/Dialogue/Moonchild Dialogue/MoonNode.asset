@@ -26,12 +26,12 @@ MonoBehaviour:
       my source of income?
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   - line: In this line of work, I do little more than learn what people want to hear,
       and say it.
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   - line: 'But in my learnings, I would say those with deepseated dissatisfactions
       towards our host warrant investigation. '
     valuableInfo: 1
@@ -41,5 +41,5 @@ MonoBehaviour:
       this nugget of insight from one observer to another.
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 2
   informationIndex: 4
