@@ -54,50 +54,89 @@ MonoBehaviour:
     linesInScene:
     - "It was so good that you could make it, truly. Everyone we are in esteemed company,
       it\u2019s been a while since we\u2019ve had a new guest join us."
-    - In fact, hah, the last was probably you, Gerald.
     blackfadeAlpha: 0.6
     narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
-      tone: 0
-    - thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
-      tone: 0
-    - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
-      tone: 0
-    currentSpeaker:
-      thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
-      tone: 0
-    linesInScene:
-    - "Couldn\u2019t have you doing these alone with such. Folk."
-    blackfadeAlpha: 0.6
-    narration: 0
-  - actorsInScene:
-    - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
-      tone: 0
+      tone: 2
     - thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
       tone: 0
     - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
       tone: 0
     currentSpeaker:
       thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+      tone: 2
+    linesInScene:
+    - In fact, hah, the last was probably you, Gerald.
+    blackfadeAlpha: 0.6
+    narration: 0
+  - actorsInScene:
+    - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+      tone: 2
+    - thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+      tone: 1
+    - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
       tone: 0
+    currentSpeaker:
+      thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+      tone: 1
+    linesInScene:
+    - "Couldn\u2019t have you doing these alone with such. Folk."
+    blackfadeAlpha: 0.6
+    narration: 0
+  - actorsInScene:
+    - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+      tone: 1
+    - thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+      tone: 1
+    - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
+      tone: 0
+    currentSpeaker:
+      thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+      tone: 1
     linesInScene:
     - "Well, come now, don\u2019t be rude. Suzanne is a guest."
     blackfadeAlpha: 0.6
     narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
-      tone: 0
+      tone: 1
     - thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
-      tone: 0
-    - thisActor: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
+      tone: 1
+    - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
       tone: 0
     currentSpeaker:
       thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
-      tone: 0
+      tone: 1
     linesInScene:
     - Mm.
+    blackfadeAlpha: 0.6
+    narration: 0
+  - actorsInScene:
+    - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+      tone: 1
+    - thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+      tone: 0
+    - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
+      tone: 0
+    currentSpeaker:
+      thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+      tone: 1
+    linesInScene:
     - It has been half a year by now.
+    blackfadeAlpha: 0.6
+    narration: 0
+  - actorsInScene:
+    - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+      tone: 0
+    - thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+      tone: 2
+    - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
+      tone: 0
+    currentSpeaker:
+      thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+      tone: 2
+    linesInScene:
     - "Welcome. Any friend of Theo\u2019s, I will be watching closely."
     blackfadeAlpha: 0.6
     narration: 0
@@ -105,7 +144,7 @@ MonoBehaviour:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
     - thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
-      tone: 0
+      tone: 2
     - thisActor: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
       tone: 0
     currentSpeaker:
@@ -113,9 +152,37 @@ MonoBehaviour:
       tone: 0
     linesInScene:
     - I am Moonchild and I will be at your deepest service tonight.
+    blackfadeAlpha: 0.6
+    narration: 0
+  - actorsInScene:
+    - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+      tone: 0
+    - thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+      tone: 0
+    - thisActor: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
+      tone: 2
+    currentSpeaker:
+      thisActor: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
+      tone: 0
+    linesInScene:
     - Such a joy that you could join us on this journey into the unknown, my child.
     - 'This will be the eighth seance I have conducted with mister Theodore here,
       in his lovely estate. '
+    blackfadeAlpha: 0.6
+    narration: 0
+  - actorsInScene:
+    - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+      tone: 0
+    - thisActor: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
+      tone: 2
+    - thisActor: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
+      tone: 2
+    currentSpeaker:
+      thisActor: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
+      tone: 0
+    linesInScene:
+    - 'Yes, this lovely affair started from such humble beginnings! '
+    - Originally it was just Moonchild, Theodore, and I!
     blackfadeAlpha: 0.6
     narration: 0
   - actorsInScene:
@@ -129,14 +196,12 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
       tone: 0
     linesInScene:
-    - 'Yes, this lovely affair started from such humble beginnings! '
-    - Originally it was just Moonchild, Theodore, and I!
     - Our ventures have grown slowly, but dazzlingly, over the years.
     blackfadeAlpha: 0.6
     narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
-      tone: 0
+      tone: 2
     - thisActor: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
       tone: 0
     - thisActor: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
@@ -151,14 +216,14 @@ MonoBehaviour:
     narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
-      tone: 0
+      tone: 2
     - thisActor: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
       tone: 0
     - thisActor: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
       tone: 0
     currentSpeaker:
       thisActor: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
-      tone: 0
+      tone: 2
     linesInScene:
     - Oh but darling, it was all you! Without you the stars would not have aligned
       so.
@@ -176,6 +241,19 @@ MonoBehaviour:
       tone: 0
     linesInScene:
     - Only if you insist.
+    blackfadeAlpha: 0.6
+    narration: 0
+  - actorsInScene:
+    - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+      tone: 2
+    - thisActor: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
+      tone: 0
+    - thisActor: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
+      tone: 0
+    currentSpeaker:
+      thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+      tone: 0
+    linesInScene:
     - The two keeping quiet in the corner are uncle Marino and aunt Gertrude.
     blackfadeAlpha: 0.6
     narration: 0
@@ -183,7 +261,7 @@ MonoBehaviour:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
     - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
-      tone: 0
+      tone: 2
     - thisActor: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
       tone: 0
     currentSpeaker:
@@ -200,6 +278,34 @@ MonoBehaviour:
       tone: 0
     - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
       tone: 0
+    - thisActor: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
+      tone: 0
+    currentSpeaker:
+      thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
+      tone: 0
+    linesInScene:
+    - I do think these occasions are certainly, interesting.
+    blackfadeAlpha: 0.6
+    narration: 0
+  - actorsInScene:
+    - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+      tone: 0
+    - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
+      tone: 2
+    - thisActor: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
+      tone: 0
+    currentSpeaker:
+      thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
+      tone: 0
+    linesInScene:
+    - 'Nonetheless, if you are a guest of his, then you have my hospitality. '
+    blackfadeAlpha: 0.6
+    narration: 0
+  - actorsInScene:
+    - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+      tone: 0
+    - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
+      tone: 2
     - thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
       tone: 0
     currentSpeaker:
@@ -207,6 +313,19 @@ MonoBehaviour:
       tone: 0
     linesInScene:
     - "And as he said, I\u2019m Marino. Pleasant evening to you miss."
+    blackfadeAlpha: 0.6
+    narration: 0
+  - actorsInScene:
+    - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+      tone: 0
+    - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
+      tone: 0
+    - thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
+      tone: 0
+    currentSpeaker:
+      thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
+      tone: 0
+    linesInScene:
     - "I\u2019m a family friend, his father and I were like brothers."
     blackfadeAlpha: 0.6
     narration: 0
@@ -230,18 +349,31 @@ MonoBehaviour:
     - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
       tone: 0
     - thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
-      tone: 0
+      tone: 1
     currentSpeaker:
       thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
       tone: 0
     linesInScene:
     - Do you enjoy starting quarrels before a rite, woman?
-    - "Let\u2019s get this underway, why don\u2019t we? "
     blackfadeAlpha: 0.6
     narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
+    - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
+      tone: 0
+    - thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
+      tone: 0
+    currentSpeaker:
+      thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
+      tone: 0
+    linesInScene:
+    - "Let\u2019s get this underway, why don\u2019t we? "
+    blackfadeAlpha: 0.6
+    narration: 0
+  - actorsInScene:
+    - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+      tone: 1
     - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
       tone: 0
     - thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
@@ -256,7 +388,7 @@ MonoBehaviour:
     narration: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
-      tone: 0
+      tone: 1
     - thisActor: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
       tone: 0
     - thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}

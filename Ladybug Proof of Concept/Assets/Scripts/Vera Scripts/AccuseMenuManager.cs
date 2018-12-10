@@ -12,6 +12,8 @@ public class AccuseMenuManager : MonoBehaviour {
     public GameObject accuseMenu;
     public Button openAccuseMenu;
 
+    public Cutscene gameOver, gameWon;
+
     public int culpritIndex;
     int accuseIndex;
 
@@ -190,9 +192,11 @@ public class AccuseMenuManager : MonoBehaviour {
         if(selectedClues.Count == clueDropdowns.Length){
             if (Tally() && (accuseIndex==culpritIndex)){
                 dialogueManager.currentGameState = DialogueManager.GameState.Win;
+                dialogueManager.endingCutscene = gameWon;
                 Debug.Log("Win");
             } else {
                 dialogueManager.currentGameState = DialogueManager.GameState.TimerOut;
+                dialogueManager.endingCutscene = gameOver;
                 Debug.Log("Lose");
             }
         } else {
