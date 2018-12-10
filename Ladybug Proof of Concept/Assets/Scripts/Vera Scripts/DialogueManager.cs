@@ -42,6 +42,9 @@ public class DialogueManager : MonoBehaviour
     public NPC activeNPC; //npc that is being interacted with
     public EnvObjectManager activeObject;
 
+    public AudioSource bgNorm;
+    public AudioSource bgDuel;
+
     private int nodeIndex = 0; //node index for the dialogue node [] on the dialogue tree
     private int lineIndex = 0; //line index for the line [] on the dialogue nodes
 
@@ -242,12 +245,18 @@ public class DialogueManager : MonoBehaviour
                 duelTrigger.SetActive(true);
                 if (Input.GetKeyUp(KeyCode.Space))
                 {
+                    bgNorm.Stop();
+                    bgDuel.Play();
                     currentGameState = GameState.DuelActive;
+
                 }
             }
             else
             {
+                bgNorm.Play();
+                bgDuel.Stop();
                 duelTrigger.SetActive(false);
+
             }
 
             UnlockInformation(treeToRun.dialogueNodes[nodeIndex]);
