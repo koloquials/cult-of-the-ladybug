@@ -27,7 +27,7 @@ MonoBehaviour:
   - line: 'Theo left behind a world of financial issues we''ll have to shoulder. '
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   - line: Taking responsibility is one thing, but we will not be without spite.
     valuableInfo: 0
     duelTrigger: 0

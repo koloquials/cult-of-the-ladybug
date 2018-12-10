@@ -24,12 +24,12 @@ MonoBehaviour:
   - line: 'I am not the fiend you are looking for, I promise you this. '
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   - line: For all the decades I've known him, Theo has always been eager to please.
       He lacked the ability to see past others' fronts.
     valuableInfo: 1
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   - line: I'm confident whoever took advange of him, whoever wanted his money must
       be the culprit.
     valuableInfo: 1

@@ -20,7 +20,7 @@ MonoBehaviour:
   - line: When he lost his parents young, I cared for Theodore like he was my own.
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 2
   - line: Admittedly, from a distance. I'm no good with these things.
     valuableInfo: 0
     duelTrigger: 0
@@ -29,7 +29,7 @@ MonoBehaviour:
       dusty old crow, but tough.
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   - line: She would have a better grasp of his personal affairs.
     valuableInfo: 1
     duelTrigger: 0

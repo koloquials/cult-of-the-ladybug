@@ -21,7 +21,7 @@ MonoBehaviour:
   - line: Hello. Lets get pleasantries over with.
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   - line: I am Gerald Hauser, friend and business partner to our late host.
     valuableInfo: 0
     duelTrigger: 1
@@ -29,9 +29,9 @@ MonoBehaviour:
   - line: What you must know is that this whole seance business is a silly farse.
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   - line: 'I''ve never considered this sort of thing a propitious idea. '
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   informationIndex: 0
