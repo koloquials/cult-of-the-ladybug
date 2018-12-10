@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clueDescription: Gerald is not a believer.
   dossierEntries:
-  - personInQuestion: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
+  - personInQuestion: {fileID: 0}
     dossierEntry: Does not believe in the supernatural whatsoever. Sees seances as
       scams and wastes of time.
   relationshipsToDisclose: []

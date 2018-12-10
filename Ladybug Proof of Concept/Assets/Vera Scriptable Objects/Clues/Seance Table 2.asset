@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b6b94f8423fb47bfadebbcb71b2f524, type: 3}
+  m_Name: Seance Table 2
+  m_EditorClassIdentifier: 
+  clueDescription: Fake seance
+  dossierEntries:
+  - personInQuestion: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
+    dossierEntry: "You look under the table and discover an odd metal box--a fog machine!
+      The fog is \r\nfed through a tube into the crystal ball on the table, to create
+      the illusion of magic.\r\n"
+  relationshipsToDisclose: []
+  accuseMenuDropdown: Secret Fog Machine
+  accuseMenuDescription: 
+  index: 0

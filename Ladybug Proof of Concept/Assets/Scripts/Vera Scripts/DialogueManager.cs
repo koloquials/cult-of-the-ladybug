@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     public Canvas duelCanvas; //reference to the Duel Canvas
     public Canvas descriptionCanvas;
     public Canvas cutsceneCanvas;
+    public Canvas hudCanvas;
 
     TimeManager timeManager; //reference to the time manager 
     VariableStorage variableStorage; //reference to information storage
@@ -74,11 +75,15 @@ public class DialogueManager : MonoBehaviour
         descriptionText = descriptionCanvas.gameObject.transform.Find("Description").GetComponent<Text>();
         descriptionText.text = null;
         descriptionCanvas.gameObject.SetActive(false);
+        hudCanvas.gameObject.SetActive(false);
 
 
     }
     private void Update()
     {
+        if(currentGameState == GameState.OverworldActive){
+            hudCanvas.gameObject.SetActive(true);
+        }
 
         if(currentGameState == GameState.IntroScene){
             RunCutScene(introCutscene, cutsceneText);
@@ -88,6 +93,7 @@ public class DialogueManager : MonoBehaviour
         if (currentGameState==GameState.DialogueActive) //turns the dialogue canvas on and runs dialogue when dialogue is triggered 
         {
             dialogueCanvas.gameObject.SetActive(true);
+            hudCanvas.gameObject.SetActive(false);
             RunDialogue();
         }
         else if (currentGameState!=GameState.DialogueActive) //turns the dialogue canvas off and stops dialogue when dialogue is finished or cancelled
@@ -107,6 +113,7 @@ public class DialogueManager : MonoBehaviour
         if (currentGameState==GameState.DuelActive) 
         {
             EnableDuel(); //enables the duel when it is triggered
+            hudCanvas.gameObject.SetActive(false);
 
             if (activeDuel.duelFinished && currentGameState!=GameState.DialogueActive)
             {
@@ -332,6 +339,7 @@ public class DialogueManager : MonoBehaviour
         currentGameState = GameState.DescriptionActive;
         Debug.Log("here");
         lineComplete = false;
+        hudCanvas.gameObject.SetActive(false);
     }
 
     DialogueNode nodeToRun;
