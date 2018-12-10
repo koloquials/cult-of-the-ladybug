@@ -9,8 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ee5ebb426ddc4629bc439ea14a170f5, type: 3}
-  m_Name: SeanceTable
+  m_Name: seance 2
   m_EditorClassIdentifier: 
   objectName: 
-  objectDescription: {fileID: 11400000, guid: d2939a0db00fd7740b5fdd6678babcbc, type: 2}
+  objectDescription: {fileID: 11400000, guid: 214e5b8aa36d5c644b994843cad38971, type: 2}
   objectSprite: {fileID: 0}

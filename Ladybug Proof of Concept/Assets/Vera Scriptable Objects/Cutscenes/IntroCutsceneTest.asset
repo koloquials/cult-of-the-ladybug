@@ -19,8 +19,8 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
     linesInScene:
-    - "Damn. Despite the life you\u2019d lived, you never expected yourself front
-      and center of the scene you now inhabited."
+    - "Despite the life you\u2019d lived, you never expected yourself front and center
+      of the scene you now inhabited."
     - When you answered the beck and call of an old friend, someone who last surfaced
       during your university days, you imagined Theodore would want to catch up over
       lunch in a cafe.
@@ -299,4 +299,4 @@ MonoBehaviour:
     - '...'
     - 'It seemed you had different work to do tonight. '
     blackfadeAlpha: 0
-    narration: 0
+    narration: 1
