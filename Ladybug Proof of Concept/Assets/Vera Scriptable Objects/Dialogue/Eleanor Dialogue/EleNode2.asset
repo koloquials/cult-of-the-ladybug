@@ -19,7 +19,7 @@ MonoBehaviour:
       his death will not absolve. '
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   - line: It will be hard, even impossible, for me to forget this facet of him.
     valuableInfo: 0
     duelTrigger: 0
@@ -32,7 +32,7 @@ MonoBehaviour:
   - line: I take more pride in my work than this.
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 2
   - line: "If I were you, I\u2019d be careful of what everyone here says. You\u2019re
       a private investigator for a living, aren\u2019t you?"
     valuableInfo: 0

@@ -20,17 +20,17 @@ MonoBehaviour:
       this.
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   - line: Theodore promised me that he would return the spark of inspiration to my
       life, and he lied.
     valuableInfo: 1
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   - line: Now he's dead, and the world is just as dark for it. What more is there
       to say?
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   - line: Tonight, we can't trust a single person in this mansion. Be vigilant, please.
     valuableInfo: 0
     duelTrigger: 0
@@ -38,5 +38,5 @@ MonoBehaviour:
   - line: I'm counting on you.
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 2
   informationIndex: 6

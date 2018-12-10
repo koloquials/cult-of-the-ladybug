@@ -13,10 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
-  clueDiscovered: {fileID: 0}
+  cluesDiscovered: []
   dialogueLines:
   - line: Don't think I don't see you snooping around. Are you another shady acquaintance
-      of young Theo?
+      of young Theo's afterall?
     valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0
@@ -33,5 +33,5 @@ MonoBehaviour:
       him now.
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   informationIndex: 0

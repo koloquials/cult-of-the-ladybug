@@ -24,7 +24,7 @@ MonoBehaviour:
       of social pressure.
     valuableInfo: 1
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   - line: But I'll shoulder them from here. What irresponsible guardian would I be
       otherwise?
     valuableInfo: 0

@@ -24,7 +24,7 @@ MonoBehaviour:
   - line: That, and I did my research, of course.
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 2
   - line: I already know plenty about each and every guest in attendance. It is my
       trade to know things, after all.
     valuableInfo: 0
@@ -39,5 +39,5 @@ MonoBehaviour:
       of luck, little detective.
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 2
   informationIndex: 0

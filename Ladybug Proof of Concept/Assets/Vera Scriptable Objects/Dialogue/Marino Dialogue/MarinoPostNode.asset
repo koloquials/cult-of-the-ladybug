@@ -23,9 +23,9 @@ MonoBehaviour:
       personal affairs.
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 1
   - line: Everything else, you can decide for yourself. God bless you.
     valuableInfo: 0
     duelTrigger: 0
-    deliveryTone: 0
+    deliveryTone: 2
   informationIndex: 0
