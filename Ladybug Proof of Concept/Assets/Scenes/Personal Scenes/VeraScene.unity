@@ -4297,13 +4297,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Press Space to Start Duel
+  m_Text: 'Press Space to Start Duel.
 
 '
 --- !u!222 &528584854
@@ -15949,21 +15949,19 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 12c170f55386f4a668acc0d00e0a03fc, type: 3}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 7fe22841a27e442818c4ea1dcdbe1969, type: 3}
+    m_FontSize: 46
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 0.7
-  m_Text: 'Press Space to Start Duel
-
-'
+    m_LineSpacing: 1.05
+  m_Text: Press Space to Start Duel.
 --- !u!222 &1645728288
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17298,7 +17296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1822658871
 MonoBehaviour:
   m_ObjectHideFlags: 0
