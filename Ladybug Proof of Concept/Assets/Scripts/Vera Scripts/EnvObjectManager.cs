@@ -24,7 +24,7 @@ public class EnvObjectManager : MonoBehaviour {
     void CheckForPlayer()
     {
 
-        print("Activate the fucking particles");
+        print("Activate the particles");
 
         var player = FindObjectOfType<PlayerMove>();
         if ((transform.position-player.gameObject.transform.position).magnitude <= player.interactionRadius)

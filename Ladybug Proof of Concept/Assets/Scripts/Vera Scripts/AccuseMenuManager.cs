@@ -122,6 +122,10 @@ public class AccuseMenuManager : MonoBehaviour {
         if(unlockedClues.Count == cluesNeededToAccuse.Count){
             canAccuse = true;
         }
+        else if(unlockedClues.Count >= cluesNeededToAccuse.Count)
+        {
+            canAccuse = true;
+        }
     }
 
     public void ToggleMenu(GameObject menu){

@@ -36,7 +36,7 @@ public class ConditionalDuelManager : MonoBehaviour {
 
     public void DuelConditionManagement(DuelCondition condition){
         int conditionsMet = 0;
-        print("we in this bitch");
+        //print("we in this bitch");
         if(condition.cluesNeededForCondition.Count!=0){
             foreach(var c in condition.cluesNeededForCondition){
                 if(!variables.clueList.Contains(c)){
