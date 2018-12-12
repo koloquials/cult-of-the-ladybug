@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour{
     public float interactionRadius, objInteract, speed;
     public bool dossierActive = false;
+    bool particlesActive;
+    public GameObject particles;
     DialogueManager dialogue;
     public void Start()
     {
@@ -65,7 +67,7 @@ public class PlayerMove : MonoBehaviour{
         var allObjects = new List<EnvObjectManager>(FindObjectsOfType<EnvObjectManager>());
         var obj = allObjects.Find(delegate (EnvObjectManager env)
         {
-            print("here");
+            //print("here");
             return (env.transform.position - this.transform.position).magnitude <= (objInteract);
            
 
@@ -73,8 +75,20 @@ public class PlayerMove : MonoBehaviour{
 
         if(obj!=null){
             transform.GetChild(0).gameObject.SetActive(true);
+            if(!particlesActive){
+                print("Particles in");
+                Instantiate(particles, obj.transform);
+                particlesActive = true;
+            }
         } else {
             transform.GetChild(0).gameObject.SetActive(false);
+            foreach(var o in allObjects){
+                for (int i = 0; i < o.transform.childCount; i++){
+                    Destroy(o.transform.GetChild(i).gameObject);
+                }
+            }
+            particlesActive = false;
+            print("Particles out");
         }
 
         if(obj != null && Input.GetKeyDown(KeyCode.E) && dialogue.currentGameState == DialogueManager.GameState.OverworldActive){
