@@ -60,7 +60,9 @@ public class DuelManager : MonoBehaviour {
     {
         if (inDuel == false && duelFinished == false && typing == false && resumeInterrogation == false){
             enemyBox.text = "";
-            type = StartCoroutine(TypeText(enemies[enemyId].name, enemies[enemyId].dialogue[step], ("\n\n[space]")));
+            //type = StartCoroutine(TypeText(enemies[enemyId].name, enemies[enemyId].dialogue[step], ("\n\n[space]")));
+            type = StartCoroutine(TypeText((""), enemies[enemyId].dialogue[step], ("")));
+
             inDuel = true;
             typingStart = true;
         }
@@ -68,6 +70,7 @@ public class DuelManager : MonoBehaviour {
             StopCoroutine(type);
             typing = false;
             enemyBox.text = (enemies[enemyId].name + enemies[enemyId].dialogue[step] + "\n\n[space]");
+
             inDuel = true;
             typingStart = false;
 
@@ -304,7 +307,11 @@ public class DuelManager : MonoBehaviour {
 
         textBox.text = (enemies[enemyId].options[optStep - 1 + playerType]);
         enemyBox.text = "";
-        type = StartCoroutine(TypeText((""), (enemies[enemyId].dialogue[step]), ("\n [space]")));
+        //type = StartCoroutine(TypeText((""), (enemies[enemyId].dialogue[step]), ("\n [space]")));
+        //fixes
+        type = StartCoroutine(TypeText((""), (enemies[enemyId].dialogue[step]), ("")));
+
+        textBox.text += "\n\n[space]";
 
         processTable = true;
         combatRound = true;

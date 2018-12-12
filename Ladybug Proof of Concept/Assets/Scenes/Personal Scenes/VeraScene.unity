@@ -14233,13 +14233,12 @@ MonoBehaviour:
   gameOver: {fileID: 11400000, guid: c5d7be0d18d4e42f89fcc832a68f1934, type: 2}
   gameWon: {fileID: 11400000, guid: 62215a5fd5cb848489be305b559491f5, type: 2}
   culpritIndex: 0
-  cluesNeededToAccuse:
-  - {fileID: 11400000, guid: e6bee93a37edd4b528d46ef756d01f08, type: 2}
+  cluesNeededToAccuse: []
   accuseBacking: {fileID: 2109259441}
   clueDropdowns:
   - {fileID: 463586957}
   correctClues:
-  - {fileID: 11400000, guid: e6bee93a37edd4b528d46ef756d01f08, type: 2}
+  - {fileID: 11400000, guid: 7c2d637f2aaa9b04faec88462d81132d, type: 2}
   accuseButtons:
   - thisNpc: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
     accusalButton: {fileID: 1729701822}
