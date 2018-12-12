@@ -77,8 +77,18 @@ public class PlayerMove : MonoBehaviour{
             transform.GetChild(0).gameObject.SetActive(true);
             if(!particlesActive){
                 print("Particles in");
-                Instantiate(particles, obj.transform);
+                
+                GameObject party = Instantiate(particles, obj.transform);
+                
                 particlesActive = true;
+                //if parent is named ash tray, coat rack or purse, cut shape scale x in half
+                if (party.transform.parent.name == "lillian's purse" || party.transform.parent.name == "ash tray" || party.transform.parent.name == "coat rack")
+                {
+                    //Debug.Log("scale change");
+                    ParticleSystem pr = party.GetComponent<ParticleSystem>();
+                    ParticleSystem.ShapeModule shape = pr.shape;
+                    shape.scale = new Vector3(1.815f, .94f, 1);
+                }
             }
         } else {
             transform.GetChild(0).gameObject.SetActive(false);
@@ -88,7 +98,7 @@ public class PlayerMove : MonoBehaviour{
                 }
             }
             particlesActive = false;
-            print("Particles out");
+            //print("Particles out");
         }
 
         if(obj != null && Input.GetKeyDown(KeyCode.E) && dialogue.currentGameState == DialogueManager.GameState.OverworldActive){

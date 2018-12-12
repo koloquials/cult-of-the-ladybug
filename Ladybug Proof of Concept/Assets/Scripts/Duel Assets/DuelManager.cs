@@ -22,6 +22,12 @@ public class DuelManager : MonoBehaviour {
     public bool playerLose = false; //if enemy has won
     public bool duelFinished = false; //if the duel is over
 
+    private bool hasPlayed = false;
+    public AudioSource importantSFX;
+    public AudioClip success;
+    public AudioClip failure;
+
+
     int playerPos; //player's tile on the board: 0 to 6
     int playerLine; //the right-most tile player controls on the board.
     int playerType; //dialogue type player picks: 1 = concede, 2 = stand ground, 3 = aggressive, 4 = insult
@@ -248,22 +254,50 @@ public class DuelManager : MonoBehaviour {
     void DetermineType(int playerTy, int enemyTy)
     {
         Debug.Log("playerType is: " + playerTy);
+        hasPlayed = false;
         switch (playerTy){
             case 1:
                 textBox.text = "";
+                if (!hasPlayed)
+                {
+                    importantSFX.PlayOneShot(failure);
+                    Debug.Log("failure");
+                }
+                hasPlayed = true;
                 Debug.Log("[very bad] ");
                 break;
             case 2:
                 textBox.text = "";
+                if (!hasPlayed)
+                {
+                    importantSFX.PlayOneShot(failure);
+                    Debug.Log("failure");
+                }
+                hasPlayed = true;
                 Debug.Log("[bad] ");
                 break;
             case 3:
                 textBox.text = "";
+                if (!hasPlayed)
+                {
+                    importantSFX.PlayOneShot(failure);
+                    Debug.Log("failure");
+                }
+                hasPlayed = true;
                 Debug.Log("[okay] ");
                 break;
             case 4:
                 //where the correct answer is shown
                 textBox.text = "[!] ";
+
+                //play important sfx here
+                if (!hasPlayed)
+                {
+                    importantSFX.PlayOneShot(success);
+                    Debug.Log("success");
+                }
+                hasPlayed = true;
+
                 Debug.Log("[great] ");
                 break;
         }
