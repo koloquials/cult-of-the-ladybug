@@ -15,7 +15,7 @@ public class Lillian : Enemy {
 
         dialogue.Add("\"Oh, my! Please, I'm not sure my poor heart can take this at the moment. But what can I do for you?”");
         options.Add("Please, darling, I just need a few moments of your time if you'd spare them.\n");
-        options.Add("You can start by helling me what the hell's up with you!\n");
+        options.Add("You can start by telling me what the hell's up with you!\n");
         options.Add("Well, I'm going around asking questions. Do you have any answers?\n");
         options.Add("I have to barge in, regardless. Could you help clarify some things?\n");
         dialogue.Add("\"Are you sure you've talked to everyone? You've already done that?\"\n");
