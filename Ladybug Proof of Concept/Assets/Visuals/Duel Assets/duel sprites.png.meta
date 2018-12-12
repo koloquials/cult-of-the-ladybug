@@ -1,10 +1,15 @@
 fileFormatVersion: 2
-guid: 8bae6c8b48c964331a385696b5a9e40c
+guid: 8835d02a9999a4affbb666694fde0951
 TextureImporter:
   fileIDToRecycleName:
-    21300000: duel_tiles_0
-    21300002: duel_tiles_1
-    21300004: duel_tiles_2
+    21300000: duel sprites_0
+    21300002: duel sprites_1
+    21300004: duel sprites_2
+    21300006: duel sprites_3
+    21300008: duel sprites_4
+    21300010: duel sprites_5
+    21300012: duel sprites_6
+    21300014: duel sprites_7
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -98,13 +103,93 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: duel_tiles_0
+      name: duel sprites_0
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 270
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a57611d3e92fc4779a8c6357b1d02477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duel sprites_1
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 274
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f86fcfeddad349149e98ac3ef4eca20
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duel sprites_2
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 271
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf6c5640f9054acf999fe80ca6fbdb4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duel sprites_3
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 263
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cdcf2fdfadac4d4188b00d1eb494294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duel sprites_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 273.66666
-        height: 126
+        width: 276
+        height: 246
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,19 +197,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a22458b94ef454dbea79f1f7492b4ab7
+      spriteID: 4ff6e1201f0994c4487b1e350b1eae00
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: duel_tiles_1
+      name: duel sprites_5
       rect:
         serializedVersion: 2
-        x: 273
+        x: 304
         y: 0
-        width: 273.66666
-        height: 126
+        width: 277
+        height: 246
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,19 +217,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb2e3ebca2ac54472a6d56a6c1026428
+      spriteID: e951eab6da7234517b597c34d64657ce
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: duel_tiles_2
+      name: duel sprites_6
       rect:
         serializedVersion: 2
-        x: 546
-        y: 0
-        width: 273.66666
-        height: 126
+        x: 631
+        y: 7
+        width: 393
+        height: 262
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,7 +237,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 756d573f6fa8c44d2a9e29d15f2235f3
+      spriteID: 91d8bb9ae571f4ac8a003d02f4833a88
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duel sprites_7
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 11
+        width: 217
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a10fc66311249b0b817f31e26c497c
       vertices: []
       indices: 
       edges: []
@@ -160,7 +265,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d150f6d457e9847f490470adadb5f097
+    spriteID: de750325f395b4b868f4bbbeaa08688e
     vertices: []
     indices: 
     edges: []
