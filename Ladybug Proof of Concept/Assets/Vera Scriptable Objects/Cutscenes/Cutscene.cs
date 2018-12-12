@@ -13,6 +13,7 @@ public class Cutscene : ScriptableObject {
         [TextArea(4,6)]
         public string[] linesInScene;
         public float blackfadeAlpha;
+        public bool theoDead;
         public bool narration;
         public bool exit;
     }

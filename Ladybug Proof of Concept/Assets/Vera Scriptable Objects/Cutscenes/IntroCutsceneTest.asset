@@ -37,6 +37,7 @@ MonoBehaviour:
     - "You\u2019ve done light research on them, but Theo wanted you to do more at
       the seance. Unorthodox, but it wasn\u2019t like you got out much.\n"
     blackfadeAlpha: 0
+    theoDead: 0
     narration: 1
     exit: 0
   - actorsInScene:
@@ -53,6 +54,7 @@ MonoBehaviour:
     - "It is so good that you could make it, truly. Everyone, we are in esteemed company!
       It\u2019s been a while since we\u2019ve had a new guest join us."
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -68,6 +70,7 @@ MonoBehaviour:
     linesInScene:
     - In fact, the last was probably you, Gerald. Haha!
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -83,6 +86,7 @@ MonoBehaviour:
     linesInScene:
     - "Couldn\u2019t have you doing this alone with such folk."
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -98,6 +102,7 @@ MonoBehaviour:
     linesInScene:
     - "Come now, don\u2019t be rude. Suzanne is my guest."
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -113,6 +118,7 @@ MonoBehaviour:
     linesInScene:
     - Mm.
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -128,6 +134,7 @@ MonoBehaviour:
     linesInScene:
     - It has been half a year by now.
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -143,6 +150,7 @@ MonoBehaviour:
     linesInScene:
     - "Welcome. Any friend of Theo\u2019s, I will be watching closely."
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -158,6 +166,7 @@ MonoBehaviour:
     linesInScene:
     - I am Moonchild and I will be leading this ritual tonight.
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -175,6 +184,7 @@ MonoBehaviour:
     - 'This will be the eighth seance I have conducted with Mister Hampshire in his
       lovely estate. '
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -191,6 +201,7 @@ MonoBehaviour:
     - 'Yes, this lovely affair started from such humble beginnings! '
     - Originally it was just Moonchild, Theodore, and I!
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -206,6 +217,7 @@ MonoBehaviour:
     linesInScene:
     - Our adventures have grown slowly, but dazzlingly, over the years.
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -221,6 +233,7 @@ MonoBehaviour:
     linesInScene:
     - 'Lillian, my love, was the one that truly brought us together, in that aspect. '
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -236,6 +249,7 @@ MonoBehaviour:
     linesInScene:
     - Oh darling, it was all you! Without you, the stars would not have aligned so.
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -251,6 +265,7 @@ MonoBehaviour:
     linesInScene:
     - If you insist!
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -266,6 +281,7 @@ MonoBehaviour:
     linesInScene:
     - The two keeping quiet in the corner are Uncle Marino and Aunt Eleanor.
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -281,6 +297,7 @@ MonoBehaviour:
     linesInScene:
     - "I am, of course, Theodore\u2019s aunt by blood."
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -296,6 +313,7 @@ MonoBehaviour:
     linesInScene:
     - I do think these occasions are certainly...interesting.
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -311,6 +329,7 @@ MonoBehaviour:
     linesInScene:
     - 'But nevermind that. If you are a guest of his, then you have my hospitality. '
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -326,6 +345,7 @@ MonoBehaviour:
     linesInScene:
     - "And as he said, I\u2019m Marino. Pleasant evening to you miss."
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -341,6 +361,7 @@ MonoBehaviour:
     linesInScene:
     - "I\u2019m a family friend, his father and I were like brothers."
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -356,6 +377,7 @@ MonoBehaviour:
     linesInScene:
     - "But you weren\u2019t. Not really."
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -371,6 +393,7 @@ MonoBehaviour:
     linesInScene:
     - Do you enjoy starting quarrels before a rite, woman?
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -386,6 +409,7 @@ MonoBehaviour:
     linesInScene:
     - "Let\u2019s get this underway, why don\u2019t we? "
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -402,6 +426,7 @@ MonoBehaviour:
     - "Y-yes! Now that these introductions are out of the way, why don\u2019t we allow
       Moonchild to get set up? "
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -419,6 +444,7 @@ MonoBehaviour:
     - Soon we will see if any departed souls would like to fill the still-empty space
       left in this room and make itself known.
     blackfadeAlpha: 0.6
+    theoDead: 0
     narration: 0
     exit: 0
   - actorsInScene:
@@ -435,16 +461,44 @@ MonoBehaviour:
     - "With that, the night\u2019s festivities were to begin. Smoke billowed out from
       below the table, accompanied by a faint whirring sound."
     - It sounds almost like the hum of a motor.
+    blackfadeAlpha: 0.4
+    theoDead: 0
+    narration: 1
+    exit: 0
+  - actorsInScene:
+    - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+      tone: 0
+    - thisActor: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
+      tone: 0
+    - thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
+      tone: 0
+    currentSpeaker:
+      thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+      tone: 0
+    linesInScene:
     - 'Suddenly, the manor''s sparkling chandeliers go out, leaving you in complete
       darkness. '
     - Was this another part of the ritual?
+    blackfadeAlpha: 1
+    theoDead: 0
+    narration: 1
+    exit: 0
+  - actorsInScene:
+    - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
+      tone: 1
+    currentSpeaker:
+      thisActor: {fileID: 0}
+      tone: 1
+    linesInScene:
     - Just as suddenly as they went out, the lights came back on.
     - When they did, Theo had collapsed before you, eight knives embed into his back.
       He was dead.
     - The guests stood aghast at their late host, and retreated towards different
       ends of the mansion, unsure as to how to react.
     - '...'
-    - It would appear you will be working a different case tonight.
-    blackfadeAlpha: 0
+    - It would appear you will be working a different case tonight. Finding a killer,
+      and their motive.
+    blackfadeAlpha: 0.2
+    theoDead: 1
     narration: 1
     exit: 0
