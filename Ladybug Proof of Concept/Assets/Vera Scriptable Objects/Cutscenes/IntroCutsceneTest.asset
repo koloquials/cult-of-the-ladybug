@@ -19,28 +19,26 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
     linesInScene:
-    - "Despite the life you\u2019d lived, you never expected yourself front and center
-      of the scene you now inhabited."
-    - When you answered the beck and call of an old friend, someone who last surfaced
+    - "Despite the life you\u2019d lived, you never expected finding yourself front
+      and center of the scene you now inhabited."
+    - When you answered the invitation of an old friend, someone who last surfaced
       during your university days, you imagined Theodore would want to catch up over
-      lunch in a cafe.
-    - "You imagined when he\u2019d hired you instead, that it would be over some marital
-      dispute or business spat. That was your usual line of work. "
+      a casual lunch.
+    - 'Then he hired you, and you imagined it would be over some domestic dispute
+      or business spat. That was your usual line of work. '
     - But no. Everything about this was strange.
-    - "An opulent table, carved of wood unimaginable to your commission fees\u2019
-      paygrade, felt cool to the touch as your clasped hands set themselves upon it. "
-    - You noted the polished gems and neatly printed, what, tarot cards? Strewn about.
-      For a moment, you ignored the other guests encircling the setting, focusing
-      on your task.
+    - 'An opulent table, carved of wood unimaginable to your paygrade, felt cool to
+      the touch as you set your hands upon it. '
+    - You noted the polished gems and neatly printed tarot cards strewn about. For
+      a moment, you forgot about the other guests around you.
     - "Tonight, you were tasked with observing each of Theo\u2019s friends here. He\u2019d
       said something about wanting to get to know them better. "
-    - This odd request gained your doubts, but who were you to turn down money for
-      a skilled service?
-    - "You\u2019d done precursory research on them, but Theo had wanted you to do
-      more work here at the seance. Unorthodox, but it wasn\u2019t like you got out
-      much.\n"
+    - This odd request gave you doubts, but who were you to turn down money for service?
+    - "You\u2019ve done light research on them, but Theo wanted you to do more at
+      the seance. Unorthodox, but it wasn\u2019t like you got out much.\n"
     blackfadeAlpha: 0
     narration: 1
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -52,10 +50,11 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
     linesInScene:
-    - "It was so good that you could make it, truly. Everyone we are in esteemed company,
-      it\u2019s been a while since we\u2019ve had a new guest join us."
+    - "It is so good that you could make it, truly. Everyone, we are in esteemed company!
+      It\u2019s been a while since we\u2019ve had a new guest join us."
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 2
@@ -67,9 +66,10 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 2
     linesInScene:
-    - In fact, hah, the last was probably you, Gerald.
+    - In fact, the last was probably you, Gerald. Haha!
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 2
@@ -81,9 +81,10 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: 037cb23421383494caf9507be04d863b, type: 2}
       tone: 1
     linesInScene:
-    - "Couldn\u2019t have you doing these alone with such. Folk."
+    - "Couldn\u2019t have you doing this alone with such folk."
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 1
@@ -95,9 +96,10 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 1
     linesInScene:
-    - "Well, come now, don\u2019t be rude. Suzanne is a guest."
+    - "Come now, don\u2019t be rude. Suzanne is my guest."
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 1
@@ -112,6 +114,7 @@ MonoBehaviour:
     - Mm.
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 1
@@ -126,6 +129,7 @@ MonoBehaviour:
     - It has been half a year by now.
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -140,6 +144,7 @@ MonoBehaviour:
     - "Welcome. Any friend of Theo\u2019s, I will be watching closely."
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -151,9 +156,10 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
       tone: 0
     linesInScene:
-    - I am Moonchild and I will be at your deepest service tonight.
+    - I am Moonchild and I will be leading this ritual tonight.
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -166,10 +172,11 @@ MonoBehaviour:
       tone: 0
     linesInScene:
     - Such a joy that you could join us on this journey into the unknown, my child.
-    - 'This will be the eighth seance I have conducted with mister Theodore here,
-      in his lovely estate. '
+    - 'This will be the eighth seance I have conducted with Mister Hampshire in his
+      lovely estate. '
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -185,6 +192,7 @@ MonoBehaviour:
     - Originally it was just Moonchild, Theodore, and I!
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -196,9 +204,10 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
       tone: 0
     linesInScene:
-    - Our ventures have grown slowly, but dazzlingly, over the years.
+    - Our adventures have grown slowly, but dazzlingly, over the years.
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 2
@@ -210,10 +219,10 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
     linesInScene:
-    - 'Lillian, my love, was the one that truly brought us together, in that aspect
-      I think. '
+    - 'Lillian, my love, was the one that truly brought us together, in that aspect. '
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 2
@@ -225,10 +234,10 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: e5b06d0a3c6ed47f99a1cb4a9bbc7e40, type: 2}
       tone: 2
     linesInScene:
-    - Oh but darling, it was all you! Without you the stars would not have aligned
-      so.
+    - Oh darling, it was all you! Without you, the stars would not have aligned so.
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -240,9 +249,10 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
     linesInScene:
-    - Only if you insist.
+    - If you insist!
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 2
@@ -254,9 +264,10 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
     linesInScene:
-    - The two keeping quiet in the corner are uncle Marino and aunt Gertrude.
+    - The two keeping quiet in the corner are Uncle Marino and Aunt Eleanor.
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -268,11 +279,10 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
       tone: 0
     linesInScene:
-    - "I am, of course, Theo\u2019s aunt by blood."
-    - I do think these occasions are certainly, interesting.
-    - 'Nonetheless, if you are a guest of his, then you have my hospitality. '
+    - "I am, of course, Theodore\u2019s aunt by blood."
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -284,9 +294,10 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
       tone: 0
     linesInScene:
-    - I do think these occasions are certainly, interesting.
+    - I do think these occasions are certainly...interesting.
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -298,9 +309,10 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
       tone: 0
     linesInScene:
-    - 'Nonetheless, if you are a guest of his, then you have my hospitality. '
+    - 'But nevermind that. If you are a guest of his, then you have my hospitality. '
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -315,6 +327,7 @@ MonoBehaviour:
     - "And as he said, I\u2019m Marino. Pleasant evening to you miss."
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -329,6 +342,7 @@ MonoBehaviour:
     - "I\u2019m a family friend, his father and I were like brothers."
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -340,9 +354,10 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
       tone: 0
     linesInScene:
-    - "But you weren\u2019t really."
+    - "But you weren\u2019t. Not really."
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -357,6 +372,7 @@ MonoBehaviour:
     - Do you enjoy starting quarrels before a rite, woman?
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -371,6 +387,7 @@ MonoBehaviour:
     - "Let\u2019s get this underway, why don\u2019t we? "
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 1
@@ -386,6 +403,7 @@ MonoBehaviour:
       Moonchild to get set up? "
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 1
@@ -397,11 +415,12 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
       tone: 0
     linesInScene:
-    - "Yes, let\u2019s. Thus with Marino, our party is complete."
-    - Soon we will see if something of a higher calling would like to fill the still-empty
-      space left in this room and make itself known.
+    - "Yes, let\u2019s. And with Suzanne's arrival, our party is complete."
+    - Soon we will see if any departed souls would like to fill the still-empty space
+      left in this room and make itself known.
     blackfadeAlpha: 0.6
     narration: 0
+    exit: 0
   - actorsInScene:
     - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
@@ -413,22 +432,19 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
       tone: 0
     linesInScene:
-    - "With that, the night\u2019s festivities were to begin. Smoke billowed from
-      below the table in a fashion you were familiar with amidst the faintest whirring
-      of a smoke generator. "
-    - 'While your awareness of the machinery shaved the edge off this magic, you supposed
-      you would let it get you into the groove of things. '
-    - "Suddenly then, the halos of light encircling the chandeliers flickered out.
-      You couldn\u2019t see a thing. "
-    - 'Was this another part of the stage magic? No, your season mind wandered somewhere
-      deeper, somewhere dreadful. '
-    - You shook it off, no the lights would come back any second.
+    - "With that, the night\u2019s festivities were to begin. Smoke billowed out from
+      below the table, accompanied by a faint whirring sound."
+    - It sounds almost like the hum of a motor.
+    - 'Suddenly, the manor''s sparkling chandeliers go out, leaving you in complete
+      darkness. '
+    - Was this another part of the ritual?
+    - Just as suddenly as they went out, the lights came back on.
     - When they did, Theo had collapsed before you, eight knives embed into his back.
-      He was very clearly dead.
-    - Just as soon as this scene had reformed into view, the other guests quickly
-      rose from their chairs and gravitated towards different ends of the mansion,
-      unsure as to how to react.
+      He was dead.
+    - The guests stood aghast at their late host, and retreated towards different
+      ends of the mansion, unsure as to how to react.
     - '...'
-    - 'It seemed you had different work to do tonight. '
+    - It would appear you will be working a different case tonight.
     blackfadeAlpha: 0
     narration: 1
+    exit: 0
