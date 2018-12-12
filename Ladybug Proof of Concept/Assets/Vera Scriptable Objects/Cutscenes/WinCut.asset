@@ -47,7 +47,14 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
       tone: 2
     linesInScene:
-    - Exit
-    blackfadeAlpha: 0
-    narration: 0
+    - 'And so it ends. '
+    - The disillusioned woman had felt taken advantage of, having come to what she
+      discovered were fake seances.
+    - With her trust broken, she lashed out at the man she believed to have betrayed
+      her and ended his life.
+    - With the other guests help, you were able to apprehend Lillian and send her
+      off to the police.
+    - Fin.
+    blackfadeAlpha: 1
+    narration: 1
     exit: 1

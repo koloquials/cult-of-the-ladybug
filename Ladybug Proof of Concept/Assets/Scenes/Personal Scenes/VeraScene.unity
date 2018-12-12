@@ -14144,7 +14144,7 @@ MonoBehaviour:
   cutsceneText: {fileID: 1486736374}
   treeToRun: {fileID: 0}
   introCutscene: {fileID: 11400000, guid: d7fc95bbd5ab94dd4a3cb106549562c5, type: 2}
-  endingCutscene: {fileID: 11400000, guid: 62215a5fd5cb848489be305b559491f5, type: 2}
+  endingCutscene: {fileID: 11400000, guid: 75c45f34725fdf1439d4a9fccd693d57, type: 2}
   toRun: {fileID: 0}
   normalText: {r: 0, g: 0, b: 0, a: 1}
   importantText: {r: 1, g: 0.79322517, b: 0, a: 1}
@@ -14239,7 +14239,7 @@ MonoBehaviour:
   accuseMenu: {fileID: 243689827}
   openAccuseMenu: {fileID: 1622296357}
   gameOver: {fileID: 11400000, guid: c5d7be0d18d4e42f89fcc832a68f1934, type: 2}
-  gameWon: {fileID: 11400000, guid: 62215a5fd5cb848489be305b559491f5, type: 2}
+  gameWon: {fileID: 11400000, guid: 75c45f34725fdf1439d4a9fccd693d57, type: 2}
   culpritIndex: 0
   cluesNeededToAccuse: []
   accuseBacking: {fileID: 2109259441}
