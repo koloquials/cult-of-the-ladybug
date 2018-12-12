@@ -349,9 +349,7 @@ public class DialogueManager : MonoBehaviour
         for (int i = 0; i < npc.npcSprites.Length; i++){
             if(currentLine.deliveryTone == npc.npcSprites[i].spriteForTone){
                 characterImage.sprite = npc.npcSprites[i].thisSprite;
-            } else {
-                characterImage.sprite = npc.npcSprites[0].thisSprite;
-            }
+            } 
         }
         
     }
