@@ -19,7 +19,7 @@ MonoBehaviour:
     thisSprite: {fileID: 21300006, guid: 3f0d6e3b2ecc24c1ca1f9c90331f3cd0, type: 3}
     spriteForTone: 0
   - spriteName: Angry
-    thisSprite: {fileID: 21300022, guid: 3f0d6e3b2ecc24c1ca1f9c90331f3cd0, type: 3}
+    thisSprite: {fileID: 21300018, guid: 3f0d6e3b2ecc24c1ca1f9c90331f3cd0, type: 3}
     spriteForTone: 1
   - spriteName: Peaceful
     thisSprite: {fileID: 21300030, guid: 3f0d6e3b2ecc24c1ca1f9c90331f3cd0, type: 3}
