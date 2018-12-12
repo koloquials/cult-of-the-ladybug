@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: seance 2
   m_EditorClassIdentifier: 
   objectName: 
-  objectDescription: {fileID: 11400000, guid: 214e5b8aa36d5c644b994843cad38971, type: 2}
+  objectDescription: {fileID: 11400000, guid: d2939a0db00fd7740b5fdd6678babcbc, type: 2}
   objectSprite: {fileID: 0}

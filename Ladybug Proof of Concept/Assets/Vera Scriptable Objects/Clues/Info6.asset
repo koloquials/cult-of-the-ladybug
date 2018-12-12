@@ -16,6 +16,6 @@ MonoBehaviour:
   - personInQuestion: {fileID: 0}
     dossierEntry: Theodore's girlfriend.
   relationshipsToDisclose: []
-  accuseMenuDropdown: Lillian's frustration with Theo's promises
+  accuseMenuDropdown: Theodore's loved Lillian
   accuseMenuDescription: 
   index: 0

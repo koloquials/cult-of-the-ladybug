@@ -382,7 +382,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4565662065790938, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 15.567265
+      value: 15.5
       objectReference: {fileID: 0}
     - target: {fileID: 4565662065790938, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -430,11 +430,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4565662065790938, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.2873163
+      value: 1.0395079
       objectReference: {fileID: 0}
     - target: {fileID: 4565662065790938, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
       propertyPath: m_LocalScale.x
-      value: 4.10319
+      value: 3.3133261
       objectReference: {fileID: 0}
     - target: {fileID: 1198819831623282, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
       propertyPath: m_Name
@@ -462,6 +462,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: b22ddd957cde8465798e2e31c2144762,
         type: 3}
+    - target: {fileID: 4565662065790938, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.8075
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
   m_IsPrefabAsset: 0
@@ -2686,11 +2690,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4565662065790938, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.3425262
+      value: 1.1892903
       objectReference: {fileID: 0}
     - target: {fileID: 4565662065790938, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
       propertyPath: m_LocalScale.x
-      value: 4.10319
+      value: 3.634852
       objectReference: {fileID: 0}
     - target: {fileID: 1198819831623282, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
       propertyPath: m_Name
@@ -2700,7 +2704,7 @@ Prefab:
         type: 2}
       propertyPath: thisObject
       value: 
-      objectReference: {fileID: 11400000, guid: e405260cf70714fa4a9e5c9bcc418b41,
+      objectReference: {fileID: 11400000, guid: 7203fd659e3866f4e8a0f454b3b21a04,
         type: 2}
     - target: {fileID: 212438332040980348, guid: 9b13994f1c20644a9a3313ce441b689d,
         type: 2}
@@ -2718,6 +2722,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: b22ddd957cde8465798e2e31c2144762,
         type: 3}
+    - target: {fileID: 4565662065790938, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.88586
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b13994f1c20644a9a3313ce441b689d, type: 2}
   m_IsPrefabAsset: 0
@@ -4302,7 +4310,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1.5
+    m_LineSpacing: 1.25
   m_Text: 'Press Space to Start Duel.
 
 '
