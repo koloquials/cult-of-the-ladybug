@@ -14,9 +14,7 @@ MonoBehaviour:
   clueDescription: Fake seance
   dossierEntries:
   - personInQuestion: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
-    dossierEntry: "You look under the table and discover an odd metal box--a fog machine!
-      The fog is \r\nfed through a tube into the crystal ball on the table, to create
-      the illusion of magic.\r\n"
+    dossierEntry: A fake psychic and, in truth, a con artist.
   relationshipsToDisclose: []
   accuseMenuDropdown: Secret Fog Machine
   accuseMenuDescription: 
