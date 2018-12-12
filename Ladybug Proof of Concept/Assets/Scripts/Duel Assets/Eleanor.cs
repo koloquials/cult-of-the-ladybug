@@ -10,7 +10,7 @@ public class Eleanor : Enemy {
         //items to replace will be {inside these brackets!}, write inside them/follow their instructions and then delete the brackets!
         name = "[ELEANOR]\n";
 
-        dialogue.Add("\n“Don't you know not to meddle in the personal affairs of others? I'm handling this situation.”");
+        dialogue.Add("\"Don't you know not to meddle in the personal affairs of others? I'm handling this situation.”");
 
         dialogue.Add("\"Don't you know not to meddle in the personal affairs of others? I'm handling this situation.\"\n");
         options.Add("You seem rather forward about moving on from this tragedy. Aren't you a little too detached?\n");

@@ -11,9 +11,9 @@ public class Eleanor2: Enemy {
         name = "[ELEANOR]\n";
         startPos = 4;
 
-        dialogue.Add("\n“Unbelievable. You're back? Why have you returned?”");
+        dialogue.Add("\"Unbelievable. You're back? Why have you returned?”");
 
-        dialogue.Add("\n“Unbelievable. You're back? Why have you returned?”");
+        dialogue.Add("\"Unbelievable. You're back? Why have you returned?”");
         options.Add("Proof that you did this. Would you like to fess up now?\n");
         options.Add("Evidence of culpability, the fast you talk the fast we can leave.\n");
         options.Add("Got some more information. Could be talk it out?\n");

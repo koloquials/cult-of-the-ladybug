@@ -11,9 +11,9 @@ public class Lillian : Enemy {
         name = "[LILLIAN]\n";
         startPos = 4;
 
-        dialogue.Add("\n“Oh, my! Please, I'm not sure my poor heart can take this at the moment. But what can I do for you?”");
+        dialogue.Add("\"Oh, my! Please, I'm not sure my poor heart can take this at the moment. But what can I do for you?”");
 
-        dialogue.Add("\n“Oh, my! Please, I'm not sure my poor heart can take this at the moment. But what can I do for you?”");
+        dialogue.Add("\"Oh, my! Please, I'm not sure my poor heart can take this at the moment. But what can I do for you?”");
         options.Add("Please, darling, I just need a few moments of your time if you'd spare them.\n");
         options.Add("You can start by helling me what the hell's up with you!\n");
         options.Add("Well, I'm going around asking questions. Do you have any answers?\n");
