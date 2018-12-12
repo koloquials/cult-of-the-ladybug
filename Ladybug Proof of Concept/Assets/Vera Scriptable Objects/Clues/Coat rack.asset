@@ -16,6 +16,6 @@ MonoBehaviour:
   - personInQuestion: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
     dossierEntry: May have filled her pockets with everyone else's valuables.
   relationshipsToDisclose: []
-  accuseMenuDropdown: Coat rack
-  accuseMenuDescription: Moonchild is a possible thief
+  accuseMenuDropdown: Moonchild is a possible thief
+  accuseMenuDescription: Coat rack
   index: 0

@@ -13,8 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: 
-  cluesDiscovered:
-  - {fileID: 11400000, guid: f498e85e86f3c47b499c107dc8886f26, type: 2}
+  cluesDiscovered: []
   dialogueLines:
   - line: The body lies, not yet cold, with eight knives in its back.
     valuableInfo: 1

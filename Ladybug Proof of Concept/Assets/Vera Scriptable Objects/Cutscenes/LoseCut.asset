@@ -12,24 +12,26 @@ MonoBehaviour:
   m_Name: LoseCut
   m_EditorClassIdentifier: 
   scenesInCutscene:
-  - actorsInScene:
-    - thisActor: {fileID: 11400000, guid: 17e1c5c107ecd4972b8cda5afdbc4e06, type: 2}
-      tone: 0
-    - thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
-      tone: 2
-    - thisActor: {fileID: 11400000, guid: c0ca31f8a4f394c79ad184143585e4b6, type: 2}
-      tone: 0
+  - actorsInScene: []
     currentSpeaker:
       thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
       tone: 2
     linesInScene:
     - You threw a finger in accusation. But you were wrong. That was not right.
     - And then...
-    - The lights went out, exactly as before.
+    blackfadeAlpha: 0.6
+    narration: 1
+    exit: 0
+  - actorsInScene: []
+    currentSpeaker:
+      thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
+      tone: 2
+    linesInScene:
+    - The lights went out, exactly as before
     - But this time, you felt a pain in your back. All your sensations seemed to drain
       away.
     - You have been killed by the true culprit.
-    blackfadeAlpha: 0.6
+    blackfadeAlpha: 1
     narration: 1
     exit: 0
   - actorsInScene:
@@ -45,5 +47,5 @@ MonoBehaviour:
     linesInScene:
     - Fin.
     blackfadeAlpha: 1
-    narration: 0
+    narration: 1
     exit: 1

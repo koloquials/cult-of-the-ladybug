@@ -16,6 +16,6 @@ MonoBehaviour:
   - personInQuestion: {fileID: 11400000, guid: 485985ce6657d4106a7d42216a33368c, type: 2}
     dossierEntry: A fake psychic and, in truth, a con artist.
   relationshipsToDisclose: []
-  accuseMenuDropdown: Secret Fog Machine
-  accuseMenuDescription: 
+  accuseMenuDropdown: Moonchild is a con artist
+  accuseMenuDescription: Secret Fog Machine
   index: 0

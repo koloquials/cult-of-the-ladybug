@@ -92,8 +92,7 @@ public class DialogueManager : MonoBehaviour
         descriptionCanvas.gameObject.SetActive(false);
         hudCanvas.gameObject.SetActive(false);
         toRun = introCutscene;
-
-
+        
     }
     private void Update()
     {
@@ -550,6 +549,10 @@ public class DialogueManager : MonoBehaviour
             try
             {
                 ActorImageSprites[i].gameObject.SetActive(true);
+                if(cutscene.scenesInCutscene[introSceneIndex].theoDead == true)
+                {
+                    GameObject.Find("Theodore").GetComponent<SpriteRenderer>().enabled = false;
+                }
                 if(!cutscene.scenesInCutscene[introSceneIndex].narration){
                     cutNameText.text = cutscene.scenesInCutscene[introSceneIndex].currentSpeaker.thisActor.npcName;
                     for (int j = 0; j < cutscene.scenesInCutscene[introSceneIndex].actorsInScene[i].thisActor.npcSprites.Length; j++)

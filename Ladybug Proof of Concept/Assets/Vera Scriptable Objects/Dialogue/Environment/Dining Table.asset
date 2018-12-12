@@ -15,8 +15,8 @@ MonoBehaviour:
   ClueTitle: 
   cluesDiscovered: []
   dialogueLines:
-  - line: A table set for 8, two for Theodore's departed family. Upon further inspection,
-      it's clear that the table settings lack knives.
+  - line: A table that was once set for 8, two extra settings for Theodore's departed
+      family. Upon further inspection, it's clear that it is now lacking knives.
     valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0

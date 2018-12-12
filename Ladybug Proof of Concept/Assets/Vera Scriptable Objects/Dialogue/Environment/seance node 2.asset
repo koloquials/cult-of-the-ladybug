@@ -21,7 +21,7 @@ MonoBehaviour:
     duelTrigger: 0
     deliveryTone: 0
   - line: "The fog is \rfed through a tube into the crystal ball on the table, to
-      create the illusion of magic table."
+      create the illusion of a magic table."
     valuableInfo: 0
     duelTrigger: 0
     deliveryTone: 0

@@ -16,6 +16,6 @@ MonoBehaviour:
   - personInQuestion: {fileID: 0}
     dossierEntry: Theodore's girlfriend.
   relationshipsToDisclose: []
-  accuseMenuDropdown: Theodore's loved Lillian
+  accuseMenuDropdown: Theodore loved Lillian
   accuseMenuDescription: 
   index: 0
