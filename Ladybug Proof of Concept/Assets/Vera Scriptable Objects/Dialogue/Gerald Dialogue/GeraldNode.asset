@@ -16,7 +16,6 @@ MonoBehaviour:
   cluesDiscovered:
   - {fileID: 11400000, guid: 52dff28b00eafcf4687747f3b018f79f, type: 2}
   - {fileID: 11400000, guid: 2e7017fed173e4a48b7f3d332ffed1cc, type: 2}
-  - {fileID: 0}
   dialogueLines:
   - line: Hello. Lets get pleasantries over with.
     valuableInfo: 0

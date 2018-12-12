@@ -13,7 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeName: 
   ClueTitle: Eleanor says that Nobody is Innocent
-  cluesDiscovered: []
+  cluesDiscovered:
+  - {fileID: 11400000, guid: 4080ea8d7c32c4644a41290159c3c6f1, type: 2}
   dialogueLines:
   - line: 'Theodore was a disappointment. He always will be one, this is something
       his death will not absolve. '

@@ -23,9 +23,12 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
       tone: 2
     linesInScene:
-    - 'You threw a finger in accusation. You fucked up, that wasn''t it. '
+    - You threw a finger in accusation. But you were wrong. That was not right.
     - And then...
-    - The house explodes or something! Shit!
+    - The lights went out, exactly as before.
+    - But this time, you felt a pain in your back. All your sensations seemed to drain
+      away.
+    - You have been killed by the true culprit.
     blackfadeAlpha: 0.6
     narration: 1
     exit: 0
@@ -40,7 +43,7 @@ MonoBehaviour:
       thisActor: {fileID: 11400000, guid: 4a0c1e1b4406f41589ce3507acd8d20b, type: 2}
       tone: 2
     linesInScene:
-    - Exit
+    - Fin.
     blackfadeAlpha: 1
     narration: 0
     exit: 1
