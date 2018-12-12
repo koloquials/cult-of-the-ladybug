@@ -10,9 +10,9 @@ public class Moonchild : Enemy {
         //items to replace will be {inside these brackets!}, write inside them/follow their instructions and then delete the brackets!
         name = "[MOONCHILD]\n";
 
-        dialogue.Add("\n“Ah. Upon your quest for knowledge, I see I've also come under suspicion. How may I allay your concerns?”");
+        dialogue.Add("\"Ah. Upon your quest for knowledge, I see I've also come under suspicion. How may I allay your concerns?”");
 
-        dialogue.Add("\n“Ah. Upon your quest for knowledge, I see I've also come under suspicion. How may I allay your concerns?”");
+        dialogue.Add("\"Ah. Upon your quest for knowledge, I see I've also come under suspicion. How may I allay your concerns?”");
         options.Add("This facade of yours ends here. You can't allay anything because I know you have the strongest motives.\n");
         options.Add("You've been putting on a helpful guise, but you're going to have to admit you're extremely shady.\n");
         options.Add("We both know you're the other outsider in this crowd, surely that turns some attention towards your motives here.\n");
