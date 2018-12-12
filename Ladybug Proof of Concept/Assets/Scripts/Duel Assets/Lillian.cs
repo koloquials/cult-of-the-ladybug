@@ -32,8 +32,8 @@ public class Lillian : Enemy {
 
         dialogue.Add("\"I just want to warn you, make sure you've hit all your bases, I want to figure things out too.\"\n");
         options.Add("You're a good person, and I thank you for that. You and Theo were close, we need that.\n");
-        options.Add("Of course, ideally we all figure things out very soon.\n");
-        options.Add("We are all involved in this. And that's why you should cooperate.\n");
+        options.Add("Of course. Ideally, we all figure things out very soon.\n");
+        options.Add("We are all involved in this, and that's why you should cooperate.\n");
         options.Add("Could you stop deflecting and start telling me what your relationship with the victim was?\n");
         dialogue.Add("\"Ah. I can only assume you're here on the basis of rumor. All you need to know is I loved Theo!\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
@@ -41,27 +41,27 @@ public class Lillian : Enemy {
         //rinse and repeat!!
 
         dialogue.Add("\"Ah. I can only assume you're here on the basis of rumor. All you need to know is I loved Theo!\"\n");
-        options.Add("You two did seem awfull involved in each other's lives, right? What kind of man was he?\n");
-        options.Add("Oh I am well aware, my dear. But I'm dyng to hear more if you could.\n");
-        options.Add("That's sweet. It is. I'm sure you're beyond upset. How were you?\n");
-        options.Add("Odd that you'd need to reaffirm that, isn't it? Can you elaborate?\n");
-        dialogue.Add("\"I think he treated me right, no matter what. He was truly a gentleman and I was enamoured by that.\"\n");
+        options.Add("You two did seem awfully involved in each other's lives. What kind of man was he?\n");
+        options.Add("Oh, I am well aware, my dear. But I'm dying to hear more if you could tell me.\n");
+        options.Add("That's sweet. I'm sure you're beyond upset. How were you?\n");
+        options.Add("Odd that you'd need to reaffirm that. Care to elaborate?\n");
+        dialogue.Add("\"I think he treated me right, no matter what. He was truly a gentleman and I loved that.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
-        dialogue.Add("\"I think he treated me right, no matter what. He was truly a gentleman and I was enamoured by that.\"\n");
+        dialogue.Add("\"I think he treated me right, no matter what. He was truly a gentleman and I loved that.\"\n");
         options.Add("I understand, I really do. This was no way for someone as good as him to go.\n");
-        options.Add("I'm truly sorry for his grisly passing then. May the mourning be swift.\n");
-        options.Add("Good of you to emphasize his pros but let's go further. What about his cons?\n");
-        options.Add("Was his whole heart in it? I feel like there's more to this you aren't telling.\n");
-        dialogue.Add("\"However, he was the wishy washy type. In a lot of ways he wasn't reliable. It was cause for concern.\"\n");
+        options.Add("I'm truly sorry for his passing. May your mourning be brief.\n");
+        options.Add("Good of you to emphasize his better qualities, but let's continue. What about his faults?\n");
+        options.Add("Was his heart really in it? I feel like there's more to this you aren't telling me.\n");
+        dialogue.Add("\"However, he was the wishy-washy type. In a lot of ways he wasn't reliable. It was...a cause for concern.\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
-        dialogue.Add("\"However, he was the wishy washy type. In a lot of ways he wasn't reliable. It was cause for concern.\"\n");
-        options.Add("I'm sorry it was the sort of thing you couldn't get patched up in time then.\n");
-        options.Add("Time is truly cruel, but at least his weaknesses are no longer alive to hurt people.\n");
-        options.Add("Must be hard work, living with such a man. But you persisted and you should be proud of that.\n");
-        options.Add("You must’ve been upset with him for being noncommital. Upsetting, I wonder?\n");
-        dialogue.Add("\"If you don't mind, my poor head is fraught with woes. Please, could I be alone for some time?\"\n");
+        dialogue.Add("\"However, he was the wishy-washy type. In a lot of ways he wasn't reliable. It was...a cause for concern.\"\n");
+        options.Add("I'm sorry it was the sort of thing you couldn't get patched up in time.\n");
+        options.Add("Time is cruel, but at least his weaknesses can no longer hurt people.\n");
+        options.Add("It must have been work, loving such a man, but you persisted and you should be proud of that.\n");
+        options.Add("You must’ve been upset with him for being non-commital. But how upset, I wonder?\n");
+        dialogue.Add("\"If you don't mind, my head is fraught with woes. Please, could I be alone for some time?\"\n");
         types.Add(4); // <- replace with 1(concede)/2(stand)/3(aggress)/4(insult) depending on the tone of enemy response.
 
         dialogue.Add("\"If you don't mind, my poor head is fraught with woes. Please, could I be alone for some time?\"\n");
