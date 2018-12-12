@@ -10,7 +10,7 @@ public class Marino : Enemy {
         //items to replace will be {inside these brackets!}, write inside them/follow their instructions and then delete the brackets!
         name = "[MARINO]\n";
 
-        dialogue.Add("\n“Slow your roll, kid. I guarantee you I had nothing to do with this.”");
+        dialogue.Add("\"Slow your roll, kid. I guarantee you I had nothing to do with this.”");
 
         dialogue.Add("\"Slow your roll, kid. I guarantee you I had nothing to do with this.\"\n");
         options.Add("Hm. And I’m willing to bet good money you can't guarantee that.\n");

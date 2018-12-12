@@ -10,7 +10,7 @@ public class Gerlad : Enemy {
         //items to replace will be {inside these brackets!}, write inside them/follow their instructions and then delete the brackets!
         name = "[GERALD]\n";
 
-        dialogue.Add("\n“Yes. I conducted business with Theodore as an investor for several years. What of it?”");
+        dialogue.Add("\"Yes. I conducted business with Theodore as an investor for several years. What of it?”");
 
         dialogue.Add("\"Yes. I conducted business with Theo as an investor for several years. What of it?\"\n");
         options.Add("The two of you had squabbles over business. Is it better for you, now that he's out of the picture?\n");
