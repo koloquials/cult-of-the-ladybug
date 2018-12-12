@@ -42,6 +42,19 @@ public class DialogueManager : MonoBehaviour
     public NPC activeNPC; //npc that is being interacted with
     public EnvObjectManager activeObject;
 
+    public AudioSource bgNorm;
+    public AudioSource bgDuel;
+    public AudioSource importantInfoSFX;
+
+    public AudioClip importante;
+    public AudioClip failure;
+
+
+    //public AudioClip correct;
+    //public AudioClip incorrect;
+
+    private bool hasPlayed = false;
+
     private int nodeIndex = 0; //node index for the dialogue node [] on the dialogue tree
     private int lineIndex = 0; //line index for the line [] on the dialogue nodes
 
@@ -140,6 +153,12 @@ public class DialogueManager : MonoBehaviour
                     {
                         ReprimandPlayer(1f); //reprimands player upon loss when they press space 
                         activeDuel.enabled = false; //turns of the duel component on the npc we're interacting with
+
+                        bgDuel.Stop();
+                        bgNorm.Play();
+                        Debug.Log("duel music stop");
+                        //duel ends
+
                         StartDialogue(activeNPC.lossTree);
                     }
                 }
@@ -149,7 +168,13 @@ public class DialogueManager : MonoBehaviour
                     {
                         activeDuel.Reset(); //reset the duel componenet on the npc
                         activeDuel.enabled = false; //turn the duel component on the npc off
+
+                        bgDuel.Stop();
+                        bgNorm.Play();
+                        Debug.Log("duel music stop");
+                        //duel ends
                         StartDialogue(activeNPC.informationReward); //run the information to load tree on the npc
+                        
                         activeNPC.duelingStatus = NPC.DuelingStatus.PostDuel;
                     }
                 }
@@ -162,6 +187,7 @@ public class DialogueManager : MonoBehaviour
                 activeNPC.GetComponent<DuelManager>().enabled = false; //this shit doesn't work but i'm too afraid to comment it out tbfh lmao
                 activeDuel = null;
                 duelCanvas.gameObject.SetActive(false);
+                
             }
             catch (System.NullReferenceException) { }
         }
@@ -211,10 +237,19 @@ public class DialogueManager : MonoBehaviour
                 variableStorage.AddInfo(treeToRun.dialogueNodes[nodeIndex].dialogueLines[lineIndex].line, treeToRun.dialogueNodes[nodeIndex]);
                 variableStorage.DiscoverClue(treeToRun.dialogueNodes[nodeIndex]);
 
+                //play important sfx here
+                if (!hasPlayed)
+                {
+                    importantInfoSFX.PlayOneShot(importante);
+                    Debug.Log("importante");
+                }
+                hasPlayed = true;
+
             }
             else
             {
                 dialogueText.color = normalText;
+                hasPlayed = false;
             }
 
             if (Input.GetKeyDown(KeyCode.E) && typing && lineComplete == false)
@@ -242,7 +277,12 @@ public class DialogueManager : MonoBehaviour
                 duelTrigger.SetActive(true);
                 if (Input.GetKeyUp(KeyCode.Space))
                 {
+                    
                     currentGameState = GameState.DuelActive;
+                    bgNorm.Stop();
+                    bgDuel.Play();
+                    Debug.Log("duel music start");
+
                 }
             }
             else
@@ -254,7 +294,7 @@ public class DialogueManager : MonoBehaviour
 
             if (nodeIndex == treeToRun.dialogueNodes.Length - 1 && lineIndex > treeToRun.dialogueNodes[nodeIndex].dialogueLines.Length)
             {
-                currentGameState = GameState.OverworldActive;
+                currentGameState = GameState.OverworldActive;               
             }
         }
         catch (System.IndexOutOfRangeException)
@@ -268,6 +308,13 @@ public class DialogueManager : MonoBehaviour
         activeDuel.Reset();
         duelCanvas.gameObject.SetActive(false);
         activeNPC.currentStatus = NPC.NPCStatus.Heated;
+        //play lose sfx here
+        if (!hasPlayed)
+        {
+            importantInfoSFX.PlayOneShot(failure);
+            Debug.Log("lose");
+        }
+        hasPlayed = true;
     }
 
     void UnlockInformation(DialogueNode node) //function that checks the nodes that get passed through the 
@@ -376,10 +423,18 @@ public class DialogueManager : MonoBehaviour
             {
                 descriptionText.color = importantText;
                 variableStorage.DiscoverClue(nodeToRun);
+                //play important sfx here
+                if (!hasPlayed)
+                {
+                    importantInfoSFX.PlayOneShot(importante);
+                    Debug.Log("importante");
+                }
+                hasPlayed = true;
             }
             else
             {
                 descriptionText.color = normalText;
+                hasPlayed = false;
             }
 
             if (Input.GetKeyDown(KeyCode.E) && typing && lineComplete == false)

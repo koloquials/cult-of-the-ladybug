@@ -21,7 +21,7 @@ MonoBehaviour:
     deliveryTone: 0
   - line: Oh, hello. Poking your nose where it doesn't belong, are you?
     valuableInfo: 0
-    duelTrigger: 0
+    duelTrigger: 1
     deliveryTone: 1
   - line: No? Alright then. Watch yourself, Miss.
     valuableInfo: 0

@@ -6,6 +6,8 @@ public class EnvObjectManager : MonoBehaviour {
 
     public EnvironmentObject thisObject;
     GameObject interactionIcon;
+    public bool partcilesActive;
+    public GameObject particles;
 
     private void Start()
     {
@@ -21,22 +23,21 @@ public class EnvObjectManager : MonoBehaviour {
 
     void CheckForPlayer()
     {
+
+        print("Activate the particles");
+
         var player = FindObjectOfType<PlayerMove>();
-        if ((player.gameObject.transform.position - transform.position).magnitude <= player.interactionRadius)
+        if ((transform.position-player.gameObject.transform.position).magnitude <= player.interactionRadius)
         {
-            interactionIcon.SetActive(true);
-            //if(!player.dossierActive && Input.GetKeyDown(KeyCode.Space)){
-            //    player.dossierActive = true;
-            //    npcCanvas.gameObject.SetActive(true);
-            //}
-            //if(player.dossierActive && Input.GetKeyDown(KeyCode.Space)){
-            //    player.dossierActive = false;
-            //    npcCanvas.gameObject.SetActive(true);
+            //if(!partcilesActive){
+            //    print("particles");
+            //    Instantiate(particles);
+            //    partcilesActive = true;
             //}
         }
         else
         {
-            interactionIcon.SetActive(false);
+            partcilesActive = false;
         }
     }
 }
